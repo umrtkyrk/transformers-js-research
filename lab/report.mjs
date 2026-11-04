@@ -79,6 +79,7 @@ export async function buildPublic(s){
 }
 export async function publish(s){
  const {config,local}=await settings();const source=await buildPublic(s);const deployment=path.resolve(ROOT,config.publish.deploymentDirectory);await fs.cp(source,path.join(deployment,'lab'),{recursive:true});
+ if(config.cloud?.enabled)await import('./cloud/stage-vercel.mjs');
  try{
   await command(process.execPath,[local.vercelCli,'deploy','--prod','--yes',...(local.vercelGlobalConfig?['--global-config',local.vercelGlobalConfig]:[])],{cwd:deployment,log:path.join(STATE,'publish.log'),timeoutMs:10*60*1000});
   s.lastPublish={at:new Date().toISOString(),status:'completed',url:config.publish.baseUrl+'lab/'};

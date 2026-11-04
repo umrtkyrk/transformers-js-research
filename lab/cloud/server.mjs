@@ -63,7 +63,11 @@ export async function artifactHandler(req,res,{fetcher=fetch,readFallback}={}){
  let relative;try{relative=artifactPath(new URL(req.url,'https://local.invalid').searchParams.get('path'));}catch{res.statusCode=400;return res.end('Invalid path');}
  const mime={html:'text/html; charset=utf-8',json:'application/json; charset=utf-8',png:'image/png',wav:'audio/wav'};
  try{
-  if(relative.startsWith('local/')&&readFallback){const localPath=relative.slice(6);const content=await readFallback(localPath);res.setHeader('Content-Type',mime[relative.split('.').at(-1)]);res.setHeader('Cache-Control','no-store');res.statusCode=200;return res.end(req.method==='HEAD'?undefined:localPath.endsWith('.html')?content.toString('utf8').replace(/href="(?:\.\.\/)+styles\.css"/g,'href="/styles.css"'):content);}
+  if(relative.startsWith('local/')&&readFallback){
+   const localPath=relative.slice(6);let content=await readFallback(localPath);
+   if(localPath.endsWith('.html'))content=content.toString('utf8').replace(/href="(?:\.\.\/)+styles\.css"/g,'href="/styles.css"').replace('<main class="lab-page">','<main class="lab-page"><div class="notice">Önceki yerel deneylerin arşivi. Buradaki zamanlayıcı bilgisi tarihsel kayıttır. <a href="/lab/">Güncel GitHub Actions sonuçları</a>.</div>');
+   res.setHeader('Content-Type',mime[relative.split('.').at(-1)]);res.setHeader('Cache-Control','no-store');res.statusCode=200;return res.end(req.method==='HEAD'?undefined:content);
+  }
   const revision=await resultRevision({fetcher});
   const response=revision?await fetcher('https://raw.githubusercontent.com/'+REPOSITORY+'/'+revision+'/lab/'+relative,{signal:AbortSignal.timeout(15000)}):{status:404,ok:false};
   let content;

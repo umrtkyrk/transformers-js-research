@@ -1,9 +1,11 @@
 {
   "functions": {
-    "api/research-artifact.mjs": {"includeFiles":"lab/**","maxDuration":30},
+    "api/research-artifact.mjs": {"includeFiles":"archive-lab/**","maxDuration":30},
     "api/research-check.mjs": {"maxDuration":30}
   },
   "rewrites": [
+    {"source":"/lab/","destination":"/api/research-artifact?path=index.html"},
+    {"source":"/lab/local/","destination":"/api/research-artifact?path=local/index.html"},
     {"source":"/lab/:path*","destination":"/api/research-artifact?path=:path*"}
   ]
 }

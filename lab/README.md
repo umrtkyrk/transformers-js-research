@@ -2,6 +2,8 @@
 
 Yayımlanan kayıtlar: [Otomatik deneyler](https://transformers-js-research.vercel.app/lab/).
 
+**Etkin çalışma ortamı GitHub Actions’tır.** Sitedeki “Yeni sürümü kontrol et” düğmesi, yeni ve desteklenen kararlı sürüm varsa bulut işini başlatır. Aynı sürümün tamamlanmış sonucu yeniden kullanılır. Yerel Windows günlük görevi devre dışıdır. Bulut kurulumu, yetkiler ve kalıcı kayıt yapısı `cloud/README.md` içindedir. Aşağıdaki komutlar yerel deneyler için kullanılabilir.
+
 Bu program seçili model depolarını ve kararlı Transformers.js sürümlerini izler, mevcut beş görev protokolünü ayrı süreçlerde çalıştırır, HTML/JSON raporlarını üretir ve Vercel'e yayımlar. ChatGPT, OpenAI veya başka bir ücretli LLM API entegrasyonu yoktur. Yerel üretim modelleri normal olarak token üretir; bunun bedeli bir LLM API faturası değildir, yerel işlem ve bellek kullanımıdır.
 
 ## Hazır kurulumda kullanım
@@ -23,7 +25,7 @@ node lab/cli.mjs publish
 
 ## Günlük çalışma
 
-Windows Görev Zamanlayıcı her gün 09:00'da `run-monitor.ps1` betiğini gizli pencereyle çalıştırır. Bilgisayarın açık, kullanıcının oturumu açık ve ağ erişiminin olması gerekir. Kaçırılan görev için Windows uygun olduğunda başlatmayı dener. Codex veya ChatGPT'nin açık olması gerekmez; zamanlayıcı bir AI ajanını uyandırmaz.
+Önceki Windows günlük görevi GitHub Actions’a geçişte devre dışı bırakılmıştır. Yerel günlük çalışma yeniden tercih edilirse `run-monitor.ps1` ve aşağıdaki kurulum komutları kullanılabilir. Bu durumda bilgisayarın açık, kullanıcının oturumu açık ve ağ erişiminin olması gerekir. Codex veya ChatGPT'nin açık olması gerekmez; zamanlayıcı bir AI ajanını uyandırmaz.
 
 Kurulumu yenilemek için:
 

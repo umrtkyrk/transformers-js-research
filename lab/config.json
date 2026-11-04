@@ -76,11 +76,18 @@
     "maxCacheBytes": 21474836480
   },
   "publish": {
-    "enabled": true,
+    "enabled": false,
     "baseUrl": "https://transformers-js-research.vercel.app/",
     "staticDirectory": "../research-portal/dist",
     "deploymentDirectory": "../vercel-deploy",
     "pendingNativeLogin": false
+  },
+  "cloud": {
+    "enabled": true,
+    "provider": "GitHub Actions",
+    "repository": "umrtkyrk/transformers-js-research",
+    "workflow": "research.yml",
+    "mode": "on-demand"
   },
   "schedule": {
     "kind": "Windows Task Scheduler",
