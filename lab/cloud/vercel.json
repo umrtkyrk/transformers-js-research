@@ -1,0 +1,9 @@
+{
+  "functions": {
+    "api/research-artifact.mjs": {"includeFiles":"lab/**","maxDuration":30},
+    "api/research-check.mjs": {"maxDuration":30}
+  },
+  "rewrites": [
+    {"source":"/lab/:path*","destination":"/api/research-artifact?path=:path*"}
+  ]
+}

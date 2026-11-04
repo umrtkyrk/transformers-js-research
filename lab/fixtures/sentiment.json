@@ -1,0 +1,496 @@
+{
+  "version": "1.0",
+  "description": "Hand-authored evaluation fixture of 60 short fictional property and estate-agent service reviews set in England. The fixture contains 48 binary-labelled cases and 12 mixed, ironic or sentiment-underspecified cases. It is a small diagnostic dataset, not a representative production benchmark.",
+  "created_at": "2026-10-26",
+  "locale": "en-GB",
+  "data_origin": "Entirely fictional text. No real people, organisations or customer records are used.",
+  "evaluation_policy": {
+    "accuracy_includes": "Only cases whose expected_label is POSITIVE or NEGATIVE.",
+    "accuracy_excludes": "All 12 cases with expected_label null. Their model outputs are recorded for qualitative review only.",
+    "label_freeze": "Expected labels are authored before model execution and must not be changed in response to model predictions.",
+    "input_field": "Only text is supplied to the model. IDs, categories, labels and rationales are evaluation metadata.",
+    "interpretation": "A high binary-model score on an ambiguous, mixed or ironic case is not evidence that ambiguity has been resolved correctly. No neutral label is expected from the binary sentiment model."
+  },
+  "cases": [
+    {
+      "id": "S001",
+      "text": "The agent was friendly, organised and genuinely helpful throughout the viewing.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Explicit praise for the agent's service."
+    },
+    {
+      "id": "S002",
+      "text": "I love how bright and peaceful this flat feels.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Clear satisfaction with the property."
+    },
+    {
+      "id": "S003",
+      "text": "Booking the viewing was easy, and everything went smoothly.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The booking and viewing experience is praised."
+    },
+    {
+      "id": "S004",
+      "text": "The agent answered every question clearly and made us feel welcome.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Clear praise for communication and treatment."
+    },
+    {
+      "id": "S005",
+      "text": "We are delighted with the clean rooms and comfortable layout.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Explicit delight about the property."
+    },
+    {
+      "id": "S006",
+      "text": "The regular updates were reassuring and saved me a great deal of worry.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The communication reduced concern and is appreciated."
+    },
+    {
+      "id": "S007",
+      "text": "Collecting the keys was quick, pleasant and well organised.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The key collection experience is clearly positive."
+    },
+    {
+      "id": "S008",
+      "text": "I would happily use this agent again after such excellent service.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "An explicit favourable recommendation."
+    },
+    {
+      "id": "S009",
+      "text": "The agent was rude and rushed us through the viewing.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Explicit criticism of the agent's conduct."
+    },
+    {
+      "id": "S010",
+      "text": "The flat was filthy, noisy and deeply disappointing.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Clear dissatisfaction with the property."
+    },
+    {
+      "id": "S011",
+      "text": "Booking a viewing was frustrating, and my messages went unanswered.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "A clearly frustrating service experience."
+    },
+    {
+      "id": "S012",
+      "text": "The agent arrived late and gave confusing answers to simple questions.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Unreliable attendance and poor communication."
+    },
+    {
+      "id": "S013",
+      "text": "We regretted renting this uncomfortable and poorly maintained flat.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Explicit regret and criticism."
+    },
+    {
+      "id": "S014",
+      "text": "The constant delays made the whole process exhausting.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The process is described as tiring and delayed."
+    },
+    {
+      "id": "S015",
+      "text": "Key collection was chaotic, and nobody seemed prepared for us.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "An explicitly disorganised handover."
+    },
+    {
+      "id": "S016",
+      "text": "I am extremely unhappy with the poor service we received.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "An explicit statement of dissatisfaction."
+    },
+    {
+      "id": "S017",
+      "text": "I have no complaints about how the agent handled the viewing.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The negation removes the otherwise negative complaint."
+    },
+    {
+      "id": "S018",
+      "text": "The flat is not cramped; every room feels spacious.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The negative property description is denied and replaced with praise."
+    },
+    {
+      "id": "S019",
+      "text": "The heating did not fail once, and the flat stayed pleasantly warm.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Failure is denied and reliable warmth is appreciated."
+    },
+    {
+      "id": "S020",
+      "text": "The agent never ignored my questions and always replied promptly.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Negated neglect and prompt replies express satisfaction."
+    },
+    {
+      "id": "S021",
+      "text": "The handover was not stressful at all; it was a relief.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Stress is explicitly denied."
+    },
+    {
+      "id": "S022",
+      "text": "There was nothing disappointing about the clean, quiet flat.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Disappointment is negated and favourable features are named."
+    },
+    {
+      "id": "S023",
+      "text": "The agent was not helpful when I asked about the tenancy.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Negation reverses the positive word helpful."
+    },
+    {
+      "id": "S024",
+      "text": "The flat was not clean when I collected the keys.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The property fails the expected standard of cleanliness."
+    },
+    {
+      "id": "S025",
+      "text": "The repair was never completed despite repeated requests.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The requested repair remains unresolved."
+    },
+    {
+      "id": "S026",
+      "text": "There is nothing pleasant about the constant noise in this flat.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Pleasantness is denied and noise is criticised."
+    },
+    {
+      "id": "S027",
+      "text": "The agent did not keep the promised appointment.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The agent failed to attend as promised."
+    },
+    {
+      "id": "S028",
+      "text": "I cannot recommend this agency after such poor service.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "An explicit unfavourable recommendation."
+    },
+    {
+      "id": "S029",
+      "text": "The agent kept the chain moving and made completion day pleasantly straightforward.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Clear satisfaction with sale progression and completion."
+    },
+    {
+      "id": "S030",
+      "text": "The tenancy paperwork was clear, and the letting team explained every charge patiently.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The tenancy process and explanations are praised."
+    },
+    {
+      "id": "S031",
+      "text": "The inventory matched the spotless flat, so I felt confident collecting the keys.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Accurate records and property condition create confidence."
+    },
+    {
+      "id": "S032",
+      "text": "The repairs were completed before move-in, and I am delighted with the flat.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Explicit satisfaction with completed repairs."
+    },
+    {
+      "id": "S033",
+      "text": "The rent and service charge were explained upfront, with no unpleasant surprises.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Transparent property costs are appreciated."
+    },
+    {
+      "id": "S034",
+      "text": "The survey findings were explained clearly, which made the purchase much less worrying.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Helpful explanations reduce concern during purchase."
+    },
+    {
+      "id": "S035",
+      "text": "The deposit return was handled promptly and fairly, and I was very pleased.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Explicit satisfaction with the deposit return process."
+    },
+    {
+      "id": "S036",
+      "text": "The accurate floor plan and detailed listing made choosing this home easy.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The listing information is described as accurate and useful."
+    },
+    {
+      "id": "S037",
+      "text": "The warm, draught-free rooms have made renting this home a pleasure.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Explicit enjoyment of the property's comfort."
+    },
+    {
+      "id": "S038",
+      "text": "The agent explained the leasehold terms patiently, and I appreciated the clear communication.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The quality of the explanation is praised, without evaluating legal terms."
+    },
+    {
+      "id": "S039",
+      "text": "Poor communication left the chain stalled and made completion day miserable.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Clear dissatisfaction with sale progression."
+    },
+    {
+      "id": "S040",
+      "text": "The letting team sent contradictory tenancy paperwork and left me thoroughly frustrated.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Contradictory paperwork causes explicit frustration."
+    },
+    {
+      "id": "S041",
+      "text": "The inventory missed obvious damage, which made the handover upsetting.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Missing damage records and an upsetting handover express dissatisfaction."
+    },
+    {
+      "id": "S042",
+      "text": "We moved into a damp flat with a broken boiler, and the experience was awful.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Explicitly poor property conditions and a negative experience."
+    },
+    {
+      "id": "S043",
+      "text": "Unexpected service charges appeared after the viewing, and I felt misled.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Unexpected costs lead to an explicit feeling of being misled."
+    },
+    {
+      "id": "S044",
+      "text": "The agent dismissed my questions about the survey, which was deeply unhelpful.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The response to survey questions is explicitly criticised."
+    },
+    {
+      "id": "S045",
+      "text": "The deposit return involved endless unanswered emails and an exhausting wait.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Poor communication and delay produce dissatisfaction."
+    },
+    {
+      "id": "S046",
+      "text": "The listing exaggerated the room sizes, and seeing the flat was a disappointment.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Misleading listing details cause explicit disappointment."
+    },
+    {
+      "id": "S047",
+      "text": "The draughts and unreliable heating have made living here unpleasant.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The property's comfort and heating are criticised."
+    },
+    {
+      "id": "S048",
+      "text": "The agent rushed through the leasehold questions and left me anxious and confused.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The quality of communication is clearly negative."
+    },
+    {
+      "id": "S049",
+      "text": "The flat is lovely, but dealing with the agent was exhausting.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Mixed sentiment with different property and service targets; excluded from binary accuracy."
+    },
+    {
+      "id": "S050",
+      "text": "The rent is reasonable, although the noise makes the place hard to enjoy.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Positive cost assessment and negative comfort assessment coexist; excluded from binary accuracy."
+    },
+    {
+      "id": "S051",
+      "text": "The agent replied quickly, but every answer created another question.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Prompt replies contrast with an unclear experience; excluded from binary accuracy."
+    },
+    {
+      "id": "S052",
+      "text": "Wonderful, another viewing cancelled at the last minute.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Ironic positive wording about an adverse event; qualitative review only and excluded from binary accuracy."
+    },
+    {
+      "id": "S053",
+      "text": "The property has character, if you enjoy sloping floors and rattling windows.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "The property description may be ironic or depend on personal preference; excluded from binary accuracy."
+    },
+    {
+      "id": "S054",
+      "text": "Completion took a month longer than expected, but the agent worked hard to resolve it.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Negative outcome and positive agent effort have different targets; excluded from binary accuracy."
+    },
+    {
+      "id": "S055",
+      "text": "The kitchen is excellent; the bedroom is a different story.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Explicit praise is combined with an implied criticism; excluded from binary accuracy."
+    },
+    {
+      "id": "S056",
+      "text": "At least the draughty flat will keep us awake during winter.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "An ironic framing of an uncomfortable property; qualitative review only and excluded from binary accuracy."
+    },
+    {
+      "id": "S057",
+      "text": "The flat is on the second floor and the tenancy begins next month.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Factual description without explicit evaluative sentiment; excluded from binary accuracy."
+    },
+    {
+      "id": "S058",
+      "text": "The agent was polite, and that is about all I can say.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Understatement may imply criticism beyond the explicit praise; excluded from binary accuracy."
+    },
+    {
+      "id": "S059",
+      "text": "The service charge is higher, but it includes the maintenance I wanted.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "A cost-benefit trade-off without an unambiguous overall sentiment; excluded from binary accuracy."
+    },
+    {
+      "id": "S060",
+      "text": "The viewing was an experience I will remember.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "The memorable experience is not specified as positive or negative; excluded from binary accuracy."
+    }
+  ]
+}

@@ -1,0 +1,697 @@
+{
+  "dataset_version": "1.0.0",
+  "authored_date": "2026-10-26",
+  "schema_validation": "passed",
+  "hard_filter_gold_validation": "passed",
+  "relevance_reference_validation": "passed",
+  "listings": 60,
+  "queries": 80,
+  "split_counts": {
+    "development": 20,
+    "evaluation": 60
+  },
+  "office_counts": {
+    "alpha": 48,
+    "beta": 12
+  },
+  "active_counts": {
+    "active": 48,
+    "inactive": 12
+  },
+  "tenure_counts": {
+    "rent": 44,
+    "sale": 16
+  },
+  "category_counts": {
+    "paraphrase": 17,
+    "location": 15,
+    "negative_challenge": 14,
+    "preference": 13,
+    "missing_information": 11,
+    "nonsense": 5,
+    "no_result": 5
+  },
+  "evaluation_category_counts": {
+    "paraphrase": 12,
+    "location": 10,
+    "negative_challenge": 10,
+    "preference": 10,
+    "missing_information": 10,
+    "nonsense": 4,
+    "no_result": 4
+  },
+  "no_result_counts": {
+    "nonsense": 5,
+    "structured_no_result": 5,
+    "semantic_no_result": 2
+  },
+  "no_result_by_split": {
+    "development": 3,
+    "evaluation": 9
+  },
+  "multi_relevant_queries": 11,
+  "model_executed": false,
+  "embedding_scores_used_for_labels": false,
+  "per_query": [
+    {
+      "query_id": "Q001",
+      "split": "development",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q002",
+      "split": "development",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q003",
+      "split": "development",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q004",
+      "split": "development",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q005",
+      "split": "development",
+      "category": "paraphrase",
+      "eligible_count": 2,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q006",
+      "split": "development",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q007",
+      "split": "development",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q008",
+      "split": "development",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q009",
+      "split": "development",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q010",
+      "split": "development",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q011",
+      "split": "development",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q012",
+      "split": "development",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q013",
+      "split": "development",
+      "category": "preference",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q014",
+      "split": "development",
+      "category": "preference",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q015",
+      "split": "development",
+      "category": "preference",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q016",
+      "split": "development",
+      "category": "missing_information",
+      "eligible_count": 34,
+      "relevant_count": 11,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q017",
+      "split": "development",
+      "category": "nonsense",
+      "eligible_count": 36,
+      "relevant_count": 0,
+      "case_kind": "nonsense"
+    },
+    {
+      "query_id": "Q018",
+      "split": "development",
+      "category": "no_result",
+      "eligible_count": 0,
+      "relevant_count": 0,
+      "case_kind": "structured_no_result"
+    },
+    {
+      "query_id": "Q019",
+      "split": "development",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 0,
+      "case_kind": "semantic_no_result"
+    },
+    {
+      "query_id": "Q020",
+      "split": "development",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q021",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q022",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q023",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q024",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q025",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q026",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 2,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q027",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q028",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q029",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q030",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q031",
+      "split": "evaluation",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q032",
+      "split": "evaluation",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q033",
+      "split": "evaluation",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q034",
+      "split": "evaluation",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q035",
+      "split": "evaluation",
+      "category": "location",
+      "eligible_count": 2,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q036",
+      "split": "evaluation",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q037",
+      "split": "evaluation",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q038",
+      "split": "evaluation",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q039",
+      "split": "evaluation",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q040",
+      "split": "evaluation",
+      "category": "location",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q041",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q042",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q043",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q044",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q045",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q046",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "eligible_count": 2,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q047",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q048",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q049",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q050",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "eligible_count": 1,
+      "relevant_count": 0,
+      "case_kind": "semantic_no_result"
+    },
+    {
+      "query_id": "Q051",
+      "split": "evaluation",
+      "category": "preference",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q052",
+      "split": "evaluation",
+      "category": "preference",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q053",
+      "split": "evaluation",
+      "category": "preference",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q054",
+      "split": "evaluation",
+      "category": "preference",
+      "eligible_count": 2,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q055",
+      "split": "evaluation",
+      "category": "preference",
+      "eligible_count": 2,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q056",
+      "split": "evaluation",
+      "category": "preference",
+      "eligible_count": 2,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q057",
+      "split": "evaluation",
+      "category": "preference",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q058",
+      "split": "evaluation",
+      "category": "preference",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q059",
+      "split": "evaluation",
+      "category": "preference",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q060",
+      "split": "evaluation",
+      "category": "preference",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q061",
+      "split": "evaluation",
+      "category": "missing_information",
+      "eligible_count": 36,
+      "relevant_count": 4,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q062",
+      "split": "evaluation",
+      "category": "missing_information",
+      "eligible_count": 36,
+      "relevant_count": 6,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q063",
+      "split": "evaluation",
+      "category": "missing_information",
+      "eligible_count": 36,
+      "relevant_count": 9,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q064",
+      "split": "evaluation",
+      "category": "missing_information",
+      "eligible_count": 36,
+      "relevant_count": 2,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q065",
+      "split": "evaluation",
+      "category": "missing_information",
+      "eligible_count": 5,
+      "relevant_count": 5,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q066",
+      "split": "evaluation",
+      "category": "missing_information",
+      "eligible_count": 13,
+      "relevant_count": 5,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q067",
+      "split": "evaluation",
+      "category": "missing_information",
+      "eligible_count": 23,
+      "relevant_count": 13,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q068",
+      "split": "evaluation",
+      "category": "missing_information",
+      "eligible_count": 13,
+      "relevant_count": 4,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q069",
+      "split": "evaluation",
+      "category": "missing_information",
+      "eligible_count": 10,
+      "relevant_count": 7,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q070",
+      "split": "evaluation",
+      "category": "missing_information",
+      "eligible_count": 36,
+      "relevant_count": 2,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q071",
+      "split": "evaluation",
+      "category": "nonsense",
+      "eligible_count": 36,
+      "relevant_count": 0,
+      "case_kind": "nonsense"
+    },
+    {
+      "query_id": "Q072",
+      "split": "evaluation",
+      "category": "nonsense",
+      "eligible_count": 12,
+      "relevant_count": 0,
+      "case_kind": "nonsense"
+    },
+    {
+      "query_id": "Q073",
+      "split": "evaluation",
+      "category": "nonsense",
+      "eligible_count": 36,
+      "relevant_count": 0,
+      "case_kind": "nonsense"
+    },
+    {
+      "query_id": "Q074",
+      "split": "evaluation",
+      "category": "nonsense",
+      "eligible_count": 36,
+      "relevant_count": 0,
+      "case_kind": "nonsense"
+    },
+    {
+      "query_id": "Q075",
+      "split": "evaluation",
+      "category": "no_result",
+      "eligible_count": 0,
+      "relevant_count": 0,
+      "case_kind": "structured_no_result"
+    },
+    {
+      "query_id": "Q076",
+      "split": "evaluation",
+      "category": "no_result",
+      "eligible_count": 0,
+      "relevant_count": 0,
+      "case_kind": "structured_no_result"
+    },
+    {
+      "query_id": "Q077",
+      "split": "evaluation",
+      "category": "no_result",
+      "eligible_count": 0,
+      "relevant_count": 0,
+      "case_kind": "structured_no_result"
+    },
+    {
+      "query_id": "Q078",
+      "split": "evaluation",
+      "category": "no_result",
+      "eligible_count": 0,
+      "relevant_count": 0,
+      "case_kind": "structured_no_result"
+    },
+    {
+      "query_id": "Q079",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    },
+    {
+      "query_id": "Q080",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "eligible_count": 1,
+      "relevant_count": 1,
+      "case_kind": "answerable"
+    }
+  ]
+}

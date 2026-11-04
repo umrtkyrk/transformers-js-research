@@ -1,0 +1,77 @@
+{
+  "version": "1.0.0",
+  "cases": [
+    {
+      "id": "T001",
+      "text": "The viewing in London is on Friday at ten in the morning.",
+      "required_phrases": [
+        "london",
+        "friday",
+        "ten"
+      ]
+    },
+    {
+      "id": "T002",
+      "text": "The monthly rent in Manchester is one thousand two hundred pounds.",
+      "required_phrases": [
+        "manchester",
+        "one thousand two hundred"
+      ]
+    },
+    {
+      "id": "T003",
+      "text": "The Bristol flat has two bedrooms and a private garden.",
+      "required_phrases": [
+        "bristol",
+        "two bedrooms",
+        "garden"
+      ]
+    },
+    {
+      "id": "T004",
+      "text": "The house in Leeds has no garden and no parking space.",
+      "required_phrases": [
+        "leeds",
+        "no garden",
+        "no parking"
+      ]
+    },
+    {
+      "id": "T005",
+      "text": "Please call the Nottingham office before arranging a viewing.",
+      "required_phrases": [
+        "nottingham",
+        "office"
+      ]
+    },
+    {
+      "id": "T006",
+      "text": "The Oxford cottage is available from the first of November.",
+      "required_phrases": [
+        "oxford",
+        "first",
+        "november"
+      ]
+    },
+    {
+      "id": "T007",
+      "text": "The buyer in Cambridge needs a step free entrance.",
+      "required_phrases": [
+        "cambridge",
+        "step free"
+      ]
+    },
+    {
+      "id": "T008",
+      "text": "The Brighton apartment costs three hundred thousand pounds.",
+      "required_phrases": [
+        "brighton",
+        "three hundred thousand"
+      ]
+    }
+  ],
+  "notes": [
+    "Waveform checks and ASR round-trip are diagnostics, not a human MOS/naturalness rating.",
+    "All sentences are fictional England property examples."
+  ]
+}

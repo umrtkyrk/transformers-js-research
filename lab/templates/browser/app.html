@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Transformers.js validation lab</title>
+  <style>
+    :root { color-scheme: light; font-family: system-ui, sans-serif; color: #13283a; background: #f2f5f7; }
+    * { box-sizing: border-box; }
+    body { margin: 0 auto; max-width: 1000px; padding: 32px 24px; }
+    h1 { font-size: 24px; margin: 0 0 8px; } h2 { font-size: 17px; margin: 0 0 12px; }
+    p { line-height: 1.5; } .muted { color: #506273; }
+    main { display: grid; gap: 18px; } section { background: white; border: 1px solid #d6dfe5; border-radius: 8px; padding: 20px; }
+    .row { display: flex; align-items: center; flex-wrap: wrap; gap: 10px; }
+    button { min-height: 42px; padding: 10px 14px; border: 1px solid #214e6b; border-radius: 5px; background: #214e6b; color: white; font: inherit; }
+    button:disabled { opacity: .5; } button.secondary { background: white; color: #214e6b; }
+    textarea { display: block; width: 100%; min-height: 90px; padding: 12px; font: inherit; border: 1px solid #a8bbc8; border-radius: 5px; margin: 8px 0 12px; }
+    pre { white-space: pre-wrap; overflow-wrap: anywhere; font: 13px/1.5 ui-monospace, monospace; background: #f4f7f9; padding: 14px; border-radius: 5px; margin: 10px 0 0; }
+    #error { color: #9b1d22; } #heartbeat { font-variant-numeric: tabular-nums; }
+    #model-state { overflow-wrap: anywhere; } label { font-weight: 600; }
+  </style>
+</head>
+<body>
+  <main>
+    <header><h1>Transformers.js validation lab</h1><p class="muted">Version 4.3.2 · pinned model assets · single-thread WASM · dedicated inference worker</p></header>
+    <section>
+      <h2>Model</h2>
+      <div class="row"><button id="load-m1" disabled>M1 multilingual embeddings</button><button id="load-m2" disabled>M2 English sentiment</button><button id="dispose" class="secondary" disabled>Dispose model</button></div>
+      <p id="model-state" aria-live="polite">Preparing worker...</p>
+      <p class="muted">UI heartbeat: <span id="heartbeat">0</span></p>
+    </section>
+    <section>
+      <h2>Live inference</h2>
+      <form id="inference-form"><label for="inputs">One text per line</label><textarea id="inputs">A bright two-bedroom flat in Manchester
+A detached house with a garden in Bristol</textarea><button id="infer" disabled>Run inference</button></form>
+      <p id="error" role="alert"></p>
+      <pre id="result" aria-live="polite">No inference has run yet.</pre>
+    </section>
+    <section><h2>Environment</h2><pre id="environment">Preparing...</pre><p class="muted">WebGPU is probed for adapter availability only; no GPU model inference is performed. The UI heartbeat does not measure total RAM or GPU memory.</p></section>
+  </main>
+  <script type="module" src="/app.mjs"></script>
+</body>
+</html>

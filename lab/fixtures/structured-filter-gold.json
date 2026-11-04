@@ -1,0 +1,897 @@
+[
+  {
+    "query_id": "Q001",
+    "eligible_ids": [
+      "UK001"
+    ]
+  },
+  {
+    "query_id": "Q002",
+    "eligible_ids": [
+      "UK007"
+    ]
+  },
+  {
+    "query_id": "Q003",
+    "eligible_ids": [
+      "UK011"
+    ]
+  },
+  {
+    "query_id": "Q004",
+    "eligible_ids": [
+      "UK016"
+    ]
+  },
+  {
+    "query_id": "Q005",
+    "eligible_ids": [
+      "UK021",
+      "UK025"
+    ]
+  },
+  {
+    "query_id": "Q006",
+    "eligible_ids": [
+      "UK012"
+    ]
+  },
+  {
+    "query_id": "Q007",
+    "eligible_ids": [
+      "UK017"
+    ]
+  },
+  {
+    "query_id": "Q008",
+    "eligible_ids": [
+      "UK010"
+    ]
+  },
+  {
+    "query_id": "Q009",
+    "eligible_ids": [
+      "UK002"
+    ]
+  },
+  {
+    "query_id": "Q010",
+    "eligible_ids": [
+      "UK001"
+    ]
+  },
+  {
+    "query_id": "Q011",
+    "eligible_ids": [
+      "UK025"
+    ]
+  },
+  {
+    "query_id": "Q012",
+    "eligible_ids": [
+      "UK020"
+    ]
+  },
+  {
+    "query_id": "Q013",
+    "eligible_ids": [
+      "UK005"
+    ]
+  },
+  {
+    "query_id": "Q014",
+    "eligible_ids": [
+      "UK015"
+    ]
+  },
+  {
+    "query_id": "Q015",
+    "eligible_ids": [
+      "UK010"
+    ]
+  },
+  {
+    "query_id": "Q016",
+    "eligible_ids": [
+      "UK001",
+      "UK002",
+      "UK005",
+      "UK007",
+      "UK010",
+      "UK011",
+      "UK012",
+      "UK015",
+      "UK016",
+      "UK017",
+      "UK021",
+      "UK022",
+      "UK025",
+      "UK026",
+      "UK027",
+      "UK030",
+      "UK031",
+      "UK032",
+      "UK035",
+      "UK036",
+      "UK037",
+      "UK040",
+      "UK041",
+      "UK042",
+      "UK045",
+      "UK046",
+      "UK047",
+      "UK050",
+      "UK051",
+      "UK052",
+      "UK055",
+      "UK056",
+      "UK057",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q017",
+    "eligible_ids": [
+      "UK001",
+      "UK002",
+      "UK005",
+      "UK006",
+      "UK007",
+      "UK010",
+      "UK011",
+      "UK012",
+      "UK015",
+      "UK016",
+      "UK017",
+      "UK020",
+      "UK021",
+      "UK022",
+      "UK025",
+      "UK026",
+      "UK027",
+      "UK030",
+      "UK031",
+      "UK032",
+      "UK035",
+      "UK036",
+      "UK037",
+      "UK040",
+      "UK041",
+      "UK042",
+      "UK045",
+      "UK046",
+      "UK047",
+      "UK050",
+      "UK051",
+      "UK052",
+      "UK055",
+      "UK056",
+      "UK057",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q018",
+    "eligible_ids": []
+  },
+  {
+    "query_id": "Q019",
+    "eligible_ids": [
+      "UK010"
+    ]
+  },
+  {
+    "query_id": "Q020",
+    "eligible_ids": [
+      "UK024"
+    ]
+  },
+  {
+    "query_id": "Q021",
+    "eligible_ids": [
+      "UK026"
+    ]
+  },
+  {
+    "query_id": "Q022",
+    "eligible_ids": [
+      "UK031"
+    ]
+  },
+  {
+    "query_id": "Q023",
+    "eligible_ids": [
+      "UK040"
+    ]
+  },
+  {
+    "query_id": "Q024",
+    "eligible_ids": [
+      "UK042"
+    ]
+  },
+  {
+    "query_id": "Q025",
+    "eligible_ids": [
+      "UK046"
+    ]
+  },
+  {
+    "query_id": "Q026",
+    "eligible_ids": [
+      "UK051",
+      "UK055"
+    ]
+  },
+  {
+    "query_id": "Q027",
+    "eligible_ids": [
+      "UK056"
+    ]
+  },
+  {
+    "query_id": "Q028",
+    "eligible_ids": [
+      "UK032"
+    ]
+  },
+  {
+    "query_id": "Q029",
+    "eligible_ids": [
+      "UK047"
+    ]
+  },
+  {
+    "query_id": "Q030",
+    "eligible_ids": [
+      "UK057"
+    ]
+  },
+  {
+    "query_id": "Q031",
+    "eligible_ids": [
+      "UK027"
+    ]
+  },
+  {
+    "query_id": "Q032",
+    "eligible_ids": [
+      "UK035"
+    ]
+  },
+  {
+    "query_id": "Q033",
+    "eligible_ids": [
+      "UK037"
+    ]
+  },
+  {
+    "query_id": "Q034",
+    "eligible_ids": [
+      "UK041"
+    ]
+  },
+  {
+    "query_id": "Q035",
+    "eligible_ids": [
+      "UK046",
+      "UK050"
+    ]
+  },
+  {
+    "query_id": "Q036",
+    "eligible_ids": [
+      "UK052"
+    ]
+  },
+  {
+    "query_id": "Q037",
+    "eligible_ids": [
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q038",
+    "eligible_ids": [
+      "UK029"
+    ]
+  },
+  {
+    "query_id": "Q039",
+    "eligible_ids": [
+      "UK054"
+    ]
+  },
+  {
+    "query_id": "Q040",
+    "eligible_ids": [
+      "UK039"
+    ]
+  },
+  {
+    "query_id": "Q041",
+    "eligible_ids": [
+      "UK031"
+    ]
+  },
+  {
+    "query_id": "Q042",
+    "eligible_ids": [
+      "UK037"
+    ]
+  },
+  {
+    "query_id": "Q043",
+    "eligible_ids": [
+      "UK046"
+    ]
+  },
+  {
+    "query_id": "Q044",
+    "eligible_ids": [
+      "UK057"
+    ]
+  },
+  {
+    "query_id": "Q045",
+    "eligible_ids": [
+      "UK027"
+    ]
+  },
+  {
+    "query_id": "Q046",
+    "eligible_ids": [
+      "UK041",
+      "UK045"
+    ]
+  },
+  {
+    "query_id": "Q047",
+    "eligible_ids": [
+      "UK035"
+    ]
+  },
+  {
+    "query_id": "Q048",
+    "eligible_ids": [
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q049",
+    "eligible_ids": [
+      "UK051"
+    ]
+  },
+  {
+    "query_id": "Q050",
+    "eligible_ids": [
+      "UK030"
+    ]
+  },
+  {
+    "query_id": "Q051",
+    "eligible_ids": [
+      "UK030"
+    ]
+  },
+  {
+    "query_id": "Q052",
+    "eligible_ids": [
+      "UK035"
+    ]
+  },
+  {
+    "query_id": "Q053",
+    "eligible_ids": [
+      "UK040"
+    ]
+  },
+  {
+    "query_id": "Q054",
+    "eligible_ids": [
+      "UK041",
+      "UK045"
+    ]
+  },
+  {
+    "query_id": "Q055",
+    "eligible_ids": [
+      "UK046",
+      "UK050"
+    ]
+  },
+  {
+    "query_id": "Q056",
+    "eligible_ids": [
+      "UK051",
+      "UK055"
+    ]
+  },
+  {
+    "query_id": "Q057",
+    "eligible_ids": [
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q058",
+    "eligible_ids": [
+      "UK034"
+    ]
+  },
+  {
+    "query_id": "Q059",
+    "eligible_ids": [
+      "UK049"
+    ]
+  },
+  {
+    "query_id": "Q060",
+    "eligible_ids": [
+      "UK044"
+    ]
+  },
+  {
+    "query_id": "Q061",
+    "eligible_ids": [
+      "UK001",
+      "UK002",
+      "UK005",
+      "UK006",
+      "UK007",
+      "UK010",
+      "UK011",
+      "UK012",
+      "UK015",
+      "UK016",
+      "UK017",
+      "UK020",
+      "UK021",
+      "UK022",
+      "UK025",
+      "UK026",
+      "UK027",
+      "UK030",
+      "UK031",
+      "UK032",
+      "UK035",
+      "UK036",
+      "UK037",
+      "UK040",
+      "UK041",
+      "UK042",
+      "UK045",
+      "UK046",
+      "UK047",
+      "UK050",
+      "UK051",
+      "UK052",
+      "UK055",
+      "UK056",
+      "UK057",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q062",
+    "eligible_ids": [
+      "UK001",
+      "UK002",
+      "UK005",
+      "UK006",
+      "UK007",
+      "UK010",
+      "UK011",
+      "UK012",
+      "UK015",
+      "UK016",
+      "UK017",
+      "UK020",
+      "UK021",
+      "UK022",
+      "UK025",
+      "UK026",
+      "UK027",
+      "UK030",
+      "UK031",
+      "UK032",
+      "UK035",
+      "UK036",
+      "UK037",
+      "UK040",
+      "UK041",
+      "UK042",
+      "UK045",
+      "UK046",
+      "UK047",
+      "UK050",
+      "UK051",
+      "UK052",
+      "UK055",
+      "UK056",
+      "UK057",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q063",
+    "eligible_ids": [
+      "UK001",
+      "UK002",
+      "UK005",
+      "UK006",
+      "UK007",
+      "UK010",
+      "UK011",
+      "UK012",
+      "UK015",
+      "UK016",
+      "UK017",
+      "UK020",
+      "UK021",
+      "UK022",
+      "UK025",
+      "UK026",
+      "UK027",
+      "UK030",
+      "UK031",
+      "UK032",
+      "UK035",
+      "UK036",
+      "UK037",
+      "UK040",
+      "UK041",
+      "UK042",
+      "UK045",
+      "UK046",
+      "UK047",
+      "UK050",
+      "UK051",
+      "UK052",
+      "UK055",
+      "UK056",
+      "UK057",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q064",
+    "eligible_ids": [
+      "UK001",
+      "UK002",
+      "UK005",
+      "UK006",
+      "UK007",
+      "UK010",
+      "UK011",
+      "UK012",
+      "UK015",
+      "UK016",
+      "UK017",
+      "UK020",
+      "UK021",
+      "UK022",
+      "UK025",
+      "UK026",
+      "UK027",
+      "UK030",
+      "UK031",
+      "UK032",
+      "UK035",
+      "UK036",
+      "UK037",
+      "UK040",
+      "UK041",
+      "UK042",
+      "UK045",
+      "UK046",
+      "UK047",
+      "UK050",
+      "UK051",
+      "UK052",
+      "UK055",
+      "UK056",
+      "UK057",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q065",
+    "eligible_ids": [
+      "UK005",
+      "UK030",
+      "UK035",
+      "UK040",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q066",
+    "eligible_ids": [
+      "UK002",
+      "UK007",
+      "UK012",
+      "UK015",
+      "UK017",
+      "UK022",
+      "UK027",
+      "UK032",
+      "UK037",
+      "UK042",
+      "UK047",
+      "UK052",
+      "UK057"
+    ]
+  },
+  {
+    "query_id": "Q067",
+    "eligible_ids": [
+      "UK001",
+      "UK005",
+      "UK006",
+      "UK010",
+      "UK011",
+      "UK016",
+      "UK020",
+      "UK021",
+      "UK025",
+      "UK026",
+      "UK030",
+      "UK031",
+      "UK035",
+      "UK036",
+      "UK040",
+      "UK041",
+      "UK045",
+      "UK046",
+      "UK050",
+      "UK051",
+      "UK055",
+      "UK056",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q068",
+    "eligible_ids": [
+      "UK002",
+      "UK007",
+      "UK012",
+      "UK015",
+      "UK017",
+      "UK022",
+      "UK027",
+      "UK032",
+      "UK037",
+      "UK042",
+      "UK047",
+      "UK052",
+      "UK057"
+    ]
+  },
+  {
+    "query_id": "Q069",
+    "eligible_ids": [
+      "UK004",
+      "UK009",
+      "UK014",
+      "UK019",
+      "UK029",
+      "UK034",
+      "UK039",
+      "UK049",
+      "UK054",
+      "UK059"
+    ]
+  },
+  {
+    "query_id": "Q070",
+    "eligible_ids": [
+      "UK001",
+      "UK002",
+      "UK005",
+      "UK006",
+      "UK007",
+      "UK010",
+      "UK011",
+      "UK012",
+      "UK015",
+      "UK016",
+      "UK017",
+      "UK020",
+      "UK021",
+      "UK022",
+      "UK025",
+      "UK026",
+      "UK027",
+      "UK030",
+      "UK031",
+      "UK032",
+      "UK035",
+      "UK036",
+      "UK037",
+      "UK040",
+      "UK041",
+      "UK042",
+      "UK045",
+      "UK046",
+      "UK047",
+      "UK050",
+      "UK051",
+      "UK052",
+      "UK055",
+      "UK056",
+      "UK057",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q071",
+    "eligible_ids": [
+      "UK001",
+      "UK002",
+      "UK005",
+      "UK006",
+      "UK007",
+      "UK010",
+      "UK011",
+      "UK012",
+      "UK015",
+      "UK016",
+      "UK017",
+      "UK020",
+      "UK021",
+      "UK022",
+      "UK025",
+      "UK026",
+      "UK027",
+      "UK030",
+      "UK031",
+      "UK032",
+      "UK035",
+      "UK036",
+      "UK037",
+      "UK040",
+      "UK041",
+      "UK042",
+      "UK045",
+      "UK046",
+      "UK047",
+      "UK050",
+      "UK051",
+      "UK052",
+      "UK055",
+      "UK056",
+      "UK057",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q072",
+    "eligible_ids": [
+      "UK004",
+      "UK009",
+      "UK014",
+      "UK019",
+      "UK024",
+      "UK029",
+      "UK034",
+      "UK039",
+      "UK044",
+      "UK049",
+      "UK054",
+      "UK059"
+    ]
+  },
+  {
+    "query_id": "Q073",
+    "eligible_ids": [
+      "UK001",
+      "UK002",
+      "UK005",
+      "UK006",
+      "UK007",
+      "UK010",
+      "UK011",
+      "UK012",
+      "UK015",
+      "UK016",
+      "UK017",
+      "UK020",
+      "UK021",
+      "UK022",
+      "UK025",
+      "UK026",
+      "UK027",
+      "UK030",
+      "UK031",
+      "UK032",
+      "UK035",
+      "UK036",
+      "UK037",
+      "UK040",
+      "UK041",
+      "UK042",
+      "UK045",
+      "UK046",
+      "UK047",
+      "UK050",
+      "UK051",
+      "UK052",
+      "UK055",
+      "UK056",
+      "UK057",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q074",
+    "eligible_ids": [
+      "UK001",
+      "UK002",
+      "UK005",
+      "UK006",
+      "UK007",
+      "UK010",
+      "UK011",
+      "UK012",
+      "UK015",
+      "UK016",
+      "UK017",
+      "UK020",
+      "UK021",
+      "UK022",
+      "UK025",
+      "UK026",
+      "UK027",
+      "UK030",
+      "UK031",
+      "UK032",
+      "UK035",
+      "UK036",
+      "UK037",
+      "UK040",
+      "UK041",
+      "UK042",
+      "UK045",
+      "UK046",
+      "UK047",
+      "UK050",
+      "UK051",
+      "UK052",
+      "UK055",
+      "UK056",
+      "UK057",
+      "UK060"
+    ]
+  },
+  {
+    "query_id": "Q075",
+    "eligible_ids": []
+  },
+  {
+    "query_id": "Q076",
+    "eligible_ids": []
+  },
+  {
+    "query_id": "Q077",
+    "eligible_ids": []
+  },
+  {
+    "query_id": "Q078",
+    "eligible_ids": []
+  },
+  {
+    "query_id": "Q079",
+    "eligible_ids": [
+      "UK019"
+    ]
+  },
+  {
+    "query_id": "Q080",
+    "eligible_ids": [
+      "UK014"
+    ]
+  }
+]

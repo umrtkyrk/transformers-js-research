@@ -1,0 +1,602 @@
+[
+  {
+    "id": "UK001",
+    "office": "alpha",
+    "city": "Manchester",
+    "tenure": "rent",
+    "price_gbp": 1200,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A bright two-bedroom flat in Manchester, available to rent for GBP 1,200 per calendar month. The first-floor apartment has a balcony and a separate kitchen. There is no private garden and no allocated parking."
+  },
+  {
+    "id": "UK002",
+    "office": "alpha",
+    "city": "Manchester",
+    "tenure": "sale",
+    "price_gbp": 285000,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A detached three-bedroom house for sale in Manchester at GBP 285,000. The house stands on its own and includes a private rear garden, a garage and a driveway. It is offered for purchase, not for rent."
+  },
+  {
+    "id": "UK003",
+    "office": "alpha",
+    "city": "Manchester",
+    "tenure": "rent",
+    "price_gbp": 950,
+    "bedrooms": 2,
+    "active": false,
+    "text": "An inactive Manchester rental listing for a two-bedroom terraced house at GBP 950 per calendar month. It has a private garden and a small patio. This property is no longer available."
+  },
+  {
+    "id": "UK004",
+    "office": "beta",
+    "city": "Manchester",
+    "tenure": "rent",
+    "price_gbp": 1050,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A ground-floor two-bedroom flat in Manchester with its own private garden. Rent is GBP 1,050 per calendar month and one allocated parking space is included. This active listing belongs to the beta office."
+  },
+  {
+    "id": "UK005",
+    "office": "alpha",
+    "city": "Manchester",
+    "tenure": "rent",
+    "price_gbp": 1550,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A three-bedroom terraced house to rent in Manchester for GBP 1,550 per calendar month. Alongside the bedrooms there is a dedicated study for working from home. The house has a private garden and a patio."
+  },
+  {
+    "id": "UK006",
+    "office": "alpha",
+    "city": "Bristol",
+    "tenure": "rent",
+    "price_gbp": 1100,
+    "bedrooms": 1,
+    "active": true,
+    "text": "A compact one-bedroom flat to rent in Bristol at GBP 1,100 per calendar month. It has a balcony and an open-plan living room. There is no garden and no parking space."
+  },
+  {
+    "id": "UK007",
+    "office": "alpha",
+    "city": "Bristol",
+    "tenure": "sale",
+    "price_gbp": 325000,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom cottage for sale in Bristol with an asking price of GBP 325,000. It offers a private garden, a stone fireplace and a separate dining room. This is a sale listing rather than a monthly rental."
+  },
+  {
+    "id": "UK008",
+    "office": "alpha",
+    "city": "Bristol",
+    "tenure": "sale",
+    "price_gbp": 390000,
+    "bedrooms": 3,
+    "active": false,
+    "text": "An inactive sale listing in Bristol: a detached three-bedroom house priced at GBP 390,000. A private garden and garage were advertised. The property has already been withdrawn from the market."
+  },
+  {
+    "id": "UK009",
+    "office": "beta",
+    "city": "Bristol",
+    "tenure": "rent",
+    "price_gbp": 1250,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom terraced house to rent in Bristol for GBP 1,250 per calendar month. It has a private garden and a dining area. It has no allocated parking and is managed by the beta office."
+  },
+  {
+    "id": "UK010",
+    "office": "alpha",
+    "city": "Bristol",
+    "tenure": "rent",
+    "price_gbp": 1450,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom ground-floor flat to rent in Bristol at GBP 1,450 per calendar month. The apartment has a step-free entrance, a balcony and access to a shared courtyard. It has no private garden and no allocated parking."
+  },
+  {
+    "id": "UK011",
+    "office": "alpha",
+    "city": "Leeds",
+    "tenure": "rent",
+    "price_gbp": 950,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom terraced house available to rent in Leeds for GBP 950 per calendar month. It has a private garden and a separate kitchen. There is no garage."
+  },
+  {
+    "id": "UK012",
+    "office": "alpha",
+    "city": "Leeds",
+    "tenure": "sale",
+    "price_gbp": 350000,
+    "bedrooms": 4,
+    "active": true,
+    "text": "A detached four-bedroom house for sale in Leeds at GBP 350,000. The property includes a private garden, a garage, a driveway and a utility room. It is suitable for a buyer seeking four bedrooms."
+  },
+  {
+    "id": "UK013",
+    "office": "alpha",
+    "city": "Leeds",
+    "tenure": "rent",
+    "price_gbp": 650,
+    "bedrooms": 1,
+    "active": false,
+    "text": "An inactive Leeds listing for a one-bedroom flat at GBP 650 per calendar month. The flat has no garden. It has been let and is no longer available."
+  },
+  {
+    "id": "UK014",
+    "office": "beta",
+    "city": "Leeds",
+    "tenure": "rent",
+    "price_gbp": 1150,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A three-bedroom semi-detached house to rent in Leeds for GBP 1,150 per calendar month. A private garden and off-street parking are included. The beta office manages this available property."
+  },
+  {
+    "id": "UK015",
+    "office": "alpha",
+    "city": "Leeds",
+    "tenure": "sale",
+    "price_gbp": 175000,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom flat for sale in Leeds with an asking price of GBP 175,000. There is a lift serving the apartment and a balcony. The flat has no private garden."
+  },
+  {
+    "id": "UK016",
+    "office": "alpha",
+    "city": "London",
+    "tenure": "rent",
+    "price_gbp": 2400,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom flat to rent in London for GBP 2,400 per calendar month. The apartment has a balcony and lift access. There is no private garden and no allocated parking."
+  },
+  {
+    "id": "UK017",
+    "office": "alpha",
+    "city": "London",
+    "tenure": "sale",
+    "price_gbp": 700000,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A three-bedroom terraced house for sale in London at GBP 700,000. The house offers a private garden and a separate dining room. It is available to buy rather than to rent."
+  },
+  {
+    "id": "UK018",
+    "office": "alpha",
+    "city": "London",
+    "tenure": "rent",
+    "price_gbp": 1750,
+    "bedrooms": 2,
+    "active": false,
+    "text": "An inactive London rental advert for a two-bedroom flat with a private garden, formerly GBP 1,750 per calendar month. The flat has already been let. The advert must not be treated as an available property."
+  },
+  {
+    "id": "UK019",
+    "office": "beta",
+    "city": "London",
+    "tenure": "rent",
+    "price_gbp": 2100,
+    "bedrooms": 2,
+    "active": true,
+    "text": "An available two-bedroom flat in London with a private garden. The rent is GBP 2,100 per calendar month. This property is listed by the beta office."
+  },
+  {
+    "id": "UK020",
+    "office": "alpha",
+    "city": "London",
+    "tenure": "rent",
+    "price_gbp": 1650,
+    "bedrooms": 0,
+    "active": true,
+    "text": "A studio flat to rent in London for GBP 1,650 per calendar month. It has an open-plan sleeping and living space, with no separate bedroom. There is no garden and no parking."
+  },
+  {
+    "id": "UK021",
+    "office": "alpha",
+    "city": "Birmingham",
+    "tenure": "rent",
+    "price_gbp": 1100,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom semi-detached house to rent in Birmingham at GBP 1,100 per calendar month. The house has a private garden and a driveway for off-street parking. There is no garage."
+  },
+  {
+    "id": "UK022",
+    "office": "alpha",
+    "city": "Birmingham",
+    "tenure": "sale",
+    "price_gbp": 275000,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A detached three-bedroom house for sale in Birmingham for GBP 275,000. A private garden, a garage and a driveway are included. This is an active purchase opportunity."
+  },
+  {
+    "id": "UK023",
+    "office": "alpha",
+    "city": "Birmingham",
+    "tenure": "rent",
+    "price_gbp": 800,
+    "bedrooms": 2,
+    "active": false,
+    "text": "An inactive two-bedroom flat rental in Birmingham, formerly GBP 800 per calendar month. It has a balcony but no private garden. The property is no longer on offer."
+  },
+  {
+    "id": "UK024",
+    "office": "beta",
+    "city": "Birmingham",
+    "tenure": "sale",
+    "price_gbp": 190000,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom terraced house for sale in Birmingham at GBP 190,000. It includes a private garden and a separate kitchen. The active sale is handled by the beta office."
+  },
+  {
+    "id": "UK025",
+    "office": "alpha",
+    "city": "Birmingham",
+    "tenure": "rent",
+    "price_gbp": 1000,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom flat to rent in Birmingham for GBP 1,000 per calendar month. Lift access is provided. The apartment has no garden and no balcony."
+  },
+  {
+    "id": "UK026",
+    "office": "alpha",
+    "city": "Nottingham",
+    "tenure": "rent",
+    "price_gbp": 900,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom cottage to rent in Nottingham for GBP 900 per calendar month. It has a private garden, a small patio and a separate kitchen. This cottage is currently available."
+  },
+  {
+    "id": "UK027",
+    "office": "alpha",
+    "city": "Nottingham",
+    "tenure": "sale",
+    "price_gbp": 240000,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A three-bedroom semi-detached house for sale in Nottingham at GBP 240,000. It has a driveway for off-street parking, but no garden and no garage. It is offered to buyers rather than tenants."
+  },
+  {
+    "id": "UK028",
+    "office": "alpha",
+    "city": "Nottingham",
+    "tenure": "rent",
+    "price_gbp": 700,
+    "bedrooms": 2,
+    "active": false,
+    "text": "An inactive two-bedroom cottage rental in Nottingham, previously GBP 700 per calendar month. A private garden was included. The cottage has already been let."
+  },
+  {
+    "id": "UK029",
+    "office": "beta",
+    "city": "Nottingham",
+    "tenure": "rent",
+    "price_gbp": 850,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom flat to rent in Nottingham at GBP 850 per calendar month. The apartment has a balcony but no garden. It is an active beta office listing."
+  },
+  {
+    "id": "UK030",
+    "office": "alpha",
+    "city": "Nottingham",
+    "tenure": "rent",
+    "price_gbp": 1150,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A three-bedroom terraced house available to rent in Nottingham for GBP 1,150 per calendar month. It has a private garden. Pets are permitted under the fictional tenancy terms."
+  },
+  {
+    "id": "UK031",
+    "office": "alpha",
+    "city": "Newcastle",
+    "tenure": "rent",
+    "price_gbp": 850,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom flat available to rent in Newcastle at GBP 850 per calendar month. It offers lift access and a balcony. There is no private garden."
+  },
+  {
+    "id": "UK032",
+    "office": "alpha",
+    "city": "Newcastle",
+    "tenure": "sale",
+    "price_gbp": 210000,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A three-bedroom terraced house for sale in Newcastle at GBP 210,000. There is a private garden and a separate dining room. It is an active sale listing."
+  },
+  {
+    "id": "UK033",
+    "office": "alpha",
+    "city": "Newcastle",
+    "tenure": "rent",
+    "price_gbp": 1000,
+    "bedrooms": 3,
+    "active": false,
+    "text": "An inactive Newcastle listing for a detached three-bedroom rental house at GBP 1,000 per calendar month. A private garden and garage were advertised. The house is no longer available."
+  },
+  {
+    "id": "UK034",
+    "office": "beta",
+    "city": "Newcastle",
+    "tenure": "rent",
+    "price_gbp": 900,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom cottage to rent in Newcastle for GBP 900 per calendar month. It includes a private garden and a stone fireplace. This available cottage belongs to the beta office."
+  },
+  {
+    "id": "UK035",
+    "office": "alpha",
+    "city": "Newcastle",
+    "tenure": "rent",
+    "price_gbp": 1100,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A three-bedroom semi-detached house to rent in Newcastle for GBP 1,100 per calendar month. It has a private garden and a driveway. There is no garage."
+  },
+  {
+    "id": "UK036",
+    "office": "alpha",
+    "city": "Liverpool",
+    "tenure": "rent",
+    "price_gbp": 900,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom terraced house to rent in Liverpool at GBP 900 per calendar month. It has a private garden and a separate kitchen. The house is available now."
+  },
+  {
+    "id": "UK037",
+    "office": "alpha",
+    "city": "Liverpool",
+    "tenure": "sale",
+    "price_gbp": 160000,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom flat for sale in Liverpool at GBP 160,000. The apartment has a balcony and lift access. There is no private garden."
+  },
+  {
+    "id": "UK038",
+    "office": "alpha",
+    "city": "Liverpool",
+    "tenure": "rent",
+    "price_gbp": 650,
+    "bedrooms": 2,
+    "active": false,
+    "text": "An inactive Liverpool rental listing for a two-bedroom terraced house at GBP 650 per calendar month. It had a private garden. The house has already been let."
+  },
+  {
+    "id": "UK039",
+    "office": "beta",
+    "city": "Liverpool",
+    "tenure": "rent",
+    "price_gbp": 800,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom terraced house to rent in Liverpool for GBP 800 per calendar month. There is a private garden and a dining area. The listing is active in the beta office."
+  },
+  {
+    "id": "UK040",
+    "office": "alpha",
+    "city": "Liverpool",
+    "tenure": "rent",
+    "price_gbp": 1300,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A detached three-bedroom house to rent in Liverpool at GBP 1,300 per calendar month. This stand-alone house includes a private garden, a garage and a driveway. It is currently available."
+  },
+  {
+    "id": "UK041",
+    "office": "alpha",
+    "city": "Brighton",
+    "tenure": "rent",
+    "price_gbp": 1800,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom flat to rent in Brighton at GBP 1,800 per calendar month. It has a balcony and a bright living room. There is no private garden."
+  },
+  {
+    "id": "UK042",
+    "office": "alpha",
+    "city": "Brighton",
+    "tenure": "sale",
+    "price_gbp": 420000,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom cottage for sale in Brighton at GBP 420,000. It offers a private garden, a patio and a stone fireplace. The cottage is available to buy."
+  },
+  {
+    "id": "UK043",
+    "office": "alpha",
+    "city": "Brighton",
+    "tenure": "rent",
+    "price_gbp": 1400,
+    "bedrooms": 2,
+    "active": false,
+    "text": "An inactive Brighton rental advert for a two-bedroom flat with a private garden at GBP 1,400 per calendar month. The property has been let. It must not appear as an available result."
+  },
+  {
+    "id": "UK044",
+    "office": "beta",
+    "city": "Brighton",
+    "tenure": "rent",
+    "price_gbp": 1200,
+    "bedrooms": 1,
+    "active": true,
+    "text": "A one-bedroom flat available to rent in Brighton for GBP 1,200 per calendar month. It has no garden and no balcony. The property is managed by the beta office."
+  },
+  {
+    "id": "UK045",
+    "office": "alpha",
+    "city": "Brighton",
+    "tenure": "rent",
+    "price_gbp": 1900,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom terraced house to rent in Brighton for GBP 1,900 per calendar month. It has a private garden for outdoor seating. There is no allocated parking and no garage."
+  },
+  {
+    "id": "UK046",
+    "office": "alpha",
+    "city": "Sheffield",
+    "tenure": "rent",
+    "price_gbp": 800,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom ground-floor flat to rent in Sheffield at GBP 800 per calendar month. It has a step-free entrance, lift access to the shared facilities and an allocated parking space. There is no garden and no balcony."
+  },
+  {
+    "id": "UK047",
+    "office": "alpha",
+    "city": "Sheffield",
+    "tenure": "sale",
+    "price_gbp": 230000,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A three-bedroom semi-detached house for sale in Sheffield at GBP 230,000. It has a private garden, a garage and a driveway. This property is actively offered for purchase."
+  },
+  {
+    "id": "UK048",
+    "office": "alpha",
+    "city": "Sheffield",
+    "tenure": "rent",
+    "price_gbp": 600,
+    "bedrooms": 2,
+    "active": false,
+    "text": "An inactive Sheffield rental listing: a two-bedroom terraced house at GBP 600 per calendar month. It has a private garden. The house is no longer available."
+  },
+  {
+    "id": "UK049",
+    "office": "beta",
+    "city": "Sheffield",
+    "tenure": "rent",
+    "price_gbp": 1200,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A detached three-bedroom house to rent in Sheffield for GBP 1,200 per calendar month. A private garden and garage are included. The active listing is handled by the beta office."
+  },
+  {
+    "id": "UK050",
+    "office": "alpha",
+    "city": "Sheffield",
+    "tenure": "rent",
+    "price_gbp": 950,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom terraced house to rent in Sheffield at GBP 950 per calendar month. It has a private garden and pets are permitted under the fictional tenancy terms. There is no garage."
+  },
+  {
+    "id": "UK051",
+    "office": "alpha",
+    "city": "Cambridge",
+    "tenure": "rent",
+    "price_gbp": 1700,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom flat to rent in Cambridge for GBP 1,700 per calendar month. There is a balcony and lift access to the apartment. It has no private garden."
+  },
+  {
+    "id": "UK052",
+    "office": "alpha",
+    "city": "Cambridge",
+    "tenure": "sale",
+    "price_gbp": 650000,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A detached three-bedroom house for sale in Cambridge at GBP 650,000. It includes a private garden, a garage and a driveway. The house is offered for purchase."
+  },
+  {
+    "id": "UK053",
+    "office": "alpha",
+    "city": "Cambridge",
+    "tenure": "rent",
+    "price_gbp": 1200,
+    "bedrooms": 2,
+    "active": false,
+    "text": "An inactive Cambridge advert for a two-bedroom cottage to rent at GBP 1,200 per calendar month. It has a private garden. The cottage has already been let."
+  },
+  {
+    "id": "UK054",
+    "office": "beta",
+    "city": "Cambridge",
+    "tenure": "rent",
+    "price_gbp": 1450,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom cottage available to rent in Cambridge for GBP 1,450 per calendar month. It has a private garden and a separate kitchen. This is a beta office listing."
+  },
+  {
+    "id": "UK055",
+    "office": "alpha",
+    "city": "Cambridge",
+    "tenure": "rent",
+    "price_gbp": 1850,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom terraced house to rent in Cambridge at GBP 1,850 per calendar month. It has a private garden and a built-in study nook for working from home. The house is currently available."
+  },
+  {
+    "id": "UK056",
+    "office": "alpha",
+    "city": "Oxford",
+    "tenure": "rent",
+    "price_gbp": 1600,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom cottage to rent in Oxford for GBP 1,600 per calendar month. It offers a private garden and a stone fireplace. The cottage is actively available."
+  },
+  {
+    "id": "UK057",
+    "office": "alpha",
+    "city": "Oxford",
+    "tenure": "sale",
+    "price_gbp": 380000,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom first-floor flat for sale in Oxford at GBP 380,000. Lift access is provided. It has no private garden and no balcony."
+  },
+  {
+    "id": "UK058",
+    "office": "alpha",
+    "city": "Oxford",
+    "tenure": "sale",
+    "price_gbp": 550000,
+    "bedrooms": 3,
+    "active": false,
+    "text": "An inactive Oxford sale listing for a detached three-bedroom house at GBP 550,000. It includes a private garden and garage. The property has been withdrawn."
+  },
+  {
+    "id": "UK059",
+    "office": "beta",
+    "city": "Oxford",
+    "tenure": "rent",
+    "price_gbp": 1500,
+    "bedrooms": 2,
+    "active": true,
+    "text": "A two-bedroom flat to rent in Oxford at GBP 1,500 per calendar month. The flat has a private garden. This available property is listed by the beta office."
+  },
+  {
+    "id": "UK060",
+    "office": "alpha",
+    "city": "Oxford",
+    "tenure": "rent",
+    "price_gbp": 2100,
+    "bedrooms": 3,
+    "active": true,
+    "text": "A three-bedroom terraced house to rent in Oxford for GBP 2,100 per calendar month. It has a private garden and a driveway for off-street parking. There is no garage."
+  }
+]

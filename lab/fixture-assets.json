@@ -1,0 +1,140 @@
+[
+  {
+    "path": "audio/A001-noisy.wav",
+    "bytes": 117004,
+    "sha256": "80065abcd4b4be5dc567947fe2f7d0e4f269a1b016d6d12d9bf50bb4749b637c",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A001-noisy.wav"
+  },
+  {
+    "path": "audio/A001.wav",
+    "bytes": 117006,
+    "sha256": "cf66d7cddbf39b7e650ea31b0d883e4e050aaa72b0d5c5a8bc3c572c87bcd273",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A001.wav"
+  },
+  {
+    "path": "audio/A002-noisy.wav",
+    "bytes": 144684,
+    "sha256": "501b67ed0c161ce499b8bae32cb73f1257fb3061b965f1e0c0386b8d3f0e9985",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A002-noisy.wav"
+  },
+  {
+    "path": "audio/A002.wav",
+    "bytes": 144686,
+    "sha256": "18749cf556b8b6583da5a6f2815491eb62b97b9f8b8378c932d5c77a942ec31c",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A002.wav"
+  },
+  {
+    "path": "audio/A003-noisy.wav",
+    "bytes": 118924,
+    "sha256": "81d4a6715a78dd78c2e80ad621b77b17aba165abd067d829fd0f3f0af66d756f",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A003-noisy.wav"
+  },
+  {
+    "path": "audio/A003.wav",
+    "bytes": 118926,
+    "sha256": "2fc8c29493db43e9e07a387022d18ec132c304d926ce779c6834f5a799610207",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A003.wav"
+  },
+  {
+    "path": "audio/A004-noisy.wav",
+    "bytes": 122764,
+    "sha256": "c028a92fce4583654452db78a101aa53ad97ed586349efb8739b89e8590f8e00",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A004-noisy.wav"
+  },
+  {
+    "path": "audio/A004.wav",
+    "bytes": 122766,
+    "sha256": "f554b92e5c51269d621bef8dd70dbd20ef42eef365962748315d843212b218ae",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A004.wav"
+  },
+  {
+    "path": "audio/A005-noisy.wav",
+    "bytes": 118604,
+    "sha256": "8a42760a2e116db96e9a1a023e616b015d1c59f6cb26d42367b68b34fe959c0b",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A005-noisy.wav"
+  },
+  {
+    "path": "audio/A005.wav",
+    "bytes": 118606,
+    "sha256": "3f686bd120bf5f49697ed53725cdf0e3c0552b2ccba27d382ec9de7ec470984d",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A005.wav"
+  },
+  {
+    "path": "audio/A006-noisy.wav",
+    "bytes": 122124,
+    "sha256": "0b95a65aa6fe306c4184734ed6b4eb58903d761f123dc8c36216c052b0b9db12",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A006-noisy.wav"
+  },
+  {
+    "path": "audio/A006.wav",
+    "bytes": 122126,
+    "sha256": "fd3e398cdc5439dfe94edf4c548488b01d189695bbda034e84e0033470eab651",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A006.wav"
+  },
+  {
+    "path": "audio/A007-noisy.wav",
+    "bytes": 111884,
+    "sha256": "a48ab7dcd1f43efece487641b48ab8be01f46b194aeed34a2607a15a1497396d",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A007-noisy.wav"
+  },
+  {
+    "path": "audio/A007.wav",
+    "bytes": 111886,
+    "sha256": "148f8628c86793aefce586a98ef091095c9390dc031fa1bda14b8bb968eb8410",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A007.wav"
+  },
+  {
+    "path": "audio/A008-noisy.wav",
+    "bytes": 127724,
+    "sha256": "13bcfb7e695c4a1b3137e1681692ad711ebacb4e82557267936ecec0f72421c5",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A008-noisy.wav"
+  },
+  {
+    "path": "audio/A008.wav",
+    "bytes": 127726,
+    "sha256": "05cdd1f37e4cb3f3b75b10243a9e9b57c2199cde892397b99db2c80fbadf0aff",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A008.wav"
+  },
+  {
+    "path": "audio/A009-noisy.wav",
+    "bytes": 125644,
+    "sha256": "d96f04d713a8e5f253066cdeb1452cf29ff6cdc9abfbbf61ce59a91d4279bce9",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A009-noisy.wav"
+  },
+  {
+    "path": "audio/A009.wav",
+    "bytes": 125646,
+    "sha256": "f97e0d3c854c71f6d058d72b6cc36834a4bb9f4020fa41f5e4ee2bb149e4ff92",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A009.wav"
+  },
+  {
+    "path": "audio/A010-noisy.wav",
+    "bytes": 121804,
+    "sha256": "4c9326b08e86cd485e7571a43b85ff896bfe632e89efca7f9abb688573c3baaf",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A010-noisy.wav"
+  },
+  {
+    "path": "audio/A010.wav",
+    "bytes": 121806,
+    "sha256": "90ff3546277d4500001d7654245c4b35629a06f4048acc50c5853e3dd4a97680",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/A010.wav"
+  },
+  {
+    "path": "audio/long-joined.wav",
+    "bytes": 1230764,
+    "sha256": "c1fc574aa325c47af6e10910fe3a7cd925d6de2f639f8671e2e9156a4031e0ad",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/long-joined.wav"
+  },
+  {
+    "path": "audio/silence-1.wav",
+    "bytes": 32044,
+    "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/silence-1.wav"
+  },
+  {
+    "path": "audio/silence-3.wav",
+    "bytes": 96044,
+    "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+    "url": "https://transformers-js-research.vercel.app/files/validation/data/audio/silence-3.wav"
+  }
+]

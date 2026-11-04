@@ -1,0 +1,111 @@
+{
+  "version": "1.0.0",
+  "source": "Windows System.Speech; Microsoft Zira Desktop; en-US synthetic voice reading fictional England property scenarios. Not human or British-accent validation.",
+  "samplingRate": 16000,
+  "cases": [
+    {
+      "id": "A001",
+      "text": "The viewing in London is on Friday at ten in the morning.",
+      "required_phrases": [
+        "london",
+        "friday",
+        "ten"
+      ],
+      "wav": "data/audio/A001.wav"
+    },
+    {
+      "id": "A002",
+      "text": "The monthly rent in Manchester is one thousand two hundred pounds.",
+      "required_phrases": [
+        "manchester",
+        "one thousand two hundred"
+      ],
+      "wav": "data/audio/A002.wav"
+    },
+    {
+      "id": "A003",
+      "text": "The Bristol flat has two bedrooms and a private garden.",
+      "required_phrases": [
+        "bristol",
+        "two bedrooms",
+        "garden"
+      ],
+      "wav": "data/audio/A003.wav"
+    },
+    {
+      "id": "A004",
+      "text": "The house in Leeds has no garden and no parking space.",
+      "required_phrases": [
+        "leeds",
+        "no garden",
+        "no parking"
+      ],
+      "wav": "data/audio/A004.wav"
+    },
+    {
+      "id": "A005",
+      "text": "Please call the Nottingham office before arranging a viewing.",
+      "required_phrases": [
+        "nottingham",
+        "office"
+      ],
+      "wav": "data/audio/A005.wav"
+    },
+    {
+      "id": "A006",
+      "text": "The Oxford cottage is available from the first of November.",
+      "required_phrases": [
+        "oxford",
+        "first",
+        "november"
+      ],
+      "wav": "data/audio/A006.wav"
+    },
+    {
+      "id": "A007",
+      "text": "The buyer in Cambridge needs a step free entrance.",
+      "required_phrases": [
+        "cambridge",
+        "step free"
+      ],
+      "wav": "data/audio/A007.wav"
+    },
+    {
+      "id": "A008",
+      "text": "The Brighton apartment costs three hundred thousand pounds.",
+      "required_phrases": [
+        "brighton",
+        "three hundred thousand"
+      ],
+      "wav": "data/audio/A008.wav"
+    },
+    {
+      "id": "A009",
+      "text": "Please cancel the viewing in Sheffield on Monday afternoon.",
+      "required_phrases": [
+        "cancel",
+        "sheffield",
+        "monday"
+      ],
+      "wav": "data/audio/A009.wav"
+    },
+    {
+      "id": "A010",
+      "text": "The Liverpool tenant reported a broken boiler this morning.",
+      "required_phrases": [
+        "liverpool",
+        "broken boiler"
+      ],
+      "wav": "data/audio/A010.wav"
+    }
+  ],
+  "noise": {
+    "snrDb": 15,
+    "seed": 7316
+  },
+  "notes": [
+    "Labels are declared before inference.",
+    "WER normalization removes punctuation and case only; number words are not rewritten to digits.",
+    "Clean and noisy clips share one synthetic voice; results are not a population-quality estimate."
+  ]
+}

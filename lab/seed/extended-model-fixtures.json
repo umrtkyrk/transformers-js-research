@@ -1,0 +1,297 @@
+{
+  "createdAt": "2026-10-26T12:39:23.146228+00:00",
+  "packageVersion": "4.3.2",
+  "models": [
+    {
+      "key": "M3",
+      "id": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "dtype": "q8",
+      "task": "automatic-speech-recognition"
+    },
+    {
+      "key": "M4",
+      "id": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "dtype": "fp32",
+      "task": "text-to-speech"
+    },
+    {
+      "key": "M5",
+      "id": "onnx-community/Qwen2.5-0.5B-Instruct",
+      "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+      "dtype": "q4",
+      "task": "text-generation"
+    }
+  ],
+  "assets": [
+    {
+      "modelKey": "M3",
+      "repository": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "filename": "onnx/encoder_model_quantized.onnx",
+      "url": "https://huggingface.co/Xenova/whisper-tiny/resolve/5332fcc35e32a33b86612b9a57a89be7906102b1/onnx/encoder_model_quantized.onnx",
+      "target": ".cache/models/Xenova/whisper-tiny/onnx/encoder_model_quantized.onnx",
+      "bytes": 10124910,
+      "sha256": "fd9d995b9dcb0520f0dbf6cf68651af639fc385f594d9d876e69ca2802dc438e"
+    },
+    {
+      "modelKey": "M3",
+      "repository": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "filename": "onnx/decoder_model_merged_quantized.onnx",
+      "url": "https://huggingface.co/Xenova/whisper-tiny/resolve/5332fcc35e32a33b86612b9a57a89be7906102b1/onnx/decoder_model_merged_quantized.onnx",
+      "target": ".cache/models/Xenova/whisper-tiny/onnx/decoder_model_merged_quantized.onnx",
+      "bytes": 30727765,
+      "sha256": "6c0c125986b007d2e3734bec84c18bda0152071b90b87fadac6d7764499927a0"
+    },
+    {
+      "modelKey": "M3",
+      "repository": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "filename": "config.json",
+      "url": "https://huggingface.co/Xenova/whisper-tiny/resolve/5332fcc35e32a33b86612b9a57a89be7906102b1/config.json",
+      "target": ".cache/models/Xenova/whisper-tiny/config.json",
+      "bytes": 2248
+    },
+    {
+      "modelKey": "M3",
+      "repository": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "filename": "generation_config.json",
+      "url": "https://huggingface.co/Xenova/whisper-tiny/resolve/5332fcc35e32a33b86612b9a57a89be7906102b1/generation_config.json",
+      "target": ".cache/models/Xenova/whisper-tiny/generation_config.json",
+      "bytes": 3716
+    },
+    {
+      "modelKey": "M3",
+      "repository": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "filename": "preprocessor_config.json",
+      "url": "https://huggingface.co/Xenova/whisper-tiny/resolve/5332fcc35e32a33b86612b9a57a89be7906102b1/preprocessor_config.json",
+      "target": ".cache/models/Xenova/whisper-tiny/preprocessor_config.json",
+      "bytes": 339
+    },
+    {
+      "modelKey": "M3",
+      "repository": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "filename": "tokenizer.json",
+      "url": "https://huggingface.co/Xenova/whisper-tiny/resolve/5332fcc35e32a33b86612b9a57a89be7906102b1/tokenizer.json",
+      "target": ".cache/models/Xenova/whisper-tiny/tokenizer.json",
+      "bytes": 2480466
+    },
+    {
+      "modelKey": "M3",
+      "repository": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "filename": "tokenizer_config.json",
+      "url": "https://huggingface.co/Xenova/whisper-tiny/resolve/5332fcc35e32a33b86612b9a57a89be7906102b1/tokenizer_config.json",
+      "target": ".cache/models/Xenova/whisper-tiny/tokenizer_config.json",
+      "bytes": 282683
+    },
+    {
+      "modelKey": "M3",
+      "repository": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "filename": "special_tokens_map.json",
+      "url": "https://huggingface.co/Xenova/whisper-tiny/resolve/5332fcc35e32a33b86612b9a57a89be7906102b1/special_tokens_map.json",
+      "target": ".cache/models/Xenova/whisper-tiny/special_tokens_map.json",
+      "bytes": 2194
+    },
+    {
+      "modelKey": "M3",
+      "repository": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "filename": "added_tokens.json",
+      "url": "https://huggingface.co/Xenova/whisper-tiny/resolve/5332fcc35e32a33b86612b9a57a89be7906102b1/added_tokens.json",
+      "target": ".cache/models/Xenova/whisper-tiny/added_tokens.json",
+      "bytes": 2082
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "filename": "onnx/encoder_model.onnx",
+      "url": "https://huggingface.co/Xenova/speecht5_tts/resolve/1723781b8ce2d02f0400c8337be04ae8ee3d6d56/onnx/encoder_model.onnx",
+      "target": ".cache/models/Xenova/speecht5_tts/onnx/encoder_model.onnx",
+      "bytes": 342803468,
+      "sha256": "a676c62303a4d29ea3ba026a698de4877ee0b0be60350c9f283eb4c5369fad08"
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "filename": "onnx/decoder_model_merged.onnx",
+      "url": "https://huggingface.co/Xenova/speecht5_tts/resolve/1723781b8ce2d02f0400c8337be04ae8ee3d6d56/onnx/decoder_model_merged.onnx",
+      "target": ".cache/models/Xenova/speecht5_tts/onnx/decoder_model_merged.onnx",
+      "bytes": 244486683,
+      "sha256": "c055656c559c5d17055a87d5c7ec544326b8852d372f171ce27c52945d836465"
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "filename": "config.json",
+      "url": "https://huggingface.co/Xenova/speecht5_tts/resolve/1723781b8ce2d02f0400c8337be04ae8ee3d6d56/config.json",
+      "target": ".cache/models/Xenova/speecht5_tts/config.json",
+      "bytes": 2129
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "filename": "generation_config.json",
+      "url": "https://huggingface.co/Xenova/speecht5_tts/resolve/1723781b8ce2d02f0400c8337be04ae8ee3d6d56/generation_config.json",
+      "target": ".cache/models/Xenova/speecht5_tts/generation_config.json",
+      "bytes": 185
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "filename": "preprocessor_config.json",
+      "url": "https://huggingface.co/Xenova/speecht5_tts/resolve/1723781b8ce2d02f0400c8337be04ae8ee3d6d56/preprocessor_config.json",
+      "target": ".cache/models/Xenova/speecht5_tts/preprocessor_config.json",
+      "bytes": 458
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "filename": "tokenizer.json",
+      "url": "https://huggingface.co/Xenova/speecht5_tts/resolve/1723781b8ce2d02f0400c8337be04ae8ee3d6d56/tokenizer.json",
+      "target": ".cache/models/Xenova/speecht5_tts/tokenizer.json",
+      "bytes": 5269
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "filename": "tokenizer_config.json",
+      "url": "https://huggingface.co/Xenova/speecht5_tts/resolve/1723781b8ce2d02f0400c8337be04ae8ee3d6d56/tokenizer_config.json",
+      "target": ".cache/models/Xenova/speecht5_tts/tokenizer_config.json",
+      "bytes": 324
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "filename": "special_tokens_map.json",
+      "url": "https://huggingface.co/Xenova/speecht5_tts/resolve/1723781b8ce2d02f0400c8337be04ae8ee3d6d56/special_tokens_map.json",
+      "target": ".cache/models/Xenova/speecht5_tts/special_tokens_map.json",
+      "bytes": 234
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "filename": "added_tokens.json",
+      "url": "https://huggingface.co/Xenova/speecht5_tts/resolve/1723781b8ce2d02f0400c8337be04ae8ee3d6d56/added_tokens.json",
+      "target": ".cache/models/Xenova/speecht5_tts/added_tokens.json",
+      "bytes": 40
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_hifigan",
+      "revision": "cf980c3610d7b7f20919960031066ef7905737bd",
+      "filename": "onnx/model.onnx",
+      "url": "https://huggingface.co/Xenova/speecht5_hifigan/resolve/cf980c3610d7b7f20919960031066ef7905737bd/onnx/model.onnx",
+      "target": ".cache/models/Xenova/speecht5_hifigan/onnx/model.onnx",
+      "bytes": 55432026,
+      "sha256": "26408d9b8b3e83e66a3ef614a5621b84cacdcabd81b3a6a2fa984eb788566e6c"
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/speecht5_hifigan",
+      "revision": "cf980c3610d7b7f20919960031066ef7905737bd",
+      "filename": "config.json",
+      "url": "https://huggingface.co/Xenova/speecht5_hifigan/resolve/cf980c3610d7b7f20919960031066ef7905737bd/config.json",
+      "target": ".cache/models/Xenova/speecht5_hifigan/config.json",
+      "bytes": 636
+    },
+    {
+      "modelKey": "M4",
+      "repository": "Xenova/transformers.js-docs",
+      "revision": "542437c29cc5273cfd29e25c77696f2b349badd7",
+      "filename": "speaker_embeddings.bin",
+      "url": "https://huggingface.co/datasets/Xenova/transformers.js-docs/resolve/542437c29cc5273cfd29e25c77696f2b349badd7/speaker_embeddings.bin",
+      "target": ".cache/aux/speaker_embeddings.bin",
+      "bytes": 2048
+    },
+    {
+      "modelKey": "M5",
+      "repository": "onnx-community/Qwen2.5-0.5B-Instruct",
+      "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+      "filename": "onnx/model_q4.onnx",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/onnx/model_q4.onnx",
+      "target": ".cache/models/onnx-community/Qwen2.5-0.5B-Instruct/onnx/model_q4.onnx",
+      "bytes": 786156820,
+      "sha256": "09235a3b1c135cd04ef570e5053b5c079e028078a2cc5f76ba6a251e91bf3296"
+    },
+    {
+      "modelKey": "M5",
+      "repository": "onnx-community/Qwen2.5-0.5B-Instruct",
+      "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+      "filename": "config.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/config.json",
+      "target": ".cache/models/onnx-community/Qwen2.5-0.5B-Instruct/config.json",
+      "bytes": 678
+    },
+    {
+      "modelKey": "M5",
+      "repository": "onnx-community/Qwen2.5-0.5B-Instruct",
+      "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+      "filename": "generation_config.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/generation_config.json",
+      "target": ".cache/models/onnx-community/Qwen2.5-0.5B-Instruct/generation_config.json",
+      "bytes": 242
+    },
+    {
+      "modelKey": "M5",
+      "repository": "onnx-community/Qwen2.5-0.5B-Instruct",
+      "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+      "filename": "tokenizer.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/tokenizer.json",
+      "target": ".cache/models/onnx-community/Qwen2.5-0.5B-Instruct/tokenizer.json",
+      "bytes": 7031673
+    },
+    {
+      "modelKey": "M5",
+      "repository": "onnx-community/Qwen2.5-0.5B-Instruct",
+      "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+      "filename": "tokenizer_config.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/tokenizer_config.json",
+      "target": ".cache/models/onnx-community/Qwen2.5-0.5B-Instruct/tokenizer_config.json",
+      "bytes": 7849
+    },
+    {
+      "modelKey": "M5",
+      "repository": "onnx-community/Qwen2.5-0.5B-Instruct",
+      "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+      "filename": "special_tokens_map.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/special_tokens_map.json",
+      "target": ".cache/models/onnx-community/Qwen2.5-0.5B-Instruct/special_tokens_map.json",
+      "bytes": 613
+    },
+    {
+      "modelKey": "M5",
+      "repository": "onnx-community/Qwen2.5-0.5B-Instruct",
+      "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+      "filename": "added_tokens.json",
+      "url": "https://huggingface.co/onnx-community/Qwen2.5-0.5B-Instruct/resolve/22942cb7d7ba4cc81bb4673549ca4d4614469b5e/added_tokens.json",
+      "target": ".cache/models/onnx-community/Qwen2.5-0.5B-Instruct/added_tokens.json",
+      "bytes": 605
+    }
+  ],
+  "vocoder": {
+    "id": "Xenova/speecht5_hifigan",
+    "revision": "cf980c3610d7b7f20919960031066ef7905737bd",
+    "dtype": "fp32"
+  },
+  "speakerEmbedding": {
+    "target": ".cache/aux/speaker_embeddings.bin",
+    "redistribute": false,
+    "note": "Public example embedding, used locally; separate license metadata was not confirmed."
+  }
+}

@@ -1,0 +1,7 @@
+{
+  "nodeExecutable": "C:/Program Files/nodejs/node.exe",
+  "npmCli": "C:/Program Files/nodejs/node_modules/npm/bin/npm-cli.js",
+  "playwrightRoot": "C:/Tools/node_modules/playwright",
+  "edgePath": "C:/Program Files (x86)/Microsoft/Edge/Application/msedge.exe",
+  "vercelCli": "C:/Tools/node_modules/vercel/dist/vc.js"
+}

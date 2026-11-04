@@ -1,0 +1,67 @@
+{
+  "createdAt": "2026-10-25T22:34:22.078766+00:00",
+  "packageVersion": "4.3.2",
+  "models": [
+    {
+      "key": "M1",
+      "id": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+      "dtype": "q8",
+      "task": "feature-extraction",
+      "files": [
+        {
+          "path": "onnx/model_quantized.onnx",
+          "bytes": 118308126,
+          "sha256": "66fc00f5f29afcaff34092e1bdd20008ca3918265a82fb9695a551e510cc4ebc"
+        },
+        {
+          "path": "config.json",
+          "bytes": 673
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 17082913
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 496
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 280
+        }
+      ],
+      "expectedDimensions": 384
+    },
+    {
+      "key": "M2",
+      "id": "Xenova/distilbert-base-uncased-finetuned-sst-2-english",
+      "revision": "0b6928efcb76139cae2c6881d49cda67fe119f42",
+      "dtype": "q8",
+      "task": "text-classification",
+      "files": [
+        {
+          "path": "onnx/model_quantized.onnx",
+          "bytes": 67581197,
+          "sha256": "79b45c7fd8c2673aa53615aba07caeb2de798f63a95a2393a365982429c94f7f"
+        },
+        {
+          "path": "config.json",
+          "bytes": 735
+        },
+        {
+          "path": "tokenizer.json",
+          "bytes": 711396
+        },
+        {
+          "path": "tokenizer_config.json",
+          "bytes": 372
+        },
+        {
+          "path": "special_tokens_map.json",
+          "bytes": 125
+        }
+      ]
+    }
+  ]
+}

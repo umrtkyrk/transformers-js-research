@@ -1,0 +1,1417 @@
+[
+  {
+    "id": "Q001",
+    "split": "development",
+    "category": "paraphrase",
+    "query": "A bright two-bedroom apartment with a balcony in Manchester, up to GBP 1,300 a month.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Manchester",
+      "tenure": "rent",
+      "max_price_gbp": 1300,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK001"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q002",
+    "split": "development",
+    "category": "paraphrase",
+    "query": "I want to buy a two-bedroom Bristol cottage with its own garden for no more than GBP 330,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Bristol",
+      "tenure": "sale",
+      "max_price_gbp": 330000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK007"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q003",
+    "split": "development",
+    "category": "paraphrase",
+    "query": "A two-bedroom terraced rental in Leeds with private outdoor space, at most GBP 1,000 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Leeds",
+      "tenure": "rent",
+      "max_price_gbp": 1000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK011"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q004",
+    "split": "development",
+    "category": "paraphrase",
+    "query": "A London two-bed apartment with a lift and balcony, to rent below GBP 2,500 a month.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "London",
+      "tenure": "rent",
+      "max_price_gbp": 2500,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK016"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q005",
+    "split": "development",
+    "category": "paraphrase",
+    "query": "A two-bedroom semi in Birmingham with a garden and space to park on the drive, up to GBP 1,200 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Birmingham",
+      "tenure": "rent",
+      "max_price_gbp": 1200,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK021"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q006",
+    "split": "development",
+    "category": "location",
+    "query": "Show me the four-bedroom detached house for sale in Leeds, with a garage and garden.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Leeds",
+      "tenure": "sale",
+      "max_price_gbp": 360000,
+      "min_bedrooms": 4
+    },
+    "relevant_ids": [
+      "UK012"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q007",
+    "split": "development",
+    "category": "location",
+    "query": "A three-bedroom terraced house to buy in London with a private garden, budget GBP 750,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "London",
+      "tenure": "sale",
+      "max_price_gbp": 750000,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK017"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q008",
+    "split": "development",
+    "category": "location",
+    "query": "Find a two-bedroom ground-floor flat to rent in Bristol for up to GBP 1,500 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Bristol",
+      "tenure": "rent",
+      "max_price_gbp": 1500,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK010"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q009",
+    "split": "development",
+    "category": "location",
+    "query": "I am buying in Manchester: a detached three-bedroom house with a garden and garage under GBP 300,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Manchester",
+      "tenure": "sale",
+      "max_price_gbp": 300000,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK002"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q010",
+    "split": "development",
+    "category": "negative_challenge",
+    "query": "A two-bedroom Manchester flat to rent with no private garden and no allocated parking, up to GBP 1,300 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Manchester",
+      "tenure": "rent",
+      "max_price_gbp": 1300,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK001"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q011",
+    "split": "development",
+    "category": "negative_challenge",
+    "query": "A two-bedroom Birmingham rental flat without a garden or balcony, maximum GBP 1,050 per month.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Birmingham",
+      "tenure": "rent",
+      "max_price_gbp": 1050,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK025"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q012",
+    "split": "development",
+    "category": "negative_challenge",
+    "query": "A London studio with no separate bedroom and no garden, at most GBP 1,700 a month.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "London",
+      "tenure": "rent",
+      "max_price_gbp": 1700
+    },
+    "relevant_ids": [
+      "UK020"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q013",
+    "split": "development",
+    "category": "preference",
+    "query": "A three-bedroom Manchester rental with a dedicated study and a private garden, budget GBP 1,600 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Manchester",
+      "tenure": "rent",
+      "max_price_gbp": 1600,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK005"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q014",
+    "split": "development",
+    "category": "preference",
+    "query": "I would like to buy a two-bedroom Leeds flat with lift access and a balcony, up to GBP 180,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Leeds",
+      "tenure": "sale",
+      "max_price_gbp": 180000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK015"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q015",
+    "split": "development",
+    "category": "preference",
+    "query": "A Bristol two-bedroom rental with a balcony and step-free entrance, within GBP 1,500 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Bristol",
+      "tenure": "rent",
+      "max_price_gbp": 1500,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK010"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q016",
+    "split": "development",
+    "category": "missing_information",
+    "query": "A two-bedroom flat, please. I have not chosen a city or whether to rent or buy.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK001",
+      "UK010",
+      "UK015",
+      "UK016",
+      "UK025",
+      "UK031",
+      "UK037",
+      "UK041",
+      "UK046",
+      "UK051",
+      "UK057"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q017",
+    "split": "development",
+    "category": "nonsense",
+    "query": "Blue umbrellas hum square Tuesdays.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q018",
+    "split": "development",
+    "category": "no_result",
+    "query": "An available two-bedroom Manchester rental with a garden for no more than GBP 1,000 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Manchester",
+      "tenure": "rent",
+      "max_price_gbp": 1000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q019",
+    "split": "development",
+    "category": "negative_challenge",
+    "query": "A two-bedroom Bristol rental with its own garden, not a balcony or shared courtyard. Maximum GBP 1,500 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Bristol",
+      "tenure": "rent",
+      "max_price_gbp": 1500,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q020",
+    "split": "development",
+    "category": "location",
+    "query": "A two-bedroom terraced house to buy in Birmingham with a private garden, up to GBP 200,000.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true,
+      "city": "Birmingham",
+      "tenure": "sale",
+      "max_price_gbp": 200000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK024"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q021",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A cosy two-bedroom Nottingham cottage with a private garden to rent, budget GBP 950 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Nottingham",
+      "tenure": "rent",
+      "max_price_gbp": 950,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK026"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q022",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A Newcastle two-bed apartment with a balcony and lift access for under GBP 900 a month.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Newcastle",
+      "tenure": "rent",
+      "max_price_gbp": 900,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK031"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q023",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A stand-alone three-bedroom Liverpool house to rent with a garden and garage, at most GBP 1,350 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Liverpool",
+      "tenure": "rent",
+      "max_price_gbp": 1350,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK040"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q024",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A two-bedroom Brighton cottage with its own garden to purchase, spending no more than GBP 430,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Brighton",
+      "tenure": "sale",
+      "max_price_gbp": 430000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK042"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q025",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A two-bed ground-floor apartment in Sheffield with step-free access and parking, up to GBP 850 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Sheffield",
+      "tenure": "rent",
+      "max_price_gbp": 850,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK046"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q026",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A Cambridge two-bedroom terraced rental with a garden and a built-in study nook, budget GBP 1,900 a month.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Cambridge",
+      "tenure": "rent",
+      "max_price_gbp": 1900,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK055"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q027",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A two-bedroom Oxford cottage with private outdoor space and a fireplace, rent up to GBP 1,650 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Oxford",
+      "tenure": "rent",
+      "max_price_gbp": 1650,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK056"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q028",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A three-bedroom terraced Newcastle home with its own garden to buy below GBP 220,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Newcastle",
+      "tenure": "sale",
+      "max_price_gbp": 220000,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK032"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q029",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A three-bedroom semi in Sheffield with a garden and garage to purchase for at most GBP 240,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Sheffield",
+      "tenure": "sale",
+      "max_price_gbp": 240000,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK047"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q030",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A two-bedroom Oxford apartment to purchase with a lift, within GBP 390,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Oxford",
+      "tenure": "sale",
+      "max_price_gbp": 390000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK057"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q031",
+    "split": "evaluation",
+    "category": "location",
+    "query": "Show a three-bedroom semi-detached house for sale in Nottingham with a driveway, up to GBP 250,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Nottingham",
+      "tenure": "sale",
+      "max_price_gbp": 250000,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK027"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q032",
+    "split": "evaluation",
+    "category": "location",
+    "query": "A three-bedroom semi-detached Newcastle rental with a private garden and driveway, maximum GBP 1,150 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Newcastle",
+      "tenure": "rent",
+      "max_price_gbp": 1150,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK035"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q033",
+    "split": "evaluation",
+    "category": "location",
+    "query": "A two-bedroom Liverpool flat to buy with a lift and balcony, budget GBP 170,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Liverpool",
+      "tenure": "sale",
+      "max_price_gbp": 170000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK037"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q034",
+    "split": "evaluation",
+    "category": "location",
+    "query": "Find a two-bedroom flat with a balcony to rent in Brighton for up to GBP 1,850 a month.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Brighton",
+      "tenure": "rent",
+      "max_price_gbp": 1850,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK041"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q035",
+    "split": "evaluation",
+    "category": "location",
+    "query": "A two-bedroom terraced Sheffield rental where pets are permitted, up to GBP 1,000 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Sheffield",
+      "tenure": "rent",
+      "max_price_gbp": 1000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK050"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q036",
+    "split": "evaluation",
+    "category": "location",
+    "query": "A detached three-bedroom house in Cambridge to buy with a garage, up to GBP 660,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Cambridge",
+      "tenure": "sale",
+      "max_price_gbp": 660000,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK052"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q037",
+    "split": "evaluation",
+    "category": "location",
+    "query": "A three-bedroom Oxford terraced rental with a driveway and garden, at most GBP 2,200 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Oxford",
+      "tenure": "rent",
+      "max_price_gbp": 2200,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK060"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q038",
+    "split": "evaluation",
+    "category": "location",
+    "query": "A two-bedroom Nottingham flat with a balcony to rent for no more than GBP 900 pcm.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true,
+      "city": "Nottingham",
+      "tenure": "rent",
+      "max_price_gbp": 900,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK029"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q039",
+    "split": "evaluation",
+    "category": "location",
+    "query": "A two-bedroom cottage with a private garden to rent in Cambridge, within GBP 1,500 a month.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true,
+      "city": "Cambridge",
+      "tenure": "rent",
+      "max_price_gbp": 1500,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK054"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q040",
+    "split": "evaluation",
+    "category": "location",
+    "query": "An available two-bedroom Liverpool terraced house with a private garden, rent up to GBP 850 pcm.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true,
+      "city": "Liverpool",
+      "tenure": "rent",
+      "max_price_gbp": 850,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK039"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q041",
+    "split": "evaluation",
+    "category": "negative_challenge",
+    "query": "A two-bedroom Newcastle rental flat without a private garden; a balcony is fine. Maximum GBP 900 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Newcastle",
+      "tenure": "rent",
+      "max_price_gbp": 900,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK031"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q042",
+    "split": "evaluation",
+    "category": "negative_challenge",
+    "query": "A two-bedroom flat to buy in Liverpool with no private garden, within GBP 170,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Liverpool",
+      "tenure": "sale",
+      "max_price_gbp": 170000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK037"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q043",
+    "split": "evaluation",
+    "category": "negative_challenge",
+    "query": "A Sheffield rental flat with two bedrooms and parking, but no garden, up to GBP 900 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Sheffield",
+      "tenure": "rent",
+      "max_price_gbp": 900,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK046"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q044",
+    "split": "evaluation",
+    "category": "negative_challenge",
+    "query": "A two-bedroom Oxford flat to buy with neither a private garden nor a balcony, at most GBP 400,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Oxford",
+      "tenure": "sale",
+      "max_price_gbp": 400000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK057"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q045",
+    "split": "evaluation",
+    "category": "negative_challenge",
+    "query": "A three-bedroom Nottingham semi to buy with a driveway but no garden and no garage, budget GBP 250,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Nottingham",
+      "tenure": "sale",
+      "max_price_gbp": 250000,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK027"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q046",
+    "split": "evaluation",
+    "category": "negative_challenge",
+    "query": "A two-bedroom Brighton rental house with a private garden but no allocated parking, within GBP 2,000 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Brighton",
+      "tenure": "rent",
+      "max_price_gbp": 2000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK045"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q047",
+    "split": "evaluation",
+    "category": "negative_challenge",
+    "query": "A Newcastle three-bedroom semi to rent with a garden and driveway but without a garage, up to GBP 1,150 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Newcastle",
+      "tenure": "rent",
+      "max_price_gbp": 1150,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK035"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q048",
+    "split": "evaluation",
+    "category": "negative_challenge",
+    "query": "A three-bedroom Oxford terraced rental with off-street parking and no garage, maximum GBP 2,200 a month.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Oxford",
+      "tenure": "rent",
+      "max_price_gbp": 2200,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK060"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q049",
+    "split": "evaluation",
+    "category": "negative_challenge",
+    "query": "A two-bedroom Cambridge rental apartment with a balcony but no private garden, up to GBP 1,750 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Cambridge",
+      "tenure": "rent",
+      "max_price_gbp": 1750,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK051"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q050",
+    "split": "evaluation",
+    "category": "negative_challenge",
+    "query": "A three-bedroom rental house in Nottingham with no garden. Maximum GBP 1,300 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Nottingham",
+      "tenure": "rent",
+      "max_price_gbp": 1300,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q051",
+    "split": "evaluation",
+    "category": "preference",
+    "query": "A three-bedroom Nottingham rental with a private garden where pets are permitted, up to GBP 1,200 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Nottingham",
+      "tenure": "rent",
+      "max_price_gbp": 1200,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK030"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q052",
+    "split": "evaluation",
+    "category": "preference",
+    "query": "I prefer a three-bedroom Newcastle semi with a garden and driveway, to rent within GBP 1,150 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Newcastle",
+      "tenure": "rent",
+      "max_price_gbp": 1150,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK035"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q053",
+    "split": "evaluation",
+    "category": "preference",
+    "query": "A detached three-bedroom Liverpool rental with a garage and private garden, at most GBP 1,350 a month.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Liverpool",
+      "tenure": "rent",
+      "max_price_gbp": 1350,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK040"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q054",
+    "split": "evaluation",
+    "category": "preference",
+    "query": "A two-bedroom terraced rental in Brighton with a private garden for outdoor seating, under GBP 2,000 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Brighton",
+      "tenure": "rent",
+      "max_price_gbp": 2000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK045"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q055",
+    "split": "evaluation",
+    "category": "preference",
+    "query": "A pet-friendly two-bedroom Sheffield terraced rental with a garden, within GBP 1,000 per month.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Sheffield",
+      "tenure": "rent",
+      "max_price_gbp": 1000,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK050"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q056",
+    "split": "evaluation",
+    "category": "preference",
+    "query": "A two-bedroom Cambridge rental house with a dedicated study nook and private garden, maximum GBP 1,900 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Cambridge",
+      "tenure": "rent",
+      "max_price_gbp": 1900,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK055"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q057",
+    "split": "evaluation",
+    "category": "preference",
+    "query": "A three-bedroom Oxford rental house with a private garden and somewhere to park on the drive, up to GBP 2,200 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Oxford",
+      "tenure": "rent",
+      "max_price_gbp": 2200,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK060"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q058",
+    "split": "evaluation",
+    "category": "preference",
+    "query": "A two-bedroom Newcastle cottage with a private garden and fireplace, rent up to GBP 950 a month.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true,
+      "city": "Newcastle",
+      "tenure": "rent",
+      "max_price_gbp": 950,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK034"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q059",
+    "split": "evaluation",
+    "category": "preference",
+    "query": "A detached three-bedroom Sheffield rental with a private garden and a garage, budget GBP 1,250 pcm.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true,
+      "city": "Sheffield",
+      "tenure": "rent",
+      "max_price_gbp": 1250,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK049"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q060",
+    "split": "evaluation",
+    "category": "preference",
+    "query": "A one-bedroom flat to rent in Brighton for no more than GBP 1,300 a month.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true,
+      "city": "Brighton",
+      "tenure": "rent",
+      "max_price_gbp": 1300,
+      "min_bedrooms": 1
+    },
+    "relevant_ids": [
+      "UK044"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q061",
+    "split": "evaluation",
+    "category": "missing_information",
+    "query": "A cottage with a private garden, please. I have not chosen a city or whether to rent or buy.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true
+    },
+    "relevant_ids": [
+      "UK007",
+      "UK026",
+      "UK042",
+      "UK056"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q062",
+    "split": "evaluation",
+    "category": "missing_information",
+    "query": "I need a property advertised with a garage. I have not set a location or budget.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true
+    },
+    "relevant_ids": [
+      "UK002",
+      "UK012",
+      "UK022",
+      "UK040",
+      "UK047",
+      "UK052"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q063",
+    "split": "evaluation",
+    "category": "missing_information",
+    "query": "Somewhere with a balcony. I have not decided on a city, bedroom count or tenure.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true
+    },
+    "relevant_ids": [
+      "UK001",
+      "UK006",
+      "UK010",
+      "UK015",
+      "UK016",
+      "UK031",
+      "UK037",
+      "UK041",
+      "UK051"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q064",
+    "split": "evaluation",
+    "category": "missing_information",
+    "query": "A ground-floor home with a step-free entrance. My location and budget are not decided.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true
+    },
+    "relevant_ids": [
+      "UK010",
+      "UK046"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q065",
+    "split": "evaluation",
+    "category": "missing_information",
+    "query": "A three-bedroom home to rent. I have not picked a city or a monthly budget.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "tenure": "rent",
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK005",
+      "UK030",
+      "UK035",
+      "UK040",
+      "UK060"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q066",
+    "split": "evaluation",
+    "category": "missing_information",
+    "query": "A two-bedroom home to buy, with no city or budget selected yet.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "tenure": "sale",
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK007",
+      "UK015",
+      "UK037",
+      "UK042",
+      "UK057"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q067",
+    "split": "evaluation",
+    "category": "missing_information",
+    "query": "A rental advertised with a private garden. I have not chosen a city or bedroom count.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "tenure": "rent"
+    },
+    "relevant_ids": [
+      "UK005",
+      "UK011",
+      "UK021",
+      "UK026",
+      "UK030",
+      "UK035",
+      "UK036",
+      "UK040",
+      "UK045",
+      "UK050",
+      "UK055",
+      "UK056",
+      "UK060"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q068",
+    "split": "evaluation",
+    "category": "missing_information",
+    "query": "A detached house for sale. I have not specified the city, price or bedroom count.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "tenure": "sale"
+    },
+    "relevant_ids": [
+      "UK002",
+      "UK012",
+      "UK022",
+      "UK052"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q069",
+    "split": "evaluation",
+    "category": "missing_information",
+    "query": "A two-bedroom rental with its own private garden. I have not chosen a location or budget.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true,
+      "tenure": "rent",
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK004",
+      "UK009",
+      "UK019",
+      "UK034",
+      "UK039",
+      "UK054",
+      "UK059"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q070",
+    "split": "evaluation",
+    "category": "missing_information",
+    "query": "A home advertised with a dedicated study or a built-in study nook. Other details are undecided.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true
+    },
+    "relevant_ids": [
+      "UK005",
+      "UK055"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q071",
+    "split": "evaluation",
+    "category": "nonsense",
+    "query": "Colourless triangles rent yesterday's alphabet.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q072",
+    "split": "evaluation",
+    "category": "nonsense",
+    "query": "Seven velvet Thursdays, please.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q073",
+    "split": "evaluation",
+    "category": "nonsense",
+    "query": "Turn the number eleven into a seaside teapot.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q074",
+    "split": "evaluation",
+    "category": "nonsense",
+    "query": "asdf qwer zxcv blorp.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q075",
+    "split": "evaluation",
+    "category": "no_result",
+    "query": "An available London home to buy for no more than GBP 100,000.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "London",
+      "tenure": "sale",
+      "max_price_gbp": 100000
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q076",
+    "split": "evaluation",
+    "category": "no_result",
+    "query": "An available two-bedroom Cambridge rental with a private garden for up to GBP 1,500 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Cambridge",
+      "tenure": "rent",
+      "max_price_gbp": 1500,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q077",
+    "split": "evaluation",
+    "category": "no_result",
+    "query": "An available Liverpool rental with at least four bedrooms.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Liverpool",
+      "tenure": "rent",
+      "min_bedrooms": 4
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q078",
+    "split": "evaluation",
+    "category": "no_result",
+    "query": "An available two-bedroom Oxford rental with a private garden for at most GBP 1,500 pcm.",
+    "allowed_office": "alpha",
+    "filters": {
+      "active": true,
+      "city": "Oxford",
+      "tenure": "rent",
+      "max_price_gbp": 1500,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [],
+    "expected_no_result": true
+  },
+  {
+    "id": "Q079",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A London two-bed apartment with its own garden, to rent within GBP 2,200 a month.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true,
+      "city": "London",
+      "tenure": "rent",
+      "max_price_gbp": 2200,
+      "min_bedrooms": 2
+    },
+    "relevant_ids": [
+      "UK019"
+    ],
+    "expected_no_result": false
+  },
+  {
+    "id": "Q080",
+    "split": "evaluation",
+    "category": "paraphrase",
+    "query": "A Leeds three-bedroom semi to rent with private outdoor space and off-street parking, at most GBP 1,200 pcm.",
+    "allowed_office": "beta",
+    "filters": {
+      "active": true,
+      "city": "Leeds",
+      "tenure": "rent",
+      "max_price_gbp": 1200,
+      "min_bedrooms": 3
+    },
+    "relevant_ids": [
+      "UK014"
+    ],
+    "expected_no_result": false
+  }
+]

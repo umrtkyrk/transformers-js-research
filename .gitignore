@@ -1,0 +1,9 @@
+.state/
+local.json
+node_modules/
+.ci-tools/
+.cloud-results/
+.env
+.env.*
+*.log
+.vercel/

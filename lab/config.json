@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "protocol": "crm-five-tasks-v1",
+  "seedVersion": "4.3.2",
+  "models": [
+    {
+      "slot": "M1",
+      "id": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+      "dtype": "q8",
+      "task": "feature-extraction",
+      "allowedModelTypes": [
+        "bert"
+      ]
+    },
+    {
+      "slot": "M2",
+      "id": "Xenova/distilbert-base-uncased-finetuned-sst-2-english",
+      "revision": "0b6928efcb76139cae2c6881d49cda67fe119f42",
+      "dtype": "q8",
+      "task": "text-classification",
+      "allowedModelTypes": [
+        "distilbert",
+        "bert",
+        "roberta"
+      ]
+    },
+    {
+      "slot": "M3",
+      "id": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "dtype": "q8",
+      "task": "automatic-speech-recognition",
+      "allowedModelTypes": [
+        "whisper"
+      ]
+    },
+    {
+      "slot": "M4",
+      "id": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "dtype": "fp32",
+      "task": "text-to-speech",
+      "allowedModelTypes": [
+        "speecht5"
+      ]
+    },
+    {
+      "slot": "M5",
+      "id": "onnx-community/Qwen2.5-0.5B-Instruct",
+      "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+      "dtype": "q4",
+      "task": "text-generation",
+      "allowedModelTypes": [
+        "qwen2"
+      ]
+    }
+  ],
+  "watch": {
+    "npmPackage": "@huggingface/transformers",
+    "allowedMajor": 4,
+    "models": true,
+    "discoveryAuthors": [
+      "Xenova",
+      "onnx-community"
+    ],
+    "discoveryLimit": 40,
+    "autoEnrollCompatible": true,
+    "maxJobsPerTick": 1
+  },
+  "limits": {
+    "maxNewModelBytes": 943718400,
+    "maxDownloadBytesPerTick": 1153433600,
+    "minimumFreeMemoryBytes": 2147483648,
+    "jobTimeoutMinutes": 30,
+    "maxCacheBytes": 21474836480
+  },
+  "publish": {
+    "enabled": true,
+    "baseUrl": "https://transformers-js-research.vercel.app/",
+    "staticDirectory": "../research-portal/dist",
+    "deploymentDirectory": "../vercel-deploy",
+    "pendingNativeLogin": false
+  },
+  "schedule": {
+    "kind": "Windows Task Scheduler",
+    "taskName": "TransformersJS Research Monitor",
+    "dailyAt": "09:00",
+    "requiresComputerOn": true
+  }
+}

@@ -1,0 +1,59 @@
+name: Research benchmarks
+run-name: Research ${{ inputs.mode || 'auto' }} ${{ inputs.version }}
+
+on:
+  workflow_dispatch:
+    inputs:
+      mode:
+        description: 'auto: new stable package; verify: independent full run; scan: package and model updates'
+        type: choice
+        options: [auto, verify, scan]
+        default: auto
+      version:
+        description: 'Exact version for verification mode only'
+        type: string
+        default: '4.3.2'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: transformers-research-results
+  cancel-in-progress: false
+
+jobs:
+  research:
+    runs-on: windows-2025
+    timeout-minutes: 50
+    env:
+      LAB_MODE: ${{ inputs.mode || 'auto' }}
+      LAB_VERSION: ${{ inputs.version }}
+      GH_TOKEN: ${{ github.token }}
+      GITHUB_REPOSITORY: ${{ github.repository }}
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version: '24.22.1'
+      - name: Restore verified model byte cache
+        uses: actions/cache@55cc8345863c7cc4c66a329aec7e433d2d1c52a9 # v6.1.0
+        with:
+          path: lab/.state/assets
+          key: model-bytes-v1-${{ runner.os }}-${{ github.run_id }}
+          restore-keys: model-bytes-v1-${{ runner.os }}-
+      - name: Install browser control
+        shell: pwsh
+        run: npm install --prefix .ci-tools --ignore-scripts --no-audit --no-fund playwright@1.62.1
+      - name: Test automation guards
+        shell: pwsh
+        run: |
+          node lab/cloud/setup.mjs
+          node --test lab/core.test.mjs lab/cloud/server.test.mjs
+      - name: Run and persist research
+        shell: pwsh
+        run: |
+          $npmDirectory = Split-Path (Get-Command npm.cmd).Source
+          $env:NPM_CLI = Join-Path $npmDirectory 'node_modules/npm/bin/npm-cli.js'
+          node lab/cloud/run.mjs

@@ -1,0 +1,259 @@
+{
+  "version": "1.0.0",
+  "system": "You are a careful assistant for a fictional England property office. Follow the requested output format. Do not invent missing property facts.",
+  "generation": {
+    "do_sample": false,
+    "max_new_tokens": 96
+  },
+  "cases": [
+    {
+      "id": "G001",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: A two-bedroom London flat rents for GBP 2,200 per month and has a private garden.",
+      "expected": {
+        "city": "London",
+        "bedrooms": 2,
+        "rent_gbp": 2200,
+        "garden": true
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive."
+    },
+    {
+      "id": "G002",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: This one-bedroom flat in Manchester is GBP 950 per month. It has no garden.",
+      "expected": {
+        "city": "Manchester",
+        "bedrooms": 1,
+        "rent_gbp": 950,
+        "garden": false
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive."
+    },
+    {
+      "id": "G003",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: Rent a three-bedroom Bristol house with a garden for GBP 1,500 pcm.",
+      "expected": {
+        "city": "Bristol",
+        "bedrooms": 3,
+        "rent_gbp": 1500,
+        "garden": true
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive."
+    },
+    {
+      "id": "G004",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: A two-bedroom Leeds flat has no garden. The rent has not been provided.",
+      "expected": {
+        "city": "Leeds",
+        "bedrooms": 2,
+        "rent_gbp": null,
+        "garden": false
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive."
+    },
+    {
+      "id": "G005",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: The Oxford property has a garden and rents for GBP 1,800 per month. Bedroom count is unknown.",
+      "expected": {
+        "city": "Oxford",
+        "bedrooms": null,
+        "rent_gbp": 1800,
+        "garden": true
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive."
+    },
+    {
+      "id": "G006",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: The Cambridge flat has two bedrooms and rent of GBP 1,600 per month. Nothing is stated about a garden.",
+      "expected": {
+        "city": "Cambridge",
+        "bedrooms": 2,
+        "rent_gbp": 1600,
+        "garden": null
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive."
+    },
+    {
+      "id": "G007",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: This three-bedroom house is GBP 1,300 pcm and has no garden. The city is not stated.",
+      "expected": {
+        "city": null,
+        "bedrooms": 3,
+        "rent_gbp": 1300,
+        "garden": false
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive."
+    },
+    {
+      "id": "G008",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: A property is available in Nottingham. No bedroom, rent or garden details are stated.",
+      "expected": {
+        "city": "Nottingham",
+        "bedrooms": null,
+        "rent_gbp": null,
+        "garden": null
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive."
+    },
+    {
+      "id": "G009",
+      "category": "classification",
+      "prompt": "Classify the message. Reply with exactly one label: RENT, SALE, MAINTENANCE, VIEWING. Message: I want to rent a flat in London.",
+      "expected": "RENT",
+      "scoring": "Trim whitespace; exact label."
+    },
+    {
+      "id": "G010",
+      "category": "classification",
+      "prompt": "Classify the message. Reply with exactly one label: RENT, SALE, MAINTENANCE, VIEWING. Message: I would like to buy a house in Bristol.",
+      "expected": "SALE",
+      "scoring": "Trim whitespace; exact label."
+    },
+    {
+      "id": "G011",
+      "category": "classification",
+      "prompt": "Classify the message. Reply with exactly one label: RENT, SALE, MAINTENANCE, VIEWING. Message: The boiler in my Manchester flat is broken.",
+      "expected": "MAINTENANCE",
+      "scoring": "Trim whitespace; exact label."
+    },
+    {
+      "id": "G012",
+      "category": "classification",
+      "prompt": "Classify the message. Reply with exactly one label: RENT, SALE, MAINTENANCE, VIEWING. Message: Please book a viewing for the Leeds house.",
+      "expected": "VIEWING",
+      "scoring": "Trim whitespace; exact label."
+    },
+    {
+      "id": "G013",
+      "category": "grounded_answer",
+      "prompt": "Answer only from the context. If the answer is missing, reply exactly NOT_STATED. Otherwise reply with the shortest answer only. Context: The flat is in Bristol. It has two bedrooms. Question: Which city is the flat in?",
+      "expected": "Bristol",
+      "scoring": "Case-insensitive; strip final punctuation; no added words."
+    },
+    {
+      "id": "G014",
+      "category": "grounded_answer",
+      "prompt": "Answer only from the context. If the answer is missing, reply exactly NOT_STATED. Otherwise reply with the shortest answer only. Context: The house is in Leeds and has no garden. Question: Does the house have a garden?",
+      "expected": "No",
+      "scoring": "Case-insensitive; strip final punctuation; no added words."
+    },
+    {
+      "id": "G015",
+      "category": "grounded_answer",
+      "prompt": "Answer only from the context. If the answer is missing, reply exactly NOT_STATED. Otherwise reply with the shortest answer only. Context: The London flat has two bedrooms. Question: What is the monthly rent?",
+      "expected": "NOT_STATED",
+      "scoring": "Case-insensitive; strip final punctuation; no added words."
+    },
+    {
+      "id": "G016",
+      "category": "grounded_answer",
+      "prompt": "Answer only from the context. If the answer is missing, reply exactly NOT_STATED. Otherwise reply with the shortest answer only. Context: The Oxford cottage is available in November. Question: What is the owner's telephone number?",
+      "expected": "NOT_STATED",
+      "scoring": "Case-insensitive; strip final punctuation; no added words."
+    },
+    {
+      "id": "G017",
+      "category": "short_draft",
+      "prompt": "Write one clear English sentence of at most 25 words from these notes. Preserve every stated fact, keep digits as digits, and add no claims: flat in London, two bedrooms, GBP 2200 per month",
+      "required": [
+        "london",
+        "two",
+        "2200"
+      ],
+      "forbidden": [
+        "guaranteed",
+        "luxury",
+        "mortgage approved"
+      ],
+      "scoring": "One sentence, <=25 words, required terms present, forbidden terms absent. This limited constraint check does not establish overall writing quality."
+    },
+    {
+      "id": "G018",
+      "category": "short_draft",
+      "prompt": "Write one clear English sentence of at most 25 words from these notes. Preserve every stated fact, keep digits as digits, and add no claims: house in Bristol, three bedrooms, private garden",
+      "required": [
+        "bristol",
+        "three",
+        "garden"
+      ],
+      "forbidden": [
+        "guaranteed",
+        "luxury",
+        "mortgage approved"
+      ],
+      "scoring": "One sentence, <=25 words, required terms present, forbidden terms absent. This limited constraint check does not establish overall writing quality."
+    },
+    {
+      "id": "G019",
+      "category": "short_draft",
+      "prompt": "Write one clear English sentence of at most 25 words from these notes. Preserve every stated fact, keep digits as digits, and add no claims: viewing in Manchester on Friday at 10 am",
+      "required": [
+        "manchester",
+        "friday",
+        "10"
+      ],
+      "forbidden": [
+        "guaranteed",
+        "luxury",
+        "mortgage approved"
+      ],
+      "scoring": "One sentence, <=25 words, required terms present, forbidden terms absent. This limited constraint check does not establish overall writing quality."
+    },
+    {
+      "id": "G020",
+      "category": "short_draft",
+      "prompt": "Write one clear English sentence of at most 25 words from these notes. Preserve every stated fact, keep digits as digits, and add no claims: Oxford cottage, available in November, no parking",
+      "required": [
+        "oxford",
+        "november",
+        "no parking"
+      ],
+      "forbidden": [
+        "guaranteed",
+        "luxury",
+        "mortgage approved"
+      ],
+      "scoring": "One sentence, <=25 words, required terms present, forbidden terms absent. This limited constraint check does not establish overall writing quality."
+    },
+    {
+      "id": "G021",
+      "category": "bounded_calculation",
+      "prompt": "A London flat rents for GBP 1200 per month. What is twelve times 1200? Reply with digits only.",
+      "expected": "14400",
+      "scoring": "Exact answer after whitespace trimming."
+    },
+    {
+      "id": "G022",
+      "category": "bounded_calculation",
+      "prompt": "There are 8 viewings in Bristol on Monday and 5 on Tuesday. How many in total? Reply with digits only.",
+      "expected": "13",
+      "scoring": "Exact answer after whitespace trimming."
+    },
+    {
+      "id": "G023",
+      "category": "bounded_calculation",
+      "prompt": "A Manchester office has 20 listings and removes 7. How many remain? Reply with digits only.",
+      "expected": "13",
+      "scoring": "Exact answer after whitespace trimming."
+    },
+    {
+      "id": "G024",
+      "category": "bounded_calculation",
+      "prompt": "A Leeds viewing starts at 10:00 and lasts 30 minutes. What time does it end? Reply exactly HH:MM.",
+      "expected": "10:30",
+      "scoring": "Exact answer after whitespace trimming."
+    }
+  ],
+  "notes": [
+    "Expected answers were declared before inference.",
+    "No production quality threshold was supplied.",
+    "Short draft constraints are partial automated checks, not a human writing-quality score."
+  ]
+}

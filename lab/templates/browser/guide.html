@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en-GB">
+<meta charset="utf-8">
+<title>Transformers.js first example</title>
+<h1>English property review sentiment</h1>
+<pre id="result">Loading model...</pre>
+<script type="module">
+  import { pipeline } from
+    "https://cdn.jsdelivr.net/npm/@huggingface/transformers@__PACKAGE_VERSION__";
+  const outputElement = document.getElementById("result");
+  const modelId =
+    "Xenova/distilbert-base-uncased-finetuned-sst-2-english";
+  try {
+    const classifier = await pipeline("text-classification", modelId, {
+      revision: "0b6928efcb76139cae2c6881d49cda67fe119f42",
+      device: "wasm",
+      dtype: "q8",
+    });
+    const result = await classifier("I love this flat in London!");
+    outputElement.textContent = JSON.stringify(result, null, 2);
+    await classifier.dispose();
+  } catch (error) {
+    outputElement.textContent = "Inference failed: " + error.message;
+  }
+</script>
+</html>
