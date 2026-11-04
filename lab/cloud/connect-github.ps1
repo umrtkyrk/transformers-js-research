@@ -17,7 +17,7 @@ try {
     $processInfo.RedirectStandardInput = $true
     # Fixed, locally configured paths; the credential is never placed in command arguments.
     $deploymentDirectory = Join-Path $workspaceRoot 'vercel-deploy'
-    $processInfo.Arguments = '"{0}" env add LAB_GITHUB_TOKEN production --sensitive --cwd "{1}" --global-config "{2}"' -f $vercelCli, $deploymentDirectory, $localSettings.vercelGlobalConfig
+    $processInfo.Arguments = '"{0}" env add LAB_GITHUB_TOKEN --environment production --sensitive --yes --force --cwd "{1}" --global-config "{2}"' -f $vercelCli, $deploymentDirectory, $localSettings.vercelGlobalConfig
     $processHandle = [System.Diagnostics.Process]::Start($processInfo)
     $processHandle.StandardInput.WriteLine([Runtime.InteropServices.Marshal]::PtrToStringBSTR($credentialPointer))
     $processHandle.StandardInput.Close()

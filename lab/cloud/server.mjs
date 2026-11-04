@@ -7,14 +7,23 @@ const stable=v=>typeof v==='string'&&/^4\.\d+\.\d+$/.test(v);
 
 export async function github(endpoint,{fetcher=fetch,token=process.env.LAB_GITHUB_TOKEN,method='GET',body}={}){
  const response=await fetcher('https://api.github.com/repos/'+REPOSITORY+'/'+endpoint,{method,signal:AbortSignal.timeout(15000),headers:{Accept:'application/vnd.github+json','X-GitHub-Api-Version':'2022-11-28','User-Agent':'TransformersJS-Research',...(token?{Authorization:'Bearer '+token}:{}),...(body?{'Content-Type':'application/json'}:{})},...(body?{body:JSON.stringify(body)}:{})});
- if(!response.ok)throw new Error('GitHub request failed ('+response.status+')');
+ if(!response.ok)throw Object.assign(new Error('GitHub request failed ('+response.status+')'),{status:response.status});
  return response.status===204?null:response.json();
+}
+
+const revisionCache=new WeakMap();
+export async function resultRevision({fetcher=fetch,token=process.env.LAB_GITHUB_TOKEN}={}){
+ const saved=revisionCache.get(fetcher);if(saved&&saved.expires>Date.now())return saved.promise;
+ const promise=github('git/ref/heads/'+RESULTS_BRANCH,{fetcher,token}).then(ref=>{
+  if(!/^[a-f0-9]{40}$/.test(ref.object?.sha))throw new Error('Invalid results commit');return ref.object.sha;
+ }).catch(error=>{if(error.status===404)return null;revisionCache.delete(fetcher);throw error;});
+ revisionCache.set(fetcher,{expires:Date.now()+10000,promise});return promise;
 }
 
 export async function releaseStatus({fetcher=fetch,token=process.env.LAB_GITHUB_TOKEN}={}){
  const [npm,history,workflows]=await Promise.all([
   fetcher('https://registry.npmjs.org/@huggingface%2ftransformers/latest',{signal:AbortSignal.timeout(15000)}).then(r=>{if(!r.ok)throw new Error('npm unavailable');return r.json()}),
-  fetcher('https://raw.githubusercontent.com/'+REPOSITORY+'/'+RESULTS_BRANCH+'/lab/catalog.json',{signal:AbortSignal.timeout(15000)}).then(r=>r.status===404?{runs:[]}:r.ok?r.json():Promise.reject(new Error('Recorded results unavailable'))),
+  resultRevision({fetcher,token}).then(revision=>revision?fetcher('https://raw.githubusercontent.com/'+REPOSITORY+'/'+revision+'/lab/catalog.json',{signal:AbortSignal.timeout(15000)}).then(r=>r.ok?r.json():Promise.reject(new Error('Recorded results unavailable'))):{runs:[]}),
   github('actions/workflows/'+WORKFLOW+'/runs?per_page=20',{fetcher,token})
  ]);
  const running=workflows.workflow_runs?.find(x=>activeStatuses.has(x.status));
@@ -43,7 +52,8 @@ export async function checkHandler(req,res,{fetcher=fetch,token=process.env.LAB_
 }
 
 export function artifactPath(value){
- const candidate=String(value??'').replace(/^\/+|\/+$/g,'')||'index.html';
+ let candidate=String(value??'').replace(/^\/+|\/+$/g,'')||'index.html';
+ if(candidate==='local')candidate='local/index.html';
  if(!/^[\w./-]+$/.test(candidate)||!candidate.split('/').every(x=>x&&x!=='.'&&x!=='..')||!/\.(html|json|png|wav)$/.test(candidate))throw new Error('Invalid artifact path');
  return candidate;
 }
@@ -53,8 +63,9 @@ export async function artifactHandler(req,res,{fetcher=fetch,readFallback}={}){
  let relative;try{relative=artifactPath(new URL(req.url,'https://local.invalid').searchParams.get('path'));}catch{res.statusCode=400;return res.end('Invalid path');}
  const mime={html:'text/html; charset=utf-8',json:'application/json; charset=utf-8',png:'image/png',wav:'audio/wav'};
  try{
-  if(relative.startsWith('local/')&&readFallback){const localPath=relative.slice(6)||'index.html';const content=await readFallback(localPath);res.setHeader('Content-Type',mime[relative.split('.').at(-1)]??'text/html; charset=utf-8');res.setHeader('Cache-Control','no-store');res.statusCode=200;return res.end(req.method==='HEAD'?undefined:localPath.endsWith('.html')?content.toString('utf8').replace(/href="(?:\.\.\/)+styles\.css"/g,'href="/styles.css"'):content);}
-  const response=await fetcher('https://raw.githubusercontent.com/'+REPOSITORY+'/'+RESULTS_BRANCH+'/lab/'+relative,{signal:AbortSignal.timeout(15000)});
+  if(relative.startsWith('local/')&&readFallback){const localPath=relative.slice(6);const content=await readFallback(localPath);res.setHeader('Content-Type',mime[relative.split('.').at(-1)]);res.setHeader('Cache-Control','no-store');res.statusCode=200;return res.end(req.method==='HEAD'?undefined:localPath.endsWith('.html')?content.toString('utf8').replace(/href="(?:\.\.\/)+styles\.css"/g,'href="/styles.css"'):content);}
+  const revision=await resultRevision({fetcher});
+  const response=revision?await fetcher('https://raw.githubusercontent.com/'+REPOSITORY+'/'+revision+'/lab/'+relative,{signal:AbortSignal.timeout(15000)}):{status:404,ok:false};
   let content;
   if(response.ok)content=Buffer.from(await response.arrayBuffer());
   else if(response.status===404&&readFallback)content=await readFallback(relative);
