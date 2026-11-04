@@ -204,10 +204,10 @@
   ],
   "candidates": [],
   "lastCheck": {
-    "at": "2026-11-04T20:04:14.346Z",
+    "at": "2026-11-04T20:18:51.523Z",
     "status": "completed",
     "errors": [],
-    "queued": 1
+    "queued": 0
   },
   "adoptedVersion": "4.3.2",
   "discoverySeeded": false,
