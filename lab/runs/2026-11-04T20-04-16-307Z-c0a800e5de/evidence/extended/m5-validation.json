@@ -1,0 +1,1436 @@
+{
+  "model": {
+    "key": "M5",
+    "id": "onnx-community/Qwen2.5-0.5B-Instruct",
+    "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+    "dtype": "q4",
+    "task": "text-generation"
+  },
+  "startedAt": "2026-11-04T20:08:43.942Z",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "win32",
+    "architecture": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor                ",
+    "freeMemoryBytesAtStart": 14316261376
+  },
+  "settings": {
+    "package": "4.3.2",
+    "backend": "Node native CPU",
+    "intraOpNumThreads": 4,
+    "interOpNumThreads": 1,
+    "network": "disabled during controlled inference",
+    "memory": "Whole-process RSS sampled25ms; short native peaks may be missed.",
+    "generation": {
+      "do_sample": false,
+      "max_new_tokens": 96
+    }
+  },
+  "tests": [
+    {
+      "id": "M5-VERSION",
+      "purpose": "Exact installed package",
+      "status": "passed",
+      "durationMs": 0.03560000000001651,
+      "detail": {
+        "@huggingface/transformers": "4.3.2",
+        "onnxruntime-node": "1.30.0"
+      }
+    },
+    {
+      "id": "M5-LOAD",
+      "purpose": "Pinned model loads on native CPU",
+      "status": "passed",
+      "durationMs": 0.0706000000000131,
+      "detail": {
+        "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+        "dtype": "q4",
+        "loadMs": 3071.6753
+      }
+    },
+    {
+      "id": "GEN-OUTPUT",
+      "purpose": "All24 prompts produce non-empty text",
+      "status": "passed",
+      "durationMs": 0.08880000000499422,
+      "detail": {
+        "cases": 24
+      }
+    },
+    {
+      "id": "GEN-TOKEN-LIMIT",
+      "purpose": "All generated counts stay within96newtokens",
+      "status": "passed",
+      "durationMs": 0.09739999999874271,
+      "detail": {
+        "maximum": 39
+      }
+    },
+    {
+      "id": "GEN-STREAM",
+      "purpose": "Streamed text matches final assistant text",
+      "status": "passed",
+      "durationMs": 0.10029999999824213,
+      "detail": {
+        "cases": 24
+      }
+    },
+    {
+      "id": "GEN-REPEAT",
+      "purpose": "Greedy repeated prompt returns identical text",
+      "status": "passed",
+      "durationMs": 3371.2945000000036,
+      "detail": {
+        "durationMs": 3371.012799999997,
+        "text": "```json\n{\n  \"city\": \"\",\n  \"bedrooms\": 2,\n  \"rent_gbp\": 2200,\n  \"garden\": null\n}\n```"
+      }
+    },
+    {
+      "id": "GEN-BATCH",
+      "purpose": "Two chats produce two output rows",
+      "status": "passed",
+      "durationMs": 1738.8338999999978,
+      "detail": {
+        "outputs": [
+          [
+            {
+              "generated_text": [
+                {
+                  "role": "system",
+                  "content": "You are a careful assistant for a fictional England property office. Follow the requested output format. Do not invent missing property facts."
+                },
+                {
+                  "role": "user",
+                  "content": "Classify the message. Reply with exactly one label: RENT, SALE, MAINTENANCE, VIEWING. Message: I want to rent a flat in London."
+                },
+                {
+                  "role": "assistant",
+                  "content": "RENT\n"
+                }
+              ]
+            }
+          ],
+          [
+            {
+              "generated_text": [
+                {
+                  "role": "system",
+                  "content": "You are a careful assistant for a fictional England property office. Follow the requested output format. Do not invent missing property facts."
+                },
+                {
+                  "role": "user",
+                  "content": "Classify the message. Reply with exactly one label: RENT, SALE, MAINTENANCE, VIEWING. Message: I would like to buy a house in Bristol."
+                },
+                {
+                  "role": "assistant",
+                  "content": "MAINTENANCE"
+                }
+              ]
+            }
+          ]
+        ],
+        "durationMs": 1738.3106000000043
+      }
+    },
+    {
+      "id": "M5-OFFLINE",
+      "purpose": "Controlled inference made no network requests",
+      "status": "passed",
+      "durationMs": 0.11490000000048894,
+      "detail": {
+        "networkAttempts": 0
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "G001",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: A two-bedroom London flat rents for GBP 2,200 per month and has a private garden.",
+      "expected": {
+        "city": "London",
+        "bedrooms": 2,
+        "rent_gbp": 2200,
+        "garden": true
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive.",
+      "output": "```json\n{\n  \"city\": \"\",\n  \"bedrooms\": 2,\n  \"rent_gbp\": 2200,\n  \"garden\": null\n}\n```",
+      "durationMs": 3567.8233999999998,
+      "memory": {
+        "before": {
+          "rss": 1569247232,
+          "heapTotal": 136790016,
+          "heapUsed": 76939688,
+          "external": 24748481,
+          "arrayBuffers": 5390072,
+          "availableSystemBytes": 12793024512
+        },
+        "after": {
+          "rss": 1651855360,
+          "heapTotal": 204324864,
+          "heapUsed": 67305168,
+          "external": 26874692,
+          "arrayBuffers": 20011403,
+          "availableSystemBytes": 12698447872
+        },
+        "sampledMaxRssBytes": 1767366656,
+        "samplingIntervalMs": 25,
+        "samples": 39,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 908.9380999999994,
+      "generatedTokenCount": 39,
+      "tokensPerSecond": 10.931034310722891,
+      "streamText": "```json\n{\n  \"city\": \"\",\n  \"bedrooms\": 2,\n  \"rent_gbp\": 2200,\n  \"garden\": null\n}\n```",
+      "score": {
+        "passed": false,
+        "jsonValid": false,
+        "exactKeys": false,
+        "fields": {}
+      }
+    },
+    {
+      "id": "G002",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: This one-bedroom flat in Manchester is GBP 950 per month. It has no garden.",
+      "expected": {
+        "city": "Manchester",
+        "bedrooms": 1,
+        "rent_gbp": 950,
+        "garden": false
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive.",
+      "output": "```json\n{\n  \"city\": \"Manchester\",\n  \"bedrooms\": null,\n  \"rent_gbp\": null,\n  \"garden\": null\n}\n```",
+      "durationMs": 3377.888099999999,
+      "memory": {
+        "before": {
+          "rss": 1652346880,
+          "heapTotal": 204324864,
+          "heapUsed": 67376936,
+          "external": 27595588,
+          "arrayBuffers": 20732299,
+          "availableSystemBytes": 12699811840
+        },
+        "after": {
+          "rss": 1669394432,
+          "heapTotal": 74039296,
+          "heapUsed": 67905408,
+          "external": 41376251,
+          "arrayBuffers": 34512962,
+          "availableSystemBytes": 12699774976
+        },
+        "sampledMaxRssBytes": 1727164416,
+        "samplingIntervalMs": 25,
+        "samples": 36,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 872.5196999999998,
+      "generatedTokenCount": 36,
+      "tokensPerSecond": 10.65754664874778,
+      "streamText": "```json\n{\n  \"city\": \"Manchester\",\n  \"bedrooms\": null,\n  \"rent_gbp\": null,\n  \"garden\": null\n}\n```",
+      "score": {
+        "passed": false,
+        "jsonValid": false,
+        "exactKeys": false,
+        "fields": {}
+      }
+    },
+    {
+      "id": "G003",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: Rent a three-bedroom Bristol house with a garden for GBP 1,500 pcm.",
+      "expected": {
+        "city": "Bristol",
+        "bedrooms": 3,
+        "rent_gbp": 1500,
+        "garden": true
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive.",
+      "output": "```json\n{\n  \"city\": \"Bristol\",\n  \"bedrooms\": null,\n  \"rent_gbp\": null,\n  \"garden\": \"true\"\n}\n```",
+      "durationMs": 3420.005800000001,
+      "memory": {
+        "before": {
+          "rss": 1650352128,
+          "heapTotal": 74039296,
+          "heapUsed": 67209464,
+          "external": 19744461,
+          "arrayBuffers": 12881172,
+          "availableSystemBytes": 12705546240
+        },
+        "after": {
+          "rss": 1660669952,
+          "heapTotal": 74039296,
+          "heapUsed": 67559024,
+          "external": 31535223,
+          "arrayBuffers": 24671934,
+          "availableSystemBytes": 12700991488
+        },
+        "sampledMaxRssBytes": 1736810496,
+        "samplingIntervalMs": 25,
+        "samples": 38,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 862.206900000001,
+      "generatedTokenCount": 38,
+      "tokensPerSecond": 11.111092267738258,
+      "streamText": "```json\n{\n  \"city\": \"Bristol\",\n  \"bedrooms\": null,\n  \"rent_gbp\": null,\n  \"garden\": \"true\"\n}\n```",
+      "score": {
+        "passed": false,
+        "jsonValid": false,
+        "exactKeys": false,
+        "fields": {}
+      }
+    },
+    {
+      "id": "G004",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: A two-bedroom Leeds flat has no garden. The rent has not been provided.",
+      "expected": {
+        "city": "Leeds",
+        "bedrooms": 2,
+        "rent_gbp": null,
+        "garden": false
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive.",
+      "output": "{\n  \"city\": \"Leeds\",\n  \"bedrooms\": null,\n  \"rent_gbp\": null,\n  \"garden\": null\n}",
+      "durationMs": 3029.1922000000013,
+      "memory": {
+        "before": {
+          "rss": 1647087616,
+          "heapTotal": 74039296,
+          "heapUsed": 67112064,
+          "external": 17745748,
+          "arrayBuffers": 10882459,
+          "availableSystemBytes": 12709081088
+        },
+        "after": {
+          "rss": 1686126592,
+          "heapTotal": 74039296,
+          "heapUsed": 67192624,
+          "external": 59555791,
+          "arrayBuffers": 43131814,
+          "availableSystemBytes": 12671877120
+        },
+        "sampledMaxRssBytes": 1726357504,
+        "samplingIntervalMs": 25,
+        "samples": 33,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 829.4705000000013,
+      "generatedTokenCount": 33,
+      "tokensPerSecond": 10.89399345475668,
+      "streamText": "{\n  \"city\": \"Leeds\",\n  \"bedrooms\": null,\n  \"rent_gbp\": null,\n  \"garden\": null\n}",
+      "score": {
+        "passed": false,
+        "jsonValid": true,
+        "exactKeys": true,
+        "fields": {
+          "city": true,
+          "bedrooms": false,
+          "rent_gbp": true,
+          "garden": false
+        },
+        "parsed": {
+          "city": "Leeds",
+          "bedrooms": null,
+          "rent_gbp": null,
+          "garden": null
+        }
+      }
+    },
+    {
+      "id": "G005",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: The Oxford property has a garden and rents for GBP 1,800 per month. Bedroom count is unknown.",
+      "expected": {
+        "city": "Oxford",
+        "bedrooms": null,
+        "rent_gbp": 1800,
+        "garden": true
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive.",
+      "output": "```json\n{\n  \"city\": \"\",\n  \"bedrooms\": null,\n  \"rent_gbp\": null,\n  \"garden\": null\n}\n```",
+      "durationMs": 3040.303500000002,
+      "memory": {
+        "before": {
+          "rss": 1658298368,
+          "heapTotal": 74039296,
+          "heapUsed": 67267512,
+          "external": 24684034,
+          "arrayBuffers": 17820745,
+          "availableSystemBytes": 12697501696
+        },
+        "after": {
+          "rss": 1681858560,
+          "heapTotal": 78495744,
+          "heapUsed": 67287688,
+          "external": 54942648,
+          "arrayBuffers": 38179374,
+          "availableSystemBytes": 12686217216
+        },
+        "sampledMaxRssBytes": 1765470208,
+        "samplingIntervalMs": 25,
+        "samples": 34,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 889.1163000000015,
+      "generatedTokenCount": 34,
+      "tokensPerSecond": 11.18309405623484,
+      "streamText": "```json\n{\n  \"city\": \"\",\n  \"bedrooms\": null,\n  \"rent_gbp\": null,\n  \"garden\": null\n}\n```",
+      "score": {
+        "passed": false,
+        "jsonValid": false,
+        "exactKeys": false,
+        "fields": {}
+      }
+    },
+    {
+      "id": "G006",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: The Cambridge flat has two bedrooms and rent of GBP 1,600 per month. Nothing is stated about a garden.",
+      "expected": {
+        "city": "Cambridge",
+        "bedrooms": 2,
+        "rent_gbp": 1600,
+        "garden": null
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive.",
+      "output": "```json\n{\n  \"city\": \"\",\n  \"bedrooms\": 2,\n  \"rent_gbp\": null,\n  \"garden\": null\n}\n```",
+      "durationMs": 3253.287500000002,
+      "memory": {
+        "before": {
+          "rss": 1664065536,
+          "heapTotal": 78495744,
+          "heapUsed": 67344304,
+          "external": 27395908,
+          "arrayBuffers": 20532619,
+          "availableSystemBytes": 12692189184
+        },
+        "after": {
+          "rss": 1739599872,
+          "heapTotal": 74039296,
+          "heapUsed": 67476416,
+          "external": 34476974,
+          "arrayBuffers": 27613685,
+          "availableSystemBytes": 12621807616
+        },
+        "sampledMaxRssBytes": 1812631552,
+        "samplingIntervalMs": 25,
+        "samples": 35,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 884.0380000000005,
+      "generatedTokenCount": 35,
+      "tokensPerSecond": 10.75834828615669,
+      "streamText": "```json\n{\n  \"city\": \"\",\n  \"bedrooms\": 2,\n  \"rent_gbp\": null,\n  \"garden\": null\n}\n```",
+      "score": {
+        "passed": false,
+        "jsonValid": false,
+        "exactKeys": false,
+        "fields": {}
+      }
+    },
+    {
+      "id": "G007",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: This three-bedroom house is GBP 1,300 pcm and has no garden. The city is not stated.",
+      "expected": {
+        "city": null,
+        "bedrooms": 3,
+        "rent_gbp": 1300,
+        "garden": false
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive.",
+      "output": "{\n  \"city\": \"\",\n  \"bedrooms\": 3,\n  \"rent_gbp\": 1300,\n  \"garden\": null\n}",
+      "durationMs": 3132.852600000002,
+      "memory": {
+        "before": {
+          "rss": 1740128256,
+          "heapTotal": 74039296,
+          "heapUsed": 67559744,
+          "external": 34804654,
+          "arrayBuffers": 27941365,
+          "availableSystemBytes": 12622569472
+        },
+        "after": {
+          "rss": 1749622784,
+          "heapTotal": 74301440,
+          "heapUsed": 67624176,
+          "external": 41642053,
+          "arrayBuffers": 34778764,
+          "availableSystemBytes": 12612407296
+        },
+        "sampledMaxRssBytes": 1817268224,
+        "samplingIntervalMs": 25,
+        "samples": 35,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 880.8137999999999,
+      "generatedTokenCount": 35,
+      "tokensPerSecond": 11.171926824773045,
+      "streamText": "{\n  \"city\": \"\",\n  \"bedrooms\": 3,\n  \"rent_gbp\": 1300,\n  \"garden\": null\n}",
+      "score": {
+        "passed": false,
+        "jsonValid": true,
+        "exactKeys": true,
+        "fields": {
+          "city": false,
+          "bedrooms": true,
+          "rent_gbp": true,
+          "garden": false
+        },
+        "parsed": {
+          "city": "",
+          "bedrooms": 3,
+          "rent_gbp": 1300,
+          "garden": null
+        }
+      }
+    },
+    {
+      "id": "G008",
+      "category": "structured_extraction",
+      "prompt": "Extract the property details from the text. Return ONLY a JSON object with exactly these keys: city, bedrooms, rent_gbp, garden. Use null for any detail not explicitly stated. garden must be true, false or null. Text: A property is available in Nottingham. No bedroom, rent or garden details are stated.",
+      "expected": {
+        "city": "Nottingham",
+        "bedrooms": null,
+        "rent_gbp": null,
+        "garden": null
+      },
+      "scoring": "JSON parses without surrounding text; exact keys/types/values; city comparison is case-insensitive.",
+      "output": "```json\n{\n  \"city\": \"Nottingham\",\n  \"bedrooms\": null,\n  \"rent_gbp\": null,\n  \"garden\": null\n}\n```",
+      "durationMs": 3133.9073000000026,
+      "memory": {
+        "before": {
+          "rss": 1749823488,
+          "heapTotal": 74301440,
+          "heapUsed": 67709600,
+          "external": 41904197,
+          "arrayBuffers": 35040908,
+          "availableSystemBytes": 12612128768
+        },
+        "after": {
+          "rss": 1772208128,
+          "heapTotal": 74301440,
+          "heapUsed": 68565400,
+          "external": 69670543,
+          "arrayBuffers": 62807254,
+          "availableSystemBytes": 12591173632
+        },
+        "sampledMaxRssBytes": 1816084480,
+        "samplingIntervalMs": 25,
+        "samples": 37,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 831.7893000000004,
+      "generatedTokenCount": 37,
+      "tokensPerSecond": 11.806347941433996,
+      "streamText": "```json\n{\n  \"city\": \"Nottingham\",\n  \"bedrooms\": null,\n  \"rent_gbp\": null,\n  \"garden\": null\n}\n```",
+      "score": {
+        "passed": false,
+        "jsonValid": false,
+        "exactKeys": false,
+        "fields": {}
+      }
+    },
+    {
+      "id": "G009",
+      "category": "classification",
+      "prompt": "Classify the message. Reply with exactly one label: RENT, SALE, MAINTENANCE, VIEWING. Message: I want to rent a flat in London.",
+      "expected": "RENT",
+      "scoring": "Trim whitespace; exact label.",
+      "output": "RENT",
+      "durationMs": 747.3162999999986,
+      "memory": {
+        "before": {
+          "rss": 1772417024,
+          "heapTotal": 74301440,
+          "heapUsed": 68633376,
+          "external": 69932687,
+          "arrayBuffers": 63069398,
+          "availableSystemBytes": 12591939584
+        },
+        "after": {
+          "rss": 1787645952,
+          "heapTotal": 74301440,
+          "heapUsed": 69198824,
+          "external": 83325011,
+          "arrayBuffers": 76461722,
+          "availableSystemBytes": 12576178176
+        },
+        "sampledMaxRssBytes": 1787645952,
+        "samplingIntervalMs": 25,
+        "samples": 3,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 624.1479999999974,
+      "generatedTokenCount": 3,
+      "tokensPerSecond": 4.014364466558545,
+      "streamText": "RENT",
+      "score": {
+        "passed": true,
+        "expected": "RENT",
+        "actual": "RENT"
+      }
+    },
+    {
+      "id": "G010",
+      "category": "classification",
+      "prompt": "Classify the message. Reply with exactly one label: RENT, SALE, MAINTENANCE, VIEWING. Message: I would like to buy a house in Bristol.",
+      "expected": "SALE",
+      "scoring": "Trim whitespace; exact label.",
+      "output": "MAINTENANCE",
+      "durationMs": 926.168999999998,
+      "memory": {
+        "before": {
+          "rss": 1787723776,
+          "heapTotal": 74301440,
+          "heapUsed": 67571768,
+          "external": 78858476,
+          "arrayBuffers": 71995187,
+          "availableSystemBytes": 12575830016
+        },
+        "after": {
+          "rss": 1794994176,
+          "heapTotal": 74563584,
+          "heapUsed": 68043720,
+          "external": 90838611,
+          "arrayBuffers": 83975322,
+          "availableSystemBytes": 12572946432
+        },
+        "sampledMaxRssBytes": 1833398272,
+        "samplingIntervalMs": 25,
+        "samples": 5,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 659.7276999999995,
+      "generatedTokenCount": 5,
+      "tokensPerSecond": 5.398582764052793,
+      "streamText": "MAINTENANCE",
+      "score": {
+        "passed": false,
+        "expected": "SALE",
+        "actual": "MAINTENANCE"
+      }
+    },
+    {
+      "id": "G011",
+      "category": "classification",
+      "prompt": "Classify the message. Reply with exactly one label: RENT, SALE, MAINTENANCE, VIEWING. Message: The boiler in my Manchester flat is broken.",
+      "expected": "MAINTENANCE",
+      "scoring": "Trim whitespace; exact label.",
+      "output": "MAINTENANCE",
+      "durationMs": 925.9562000000005,
+      "memory": {
+        "before": {
+          "rss": 1750097920,
+          "heapTotal": 74301440,
+          "heapUsed": 67678568,
+          "external": 34447175,
+          "arrayBuffers": 27583886,
+          "availableSystemBytes": 12617187328
+        },
+        "after": {
+          "rss": 1795723264,
+          "heapTotal": 74301440,
+          "heapUsed": 68082336,
+          "external": 90631601,
+          "arrayBuffers": 83768312,
+          "availableSystemBytes": 12573712384
+        },
+        "sampledMaxRssBytes": 1795723264,
+        "samplingIntervalMs": 25,
+        "samples": 5,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 632.5999000000011,
+      "generatedTokenCount": 5,
+      "tokensPerSecond": 5.399823447372562,
+      "streamText": "MAINTENANCE",
+      "score": {
+        "passed": true,
+        "expected": "MAINTENANCE",
+        "actual": "MAINTENANCE"
+      }
+    },
+    {
+      "id": "G012",
+      "category": "classification",
+      "prompt": "Classify the message. Reply with exactly one label: RENT, SALE, MAINTENANCE, VIEWING. Message: Please book a viewing for the Leeds house.",
+      "expected": "VIEWING",
+      "scoring": "Trim whitespace; exact label.",
+      "output": "VIEWING",
+      "durationMs": 739.0171000000009,
+      "memory": {
+        "before": {
+          "rss": 1738432512,
+          "heapTotal": 74301440,
+          "heapUsed": 67493408,
+          "external": 35012399,
+          "arrayBuffers": 28149110,
+          "availableSystemBytes": 12620750848
+        },
+        "after": {
+          "rss": 1790676992,
+          "heapTotal": 74301440,
+          "heapUsed": 69198720,
+          "external": 84831787,
+          "arrayBuffers": 77968498,
+          "availableSystemBytes": 12576407552
+        },
+        "sampledMaxRssBytes": 1790676992,
+        "samplingIntervalMs": 25,
+        "samples": 3,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 622.2373000000007,
+      "generatedTokenCount": 3,
+      "tokensPerSecond": 4.05944598575594,
+      "streamText": "VIEWING",
+      "score": {
+        "passed": true,
+        "expected": "VIEWING",
+        "actual": "VIEWING"
+      }
+    },
+    {
+      "id": "G013",
+      "category": "grounded_answer",
+      "prompt": "Answer only from the context. If the answer is missing, reply exactly NOT_STATED. Otherwise reply with the shortest answer only. Context: The flat is in Bristol. It has two bedrooms. Question: Which city is the flat in?",
+      "expected": "Bristol",
+      "scoring": "Case-insensitive; strip final punctuation; no added words.",
+      "output": "Bristol",
+      "durationMs": 832.8787000000048,
+      "memory": {
+        "before": {
+          "rss": 1790676992,
+          "heapTotal": 78495744,
+          "heapUsed": 67566176,
+          "external": 80841892,
+          "arrayBuffers": 73978603,
+          "availableSystemBytes": 12576145408
+        },
+        "after": {
+          "rss": 1846095872,
+          "heapTotal": 78495744,
+          "heapUsed": 70924336,
+          "external": 142698789,
+          "arrayBuffers": 135835500,
+          "availableSystemBytes": 12526182400
+        },
+        "sampledMaxRssBytes": 1846095872,
+        "samplingIntervalMs": 25,
+        "samples": 3,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 680.6855999999971,
+      "generatedTokenCount": 3,
+      "tokensPerSecond": 3.601965088073429,
+      "streamText": "Bristol",
+      "score": {
+        "passed": true,
+        "expected": "Bristol",
+        "actual": "Bristol"
+      }
+    },
+    {
+      "id": "G014",
+      "category": "grounded_answer",
+      "prompt": "Answer only from the context. If the answer is missing, reply exactly NOT_STATED. Otherwise reply with the shortest answer only. Context: The house is in Leeds and has no garden. Question: Does the house have a garden?",
+      "expected": "No",
+      "scoring": "Case-insensitive; strip final punctuation; no added words.",
+      "output": "NOT_STATED",
+      "durationMs": 871.4422999999952,
+      "memory": {
+        "before": {
+          "rss": 1736757248,
+          "heapTotal": 78757888,
+          "heapUsed": 67712760,
+          "external": 32753492,
+          "arrayBuffers": 25890203,
+          "availableSystemBytes": 12622958592
+        },
+        "after": {
+          "rss": 1801781248,
+          "heapTotal": 79020032,
+          "heapUsed": 68131240,
+          "external": 97307411,
+          "arrayBuffers": 90444122,
+          "availableSystemBytes": 12569559040
+        },
+        "sampledMaxRssBytes": 1801781248,
+        "samplingIntervalMs": 25,
+        "samples": 4,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 694.6218999999983,
+      "generatedTokenCount": 4,
+      "tokensPerSecond": 4.590091621671363,
+      "streamText": "NOT_STATED",
+      "score": {
+        "passed": false,
+        "expected": "No",
+        "actual": "NOT_STATED"
+      }
+    },
+    {
+      "id": "G015",
+      "category": "grounded_answer",
+      "prompt": "Answer only from the context. If the answer is missing, reply exactly NOT_STATED. Otherwise reply with the shortest answer only. Context: The London flat has two bedrooms. Question: What is the monthly rent?",
+      "expected": "NOT_STATED",
+      "scoring": "Case-insensitive; strip final punctuation; no added words.",
+      "output": "NOT_STATED",
+      "durationMs": 868.8772000000026,
+      "memory": {
+        "before": {
+          "rss": 1750863872,
+          "heapTotal": 79020032,
+          "heapUsed": 67545848,
+          "external": 33146708,
+          "arrayBuffers": 26283419,
+          "availableSystemBytes": 12618899456
+        },
+        "after": {
+          "rss": 1801445376,
+          "heapTotal": 79282176,
+          "heapUsed": 68088400,
+          "external": 94941661,
+          "arrayBuffers": 88078372,
+          "availableSystemBytes": 12570861568
+        },
+        "sampledMaxRssBytes": 1801445376,
+        "samplingIntervalMs": 25,
+        "samples": 4,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 672.7848999999987,
+      "generatedTokenCount": 4,
+      "tokensPerSecond": 4.6036424940141,
+      "streamText": "NOT_STATED",
+      "score": {
+        "passed": true,
+        "expected": "NOT_STATED",
+        "actual": "NOT_STATED"
+      }
+    },
+    {
+      "id": "G016",
+      "category": "grounded_answer",
+      "prompt": "Answer only from the context. If the answer is missing, reply exactly NOT_STATED. Otherwise reply with the shortest answer only. Context: The Oxford cottage is available in November. Question: What is the owner's telephone number?",
+      "expected": "NOT_STATED",
+      "scoring": "Case-insensitive; strip final punctuation; no added words.",
+      "output": "NOT_STATED",
+      "durationMs": 908.9879000000001,
+      "memory": {
+        "before": {
+          "rss": 1752530944,
+          "heapTotal": 79020032,
+          "heapUsed": 67762128,
+          "external": 33670996,
+          "arrayBuffers": 26807707,
+          "availableSystemBytes": 12619096064
+        },
+        "after": {
+          "rss": 1803997184,
+          "heapTotal": 79020032,
+          "heapUsed": 68131408,
+          "external": 97583672,
+          "arrayBuffers": 90720383,
+          "availableSystemBytes": 12569538560
+        },
+        "sampledMaxRssBytes": 1803997184,
+        "samplingIntervalMs": 25,
+        "samples": 4,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 667.2212,
+      "generatedTokenCount": 4,
+      "tokensPerSecond": 4.400498620498689,
+      "streamText": "NOT_STATED",
+      "score": {
+        "passed": true,
+        "expected": "NOT_STATED",
+        "actual": "NOT_STATED"
+      }
+    },
+    {
+      "id": "G017",
+      "category": "short_draft",
+      "prompt": "Write one clear English sentence of at most 25 words from these notes. Preserve every stated fact, keep digits as digits, and add no claims: flat in London, two bedrooms, GBP 2200 per month",
+      "required": [
+        "london",
+        "two",
+        "2200"
+      ],
+      "forbidden": [
+        "guaranteed",
+        "luxury",
+        "mortgage approved"
+      ],
+      "scoring": "One sentence, <=25 words, required terms present, forbidden terms absent. This limited constraint check does not establish overall writing quality.",
+      "output": "A 2-bedroom flat in London costs approximately £2200 per month.",
+      "durationMs": 1771.4859999999971,
+      "memory": {
+        "before": {
+          "rss": 1803997184,
+          "heapTotal": 79020032,
+          "heapUsed": 68217872,
+          "external": 97845816,
+          "arrayBuffers": 90982527,
+          "availableSystemBytes": 12569243648
+        },
+        "after": {
+          "rss": 1752645632,
+          "heapTotal": 79282176,
+          "heapUsed": 68052992,
+          "external": 46334970,
+          "arrayBuffers": 39471681,
+          "availableSystemBytes": 12609986560
+        },
+        "sampledMaxRssBytes": 1850904576,
+        "samplingIntervalMs": 25,
+        "samples": 18,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 686.0365999999995,
+      "generatedTokenCount": 18,
+      "tokensPerSecond": 10.160960910783393,
+      "streamText": "A 2-bedroom flat in London costs approximately £2200 per month.",
+      "score": {
+        "passed": false,
+        "wordCount": 10,
+        "sentences": 1,
+        "required": [
+          {
+            "term": "london",
+            "present": true
+          },
+          {
+            "term": "two",
+            "present": false
+          },
+          {
+            "term": "2200",
+            "present": true
+          }
+        ],
+        "forbidden": [],
+        "note": "Partial automated constraints, not human writing quality."
+      }
+    },
+    {
+      "id": "G018",
+      "category": "short_draft",
+      "prompt": "Write one clear English sentence of at most 25 words from these notes. Preserve every stated fact, keep digits as digits, and add no claims: house in Bristol, three bedrooms, private garden",
+      "required": [
+        "bristol",
+        "three",
+        "garden"
+      ],
+      "forbidden": [
+        "guaranteed",
+        "luxury",
+        "mortgage approved"
+      ],
+      "scoring": "One sentence, <=25 words, required terms present, forbidden terms absent. This limited constraint check does not establish overall writing quality.",
+      "output": "There is a house located in Bristol that has three bedrooms and a private garden.",
+      "durationMs": 1740.3824999999997,
+      "memory": {
+        "before": {
+          "rss": 1752932352,
+          "heapTotal": 79282176,
+          "heapUsed": 68140248,
+          "external": 46630113,
+          "arrayBuffers": 39766824,
+          "availableSystemBytes": 12610736128
+        },
+        "after": {
+          "rss": 1844781056,
+          "heapTotal": 79282176,
+          "heapUsed": 70092576,
+          "external": 140035135,
+          "arrayBuffers": 133171846,
+          "availableSystemBytes": 12518154240
+        },
+        "sampledMaxRssBytes": 1844781056,
+        "samplingIntervalMs": 25,
+        "samples": 17,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 638.0347000000038,
+      "generatedTokenCount": 17,
+      "tokensPerSecond": 9.767967673772866,
+      "streamText": "There is a house located in Bristol that has three bedrooms and a private garden.",
+      "score": {
+        "passed": true,
+        "wordCount": 15,
+        "sentences": 1,
+        "required": [
+          {
+            "term": "bristol",
+            "present": true
+          },
+          {
+            "term": "three",
+            "present": true
+          },
+          {
+            "term": "garden",
+            "present": true
+          }
+        ],
+        "forbidden": [],
+        "note": "Partial automated constraints, not human writing quality."
+      }
+    },
+    {
+      "id": "G019",
+      "category": "short_draft",
+      "prompt": "Write one clear English sentence of at most 25 words from these notes. Preserve every stated fact, keep digits as digits, and add no claims: viewing in Manchester on Friday at 10 am",
+      "required": [
+        "manchester",
+        "friday",
+        "10"
+      ],
+      "forbidden": [
+        "guaranteed",
+        "luxury",
+        "mortgage approved"
+      ],
+      "scoring": "One sentence, <=25 words, required terms present, forbidden terms absent. This limited constraint check does not establish overall writing quality.",
+      "output": "On Friday, October 10th, you can view your home in Manchester.",
+      "durationMs": 1734.1079000000027,
+      "memory": {
+        "before": {
+          "rss": 1747767296,
+          "heapTotal": 79544320,
+          "heapUsed": 67909216,
+          "external": 43947811,
+          "arrayBuffers": 37084522,
+          "availableSystemBytes": 12612984832
+        },
+        "after": {
+          "rss": 1780785152,
+          "heapTotal": 79020032,
+          "heapUsed": 67623776,
+          "external": 75984661,
+          "arrayBuffers": 63765520,
+          "availableSystemBytes": 12584271872
+        },
+        "sampledMaxRssBytes": 1802649600,
+        "samplingIntervalMs": 25,
+        "samples": 18,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 625.4223999999958,
+      "generatedTokenCount": 18,
+      "tokensPerSecond": 10.379976932231248,
+      "streamText": "On Friday, October 10th, you can view your home in Manchester.",
+      "score": {
+        "passed": true,
+        "wordCount": 11,
+        "sentences": 1,
+        "required": [
+          {
+            "term": "manchester",
+            "present": true
+          },
+          {
+            "term": "friday",
+            "present": true
+          },
+          {
+            "term": "10",
+            "present": true
+          }
+        ],
+        "forbidden": [],
+        "note": "Partial automated constraints, not human writing quality."
+      }
+    },
+    {
+      "id": "G020",
+      "category": "short_draft",
+      "prompt": "Write one clear English sentence of at most 25 words from these notes. Preserve every stated fact, keep digits as digits, and add no claims: Oxford cottage, available in November, no parking",
+      "required": [
+        "oxford",
+        "november",
+        "no parking"
+      ],
+      "forbidden": [
+        "guaranteed",
+        "luxury",
+        "mortgage approved"
+      ],
+      "scoring": "One sentence, <=25 words, required terms present, forbidden terms absent. This limited constraint check does not establish overall writing quality.",
+      "output": "Oxford Cottage is available for rent in November with no parking charges.",
+      "durationMs": 1540.7525000000023,
+      "memory": {
+        "before": {
+          "rss": 1780879360,
+          "heapTotal": 79020032,
+          "heapUsed": 67896856,
+          "external": 38560840,
+          "arrayBuffers": 31697551,
+          "availableSystemBytes": 12583710720
+        },
+        "after": {
+          "rss": 1792073728,
+          "heapTotal": 79020032,
+          "heapUsed": 69687328,
+          "external": 85894576,
+          "arrayBuffers": 79031287,
+          "availableSystemBytes": 12581269504
+        },
+        "sampledMaxRssBytes": 1829814272,
+        "samplingIntervalMs": 25,
+        "samples": 15,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 630.278999999995,
+      "generatedTokenCount": 15,
+      "tokensPerSecond": 9.735502619661482,
+      "streamText": "Oxford Cottage is available for rent in November with no parking charges.",
+      "score": {
+        "passed": true,
+        "wordCount": 12,
+        "sentences": 1,
+        "required": [
+          {
+            "term": "oxford",
+            "present": true
+          },
+          {
+            "term": "november",
+            "present": true
+          },
+          {
+            "term": "no parking",
+            "present": true
+          }
+        ],
+        "forbidden": [],
+        "note": "Partial automated constraints, not human writing quality."
+      }
+    },
+    {
+      "id": "G021",
+      "category": "bounded_calculation",
+      "prompt": "A London flat rents for GBP 1200 per month. What is twelve times 1200? Reply with digits only.",
+      "expected": "14400",
+      "scoring": "Exact answer after whitespace trimming.",
+      "output": "120000",
+      "durationMs": 947.7786000000051,
+      "memory": {
+        "before": {
+          "rss": 1792073728,
+          "heapTotal": 79282176,
+          "heapUsed": 67960912,
+          "external": 86196314,
+          "arrayBuffers": 54763736,
+          "availableSystemBytes": 12582014976
+        },
+        "after": {
+          "rss": 1763487744,
+          "heapTotal": 78757888,
+          "heapUsed": 68432640,
+          "external": 57790628,
+          "arrayBuffers": 50927339,
+          "availableSystemBytes": 12604203008
+        },
+        "sampledMaxRssBytes": 1796009984,
+        "samplingIntervalMs": 25,
+        "samples": 7,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 560.5374000000011,
+      "generatedTokenCount": 7,
+      "tokensPerSecond": 7.385691130818909,
+      "streamText": "120000",
+      "score": {
+        "passed": false,
+        "expected": "14400",
+        "actual": "120000"
+      }
+    },
+    {
+      "id": "G022",
+      "category": "bounded_calculation",
+      "prompt": "There are 8 viewings in Bristol on Monday and 5 on Tuesday. How many in total? Reply with digits only.",
+      "expected": "13",
+      "scoring": "Exact answer after whitespace trimming.",
+      "output": "13",
+      "durationMs": 684.9297000000006,
+      "memory": {
+        "before": {
+          "rss": 1763102720,
+          "heapTotal": 78757888,
+          "heapUsed": 67823608,
+          "external": 40462137,
+          "arrayBuffers": 33598848,
+          "availableSystemBytes": 12603506688
+        },
+        "after": {
+          "rss": 1763217408,
+          "heapTotal": 78757888,
+          "heapUsed": 67881616,
+          "external": 46206400,
+          "arrayBuffers": 39343111,
+          "availableSystemBytes": 12603330560
+        },
+        "sampledMaxRssBytes": 1802092544,
+        "samplingIntervalMs": 25,
+        "samples": 3,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 541.136599999998,
+      "generatedTokenCount": 3,
+      "tokensPerSecond": 4.380011554470476,
+      "streamText": "13",
+      "score": {
+        "passed": true,
+        "expected": "13",
+        "actual": "13"
+      }
+    },
+    {
+      "id": "G023",
+      "category": "bounded_calculation",
+      "prompt": "A Manchester office has 20 listings and removes 7. How many remain? Reply with digits only.",
+      "expected": "13",
+      "scoring": "Exact answer after whitespace trimming.",
+      "output": "13",
+      "durationMs": 634.527399999999,
+      "memory": {
+        "before": {
+          "rss": 1763221504,
+          "heapTotal": 78757888,
+          "heapUsed": 67973208,
+          "external": 46510804,
+          "arrayBuffers": 39647515,
+          "availableSystemBytes": 12604116992
+        },
+        "after": {
+          "rss": 1800130560,
+          "heapTotal": 78757888,
+          "heapUsed": 71170000,
+          "external": 90712902,
+          "arrayBuffers": 83849613,
+          "availableSystemBytes": 12568723456
+        },
+        "sampledMaxRssBytes": 1800130560,
+        "samplingIntervalMs": 25,
+        "samples": 3,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 519.7816999999995,
+      "generatedTokenCount": 3,
+      "tokensPerSecond": 4.727928218702619,
+      "streamText": "13",
+      "score": {
+        "passed": true,
+        "expected": "13",
+        "actual": "13"
+      }
+    },
+    {
+      "id": "G024",
+      "category": "bounded_calculation",
+      "prompt": "A Leeds viewing starts at 10:00 and lasts 30 minutes. What time does it end? Reply exactly HH:MM.",
+      "expected": "10:30",
+      "scoring": "Exact answer after whitespace trimming.",
+      "output": "23:30",
+      "durationMs": 939.0982999999978,
+      "memory": {
+        "before": {
+          "rss": 1763864576,
+          "heapTotal": 79020032,
+          "heapUsed": 67908184,
+          "external": 41316748,
+          "arrayBuffers": 34453459,
+          "availableSystemBytes": 12603654144
+        },
+        "after": {
+          "rss": 1807044608,
+          "heapTotal": 79020032,
+          "heapUsed": 68476824,
+          "external": 100016266,
+          "arrayBuffers": 93152977,
+          "availableSystemBytes": 12562956288
+        },
+        "sampledMaxRssBytes": 1807044608,
+        "samplingIntervalMs": 25,
+        "samples": 6,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "firstTokenMs": 567.4582999999984,
+      "generatedTokenCount": 6,
+      "tokensPerSecond": 6.389107508766669,
+      "streamText": "23:30",
+      "score": {
+        "passed": false,
+        "expected": "10:30",
+        "actual": "23:30"
+      }
+    }
+  ],
+  "observations": {
+    "byCategory": {
+      "structured_extraction": {
+        "cases": 8,
+        "passed": 0,
+        "latencyMs": {
+          "count": 8,
+          "median": 3133.9073000000026,
+          "p95": 3567.8233999999998,
+          "minimum": 3029.1922000000013,
+          "maximum": 3567.8233999999998,
+          "mean": 3244.4075500000013
+        }
+      },
+      "classification": {
+        "cases": 4,
+        "passed": 3,
+        "latencyMs": {
+          "count": 4,
+          "median": 747.3162999999986,
+          "p95": 926.168999999998,
+          "minimum": 739.0171000000009,
+          "maximum": 926.168999999998,
+          "mean": 834.6146499999995
+        }
+      },
+      "grounded_answer": {
+        "cases": 4,
+        "passed": 3,
+        "latencyMs": {
+          "count": 4,
+          "median": 868.8772000000026,
+          "p95": 908.9879000000001,
+          "minimum": 832.8787000000048,
+          "maximum": 908.9879000000001,
+          "mean": 870.5465250000007
+        }
+      },
+      "short_draft": {
+        "cases": 4,
+        "passed": 3,
+        "latencyMs": {
+          "count": 4,
+          "median": 1734.1079000000027,
+          "p95": 1771.4859999999971,
+          "minimum": 1540.7525000000023,
+          "maximum": 1771.4859999999971,
+          "mean": 1696.6822250000005
+        }
+      },
+      "bounded_calculation": {
+        "cases": 4,
+        "passed": 2,
+        "latencyMs": {
+          "count": 4,
+          "median": 684.9297000000006,
+          "p95": 947.7786000000051,
+          "minimum": 634.527399999999,
+          "maximum": 947.7786000000051,
+          "mean": 801.5835000000006
+        }
+      }
+    },
+    "latencyMs": {
+      "count": 24,
+      "median": 947.7786000000051,
+      "p95": 3420.005800000001,
+      "minimum": 634.527399999999,
+      "maximum": 3567.8233999999998,
+      "mean": 1782.040333333334
+    },
+    "firstTokenMs": {
+      "count": 24,
+      "median": 667.2212,
+      "p95": 889.1163000000015,
+      "minimum": 519.7816999999995,
+      "maximum": 908.9380999999994,
+      "mean": 707.5669083333328
+    },
+    "totalGeneratedTokens": 405,
+    "totalGenerationMs": 42768.968000000015,
+    "weightedTokensPerSecond": 9.469482639842978
+  },
+  "networkAttempts": [],
+  "import": {
+    "durationMs": 146.41310000000001,
+    "memory": {
+      "before": {
+        "rss": 48971776,
+        "heapTotal": 8962048,
+        "heapUsed": 5797704,
+        "external": 2432264,
+        "arrayBuffers": 158968,
+        "availableSystemBytes": 14316187648
+      },
+      "after": {
+        "rss": 67489792,
+        "heapTotal": 19447808,
+        "heapUsed": 12047856,
+        "external": 5663695,
+        "arrayBuffers": 345271,
+        "availableSystemBytes": 14297391104
+      },
+      "sampledMaxRssBytes": 67489792,
+      "samplingIntervalMs": 25,
+      "samples": 1,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  "packageLockSha256": "ecd4f3eadc4adb41d2979d672fa766243bd25ed683018f95d63e0d841220e2aa",
+  "dependencies": {
+    "@huggingface/transformers": "4.3.2",
+    "onnxruntime-node": "1.30.0"
+  },
+  "load": {
+    "durationMs": 3071.6753,
+    "memory": {
+      "before": {
+        "rss": 67526656,
+        "heapTotal": 19447808,
+        "heapUsed": 12352008,
+        "external": 5700002,
+        "arrayBuffers": 381586,
+        "availableSystemBytes": 14297321472
+      },
+      "after": {
+        "rss": 1565433856,
+        "heapTotal": 132812800,
+        "heapUsed": 95112768,
+        "external": 23085095,
+        "arrayBuffers": 3726686,
+        "availableSystemBytes": 12795465728
+      },
+      "sampledMaxRssBytes": 1565433856,
+      "samplingIntervalMs": 25,
+      "samples": 3,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  "dataset": {
+    "fixtureSha256": "df412e3881f774cbebb4be60b30f9d3f88b25b54ee9702a1f2fbcaa34c60ad23",
+    "cases": 24,
+    "notes": [
+      "Expected answers were declared before inference.",
+      "No production quality threshold was supplied.",
+      "Short draft constraints are partial automated checks, not a human writing-quality score."
+    ]
+  },
+  "summary": {
+    "technical": {
+      "total": 8,
+      "passed": 8,
+      "failed": 0
+    },
+    "cases": 24,
+    "automatedConstraintPasses": 11
+  },
+  "status": "completed",
+  "completedAt": "2026-11-04T20:09:35.545Z"
+}

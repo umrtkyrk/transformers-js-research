@@ -1,0 +1,1715 @@
+{
+  "model": {
+    "key": "M3",
+    "id": "Xenova/whisper-tiny",
+    "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+    "dtype": "q8",
+    "task": "automatic-speech-recognition"
+  },
+  "startedAt": "2026-11-04T20:07:44.435Z",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "win32",
+    "architecture": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor                ",
+    "freeMemoryBytesAtStart": 14266523648
+  },
+  "settings": {
+    "package": "4.3.2",
+    "backend": "Node native CPU",
+    "intraOpNumThreads": 4,
+    "interOpNumThreads": 1,
+    "network": "disabled during controlled inference",
+    "memory": "Whole-process RSS sampled25ms; short native peaks may be missed."
+  },
+  "tests": [
+    {
+      "id": "M3-VERSION",
+      "purpose": "Exact installed package",
+      "status": "passed",
+      "durationMs": 0.03479999999998995,
+      "detail": {
+        "@huggingface/transformers": "4.3.2",
+        "onnxruntime-node": "1.30.0"
+      }
+    },
+    {
+      "id": "M3-LOAD",
+      "purpose": "Pinned model loads on native CPU",
+      "status": "passed",
+      "durationMs": 0.06579999999996744,
+      "detail": {
+        "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+        "dtype": "q8",
+        "loadMs": 768.9963
+      }
+    },
+    {
+      "id": "ASR-OUTPUT",
+      "purpose": "All23 inference cases return a string",
+      "status": "passed",
+      "durationMs": 0.05490000000281725,
+      "detail": {
+        "cases": 23
+      }
+    },
+    {
+      "id": "ASR-SILENCE",
+      "purpose": "Silence produces no transcribed speech",
+      "status": "failed",
+      "durationMs": 0.1757999999972526,
+      "error": "Speech hallucinated on silence: [\" you\",\" you\"]"
+    },
+    {
+      "id": "ASR-BATCH",
+      "purpose": "Two audio inputs preserve order and text",
+      "status": "passed",
+      "durationMs": 1728.6782999999996,
+      "detail": {
+        "outputs": [
+          {
+            "text": " The viewing in London is on Friday at 10 in the morning."
+          },
+          {
+            "text": " The monthly rent in Manchester is £1200."
+          }
+        ],
+        "durationMs": 1728.2333999999973
+      }
+    },
+    {
+      "id": "ASR-TIMESTAMPS",
+      "purpose": "Timestamp mode returns bounded timestamp chunks",
+      "status": "passed",
+      "durationMs": 992.2065000000002,
+      "detail": {
+        "text": " The viewing in London is on Friday at 10 in the morning.",
+        "chunks": [
+          {
+            "timestamp": [
+              0,
+              3
+            ],
+            "text": " The viewing in London is on Friday at 10 in the morning."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ASR-NODE-WAV-PATH",
+      "purpose": "Node path loading fails clearly without AudioContext",
+      "status": "passed",
+      "durationMs": 1.0200999999979103,
+      "detail": {
+        "error": "Unable to load audio from path/URL since `AudioContext` is not available in your environment. Instead, audio data should be passed directly to the pipeline/processor. For more information and some example code, see https://huggingface.co/docs/transformers.js/guides/node-audio-processing.",
+        "workaround": "Decode WAV to Float32Array before pipeline"
+      }
+    },
+    {
+      "id": "M3-OFFLINE",
+      "purpose": "Controlled inference made no network requests",
+      "status": "passed",
+      "durationMs": 0.056299999996554106,
+      "detail": {
+        "networkAttempts": 0
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "A001",
+      "condition": "clean",
+      "wav": "data/audio/A001.wav",
+      "reference": "The viewing in London is on Friday at ten in the morning.",
+      "prediction": " The viewing in London is on Friday at 10 in the morning.",
+      "durationSeconds": 3.655,
+      "durationMs": 908.1970000000001,
+      "realTimeFactor": 0.24848071135430919,
+      "memory": {
+        "before": {
+          "rss": 331894784,
+          "heapTotal": 125562880,
+          "heapUsed": 72138920,
+          "external": 35890215,
+          "arrayBuffers": 29021420,
+          "availableSystemBytes": 13979430912
+        },
+        "after": {
+          "rss": 764403712,
+          "heapTotal": 119808000,
+          "heapUsed": 50525920,
+          "external": 56535147,
+          "arrayBuffers": 49666352,
+          "availableSystemBytes": 13544640512
+        },
+        "sampledMaxRssBytes": 981630976,
+        "samplingIntervalMs": 25,
+        "samples": 9,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "cf66d7cddbf39b7e650ea31b0d883e4e050aaa72b0d5c5a8bc3c572c87bcd273",
+      "score": {
+        "referenceWords": 12,
+        "wordErrors": 1,
+        "wer": 0.08333333333333333,
+        "characterErrors": 3,
+        "referenceCharacters": 56,
+        "cer": 0.05357142857142857,
+        "requiredPhrases": [
+          {
+            "text": "london",
+            "present": true
+          },
+          {
+            "text": "friday",
+            "present": true
+          },
+          {
+            "text": "ten",
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "A001-N",
+      "condition": "noise15dB",
+      "wav": "data/audio/A001-noisy.wav",
+      "reference": "The viewing in London is on Friday at ten in the morning.",
+      "prediction": " The viewing in London is on Friday, the 10th of the morning.",
+      "durationSeconds": 3.655,
+      "durationMs": 932.5701999999997,
+      "realTimeFactor": 0.2551491655266757,
+      "memory": {
+        "before": {
+          "rss": 765071360,
+          "heapTotal": 119808000,
+          "heapUsed": 50702856,
+          "external": 56993899,
+          "arrayBuffers": 50125104,
+          "availableSystemBytes": 13546319872
+        },
+        "after": {
+          "rss": 824000512,
+          "heapTotal": 120070144,
+          "heapUsed": 50444144,
+          "external": 48583821,
+          "arrayBuffers": 41720532,
+          "availableSystemBytes": 13486452736
+        },
+        "sampledMaxRssBytes": 1052278784,
+        "samplingIntervalMs": 25,
+        "samples": 10,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "80065abcd4b4be5dc567947fe2f7d0e4f269a1b016d6d12d9bf50bb4749b637c",
+      "score": {
+        "referenceWords": 12,
+        "wordErrors": 3,
+        "wer": 0.25,
+        "characterErrors": 9,
+        "referenceCharacters": 56,
+        "cer": 0.16071428571428573,
+        "requiredPhrases": [
+          {
+            "text": "london",
+            "present": true
+          },
+          {
+            "text": "friday",
+            "present": true
+          },
+          {
+            "text": "ten",
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "A002",
+      "condition": "clean",
+      "wav": "data/audio/A002.wav",
+      "reference": "The monthly rent in Manchester is one thousand two hundred pounds.",
+      "prediction": " The monthly rent in Manchester is £1200.",
+      "durationSeconds": 4.52,
+      "durationMs": 852.9589999999998,
+      "realTimeFactor": 0.18870774336283183,
+      "memory": {
+        "before": {
+          "rss": 824045568,
+          "heapTotal": 120070144,
+          "heapUsed": 50590280,
+          "external": 48845965,
+          "arrayBuffers": 41982676,
+          "availableSystemBytes": 13486190592
+        },
+        "after": {
+          "rss": 832122880,
+          "heapTotal": 120070144,
+          "heapUsed": 51147688,
+          "external": 56486439,
+          "arrayBuffers": 49623150,
+          "availableSystemBytes": 13484613632
+        },
+        "sampledMaxRssBytes": 1047166976,
+        "samplingIntervalMs": 25,
+        "samples": 8,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "18749cf556b8b6583da5a6f2815491eb62b97b9f8b8378c932d5c77a942ec31c",
+      "score": {
+        "referenceWords": 11,
+        "wordErrors": 5,
+        "wer": 0.45454545454545453,
+        "characterErrors": 31,
+        "referenceCharacters": 65,
+        "cer": 0.47692307692307695,
+        "requiredPhrases": [
+          {
+            "text": "manchester",
+            "present": true
+          },
+          {
+            "text": "one thousand two hundred",
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "A002-N",
+      "condition": "noise15dB",
+      "wav": "data/audio/A002-noisy.wav",
+      "reference": "The monthly rent in Manchester is one thousand two hundred pounds.",
+      "prediction": " The monthly rent and Manchester is £1200.",
+      "durationSeconds": 4.52,
+      "durationMs": 876.3736000000004,
+      "realTimeFactor": 0.19388796460177,
+      "memory": {
+        "before": {
+          "rss": 832159744,
+          "heapTotal": 120070144,
+          "heapUsed": 51258376,
+          "external": 56879655,
+          "arrayBuffers": 50016366,
+          "availableSystemBytes": 13484257280
+        },
+        "after": {
+          "rss": 824799232,
+          "heapTotal": 120070144,
+          "heapUsed": 50740712,
+          "external": 52773854,
+          "arrayBuffers": 45910565,
+          "availableSystemBytes": 13493202944
+        },
+        "sampledMaxRssBytes": 1044652032,
+        "samplingIntervalMs": 25,
+        "samples": 7,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "501b67ed0c161ce499b8bae32cb73f1257fb3061b965f1e0c0386b8d3f0e9985",
+      "score": {
+        "referenceWords": 11,
+        "wordErrors": 6,
+        "wer": 0.5454545454545454,
+        "characterErrors": 33,
+        "referenceCharacters": 65,
+        "cer": 0.5076923076923077,
+        "requiredPhrases": [
+          {
+            "text": "manchester",
+            "present": true
+          },
+          {
+            "text": "one thousand two hundred",
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "A003",
+      "condition": "clean",
+      "wav": "data/audio/A003.wav",
+      "reference": "The Bristol flat has two bedrooms and a private garden.",
+      "prediction": " The Bristol flat has two bedrooms and a private garden.",
+      "durationSeconds": 3.715,
+      "durationMs": 882.1480000000001,
+      "realTimeFactor": 0.23745572005383583,
+      "memory": {
+        "before": {
+          "rss": 825094144,
+          "heapTotal": 120070144,
+          "heapUsed": 50842760,
+          "external": 53167070,
+          "arrayBuffers": 46303781,
+          "availableSystemBytes": 13492809728
+        },
+        "after": {
+          "rss": 831438848,
+          "heapTotal": 120070144,
+          "heapUsed": 50895024,
+          "external": 55434333,
+          "arrayBuffers": 48571044,
+          "availableSystemBytes": 13493747712
+        },
+        "sampledMaxRssBytes": 1046941696,
+        "samplingIntervalMs": 25,
+        "samples": 9,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "2fc8c29493db43e9e07a387022d18ec132c304d926ce779c6834f5a799610207",
+      "score": {
+        "referenceWords": 10,
+        "wordErrors": 0,
+        "wer": 0,
+        "characterErrors": 0,
+        "referenceCharacters": 54,
+        "cer": 0,
+        "requiredPhrases": [
+          {
+            "text": "bristol",
+            "present": true
+          },
+          {
+            "text": "two bedrooms",
+            "present": true
+          },
+          {
+            "text": "garden",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A003-N",
+      "condition": "noise15dB",
+      "wav": "data/audio/A003-noisy.wav",
+      "reference": "The Bristol flat has two bedrooms and a private garden.",
+      "prediction": " The Bristol flat has two bedrooms and a private garden.",
+      "durationSeconds": 3.715,
+      "durationMs": 851.1328999999996,
+      "realTimeFactor": 0.2291071063257065,
+      "memory": {
+        "before": {
+          "rss": 831447040,
+          "heapTotal": 120070144,
+          "heapUsed": 51029344,
+          "external": 55696477,
+          "arrayBuffers": 48833188,
+          "availableSystemBytes": 13493465088
+        },
+        "after": {
+          "rss": 830201856,
+          "heapTotal": 120070144,
+          "heapUsed": 50924560,
+          "external": 56548445,
+          "arrayBuffers": 49685156,
+          "availableSystemBytes": 13494296576
+        },
+        "sampledMaxRssBytes": 1043968000,
+        "samplingIntervalMs": 25,
+        "samples": 8,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "81d4a6715a78dd78c2e80ad621b77b17aba165abd067d829fd0f3f0af66d756f",
+      "score": {
+        "referenceWords": 10,
+        "wordErrors": 0,
+        "wer": 0,
+        "characterErrors": 0,
+        "referenceCharacters": 54,
+        "cer": 0,
+        "requiredPhrases": [
+          {
+            "text": "bristol",
+            "present": true
+          },
+          {
+            "text": "two bedrooms",
+            "present": true
+          },
+          {
+            "text": "garden",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A004",
+      "condition": "clean",
+      "wav": "data/audio/A004.wav",
+      "reference": "The house in Leeds has no garden and no parking space.",
+      "prediction": " The house in Leeds has no garden and no parking space.",
+      "durationSeconds": 3.835,
+      "durationMs": 883.9795000000004,
+      "realTimeFactor": 0.2305031290743156,
+      "memory": {
+        "before": {
+          "rss": 830447616,
+          "heapTotal": 120070144,
+          "heapUsed": 51084760,
+          "external": 56810589,
+          "arrayBuffers": 49947300,
+          "availableSystemBytes": 13494099968
+        },
+        "after": {
+          "rss": 833527808,
+          "heapTotal": 120070144,
+          "heapUsed": 51126088,
+          "external": 59254902,
+          "arrayBuffers": 52391613,
+          "availableSystemBytes": 13495078912
+        },
+        "sampledMaxRssBytes": 1046425600,
+        "samplingIntervalMs": 25,
+        "samples": 9,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "f554b92e5c51269d621bef8dd70dbd20ef42eef365962748315d843212b218ae",
+      "score": {
+        "referenceWords": 11,
+        "wordErrors": 0,
+        "wer": 0,
+        "characterErrors": 0,
+        "referenceCharacters": 53,
+        "cer": 0,
+        "requiredPhrases": [
+          {
+            "text": "leeds",
+            "present": true
+          },
+          {
+            "text": "no garden",
+            "present": true
+          },
+          {
+            "text": "no parking",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A004-N",
+      "condition": "noise15dB",
+      "wav": "data/audio/A004-noisy.wav",
+      "reference": "The house in Leeds has no garden and no parking space.",
+      "prediction": " The house in Leeds has no garden and no parking space.",
+      "durationSeconds": 3.835,
+      "durationMs": 932.2419,
+      "realTimeFactor": 0.24308784876140807,
+      "memory": {
+        "before": {
+          "rss": 833527808,
+          "heapTotal": 120070144,
+          "heapUsed": 51355360,
+          "external": 59517046,
+          "arrayBuffers": 52653757,
+          "availableSystemBytes": 13494792192
+        },
+        "after": {
+          "rss": 834707456,
+          "heapTotal": 120070144,
+          "heapUsed": 51204888,
+          "external": 60500086,
+          "arrayBuffers": 53636797,
+          "availableSystemBytes": 13493522432
+        },
+        "sampledMaxRssBytes": 1049432064,
+        "samplingIntervalMs": 25,
+        "samples": 9,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "c028a92fce4583654452db78a101aa53ad97ed586349efb8739b89e8590f8e00",
+      "score": {
+        "referenceWords": 11,
+        "wordErrors": 0,
+        "wer": 0,
+        "characterErrors": 0,
+        "referenceCharacters": 53,
+        "cer": 0,
+        "requiredPhrases": [
+          {
+            "text": "leeds",
+            "present": true
+          },
+          {
+            "text": "no garden",
+            "present": true
+          },
+          {
+            "text": "no parking",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A005",
+      "condition": "clean",
+      "wav": "data/audio/A005.wav",
+      "reference": "Please call the Nottingham office before arranging a viewing.",
+      "prediction": " Please call the Nottingham Office before arranging a viewing.",
+      "durationSeconds": 3.705,
+      "durationMs": 864.2483999999986,
+      "realTimeFactor": 0.2332654251012142,
+      "memory": {
+        "before": {
+          "rss": 834711552,
+          "heapTotal": 120070144,
+          "heapUsed": 51343976,
+          "external": 60827766,
+          "arrayBuffers": 53964477,
+          "availableSystemBytes": 13493231616
+        },
+        "after": {
+          "rss": 838893568,
+          "heapTotal": 120070144,
+          "heapUsed": 51588192,
+          "external": 65967046,
+          "arrayBuffers": 59103757,
+          "availableSystemBytes": 13491527680
+        },
+        "sampledMaxRssBytes": 1049247744,
+        "samplingIntervalMs": 25,
+        "samples": 8,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "3f686bd120bf5f49697ed53725cdf0e3c0552b2ccba27d382ec9de7ec470984d",
+      "score": {
+        "referenceWords": 9,
+        "wordErrors": 0,
+        "wer": 0,
+        "characterErrors": 0,
+        "referenceCharacters": 60,
+        "cer": 0,
+        "requiredPhrases": [
+          {
+            "text": "nottingham",
+            "present": true
+          },
+          {
+            "text": "office",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A005-N",
+      "condition": "noise15dB",
+      "wav": "data/audio/A005-noisy.wav",
+      "reference": "Please call the Nottingham office before arranging a viewing.",
+      "prediction": " Please call the Nodding Office before arranging a viewing.",
+      "durationSeconds": 3.705,
+      "durationMs": 890.2816999999995,
+      "realTimeFactor": 0.2402919568151146,
+      "memory": {
+        "before": {
+          "rss": 839110656,
+          "heapTotal": 120070144,
+          "heapUsed": 51737216,
+          "external": 66229190,
+          "arrayBuffers": 59365901,
+          "availableSystemBytes": 13492314112
+        },
+        "after": {
+          "rss": 835801088,
+          "heapTotal": 120332288,
+          "heapUsed": 51269888,
+          "external": 62319993,
+          "arrayBuffers": 55456704,
+          "availableSystemBytes": 13492822016
+        },
+        "sampledMaxRssBytes": 1049354240,
+        "samplingIntervalMs": 25,
+        "samples": 9,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "8a42760a2e116db96e9a1a023e616b015d1c59f6cb26d42367b68b34fe959c0b",
+      "score": {
+        "referenceWords": 9,
+        "wordErrors": 1,
+        "wer": 0.1111111111111111,
+        "characterErrors": 5,
+        "referenceCharacters": 60,
+        "cer": 0.08333333333333333,
+        "requiredPhrases": [
+          {
+            "text": "nottingham",
+            "present": false
+          },
+          {
+            "text": "office",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A006",
+      "condition": "clean",
+      "wav": "data/audio/A006.wav",
+      "reference": "The Oxford cottage is available from the first of November.",
+      "prediction": " The Oxford College is available from the first of November.",
+      "durationSeconds": 3.815,
+      "durationMs": 880.209499999999,
+      "realTimeFactor": 0.23072332896461312,
+      "memory": {
+        "before": {
+          "rss": 835883008,
+          "heapTotal": 120332288,
+          "heapUsed": 51422680,
+          "external": 62647673,
+          "arrayBuffers": 55784384,
+          "availableSystemBytes": 13492531200
+        },
+        "after": {
+          "rss": 839667712,
+          "heapTotal": 120332288,
+          "heapUsed": 51558152,
+          "external": 66799530,
+          "arrayBuffers": 59936241,
+          "availableSystemBytes": 13491601408
+        },
+        "sampledMaxRssBytes": 1050161152,
+        "samplingIntervalMs": 25,
+        "samples": 8,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "fd3e398cdc5439dfe94edf4c548488b01d189695bbda034e84e0033470eab651",
+      "score": {
+        "referenceWords": 10,
+        "wordErrors": 1,
+        "wer": 0.1,
+        "characterErrors": 3,
+        "referenceCharacters": 58,
+        "cer": 0.05172413793103448,
+        "requiredPhrases": [
+          {
+            "text": "oxford",
+            "present": true
+          },
+          {
+            "text": "first",
+            "present": true
+          },
+          {
+            "text": "november",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A006-N",
+      "condition": "noise15dB",
+      "wav": "data/audio/A006-noisy.wav",
+      "reference": "The Oxford cottage is available from the first of November.",
+      "prediction": " The Oxford College is available from the first of November.",
+      "durationSeconds": 3.815,
+      "durationMs": 861.5296999999991,
+      "realTimeFactor": 0.2258269200524244,
+      "memory": {
+        "before": {
+          "rss": 840114176,
+          "heapTotal": 120332288,
+          "heapUsed": 51712016,
+          "external": 67061674,
+          "arrayBuffers": 60198385,
+          "availableSystemBytes": 13491339264
+        },
+        "after": {
+          "rss": 839733248,
+          "heapTotal": 120332288,
+          "heapUsed": 51225240,
+          "external": 63691873,
+          "arrayBuffers": 56828584,
+          "availableSystemBytes": 13490417664
+        },
+        "sampledMaxRssBytes": 1053245440,
+        "samplingIntervalMs": 25,
+        "samples": 8,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "0b95a65aa6fe306c4184734ed6b4eb58903d761f123dc8c36216c052b0b9db12",
+      "score": {
+        "referenceWords": 10,
+        "wordErrors": 1,
+        "wer": 0.1,
+        "characterErrors": 3,
+        "referenceCharacters": 58,
+        "cer": 0.05172413793103448,
+        "requiredPhrases": [
+          {
+            "text": "oxford",
+            "present": true
+          },
+          {
+            "text": "first",
+            "present": true
+          },
+          {
+            "text": "november",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A007",
+      "condition": "clean",
+      "wav": "data/audio/A007.wav",
+      "reference": "The buyer in Cambridge needs a step free entrance.",
+      "prediction": " The buyer in Cambridge needs a step-free entrance.",
+      "durationSeconds": 3.495,
+      "durationMs": 882.2999999999993,
+      "realTimeFactor": 0.25244635193133025,
+      "memory": {
+        "before": {
+          "rss": 839753728,
+          "heapTotal": 120332288,
+          "heapUsed": 51394456,
+          "external": 63987283,
+          "arrayBuffers": 57123994,
+          "availableSystemBytes": 13490118656
+        },
+        "after": {
+          "rss": 841265152,
+          "heapTotal": 120332288,
+          "heapUsed": 51544240,
+          "external": 69093281,
+          "arrayBuffers": 62229992,
+          "availableSystemBytes": 13492342784
+        },
+        "sampledMaxRssBytes": 1049964544,
+        "samplingIntervalMs": 25,
+        "samples": 9,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "148f8628c86793aefce586a98ef091095c9390dc031fa1bda14b8bb968eb8410",
+      "score": {
+        "referenceWords": 9,
+        "wordErrors": 0,
+        "wer": 0,
+        "characterErrors": 0,
+        "referenceCharacters": 49,
+        "cer": 0,
+        "requiredPhrases": [
+          {
+            "text": "cambridge",
+            "present": true
+          },
+          {
+            "text": "step free",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A007-N",
+      "condition": "noise15dB",
+      "wav": "data/audio/A007-noisy.wav",
+      "reference": "The buyer in Cambridge needs a step free entrance.",
+      "prediction": " The buyer and Cambridge need to step three entrance.",
+      "durationSeconds": 3.495,
+      "durationMs": 879.5601000000006,
+      "realTimeFactor": 0.25166240343347657,
+      "memory": {
+        "before": {
+          "rss": 841461760,
+          "heapTotal": 120332288,
+          "heapUsed": 51708952,
+          "external": 69390272,
+          "arrayBuffers": 62526983,
+          "availableSystemBytes": 13492043776
+        },
+        "after": {
+          "rss": 843059200,
+          "heapTotal": 120332288,
+          "heapUsed": 51443448,
+          "external": 67782206,
+          "arrayBuffers": 60918917,
+          "availableSystemBytes": 13492043776
+        },
+        "sampledMaxRssBytes": 1055744000,
+        "samplingIntervalMs": 25,
+        "samples": 8,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "a48ab7dcd1f43efece487641b48ab8be01f46b194aeed34a2607a15a1497396d",
+      "score": {
+        "referenceWords": 9,
+        "wordErrors": 4,
+        "wer": 0.4444444444444444,
+        "characterErrors": 7,
+        "referenceCharacters": 49,
+        "cer": 0.14285714285714285,
+        "requiredPhrases": [
+          {
+            "text": "cambridge",
+            "present": true
+          },
+          {
+            "text": "step free",
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "A008",
+      "condition": "clean",
+      "wav": "data/audio/A008.wav",
+      "reference": "The Brighton apartment costs three hundred thousand pounds.",
+      "prediction": " The Brighton apartment costs £300,000.",
+      "durationSeconds": 3.99,
+      "durationMs": 825.4627,
+      "realTimeFactor": 0.2068828822055138,
+      "memory": {
+        "before": {
+          "rss": 843292672,
+          "heapTotal": 120332288,
+          "heapUsed": 51581696,
+          "external": 68080828,
+          "arrayBuffers": 61217539,
+          "availableSystemBytes": 13491781632
+        },
+        "after": {
+          "rss": 842547200,
+          "heapTotal": 120332288,
+          "heapUsed": 51107080,
+          "external": 65553371,
+          "arrayBuffers": 58690082,
+          "availableSystemBytes": 13492195328
+        },
+        "sampledMaxRssBytes": 1057345536,
+        "samplingIntervalMs": 25,
+        "samples": 8,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "05cdd1f37e4cb3f3b75b10243a9e9b57c2199cde892397b99db2c80fbadf0aff",
+      "score": {
+        "referenceWords": 8,
+        "wordErrors": 4,
+        "wer": 0.5,
+        "characterErrors": 28,
+        "referenceCharacters": 58,
+        "cer": 0.4827586206896552,
+        "requiredPhrases": [
+          {
+            "text": "brighton",
+            "present": true
+          },
+          {
+            "text": "three hundred thousand",
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "A008-N",
+      "condition": "noise15dB",
+      "wav": "data/audio/A008-noisy.wav",
+      "reference": "The Brighton apartment costs three hundred thousand pounds.",
+      "prediction": " The bright department costs £300,000.",
+      "durationSeconds": 3.99,
+      "durationMs": 847.256800000001,
+      "realTimeFactor": 0.21234506265664185,
+      "memory": {
+        "before": {
+          "rss": 842551296,
+          "heapTotal": 120332288,
+          "heapUsed": 51217376,
+          "external": 65853594,
+          "arrayBuffers": 58990305,
+          "availableSystemBytes": 13491896320
+        },
+        "after": {
+          "rss": 843911168,
+          "heapTotal": 120332288,
+          "heapUsed": 51419968,
+          "external": 70761755,
+          "arrayBuffers": 63898466,
+          "availableSystemBytes": 13491535872
+        },
+        "sampledMaxRssBytes": 1059676160,
+        "samplingIntervalMs": 25,
+        "samples": 7,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "13bcfb7e695c4a1b3137e1681692ad711ebacb4e82557267936ecec0f72421c5",
+      "score": {
+        "referenceWords": 8,
+        "wordErrors": 6,
+        "wer": 0.75,
+        "characterErrors": 32,
+        "referenceCharacters": 58,
+        "cer": 0.5517241379310345,
+        "requiredPhrases": [
+          {
+            "text": "brighton",
+            "present": false
+          },
+          {
+            "text": "three hundred thousand",
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "A009",
+      "condition": "clean",
+      "wav": "data/audio/A009.wav",
+      "reference": "Please cancel the viewing in Sheffield on Monday afternoon.",
+      "prediction": " Please cancel the viewing and check field on Monday afternoon.",
+      "durationSeconds": 3.925,
+      "durationMs": 886.2446999999993,
+      "realTimeFactor": 0.2257948280254775,
+      "memory": {
+        "before": {
+          "rss": 844042240,
+          "heapTotal": 120332288,
+          "heapUsed": 51531904,
+          "external": 71063601,
+          "arrayBuffers": 64200312,
+          "availableSystemBytes": 13491232768
+        },
+        "after": {
+          "rss": 844931072,
+          "heapTotal": 120594432,
+          "heapUsed": 51254976,
+          "external": 69131364,
+          "arrayBuffers": 62268075,
+          "availableSystemBytes": 13490270208
+        },
+        "sampledMaxRssBytes": 1059721216,
+        "samplingIntervalMs": 25,
+        "samples": 8,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "f97e0d3c854c71f6d058d72b6cc36834a4bb9f4020fa41f5e4ee2bb149e4ff92",
+      "score": {
+        "referenceWords": 9,
+        "wordErrors": 3,
+        "wer": 0.3333333333333333,
+        "characterErrors": 6,
+        "referenceCharacters": 58,
+        "cer": 0.10344827586206896,
+        "requiredPhrases": [
+          {
+            "text": "cancel",
+            "present": true
+          },
+          {
+            "text": "sheffield",
+            "present": false
+          },
+          {
+            "text": "monday",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A009-N",
+      "condition": "noise15dB",
+      "wav": "data/audio/A009-noisy.wav",
+      "reference": "Please cancel the viewing in Sheffield on Monday afternoon.",
+      "prediction": " Please cancel the viewing and check the old Monday afternoon.",
+      "durationSeconds": 3.925,
+      "durationMs": 854.6927999999989,
+      "realTimeFactor": 0.21775612738853475,
+      "memory": {
+        "before": {
+          "rss": 844967936,
+          "heapTotal": 120594432,
+          "heapUsed": 51430432,
+          "external": 69434927,
+          "arrayBuffers": 62571638,
+          "availableSystemBytes": 13490008064
+        },
+        "after": {
+          "rss": 846815232,
+          "heapTotal": 120594432,
+          "heapUsed": 51601128,
+          "external": 74467244,
+          "arrayBuffers": 67603955,
+          "availableSystemBytes": 13490036736
+        },
+        "sampledMaxRssBytes": 1055272960,
+        "samplingIntervalMs": 25,
+        "samples": 9,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "d96f04d713a8e5f253066cdeb1452cf29ff6cdc9abfbbf61ce59a91d4279bce9",
+      "score": {
+        "referenceWords": 9,
+        "wordErrors": 4,
+        "wer": 0.4444444444444444,
+        "characterErrors": 11,
+        "referenceCharacters": 58,
+        "cer": 0.1896551724137931,
+        "requiredPhrases": [
+          {
+            "text": "cancel",
+            "present": true
+          },
+          {
+            "text": "sheffield",
+            "present": false
+          },
+          {
+            "text": "monday",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A010",
+      "condition": "clean",
+      "wav": "data/audio/A010.wav",
+      "reference": "The Liverpool tenant reported a broken boiler this morning.",
+      "prediction": " The Liverpool tenant reported a broken boiler this morning.",
+      "durationSeconds": 3.805,
+      "durationMs": 850.0001000000011,
+      "realTimeFactor": 0.22339030223390305,
+      "memory": {
+        "before": {
+          "rss": 847122432,
+          "heapTotal": 120594432,
+          "heapUsed": 51758816,
+          "external": 74772536,
+          "arrayBuffers": 67909247,
+          "availableSystemBytes": 13489729536
+        },
+        "after": {
+          "rss": 847912960,
+          "heapTotal": 120594432,
+          "heapUsed": 51549264,
+          "external": 74771001,
+          "arrayBuffers": 67907712,
+          "availableSystemBytes": 13488558080
+        },
+        "sampledMaxRssBytes": 1059942400,
+        "samplingIntervalMs": 25,
+        "samples": 8,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "90ff3546277d4500001d7654245c4b35629a06f4048acc50c5853e3dd4a97680",
+      "score": {
+        "referenceWords": 9,
+        "wordErrors": 0,
+        "wer": 0,
+        "characterErrors": 0,
+        "referenceCharacters": 58,
+        "cer": 0,
+        "requiredPhrases": [
+          {
+            "text": "liverpool",
+            "present": true
+          },
+          {
+            "text": "broken boiler",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "A010-N",
+      "condition": "noise15dB",
+      "wav": "data/audio/A010-noisy.wav",
+      "reference": "The Liverpool tenant reported a broken boiler this morning.",
+      "prediction": " The Liverpool tenant reported a broken boiler this morning.",
+      "durationSeconds": 3.805,
+      "durationMs": 857.3787000000011,
+      "realTimeFactor": 0.22532948751642604,
+      "memory": {
+        "before": {
+          "rss": 847912960,
+          "heapTotal": 120594432,
+          "heapUsed": 51720136,
+          "external": 75077896,
+          "arrayBuffers": 68214607,
+          "availableSystemBytes": 13488295936
+        },
+        "after": {
+          "rss": 848359424,
+          "heapTotal": 120594432,
+          "heapUsed": 51549112,
+          "external": 75745422,
+          "arrayBuffers": 68882133,
+          "availableSystemBytes": 13488197632
+        },
+        "sampledMaxRssBytes": 1059704832,
+        "samplingIntervalMs": 25,
+        "samples": 8,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "4c9326b08e86cd485e7571a43b85ff896bfe632e89efca7f9abb688573c3baaf",
+      "score": {
+        "referenceWords": 9,
+        "wordErrors": 0,
+        "wer": 0,
+        "characterErrors": 0,
+        "referenceCharacters": 58,
+        "cer": 0,
+        "requiredPhrases": [
+          {
+            "text": "liverpool",
+            "present": true
+          },
+          {
+            "text": "broken boiler",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "SILENCE-1",
+      "condition": "silence",
+      "wav": "data/audio/silence-1.wav",
+      "reference": "",
+      "prediction": " you",
+      "durationSeconds": 1,
+      "durationMs": 733.2777000000024,
+      "realTimeFactor": 0.7332777000000024,
+      "memory": {
+        "before": {
+          "rss": 848412672,
+          "heapTotal": 120594432,
+          "heapUsed": 51717512,
+          "external": 75791788,
+          "arrayBuffers": 68928499,
+          "availableSystemBytes": 13488152576
+        },
+        "after": {
+          "rss": 1029369856,
+          "heapTotal": 120594432,
+          "heapUsed": 50912304,
+          "external": 254741017,
+          "arrayBuffers": 247877728,
+          "availableSystemBytes": 13310615552
+        },
+        "sampledMaxRssBytes": 1029369856,
+        "samplingIntervalMs": 25,
+        "samples": 4,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+      "score": {
+        "referenceWords": 0,
+        "wordErrors": 1,
+        "wer": null,
+        "characterErrors": 3,
+        "referenceCharacters": 0,
+        "cer": null,
+        "requiredPhrases": []
+      }
+    },
+    {
+      "id": "SILENCE-3",
+      "condition": "silence",
+      "wav": "data/audio/silence-3.wav",
+      "reference": "",
+      "prediction": " you",
+      "durationSeconds": 3,
+      "durationMs": 727.3580999999976,
+      "realTimeFactor": 0.24245269999999922,
+      "memory": {
+        "before": {
+          "rss": 877355008,
+          "heapTotal": 120332288,
+          "heapUsed": 51057744,
+          "external": 254788702,
+          "arrayBuffers": 85925380,
+          "availableSystemBytes": 13457973248
+        },
+        "after": {
+          "rss": 815169536,
+          "heapTotal": 120332288,
+          "heapUsed": 50816528,
+          "external": 38740984,
+          "arrayBuffers": 31877695,
+          "availableSystemBytes": 13520347136
+        },
+        "sampledMaxRssBytes": 1034534912,
+        "samplingIntervalMs": 25,
+        "samples": 4,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+      "score": {
+        "referenceWords": 0,
+        "wordErrors": 1,
+        "wer": null,
+        "characterErrors": 3,
+        "referenceCharacters": 0,
+        "cer": null,
+        "requiredPhrases": []
+      }
+    },
+    {
+      "id": "LONG-01",
+      "condition": "long-chunked",
+      "wav": "data/audio/long-joined.wav",
+      "reference": "The viewing in London is on Friday at ten in the morning. The monthly rent in Manchester is one thousand two hundred pounds. The Bristol flat has two bedrooms and a private garden. The house in Leeds has no garden and no parking space. Please call the Nottingham office before arranging a viewing. The Oxford cottage is available from the first of November. The buyer in Cambridge needs a step free entrance. The Brighton apartment costs three hundred thousand pounds. Please cancel the viewing in Sheffield on Monday afternoon. The Liverpool tenant reported a broken boiler this morning.",
+      "prediction": " The viewing in London is on Friday at 10 in the morning. The monthly rent in Manchester is £1200. The Bristol flat has two bedrooms and a private garden. The house in Leeds has no garden and no parking space. Please call the Nottingham Office before arranging a viewing. The Oxford College is available from the first of November. The buyer in Cambridge needs a step free entrance. The Brighton Department costs £300,000. Please cancel the viewing and check field on Monday afternoon. The Liverpool tenant reported a broken boiler this morning.",
+      "durationSeconds": 38.46,
+      "durationMs": 5304.364300000001,
+      "realTimeFactor": 0.1379189885595424,
+      "memory": {
+        "before": {
+          "rss": 815169536,
+          "heapTotal": 120332288,
+          "heapUsed": 50892088,
+          "external": 38789987,
+          "arrayBuffers": 31926698,
+          "availableSystemBytes": 13520338944
+        },
+        "after": {
+          "rss": 821211136,
+          "heapTotal": 55320576,
+          "heapUsed": 51341072,
+          "external": 45032735,
+          "arrayBuffers": 38169446,
+          "availableSystemBytes": 13519384576
+        },
+        "sampledMaxRssBytes": 1038794752,
+        "samplingIntervalMs": 25,
+        "samples": 85,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "sha256": "c1fc574aa325c47af6e10910fe3a7cd925d6de2f639f8671e2e9156a4031e0ad",
+      "score": {
+        "referenceWords": 98,
+        "wordErrors": 15,
+        "wer": 0.15306122448979592,
+        "characterErrors": 73,
+        "referenceCharacters": 578,
+        "cer": 0.12629757785467127,
+        "requiredPhrases": []
+      }
+    }
+  ],
+  "observations": {
+    "clean": {
+      "cases": 10,
+      "referenceWords": 98,
+      "wordErrors": 14,
+      "wer": 0.14285714285714285,
+      "latencyMs": {
+        "count": 10,
+        "median": 880.209499999999,
+        "p95": 908.1970000000001,
+        "minimum": 825.4627,
+        "maximum": 908.1970000000001,
+        "mean": 871.5748899999999
+      },
+      "medianRealTimeFactor": 0.2305031290743156
+    },
+    "noise15dB": {
+      "cases": 10,
+      "referenceWords": 98,
+      "wordErrors": 25,
+      "wer": 0.25510204081632654,
+      "latencyMs": {
+        "count": 10,
+        "median": 861.5296999999991,
+        "p95": 932.5701999999997,
+        "minimum": 847.256800000001,
+        "maximum": 932.5701999999997,
+        "mean": 878.3018400000001
+      },
+      "medianRealTimeFactor": 0.2258269200524244
+    },
+    "long-chunked": {
+      "cases": 1,
+      "referenceWords": 98,
+      "wordErrors": 15,
+      "wer": 0.15306122448979592,
+      "latencyMs": {
+        "count": 1,
+        "median": 5304.364300000001,
+        "p95": 5304.364300000001,
+        "minimum": 5304.364300000001,
+        "maximum": 5304.364300000001,
+        "mean": 5304.364300000001
+      },
+      "medianRealTimeFactor": 0.1379189885595424
+    },
+    "warm": {
+      "count": 3,
+      "median": 922.1790000000001,
+      "p95": 934.5849000000017,
+      "minimum": 870.9637000000002,
+      "maximum": 934.5849000000017,
+      "mean": 909.242533333334
+    }
+  },
+  "networkAttempts": [],
+  "import": {
+    "durationMs": 147.79,
+    "memory": {
+      "before": {
+        "rss": 49131520,
+        "heapTotal": 8962048,
+        "heapUsed": 5771808,
+        "external": 2432264,
+        "arrayBuffers": 158968,
+        "availableSystemBytes": 14266384384
+      },
+      "after": {
+        "rss": 67444736,
+        "heapTotal": 19447808,
+        "heapUsed": 12063008,
+        "external": 5663695,
+        "arrayBuffers": 345271,
+        "availableSystemBytes": 14247784448
+      },
+      "sampledMaxRssBytes": 67444736,
+      "samplingIntervalMs": 25,
+      "samples": 1,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  "packageLockSha256": "ecd4f3eadc4adb41d2979d672fa766243bd25ed683018f95d63e0d841220e2aa",
+  "dependencies": {
+    "@huggingface/transformers": "4.3.2",
+    "onnxruntime-node": "1.30.0"
+  },
+  "load": {
+    "durationMs": 768.9963,
+    "memory": {
+      "before": {
+        "rss": 67551232,
+        "heapTotal": 19447808,
+        "heapUsed": 12366856,
+        "external": 5700002,
+        "arrayBuffers": 381586,
+        "availableSystemBytes": 14247649280
+      },
+      "after": {
+        "rss": 261341184,
+        "heapTotal": 119349248,
+        "heapUsed": 57711712,
+        "external": 12562908,
+        "arrayBuffers": 2222566,
+        "availableSystemBytes": 14049292288
+      },
+      "sampledMaxRssBytes": 261341184,
+      "samplingIntervalMs": 25,
+      "samples": 3,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  "dataset": {
+    "source": "Windows System.Speech; Microsoft Zira Desktop; en-US synthetic voice reading fictional England property scenarios. Not human or British-accent validation.",
+    "fixtureSha256": "dbe9989c77beffff0e1db1d0acf7e8e93ec733ab4d5fcc97063321dc74751589",
+    "normalization": [
+      "Labels are declared before inference.",
+      "WER normalization removes punctuation and case only; number words are not rewritten to digits.",
+      "Clean and noisy clips share one synthetic voice; results are not a population-quality estimate."
+    ],
+    "generatedCases": [
+      {
+        "id": "A001",
+        "text": "The viewing in London is on Friday at ten in the morning.",
+        "required_phrases": [
+          "london",
+          "friday",
+          "ten"
+        ],
+        "wav": "data/audio/A001.wav",
+        "condition": "clean",
+        "sha256": "cf66d7cddbf39b7e650ea31b0d883e4e050aaa72b0d5c5a8bc3c572c87bcd273",
+        "durationSeconds": 3.655
+      },
+      {
+        "id": "A001-N",
+        "text": "The viewing in London is on Friday at ten in the morning.",
+        "required_phrases": [
+          "london",
+          "friday",
+          "ten"
+        ],
+        "wav": "data/audio/A001-noisy.wav",
+        "condition": "noise15dB",
+        "sha256": "80065abcd4b4be5dc567947fe2f7d0e4f269a1b016d6d12d9bf50bb4749b637c",
+        "durationSeconds": 3.655
+      },
+      {
+        "id": "A002",
+        "text": "The monthly rent in Manchester is one thousand two hundred pounds.",
+        "required_phrases": [
+          "manchester",
+          "one thousand two hundred"
+        ],
+        "wav": "data/audio/A002.wav",
+        "condition": "clean",
+        "sha256": "18749cf556b8b6583da5a6f2815491eb62b97b9f8b8378c932d5c77a942ec31c",
+        "durationSeconds": 4.52
+      },
+      {
+        "id": "A002-N",
+        "text": "The monthly rent in Manchester is one thousand two hundred pounds.",
+        "required_phrases": [
+          "manchester",
+          "one thousand two hundred"
+        ],
+        "wav": "data/audio/A002-noisy.wav",
+        "condition": "noise15dB",
+        "sha256": "501b67ed0c161ce499b8bae32cb73f1257fb3061b965f1e0c0386b8d3f0e9985",
+        "durationSeconds": 4.52
+      },
+      {
+        "id": "A003",
+        "text": "The Bristol flat has two bedrooms and a private garden.",
+        "required_phrases": [
+          "bristol",
+          "two bedrooms",
+          "garden"
+        ],
+        "wav": "data/audio/A003.wav",
+        "condition": "clean",
+        "sha256": "2fc8c29493db43e9e07a387022d18ec132c304d926ce779c6834f5a799610207",
+        "durationSeconds": 3.715
+      },
+      {
+        "id": "A003-N",
+        "text": "The Bristol flat has two bedrooms and a private garden.",
+        "required_phrases": [
+          "bristol",
+          "two bedrooms",
+          "garden"
+        ],
+        "wav": "data/audio/A003-noisy.wav",
+        "condition": "noise15dB",
+        "sha256": "81d4a6715a78dd78c2e80ad621b77b17aba165abd067d829fd0f3f0af66d756f",
+        "durationSeconds": 3.715
+      },
+      {
+        "id": "A004",
+        "text": "The house in Leeds has no garden and no parking space.",
+        "required_phrases": [
+          "leeds",
+          "no garden",
+          "no parking"
+        ],
+        "wav": "data/audio/A004.wav",
+        "condition": "clean",
+        "sha256": "f554b92e5c51269d621bef8dd70dbd20ef42eef365962748315d843212b218ae",
+        "durationSeconds": 3.835
+      },
+      {
+        "id": "A004-N",
+        "text": "The house in Leeds has no garden and no parking space.",
+        "required_phrases": [
+          "leeds",
+          "no garden",
+          "no parking"
+        ],
+        "wav": "data/audio/A004-noisy.wav",
+        "condition": "noise15dB",
+        "sha256": "c028a92fce4583654452db78a101aa53ad97ed586349efb8739b89e8590f8e00",
+        "durationSeconds": 3.835
+      },
+      {
+        "id": "A005",
+        "text": "Please call the Nottingham office before arranging a viewing.",
+        "required_phrases": [
+          "nottingham",
+          "office"
+        ],
+        "wav": "data/audio/A005.wav",
+        "condition": "clean",
+        "sha256": "3f686bd120bf5f49697ed53725cdf0e3c0552b2ccba27d382ec9de7ec470984d",
+        "durationSeconds": 3.705
+      },
+      {
+        "id": "A005-N",
+        "text": "Please call the Nottingham office before arranging a viewing.",
+        "required_phrases": [
+          "nottingham",
+          "office"
+        ],
+        "wav": "data/audio/A005-noisy.wav",
+        "condition": "noise15dB",
+        "sha256": "8a42760a2e116db96e9a1a023e616b015d1c59f6cb26d42367b68b34fe959c0b",
+        "durationSeconds": 3.705
+      },
+      {
+        "id": "A006",
+        "text": "The Oxford cottage is available from the first of November.",
+        "required_phrases": [
+          "oxford",
+          "first",
+          "november"
+        ],
+        "wav": "data/audio/A006.wav",
+        "condition": "clean",
+        "sha256": "fd3e398cdc5439dfe94edf4c548488b01d189695bbda034e84e0033470eab651",
+        "durationSeconds": 3.815
+      },
+      {
+        "id": "A006-N",
+        "text": "The Oxford cottage is available from the first of November.",
+        "required_phrases": [
+          "oxford",
+          "first",
+          "november"
+        ],
+        "wav": "data/audio/A006-noisy.wav",
+        "condition": "noise15dB",
+        "sha256": "0b95a65aa6fe306c4184734ed6b4eb58903d761f123dc8c36216c052b0b9db12",
+        "durationSeconds": 3.815
+      },
+      {
+        "id": "A007",
+        "text": "The buyer in Cambridge needs a step free entrance.",
+        "required_phrases": [
+          "cambridge",
+          "step free"
+        ],
+        "wav": "data/audio/A007.wav",
+        "condition": "clean",
+        "sha256": "148f8628c86793aefce586a98ef091095c9390dc031fa1bda14b8bb968eb8410",
+        "durationSeconds": 3.495
+      },
+      {
+        "id": "A007-N",
+        "text": "The buyer in Cambridge needs a step free entrance.",
+        "required_phrases": [
+          "cambridge",
+          "step free"
+        ],
+        "wav": "data/audio/A007-noisy.wav",
+        "condition": "noise15dB",
+        "sha256": "a48ab7dcd1f43efece487641b48ab8be01f46b194aeed34a2607a15a1497396d",
+        "durationSeconds": 3.495
+      },
+      {
+        "id": "A008",
+        "text": "The Brighton apartment costs three hundred thousand pounds.",
+        "required_phrases": [
+          "brighton",
+          "three hundred thousand"
+        ],
+        "wav": "data/audio/A008.wav",
+        "condition": "clean",
+        "sha256": "05cdd1f37e4cb3f3b75b10243a9e9b57c2199cde892397b99db2c80fbadf0aff",
+        "durationSeconds": 3.99
+      },
+      {
+        "id": "A008-N",
+        "text": "The Brighton apartment costs three hundred thousand pounds.",
+        "required_phrases": [
+          "brighton",
+          "three hundred thousand"
+        ],
+        "wav": "data/audio/A008-noisy.wav",
+        "condition": "noise15dB",
+        "sha256": "13bcfb7e695c4a1b3137e1681692ad711ebacb4e82557267936ecec0f72421c5",
+        "durationSeconds": 3.99
+      },
+      {
+        "id": "A009",
+        "text": "Please cancel the viewing in Sheffield on Monday afternoon.",
+        "required_phrases": [
+          "cancel",
+          "sheffield",
+          "monday"
+        ],
+        "wav": "data/audio/A009.wav",
+        "condition": "clean",
+        "sha256": "f97e0d3c854c71f6d058d72b6cc36834a4bb9f4020fa41f5e4ee2bb149e4ff92",
+        "durationSeconds": 3.925
+      },
+      {
+        "id": "A009-N",
+        "text": "Please cancel the viewing in Sheffield on Monday afternoon.",
+        "required_phrases": [
+          "cancel",
+          "sheffield",
+          "monday"
+        ],
+        "wav": "data/audio/A009-noisy.wav",
+        "condition": "noise15dB",
+        "sha256": "d96f04d713a8e5f253066cdeb1452cf29ff6cdc9abfbbf61ce59a91d4279bce9",
+        "durationSeconds": 3.925
+      },
+      {
+        "id": "A010",
+        "text": "The Liverpool tenant reported a broken boiler this morning.",
+        "required_phrases": [
+          "liverpool",
+          "broken boiler"
+        ],
+        "wav": "data/audio/A010.wav",
+        "condition": "clean",
+        "sha256": "90ff3546277d4500001d7654245c4b35629a06f4048acc50c5853e3dd4a97680",
+        "durationSeconds": 3.805
+      },
+      {
+        "id": "A010-N",
+        "text": "The Liverpool tenant reported a broken boiler this morning.",
+        "required_phrases": [
+          "liverpool",
+          "broken boiler"
+        ],
+        "wav": "data/audio/A010-noisy.wav",
+        "condition": "noise15dB",
+        "sha256": "4c9326b08e86cd485e7571a43b85ff896bfe632e89efca7f9abb688573c3baaf",
+        "durationSeconds": 3.805
+      },
+      {
+        "id": "SILENCE-1",
+        "text": "",
+        "required_phrases": [],
+        "wav": "data/audio/silence-1.wav",
+        "condition": "silence",
+        "sha256": "643f8a8dc8bd9c19225afffad2becfec5426180b3749cb208abdf1a6c8354efc",
+        "durationSeconds": 1
+      },
+      {
+        "id": "SILENCE-3",
+        "text": "",
+        "required_phrases": [],
+        "wav": "data/audio/silence-3.wav",
+        "condition": "silence",
+        "sha256": "d303811b8c84619667cd0501342f84ec6cbe69f7aa3856dcf52fabda374c92b8",
+        "durationSeconds": 3
+      },
+      {
+        "id": "LONG-01",
+        "text": "The viewing in London is on Friday at ten in the morning. The monthly rent in Manchester is one thousand two hundred pounds. The Bristol flat has two bedrooms and a private garden. The house in Leeds has no garden and no parking space. Please call the Nottingham office before arranging a viewing. The Oxford cottage is available from the first of November. The buyer in Cambridge needs a step free entrance. The Brighton apartment costs three hundred thousand pounds. Please cancel the viewing in Sheffield on Monday afternoon. The Liverpool tenant reported a broken boiler this morning.",
+        "required_phrases": [],
+        "wav": "data/audio/long-joined.wav",
+        "condition": "long-chunked",
+        "sha256": "c1fc574aa325c47af6e10910fe3a7cd925d6de2f639f8671e2e9156a4031e0ad",
+        "durationSeconds": 38.46
+      }
+    ]
+  },
+  "summary": {
+    "technical": {
+      "total": 8,
+      "passed": 7,
+      "failed": 1
+    },
+    "cases": 23
+  },
+  "status": "completed",
+  "completedAt": "2026-11-04T20:08:15.515Z"
+}

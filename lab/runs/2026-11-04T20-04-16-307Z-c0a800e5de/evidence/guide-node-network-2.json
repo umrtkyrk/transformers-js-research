@@ -1,0 +1,14 @@
+{
+  "timestamp": "2026-11-04T20:09:51.050Z",
+  "durationMs": 645.2494,
+  "fetches": [
+    {
+      "url": "https://huggingface.co/Xenova/distilbert-base-uncased-finetuned-sst-2-english/resolve/main/tokenizer_config.json",
+      "method": "GET",
+      "status": 206,
+      "durationMs": 74.02839999999998,
+      "contentLength": "1",
+      "contentType": "text/plain; charset=utf-8"
+    }
+  ]
+}

@@ -1,0 +1,1638 @@
+{
+  "cases": 80,
+  "passed": 80,
+  "failed": 0,
+  "note": "Runtime filter predicate compared with separately authored candidate ID gold; this tests the fixture application, not model authorization or a production security boundary.",
+  "rows": [
+    {
+      "id": "Q001",
+      "actual": [
+        "UK001"
+      ],
+      "expected": [
+        "UK001"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q002",
+      "actual": [
+        "UK007"
+      ],
+      "expected": [
+        "UK007"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q003",
+      "actual": [
+        "UK011"
+      ],
+      "expected": [
+        "UK011"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q004",
+      "actual": [
+        "UK016"
+      ],
+      "expected": [
+        "UK016"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q005",
+      "actual": [
+        "UK021",
+        "UK025"
+      ],
+      "expected": [
+        "UK021",
+        "UK025"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q006",
+      "actual": [
+        "UK012"
+      ],
+      "expected": [
+        "UK012"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q007",
+      "actual": [
+        "UK017"
+      ],
+      "expected": [
+        "UK017"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q008",
+      "actual": [
+        "UK010"
+      ],
+      "expected": [
+        "UK010"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q009",
+      "actual": [
+        "UK002"
+      ],
+      "expected": [
+        "UK002"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q010",
+      "actual": [
+        "UK001"
+      ],
+      "expected": [
+        "UK001"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q011",
+      "actual": [
+        "UK025"
+      ],
+      "expected": [
+        "UK025"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q012",
+      "actual": [
+        "UK020"
+      ],
+      "expected": [
+        "UK020"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q013",
+      "actual": [
+        "UK005"
+      ],
+      "expected": [
+        "UK005"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q014",
+      "actual": [
+        "UK015"
+      ],
+      "expected": [
+        "UK015"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q015",
+      "actual": [
+        "UK010"
+      ],
+      "expected": [
+        "UK010"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q016",
+      "actual": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q017",
+      "actual": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q018",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "id": "Q019",
+      "actual": [
+        "UK010"
+      ],
+      "expected": [
+        "UK010"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q020",
+      "actual": [
+        "UK024"
+      ],
+      "expected": [
+        "UK024"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q021",
+      "actual": [
+        "UK026"
+      ],
+      "expected": [
+        "UK026"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q022",
+      "actual": [
+        "UK031"
+      ],
+      "expected": [
+        "UK031"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q023",
+      "actual": [
+        "UK040"
+      ],
+      "expected": [
+        "UK040"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q024",
+      "actual": [
+        "UK042"
+      ],
+      "expected": [
+        "UK042"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q025",
+      "actual": [
+        "UK046"
+      ],
+      "expected": [
+        "UK046"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q026",
+      "actual": [
+        "UK051",
+        "UK055"
+      ],
+      "expected": [
+        "UK051",
+        "UK055"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q027",
+      "actual": [
+        "UK056"
+      ],
+      "expected": [
+        "UK056"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q028",
+      "actual": [
+        "UK032"
+      ],
+      "expected": [
+        "UK032"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q029",
+      "actual": [
+        "UK047"
+      ],
+      "expected": [
+        "UK047"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q030",
+      "actual": [
+        "UK057"
+      ],
+      "expected": [
+        "UK057"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q031",
+      "actual": [
+        "UK027"
+      ],
+      "expected": [
+        "UK027"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q032",
+      "actual": [
+        "UK035"
+      ],
+      "expected": [
+        "UK035"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q033",
+      "actual": [
+        "UK037"
+      ],
+      "expected": [
+        "UK037"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q034",
+      "actual": [
+        "UK041"
+      ],
+      "expected": [
+        "UK041"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q035",
+      "actual": [
+        "UK046",
+        "UK050"
+      ],
+      "expected": [
+        "UK046",
+        "UK050"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q036",
+      "actual": [
+        "UK052"
+      ],
+      "expected": [
+        "UK052"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q037",
+      "actual": [
+        "UK060"
+      ],
+      "expected": [
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q038",
+      "actual": [
+        "UK029"
+      ],
+      "expected": [
+        "UK029"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q039",
+      "actual": [
+        "UK054"
+      ],
+      "expected": [
+        "UK054"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q040",
+      "actual": [
+        "UK039"
+      ],
+      "expected": [
+        "UK039"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q041",
+      "actual": [
+        "UK031"
+      ],
+      "expected": [
+        "UK031"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q042",
+      "actual": [
+        "UK037"
+      ],
+      "expected": [
+        "UK037"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q043",
+      "actual": [
+        "UK046"
+      ],
+      "expected": [
+        "UK046"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q044",
+      "actual": [
+        "UK057"
+      ],
+      "expected": [
+        "UK057"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q045",
+      "actual": [
+        "UK027"
+      ],
+      "expected": [
+        "UK027"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q046",
+      "actual": [
+        "UK041",
+        "UK045"
+      ],
+      "expected": [
+        "UK041",
+        "UK045"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q047",
+      "actual": [
+        "UK035"
+      ],
+      "expected": [
+        "UK035"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q048",
+      "actual": [
+        "UK060"
+      ],
+      "expected": [
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q049",
+      "actual": [
+        "UK051"
+      ],
+      "expected": [
+        "UK051"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q050",
+      "actual": [
+        "UK030"
+      ],
+      "expected": [
+        "UK030"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q051",
+      "actual": [
+        "UK030"
+      ],
+      "expected": [
+        "UK030"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q052",
+      "actual": [
+        "UK035"
+      ],
+      "expected": [
+        "UK035"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q053",
+      "actual": [
+        "UK040"
+      ],
+      "expected": [
+        "UK040"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q054",
+      "actual": [
+        "UK041",
+        "UK045"
+      ],
+      "expected": [
+        "UK041",
+        "UK045"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q055",
+      "actual": [
+        "UK046",
+        "UK050"
+      ],
+      "expected": [
+        "UK046",
+        "UK050"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q056",
+      "actual": [
+        "UK051",
+        "UK055"
+      ],
+      "expected": [
+        "UK051",
+        "UK055"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q057",
+      "actual": [
+        "UK060"
+      ],
+      "expected": [
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q058",
+      "actual": [
+        "UK034"
+      ],
+      "expected": [
+        "UK034"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q059",
+      "actual": [
+        "UK049"
+      ],
+      "expected": [
+        "UK049"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q060",
+      "actual": [
+        "UK044"
+      ],
+      "expected": [
+        "UK044"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q061",
+      "actual": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q062",
+      "actual": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q063",
+      "actual": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q064",
+      "actual": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q065",
+      "actual": [
+        "UK005",
+        "UK030",
+        "UK035",
+        "UK040",
+        "UK060"
+      ],
+      "expected": [
+        "UK005",
+        "UK030",
+        "UK035",
+        "UK040",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q066",
+      "actual": [
+        "UK002",
+        "UK007",
+        "UK012",
+        "UK015",
+        "UK017",
+        "UK022",
+        "UK027",
+        "UK032",
+        "UK037",
+        "UK042",
+        "UK047",
+        "UK052",
+        "UK057"
+      ],
+      "expected": [
+        "UK002",
+        "UK007",
+        "UK012",
+        "UK015",
+        "UK017",
+        "UK022",
+        "UK027",
+        "UK032",
+        "UK037",
+        "UK042",
+        "UK047",
+        "UK052",
+        "UK057"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q067",
+      "actual": [
+        "UK001",
+        "UK005",
+        "UK006",
+        "UK010",
+        "UK011",
+        "UK016",
+        "UK020",
+        "UK021",
+        "UK025",
+        "UK026",
+        "UK030",
+        "UK031",
+        "UK035",
+        "UK036",
+        "UK040",
+        "UK041",
+        "UK045",
+        "UK046",
+        "UK050",
+        "UK051",
+        "UK055",
+        "UK056",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK005",
+        "UK006",
+        "UK010",
+        "UK011",
+        "UK016",
+        "UK020",
+        "UK021",
+        "UK025",
+        "UK026",
+        "UK030",
+        "UK031",
+        "UK035",
+        "UK036",
+        "UK040",
+        "UK041",
+        "UK045",
+        "UK046",
+        "UK050",
+        "UK051",
+        "UK055",
+        "UK056",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q068",
+      "actual": [
+        "UK002",
+        "UK007",
+        "UK012",
+        "UK015",
+        "UK017",
+        "UK022",
+        "UK027",
+        "UK032",
+        "UK037",
+        "UK042",
+        "UK047",
+        "UK052",
+        "UK057"
+      ],
+      "expected": [
+        "UK002",
+        "UK007",
+        "UK012",
+        "UK015",
+        "UK017",
+        "UK022",
+        "UK027",
+        "UK032",
+        "UK037",
+        "UK042",
+        "UK047",
+        "UK052",
+        "UK057"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q069",
+      "actual": [
+        "UK004",
+        "UK009",
+        "UK014",
+        "UK019",
+        "UK029",
+        "UK034",
+        "UK039",
+        "UK049",
+        "UK054",
+        "UK059"
+      ],
+      "expected": [
+        "UK004",
+        "UK009",
+        "UK014",
+        "UK019",
+        "UK029",
+        "UK034",
+        "UK039",
+        "UK049",
+        "UK054",
+        "UK059"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q070",
+      "actual": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q071",
+      "actual": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q072",
+      "actual": [
+        "UK004",
+        "UK009",
+        "UK014",
+        "UK019",
+        "UK024",
+        "UK029",
+        "UK034",
+        "UK039",
+        "UK044",
+        "UK049",
+        "UK054",
+        "UK059"
+      ],
+      "expected": [
+        "UK004",
+        "UK009",
+        "UK014",
+        "UK019",
+        "UK024",
+        "UK029",
+        "UK034",
+        "UK039",
+        "UK044",
+        "UK049",
+        "UK054",
+        "UK059"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q073",
+      "actual": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q074",
+      "actual": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "expected": [
+        "UK001",
+        "UK002",
+        "UK005",
+        "UK006",
+        "UK007",
+        "UK010",
+        "UK011",
+        "UK012",
+        "UK015",
+        "UK016",
+        "UK017",
+        "UK020",
+        "UK021",
+        "UK022",
+        "UK025",
+        "UK026",
+        "UK027",
+        "UK030",
+        "UK031",
+        "UK032",
+        "UK035",
+        "UK036",
+        "UK037",
+        "UK040",
+        "UK041",
+        "UK042",
+        "UK045",
+        "UK046",
+        "UK047",
+        "UK050",
+        "UK051",
+        "UK052",
+        "UK055",
+        "UK056",
+        "UK057",
+        "UK060"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q075",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "id": "Q076",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "id": "Q077",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "id": "Q078",
+      "actual": [],
+      "expected": [],
+      "passed": true
+    },
+    {
+      "id": "Q079",
+      "actual": [
+        "UK019"
+      ],
+      "expected": [
+        "UK019"
+      ],
+      "passed": true
+    },
+    {
+      "id": "Q080",
+      "actual": [
+        "UK014"
+      ],
+      "expected": [
+        "UK014"
+      ],
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,1387 @@
+{
+  "startedAt": "2026-11-04T20:06:21.228Z",
+  "settings": {
+    "package": "4.3.2",
+    "backend": "Node native CPU",
+    "dtype": "q8",
+    "intraOpNumThreads": 4,
+    "interOpNumThreads": 1,
+    "network": "blocked during controlled fixture inference",
+    "memorySamplingMs": 25,
+    "predeclaredEmbeddingCosineTolerance": 0.9999,
+    "indexPreparationBatchSize": 8,
+    "queryEmbeddingBatchSize": 1
+  },
+  "tests": [
+    {
+      "id": "DATA-01",
+      "group": "fixture",
+      "status": "passed",
+      "durationMs": 0.5699000000000183,
+      "detail": {
+        "listings": 60,
+        "queries": 80,
+        "sentiment": 60,
+        "sha256": {
+          "listings": "7d5a10a853ee136387e0be2d2d4601d660736f1581858a13fc5ef9d940ede805",
+          "queries": "6eeb22720b2e8ab4403a99d947f79d19c6e1c22de3b04f16bdbec074d1042d45",
+          "sentiment": "e3b8297aba9258061f3305b6f8cb70c9de0f66d6570cf2f73b783853fcf208af"
+        }
+      }
+    },
+    {
+      "id": "ENV-01",
+      "group": "compatibility",
+      "status": "passed",
+      "durationMs": 0.03239999999982501,
+      "detail": {
+        "@huggingface/transformers": "4.3.2",
+        "onnxruntime-node": "1.30.0",
+        "onnxruntime-web": "1.31.0-dev.20260914-8d85527a0",
+        "sharp": "0.35.5",
+        "@huggingface/tokenizers": "0.2.0",
+        "@huggingface/jinja": "0.5.10"
+      }
+    },
+    {
+      "id": "EMB-01",
+      "group": "compatibility",
+      "status": "passed",
+      "durationMs": 0.17960000000016407,
+      "detail": {
+        "dims": [
+          2,
+          384
+        ],
+        "durationMs": 16.75760000000014,
+        "memory": {
+          "before": {
+            "rss": 554037248,
+            "heapTotal": 327114752,
+            "heapUsed": 204172600,
+            "external": 18685774,
+            "arrayBuffers": 11816979,
+            "availableSystemBytes": 13712785408
+          },
+          "after": {
+            "rss": 555368448,
+            "heapTotal": 327376896,
+            "heapUsed": 205501864,
+            "external": 18794894,
+            "arrayBuffers": 11926099,
+            "availableSystemBytes": 13711572992
+          },
+          "sampledMaxRssBytes": 555368448,
+          "samplingIntervalMs": 25,
+          "samples": 1,
+          "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+        }
+      }
+    },
+    {
+      "id": "EMB-02",
+      "group": "compatibility",
+      "status": "passed",
+      "durationMs": 0.32539999999994507,
+      "detail": {
+        "norms": [
+          0.9999999743718863,
+          1.0000002004421062
+        ],
+        "tolerance": 0.0002
+      }
+    },
+    {
+      "id": "EMB-03",
+      "group": "consistency",
+      "status": "failed",
+      "durationMs": 6.202400000000125,
+      "error": "Single/batch cosine drift: 0.992712294189976; required >=0.9999"
+    },
+    {
+      "id": "EMB-04",
+      "group": "consistency",
+      "status": "passed",
+      "durationMs": 11.24720000000002,
+      "detail": {
+        "cosines": [
+          0.9999999487437731,
+          1.0000004008842525
+        ]
+      }
+    },
+    {
+      "id": "LEN-01",
+      "group": "tokenization",
+      "status": "passed",
+      "durationMs": 49.62480000000005,
+      "detail": {
+        "tokenizerModelMaxLength": 512,
+        "rawDims": [
+          1,
+          1802
+        ],
+        "truncatedDims": [
+          1,
+          512
+        ],
+        "warning": "The upstream SentenceTransformer 128-token setting is not assumed to equal this JavaScript tokenizer limit."
+      }
+    },
+    {
+      "id": "LEN-02",
+      "group": "tokenization",
+      "status": "passed",
+      "durationMs": 319.11450000000013,
+      "detail": {
+        "identicalTruncatedTokenIds": true,
+        "embeddingCosine": 0.9999998189700954,
+        "finding": "A requirement beyond the truncation boundary never reaches the model."
+      }
+    },
+    {
+      "id": "LEN-03",
+      "group": "tokenization",
+      "status": "passed",
+      "durationMs": 17.017900000000054,
+      "detail": {
+        "paddedDims": [
+          2,
+          512
+        ],
+        "realTokenCounts": [
+          11,
+          512
+        ],
+        "paddingTokens": 501
+      }
+    },
+    {
+      "id": "LEN-04",
+      "group": "consistency",
+      "status": "failed",
+      "durationMs": 231.10860000000002,
+      "error": "Padding changed short input embedding: 0.9956058190100308; required >=0.9999"
+    },
+    {
+      "id": "GUARD-null",
+      "group": "application-input-guard",
+      "status": "passed",
+      "durationMs": 0.20929999999998472,
+      "detail": {
+        "rejected": true,
+        "layer": "example application, not the library"
+      }
+    },
+    {
+      "id": "GUARD-object",
+      "group": "application-input-guard",
+      "status": "passed",
+      "durationMs": 0.0644999999999527,
+      "detail": {
+        "rejected": true,
+        "layer": "example application, not the library"
+      }
+    },
+    {
+      "id": "GUARD-empty-array",
+      "group": "application-input-guard",
+      "status": "passed",
+      "durationMs": 0.02130000000011023,
+      "detail": {
+        "rejected": true,
+        "layer": "example application, not the library"
+      }
+    },
+    {
+      "id": "GUARD-mixed-array",
+      "group": "application-input-guard",
+      "status": "passed",
+      "durationMs": 0.025300000000015643,
+      "detail": {
+        "rejected": true,
+        "layer": "example application, not the library"
+      }
+    },
+    {
+      "id": "GUARD-blank",
+      "group": "application-input-guard",
+      "status": "passed",
+      "durationMs": 0.025799999999890133,
+      "detail": {
+        "rejected": true,
+        "layer": "example application, not the library"
+      }
+    },
+    {
+      "id": "GUARD-oversized-batch",
+      "group": "application-input-guard",
+      "status": "passed",
+      "durationMs": 0.020300000000133878,
+      "detail": {
+        "rejected": true,
+        "layer": "example application, not the library"
+      }
+    },
+    {
+      "id": "API-01",
+      "group": "failure-behavior",
+      "status": "passed",
+      "durationMs": 0.15750000000002728,
+      "detail": {
+        "error": "Unsupported pipeline: not-a-supported-task. Must be one of [text-classification,token-classification,question-answering,fill-mask,summarization,translation,text2text-generation,text-generation,zero-shot-classification,audio-classification,zero-shot-audio-classification,automatic-speech-recognition,text-to-audio,image-to-text,image-classification,image-segmentation,background-removal,zero-shot-image-classification,object-detection,zero-shot-object-detection,document-question-answering,image-to-image,depth-estimation,feature-extraction,image-feature-extraction]"
+      }
+    },
+    {
+      "id": "API-02",
+      "group": "failure-behavior",
+      "status": "passed",
+      "durationMs": 0.6897999999998774,
+      "detail": {
+        "error": "`local_files_only=true` or `env.allowRemoteModels=false` and file was not found locally at \"D:\\a\\transformers-js-research\\transformers-js-research\\lab\\.state\\jobs\\2026-11-04T20-04-16-307Z-c0a800e5de\\.cache\\models\\/validation/nonexistent-model/config.json\"."
+      }
+    },
+    {
+      "id": "API-03",
+      "group": "failure-behavior",
+      "status": "passed",
+      "durationMs": 3.076999999999998,
+      "detail": {
+        "error": "`local_files_only=true` or `env.allowRemoteModels=false` and file was not found locally at \"D:\\a\\transformers-js-research\\transformers-js-research\\lab\\.state\\jobs\\2026-11-04T20-04-16-307Z-c0a800e5de\\.cache\\models\\/Xenova/paraphrase-multilingual-MiniLM-L12-v2/onnx/model.onnx\"."
+      }
+    },
+    {
+      "id": "API-04",
+      "group": "streamer-guard",
+      "status": "passed",
+      "durationMs": 0.4655999999999949,
+      "detail": {
+        "error": "TextStreamer only supports batch size of 1",
+        "generationModelExecuted": false
+      }
+    },
+    {
+      "id": "CRM-01",
+      "group": "application-filters",
+      "status": "passed",
+      "durationMs": 0.8877000000002226,
+      "detail": {
+        "inspectedResults": 500,
+        "violations": 0,
+        "layer": "fixture application"
+      }
+    },
+    {
+      "id": "CRM-02",
+      "group": "application-permissions",
+      "status": "passed",
+      "durationMs": 0.12089999999989232,
+      "detail": {
+        "identicalTextOtherOfficeExcluded": true
+      }
+    },
+    {
+      "id": "CRM-03",
+      "group": "application-permissions",
+      "status": "passed",
+      "durationMs": 0.09689999999955035,
+      "detail": {
+        "emptyScopeDenied": true
+      }
+    },
+    {
+      "id": "CRM-04",
+      "group": "application-updates",
+      "status": "passed",
+      "durationMs": 0.15020000000004075,
+      "detail": {
+        "inactiveAndDeletedRecordsExcluded": true,
+        "note": "Application fixture logic, not a production authorization audit or external CRM integration."
+      }
+    },
+    {
+      "id": "JOB-01",
+      "group": "application-resume",
+      "status": "passed",
+      "durationMs": 122.76980000000913,
+      "detail": {
+        "records": 12,
+        "firstRunInterrupted": true,
+        "completedAfterResume": 12,
+        "completedAfterRepeatedRun": 12,
+        "note": "Persisted toy checkpoint and retry in one process; no external CRM transaction or operating-system crash was tested."
+      }
+    },
+    {
+      "id": "CLS-01",
+      "group": "compatibility",
+      "status": "passed",
+      "durationMs": 0.13429999999061693,
+      "detail": {
+        "count": 60
+      }
+    },
+    {
+      "id": "CLS-02",
+      "group": "consistency",
+      "status": "passed",
+      "durationMs": 174.40350000000035,
+      "detail": {
+        "cases": 8,
+        "maxScoreDifference": 0.00008666515350341797,
+        "tolerance": 0.001
+      }
+    },
+    {
+      "id": "ENV-02",
+      "group": "offline-fixture",
+      "status": "passed",
+      "durationMs": 0.10069999999541324,
+      "detail": {
+        "networkAttempts": 0,
+        "modelSources": "SHA256-verified immutable local fixtures"
+      }
+    }
+  ],
+  "phases": {
+    "import": {
+      "durationMs": 139.3861,
+      "memory": {
+        "before": {
+          "rss": 55533568,
+          "heapTotal": 8962048,
+          "heapUsed": 5712552,
+          "external": 2418764,
+          "arrayBuffers": 145468,
+          "availableSystemBytes": 14216093696
+        },
+        "after": {
+          "rss": 73474048,
+          "heapTotal": 19447808,
+          "heapUsed": 11979728,
+          "external": 5663695,
+          "arrayBuffers": 345271,
+          "availableSystemBytes": 14195257344
+        },
+        "sampledMaxRssBytes": 73474048,
+        "samplingIntervalMs": 25,
+        "samples": 1,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      }
+    },
+    "embeddingLoad": {
+      "durationMs": 1059.3301999999999,
+      "memory": {
+        "before": {
+          "rss": 76075008,
+          "heapTotal": 20758528,
+          "heapUsed": 10951160,
+          "external": 5683486,
+          "arrayBuffers": 168426,
+          "availableSystemBytes": 14192971776
+        },
+        "after": {
+          "rss": 507023360,
+          "heapTotal": 281239552,
+          "heapUsed": 205938600,
+          "external": 18030414,
+          "arrayBuffers": 11161619,
+          "availableSystemBytes": 13760655360
+        },
+        "sampledMaxRssBytes": 507023360,
+        "samplingIntervalMs": 25,
+        "samples": 3,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      }
+    },
+    "tokenization": {
+      "tokenizerModelMaxLength": 512,
+      "rawDims": [
+        1,
+        1802
+      ],
+      "truncatedDims": [
+        1,
+        512
+      ],
+      "warning": "The upstream SentenceTransformer 128-token setting is not assumed to equal this JavaScript tokenizer limit."
+    },
+    "embeddingInvalidInputs": [
+      {
+        "name": "null",
+        "libraryBehavior": "rejected",
+        "durationMs": 0.10789999999997235,
+        "error": "text may not be null or undefined"
+      },
+      {
+        "name": "object",
+        "libraryBehavior": "returned-output",
+        "durationMs": 4.343399999999974,
+        "output": {
+          "dims": [
+            1,
+            384
+          ],
+          "finite": true
+        }
+      },
+      {
+        "name": "number",
+        "libraryBehavior": "returned-output",
+        "durationMs": 3.490000000000009,
+        "output": {
+          "dims": [
+            1,
+            384
+          ],
+          "finite": true
+        }
+      },
+      {
+        "name": "empty-array",
+        "libraryBehavior": "rejected",
+        "durationMs": 0.07539999999994507,
+        "error": "text array must be non-empty"
+      },
+      {
+        "name": "mixed-array",
+        "libraryBehavior": "rejected",
+        "durationMs": 0.6702999999999975,
+        "error": "Cannot read properties of null (reading 'length')"
+      },
+      {
+        "name": "empty-string",
+        "libraryBehavior": "returned-output",
+        "durationMs": 3.4282000000000608,
+        "output": {
+          "dims": [
+            1,
+            384
+          ],
+          "finite": true
+        }
+      },
+      {
+        "name": "whitespace",
+        "libraryBehavior": "returned-output",
+        "durationMs": 2.906400000000076,
+        "output": {
+          "dims": [
+            1,
+            384
+          ],
+          "finite": true
+        }
+      }
+    ],
+    "retrievalPreparation": {
+      "durationMs": 2127.5195999999996,
+      "memory": {
+        "before": {
+          "rss": 712056832,
+          "heapTotal": 340484096,
+          "heapUsed": 206244984,
+          "external": 49074433,
+          "arrayBuffers": 42205638,
+          "availableSystemBytes": 13553197056
+        },
+        "after": {
+          "rss": 830103552,
+          "heapTotal": 499654656,
+          "heapUsed": 376735848,
+          "external": 49763286,
+          "arrayBuffers": 42894491,
+          "availableSystemBytes": 13437984768
+        },
+        "sampledMaxRssBytes": 866611200,
+        "samplingIntervalMs": 25,
+        "samples": 33,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      }
+    },
+    "retrieval": {
+      "semantic": {
+        "queries": 60,
+        "answerable": 51,
+        "noResult": 9,
+        "hitAt1": 0.9411764705882353,
+        "hitAt3": 0.9803921568627451,
+        "hitAt5": 0.9803921568627451,
+        "recallAt3": 0.8671011994541409,
+        "recallAt5": 0.901023486317604,
+        "mrr": 0.9560308972073679
+      },
+      "lexical": {
+        "queries": 60,
+        "answerable": 51,
+        "noResult": 9,
+        "hitAt1": 0.9607843137254902,
+        "hitAt3": 1,
+        "hitAt5": 1,
+        "recallAt3": 0.9070794129617661,
+        "recallAt5": 0.9473054178936532,
+        "mrr": 0.977124183006536
+      },
+      "semanticCalibration": {
+        "tp": 17,
+        "tn": 2,
+        "fp": 1,
+        "fn": 0,
+        "threshold": 0.25,
+        "accuracy": 0.95,
+        "positiveRecall": 1,
+        "negativeRecall": 0.6666666666666666,
+        "balancedAccuracy": 0.8333333333333333,
+        "f1": 0.9714285714285714
+      },
+      "lexicalCalibration": {
+        "tp": 13,
+        "tn": 3,
+        "fp": 0,
+        "fn": 4,
+        "threshold": 0.6000000000000001,
+        "accuracy": 0.8,
+        "positiveRecall": 0.7647058823529411,
+        "negativeRecall": 1,
+        "balancedAccuracy": 0.8823529411764706,
+        "f1": 0.8666666666666667
+      },
+      "semanticAnswerability": {
+        "tp": 51,
+        "tn": 8,
+        "fp": 1,
+        "fn": 0,
+        "threshold": 0.25,
+        "accuracy": 0.9833333333333333,
+        "positiveRecall": 1,
+        "negativeRecall": 0.8888888888888888,
+        "balancedAccuracy": 0.9444444444444444,
+        "f1": 0.9902912621359223
+      },
+      "lexicalAnswerability": {
+        "tp": 32,
+        "tn": 9,
+        "fp": 0,
+        "fn": 19,
+        "threshold": 0.6000000000000001,
+        "accuracy": 0.6833333333333333,
+        "positiveRecall": 0.6274509803921569,
+        "negativeRecall": 1,
+        "balancedAccuracy": 0.8137254901960784,
+        "f1": 0.7710843373493976
+      },
+      "byCategory": {
+        "paraphrase": {
+          "semantic": {
+            "queries": 12,
+            "answerable": 12,
+            "noResult": 0,
+            "hitAt1": 1,
+            "hitAt3": 1,
+            "hitAt5": 1,
+            "recallAt3": 1,
+            "recallAt5": 1,
+            "mrr": 1
+          },
+          "lexical": {
+            "queries": 12,
+            "answerable": 12,
+            "noResult": 0,
+            "hitAt1": 1,
+            "hitAt3": 1,
+            "hitAt5": 1,
+            "recallAt3": 1,
+            "recallAt5": 1,
+            "mrr": 1
+          }
+        },
+        "location": {
+          "semantic": {
+            "queries": 10,
+            "answerable": 10,
+            "noResult": 0,
+            "hitAt1": 1,
+            "hitAt3": 1,
+            "hitAt5": 1,
+            "recallAt3": 1,
+            "recallAt5": 1,
+            "mrr": 1
+          },
+          "lexical": {
+            "queries": 10,
+            "answerable": 10,
+            "noResult": 0,
+            "hitAt1": 1,
+            "hitAt3": 1,
+            "hitAt5": 1,
+            "recallAt3": 1,
+            "recallAt5": 1,
+            "mrr": 1
+          }
+        },
+        "negative_challenge": {
+          "semantic": {
+            "queries": 10,
+            "answerable": 9,
+            "noResult": 1,
+            "hitAt1": 1,
+            "hitAt3": 1,
+            "hitAt5": 1,
+            "recallAt3": 1,
+            "recallAt5": 1,
+            "mrr": 1
+          },
+          "lexical": {
+            "queries": 10,
+            "answerable": 9,
+            "noResult": 1,
+            "hitAt1": 1,
+            "hitAt3": 1,
+            "hitAt5": 1,
+            "recallAt3": 1,
+            "recallAt5": 1,
+            "mrr": 1
+          }
+        },
+        "preference": {
+          "semantic": {
+            "queries": 10,
+            "answerable": 10,
+            "noResult": 0,
+            "hitAt1": 1,
+            "hitAt3": 1,
+            "hitAt5": 1,
+            "recallAt3": 1,
+            "recallAt5": 1,
+            "mrr": 1
+          },
+          "lexical": {
+            "queries": 10,
+            "answerable": 10,
+            "noResult": 0,
+            "hitAt1": 1,
+            "hitAt3": 1,
+            "hitAt5": 1,
+            "recallAt3": 1,
+            "recallAt5": 1,
+            "mrr": 1
+          }
+        },
+        "missing_information": {
+          "semantic": {
+            "queries": 10,
+            "answerable": 10,
+            "noResult": 0,
+            "hitAt1": 0.7,
+            "hitAt3": 0.9,
+            "hitAt5": 0.9,
+            "recallAt3": 0.3222161172161172,
+            "recallAt5": 0.49521978021978014,
+            "mrr": 0.7757575757575758
+          },
+          "lexical": {
+            "queries": 10,
+            "answerable": 10,
+            "noResult": 0,
+            "hitAt1": 0.8,
+            "hitAt3": 1,
+            "hitAt5": 1,
+            "recallAt3": 0.5261050061050061,
+            "recallAt5": 0.7312576312576313,
+            "mrr": 0.8833333333333332
+          }
+        },
+        "nonsense": {
+          "semantic": {
+            "queries": 4,
+            "answerable": 0,
+            "noResult": 4,
+            "hitAt1": 0,
+            "hitAt3": 0,
+            "hitAt5": 0,
+            "recallAt3": 0,
+            "recallAt5": 0,
+            "mrr": 0
+          },
+          "lexical": {
+            "queries": 4,
+            "answerable": 0,
+            "noResult": 4,
+            "hitAt1": 0,
+            "hitAt3": 0,
+            "hitAt5": 0,
+            "recallAt3": 0,
+            "recallAt5": 0,
+            "mrr": 0
+          }
+        },
+        "no_result": {
+          "semantic": {
+            "queries": 4,
+            "answerable": 0,
+            "noResult": 4,
+            "hitAt1": 0,
+            "hitAt3": 0,
+            "hitAt5": 0,
+            "recallAt3": 0,
+            "recallAt5": 0,
+            "mrr": 0
+          },
+          "lexical": {
+            "queries": 4,
+            "answerable": 0,
+            "noResult": 4,
+            "hitAt1": 0,
+            "hitAt3": 0,
+            "hitAt5": 0,
+            "recallAt3": 0,
+            "recallAt5": 0,
+            "mrr": 0
+          }
+        }
+      },
+      "candidateCounts": [
+        {
+          "id": "Q021",
+          "eligible": 1
+        },
+        {
+          "id": "Q022",
+          "eligible": 1
+        },
+        {
+          "id": "Q023",
+          "eligible": 1
+        },
+        {
+          "id": "Q024",
+          "eligible": 1
+        },
+        {
+          "id": "Q025",
+          "eligible": 1
+        },
+        {
+          "id": "Q026",
+          "eligible": 2
+        },
+        {
+          "id": "Q027",
+          "eligible": 1
+        },
+        {
+          "id": "Q028",
+          "eligible": 1
+        },
+        {
+          "id": "Q029",
+          "eligible": 1
+        },
+        {
+          "id": "Q030",
+          "eligible": 1
+        },
+        {
+          "id": "Q031",
+          "eligible": 1
+        },
+        {
+          "id": "Q032",
+          "eligible": 1
+        },
+        {
+          "id": "Q033",
+          "eligible": 1
+        },
+        {
+          "id": "Q034",
+          "eligible": 1
+        },
+        {
+          "id": "Q035",
+          "eligible": 2
+        },
+        {
+          "id": "Q036",
+          "eligible": 1
+        },
+        {
+          "id": "Q037",
+          "eligible": 1
+        },
+        {
+          "id": "Q038",
+          "eligible": 1
+        },
+        {
+          "id": "Q039",
+          "eligible": 1
+        },
+        {
+          "id": "Q040",
+          "eligible": 1
+        },
+        {
+          "id": "Q041",
+          "eligible": 1
+        },
+        {
+          "id": "Q042",
+          "eligible": 1
+        },
+        {
+          "id": "Q043",
+          "eligible": 1
+        },
+        {
+          "id": "Q044",
+          "eligible": 1
+        },
+        {
+          "id": "Q045",
+          "eligible": 1
+        },
+        {
+          "id": "Q046",
+          "eligible": 2
+        },
+        {
+          "id": "Q047",
+          "eligible": 1
+        },
+        {
+          "id": "Q048",
+          "eligible": 1
+        },
+        {
+          "id": "Q049",
+          "eligible": 1
+        },
+        {
+          "id": "Q050",
+          "eligible": 1
+        },
+        {
+          "id": "Q051",
+          "eligible": 1
+        },
+        {
+          "id": "Q052",
+          "eligible": 1
+        },
+        {
+          "id": "Q053",
+          "eligible": 1
+        },
+        {
+          "id": "Q054",
+          "eligible": 2
+        },
+        {
+          "id": "Q055",
+          "eligible": 2
+        },
+        {
+          "id": "Q056",
+          "eligible": 2
+        },
+        {
+          "id": "Q057",
+          "eligible": 1
+        },
+        {
+          "id": "Q058",
+          "eligible": 1
+        },
+        {
+          "id": "Q059",
+          "eligible": 1
+        },
+        {
+          "id": "Q060",
+          "eligible": 1
+        },
+        {
+          "id": "Q061",
+          "eligible": 36
+        },
+        {
+          "id": "Q062",
+          "eligible": 36
+        },
+        {
+          "id": "Q063",
+          "eligible": 36
+        },
+        {
+          "id": "Q064",
+          "eligible": 36
+        },
+        {
+          "id": "Q065",
+          "eligible": 5
+        },
+        {
+          "id": "Q066",
+          "eligible": 13
+        },
+        {
+          "id": "Q067",
+          "eligible": 23
+        },
+        {
+          "id": "Q068",
+          "eligible": 13
+        },
+        {
+          "id": "Q069",
+          "eligible": 10
+        },
+        {
+          "id": "Q070",
+          "eligible": 36
+        },
+        {
+          "id": "Q071",
+          "eligible": 36
+        },
+        {
+          "id": "Q072",
+          "eligible": 12
+        },
+        {
+          "id": "Q073",
+          "eligible": 36
+        },
+        {
+          "id": "Q074",
+          "eligible": 36
+        },
+        {
+          "id": "Q075",
+          "eligible": 0
+        },
+        {
+          "id": "Q076",
+          "eligible": 0
+        },
+        {
+          "id": "Q077",
+          "eligible": 0
+        },
+        {
+          "id": "Q078",
+          "eligible": 0
+        },
+        {
+          "id": "Q079",
+          "eligible": 1
+        },
+        {
+          "id": "Q080",
+          "eligible": 1
+        }
+      ],
+      "note": "Quality is descriptive on this synthetic fixture. No production acceptance threshold was supplied. Ground truth labels and filters are never sent to the embedding model.",
+      "multiCandidateEvaluation": {
+        "semantic": {
+          "queries": 20,
+          "answerable": 16,
+          "noResult": 4,
+          "hitAt1": 0.8125,
+          "hitAt3": 0.9375,
+          "hitAt5": 0.9375,
+          "recallAt3": 0.5763850732600732,
+          "recallAt5": 0.6845123626373626,
+          "mrr": 0.859848484848485
+        },
+        "lexical": {
+          "queries": 20,
+          "answerable": 16,
+          "noResult": 4,
+          "hitAt1": 0.875,
+          "hitAt3": 1,
+          "hitAt5": 1,
+          "recallAt3": 0.7038156288156288,
+          "recallAt5": 0.8320360195360195,
+          "mrr": 0.9270833333333333
+        }
+      }
+    },
+    "batchBenchmark": {
+      "corpusSize": 64,
+      "rounds": 10,
+      "warmupCalls": 3,
+      "summaries": [
+        {
+          "size": 1,
+          "completedRounds": 10,
+          "batchLatencyMs": {
+            "count": 640,
+            "median": 10.355100000000675,
+            "p95": 14.43080000000009,
+            "minimum": 8.141499999999724,
+            "maximum": 59.29460000000108,
+            "mean": 11.29520468749993
+          },
+          "corpusRoundMs": {
+            "count": 10,
+            "median": 701.6687000000002,
+            "p95": 876.8457999999991,
+            "minimum": 677.3325000000004,
+            "maximum": 876.8457999999991,
+            "mean": 723.0490300000006
+          },
+          "textsPerSecond": 88.51405277454,
+          "sampledMaxProcessRssBytes": 955637760
+        },
+        {
+          "size": 4,
+          "completedRounds": 10,
+          "batchLatencyMs": {
+            "count": 160,
+            "median": 34.80229999999938,
+            "p95": 52.29770000000099,
+            "minimum": 29.969499999999243,
+            "maximum": 78.30210000000079,
+            "mean": 36.50377374999999
+          },
+          "corpusRoundMs": {
+            "count": 10,
+            "median": 580.9263999999994,
+            "p95": 606.4523000000008,
+            "minimum": 574.1170999999995,
+            "maximum": 606.4523000000008,
+            "mean": 584.13728
+          },
+          "textsPerSecond": 109.5632862192942,
+          "sampledMaxProcessRssBytes": 951181312
+        },
+        {
+          "size": 8,
+          "completedRounds": 10,
+          "batchLatencyMs": {
+            "count": 80,
+            "median": 63.891599999999016,
+            "p95": 106.80079999999998,
+            "minimum": 54.771600000000035,
+            "maximum": 179.67299999999886,
+            "mean": 69.06226124999986
+          },
+          "corpusRoundMs": {
+            "count": 10,
+            "median": 536.9493999999995,
+            "p95": 699.9659000000029,
+            "minimum": 521.7280000000028,
+            "maximum": 699.9659000000029,
+            "mean": 552.560920000001
+          },
+          "textsPerSecond": 115.82433299843186,
+          "sampledMaxProcessRssBytes": 954355712
+        },
+        {
+          "size": 16,
+          "completedRounds": 10,
+          "batchLatencyMs": {
+            "count": 40,
+            "median": 129.47969999999987,
+            "p95": 164.1178,
+            "minimum": 118.38230000000112,
+            "maximum": 174.44520000000193,
+            "mean": 137.2802825000003
+          },
+          "corpusRoundMs": {
+            "count": 10,
+            "median": 545.441700000003,
+            "p95": 610.2227999999996,
+            "minimum": 526.9701999999997,
+            "maximum": 610.2227999999996,
+            "mean": 549.1807399999998
+          },
+          "textsPerSecond": 116.53722597773553,
+          "sampledMaxProcessRssBytes": 951181312
+        },
+        {
+          "size": 32,
+          "completedRounds": 10,
+          "batchLatencyMs": {
+            "count": 20,
+            "median": 254.68559999999707,
+            "p95": 296.8163000000004,
+            "minimum": 248.14220000000205,
+            "maximum": 307.83160000000044,
+            "mean": 267.8916800000003
+          },
+          "corpusRoundMs": {
+            "count": 10,
+            "median": 536.289499999999,
+            "p95": 559.2601000000004,
+            "minimum": 505.1779000000024,
+            "maximum": 559.2601000000004,
+            "mean": 535.83629
+          },
+          "textsPerSecond": 119.43946536357215,
+          "sampledMaxProcessRssBytes": 952991744
+        }
+      ],
+      "note": "Native CPU, four intra-op threads; repeated synthetic texts. Amortized throughput is not interactive user latency."
+    },
+    "scaling": [
+      {
+        "count": 256,
+        "processed": 256,
+        "batchSize": 16,
+        "durationMs": 2148.4668999999994,
+        "textsPerSecond": 119.15473307966721,
+        "memory": {
+          "before": {
+            "rss": 933208064,
+            "heapTotal": 316960768,
+            "heapUsed": 228895488,
+            "external": 96558121,
+            "arrayBuffers": 89694283,
+            "availableSystemBytes": 13345705984
+          },
+          "after": {
+            "rss": 936398848,
+            "heapTotal": 316960768,
+            "heapUsed": 226671552,
+            "external": 97828081,
+            "arrayBuffers": 90964243,
+            "availableSystemBytes": 13342294016
+          },
+          "sampledMaxRssBytes": 937431040,
+          "samplingIntervalMs": 25,
+          "samples": 16,
+          "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+        }
+      },
+      {
+        "count": 1024,
+        "processed": 1024,
+        "batchSize": 16,
+        "durationMs": 8709.7192,
+        "textsPerSecond": 117.56980638365471,
+        "memory": {
+          "before": {
+            "rss": 936833024,
+            "heapTotal": 316960768,
+            "heapUsed": 226721632,
+            "external": 98352369,
+            "arrayBuffers": 91488531,
+            "availableSystemBytes": 13342879744
+          },
+          "after": {
+            "rss": 941064192,
+            "heapTotal": 316960768,
+            "heapUsed": 226723016,
+            "external": 102505713,
+            "arrayBuffers": 95641875,
+            "availableSystemBytes": 13342515200
+          },
+          "sampledMaxRssBytes": 941064192,
+          "samplingIntervalMs": 25,
+          "samples": 64,
+          "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+        }
+      },
+      {
+        "count": 4096,
+        "processed": 4096,
+        "batchSize": 16,
+        "durationMs": 34872.5222,
+        "textsPerSecond": 117.45637371764295,
+        "memory": {
+          "before": {
+            "rss": 941531136,
+            "heapTotal": 316960768,
+            "heapUsed": 226771416,
+            "external": 103095537,
+            "arrayBuffers": 96231699,
+            "availableSystemBytes": 13342027776
+          },
+          "after": {
+            "rss": 953573376,
+            "heapTotal": 316960768,
+            "heapUsed": 209017584,
+            "external": 119049164,
+            "arrayBuffers": 112185875,
+            "availableSystemBytes": 13348163584
+          },
+          "sampledMaxRssBytes": 954101760,
+          "samplingIntervalMs": 25,
+          "samples": 256,
+          "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+        }
+      }
+    ],
+    "classificationLoad": {
+      "durationMs": 191.37750000000233,
+      "memory": {
+        "before": {
+          "rss": 703967232,
+          "heapTotal": 316960768,
+          "heapUsed": 224356096,
+          "external": 123317340,
+          "arrayBuffers": 116454051,
+          "availableSystemBytes": 13588271104
+        },
+        "after": {
+          "rss": 790274048,
+          "heapTotal": 323723264,
+          "heapUsed": 241442160,
+          "external": 125409624,
+          "arrayBuffers": 118546335,
+          "availableSystemBytes": 13507203072
+        },
+        "sampledMaxRssBytes": 790274048,
+        "samplingIntervalMs": 25,
+        "samples": 2,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      }
+    },
+    "sentiment": {
+      "labeled": 48,
+      "ambiguousExcluded": 12,
+      "correct": 46,
+      "accuracy": 0.9583333333333334,
+      "perClass": {
+        "POSITIVE": {
+          "tp": 22,
+          "fp": 0,
+          "fn": 2,
+          "precision": 1,
+          "recall": 0.9166666666666666
+        },
+        "NEGATIVE": {
+          "tp": 24,
+          "fp": 2,
+          "fn": 0,
+          "precision": 0.9230769230769231,
+          "recall": 1
+        }
+      },
+      "byCategory": {
+        "straightforward": {
+          "count": 16,
+          "correct": 16
+        },
+        "negation": {
+          "count": 12,
+          "correct": 11
+        },
+        "property_domain": {
+          "count": 20,
+          "correct": 19
+        }
+      }
+    },
+    "classificationInvalidInputs": [
+      {
+        "name": "null",
+        "libraryBehavior": "rejected",
+        "durationMs": 0.35050000000046566,
+        "error": "text may not be null or undefined"
+      },
+      {
+        "name": "object",
+        "libraryBehavior": "returned-output",
+        "durationMs": 3.4029000000009546,
+        "output": [
+          {
+            "label": "POSITIVE",
+            "score": 0.7906498908996582
+          }
+        ]
+      },
+      {
+        "name": "number",
+        "libraryBehavior": "returned-output",
+        "durationMs": 3.208100000003469,
+        "output": [
+          {
+            "label": "POSITIVE",
+            "score": 0.7906498908996582
+          }
+        ]
+      },
+      {
+        "name": "empty-array",
+        "libraryBehavior": "rejected",
+        "durationMs": 0.06260000000474975,
+        "error": "text array must be non-empty"
+      },
+      {
+        "name": "mixed-array",
+        "libraryBehavior": "rejected",
+        "durationMs": 0.3595000000059372,
+        "error": "Cannot read properties of null (reading 'length')"
+      },
+      {
+        "name": "empty-string",
+        "libraryBehavior": "returned-output",
+        "durationMs": 3.106100000004517,
+        "output": [
+          {
+            "label": "POSITIVE",
+            "score": 0.7906498908996582
+          }
+        ]
+      },
+      {
+        "name": "whitespace",
+        "libraryBehavior": "returned-output",
+        "durationMs": 2.8470999999990454,
+        "output": [
+          {
+            "label": "POSITIVE",
+            "score": 0.7906498908996582
+          }
+        ]
+      }
+    ]
+  },
+  "networkAttempts": [],
+  "dependencies": {
+    "@huggingface/transformers": "4.3.2",
+    "onnxruntime-node": "1.30.0",
+    "onnxruntime-web": "1.31.0-dev.20260914-8d85527a0",
+    "sharp": "0.35.5",
+    "@huggingface/tokenizers": "0.2.0",
+    "@huggingface/jinja": "0.5.10"
+  },
+  "packageLockSha256": "ecd4f3eadc4adb41d2979d672fa766243bd25ed683018f95d63e0d841220e2aa",
+  "models": [
+    {
+      "key": "M1",
+      "id": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+      "dtype": "q8",
+      "task": "feature-extraction",
+      "expectedDimensions": 384
+    },
+    {
+      "key": "M2",
+      "id": "Xenova/distilbert-base-uncased-finetuned-sst-2-english",
+      "revision": "0b6928efcb76139cae2c6881d49cda67fe119f42",
+      "dtype": "q8",
+      "task": "text-classification"
+    }
+  ],
+  "dataset": {
+    "listings": 60,
+    "queries": 80,
+    "sentiment": 60,
+    "sha256": {
+      "listings": "7d5a10a853ee136387e0be2d2d4601d660736f1581858a13fc5ef9d940ede805",
+      "queries": "6eeb22720b2e8ab4403a99d947f79d19c6e1c22de3b04f16bdbec074d1042d45",
+      "sentiment": "e3b8297aba9258061f3305b6f8cb70c9de0f66d6570cf2f73b783853fcf208af"
+    }
+  },
+  "completedAt": "2026-11-04T20:07:41.632Z",
+  "summary": {
+    "passed": 26,
+    "failed": 2,
+    "tests": 28
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "version": "4.3.2",
+  "models": [
+    {
+      "slot": "M1",
+      "id": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+      "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+      "dtype": "q8",
+      "task": "feature-extraction",
+      "allowedModelTypes": [
+        "bert"
+      ]
+    },
+    {
+      "slot": "M2",
+      "id": "Xenova/distilbert-base-uncased-finetuned-sst-2-english",
+      "revision": "0b6928efcb76139cae2c6881d49cda67fe119f42",
+      "dtype": "q8",
+      "task": "text-classification",
+      "allowedModelTypes": [
+        "distilbert",
+        "bert",
+        "roberta"
+      ]
+    },
+    {
+      "slot": "M3",
+      "id": "Xenova/whisper-tiny",
+      "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+      "dtype": "q8",
+      "task": "automatic-speech-recognition",
+      "allowedModelTypes": [
+        "whisper"
+      ]
+    },
+    {
+      "slot": "M4",
+      "id": "Xenova/speecht5_tts",
+      "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+      "dtype": "fp32",
+      "task": "text-to-speech",
+      "allowedModelTypes": [
+        "speecht5"
+      ]
+    },
+    {
+      "slot": "M5",
+      "id": "onnx-community/Qwen2.5-0.5B-Instruct",
+      "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+      "dtype": "q4",
+      "task": "text-generation",
+      "allowedModelTypes": [
+        "qwen2"
+      ]
+    }
+  ],
+  "reason": "cloud verification",
+  "protocolHash": "92095318905a61ebb985cdde0eb9e3f02d1f3c5d5b54037922c16a9ef78408b9",
+  "datasetHash": "44cf5cef4e6bc6cb0d82421fd67d364e32d258fcf8bb709e1b9552391eff8d36",
+  "force": true,
+  "key": "c0a800e5de025f9cc97fe1648af5457793c541eae1e100c1e7df551470b4a6d1",
+  "queuedAt": "2026-11-04T20:04:14.346Z",
+  "status": "running"
+}

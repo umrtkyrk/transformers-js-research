@@ -1,0 +1,75 @@
+<!doctype html><html lang="tr"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Deney 4.3.2 · Transformers.js</title><meta name="description" content="Yerel Node.js ve Playwright ile otomatik model deneyleri. Tarihli sonuçlar, başarısız kontroller ve karşılaştırmalar."><link rel="canonical" href="https://transformers-js-research.vercel.app/lab/runs/2026-11-04T20-04-16-307Z-c0a800e5de/report.html"><link rel="stylesheet" href="../../../styles.css"><style>.lab-page{max-width:1160px;margin:auto;padding:32px 24px}.lab-page h1{font:36px Georgia,serif}.lab-page h2{margin-top:30px}.lab-page .toolbar{margin:22px 0;flex-wrap:wrap}.lab-page code{overflow-wrap:anywhere}.lab-page td{vertical-align:top}.lab-page .notice{margin:18px 0}.lab-page details{margin:16px 0}.lab-page .model-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}.lab-page .model-list .panel{margin:0}.lab-page .status-warn{color:#8f3829;font-weight:700}@media(max-width:600px){.lab-page .model-list{grid-template-columns:1fr}.lab-page .table-wrap table{min-width:0;table-layout:fixed}.lab-page th,.lab-page td{overflow-wrap:anywhere;padding:10px 7px}}</style><style>@media(max-width:600px){.lab-page th{white-space:normal}.run-history thead{display:none}.run-history,.run-history tbody,.run-history tr,.run-history td{display:block;width:100%}.run-history tr{padding:10px 0;border-bottom:1px solid #dbe1d9}.run-history td{display:grid;grid-template-columns:110px minmax(0,1fr);gap:10px;box-sizing:border-box;padding:8px 12px;border:0}.run-history td:before{content:attr(data-label);font-weight:700;color:#61716e}}</style></head><body><main class="lab-page"><nav class="toolbar"><a class="button" href="../../">Otomatik deneyler</a><a class="button" href="/versions/4.3.2/">Araştırma</a><a class="button" href="run.json">Koşu JSON</a></nav><h1>Deney kaydı</h1><p><strong>Tamamlandı</strong> · Transformers.js 4.3.2 · 04.11.2026 23:04:16</p><p>GitHub Actions ortam doğrulaması</p><section class="decision-summary"><h2>Bu koşuda ne oldu?</h2><p>54 kaydedilmiş teknik kontrolde 48 geçti, 6 başarısız. Beklenen ortak protokol 54 kontroldür. Bütün ortak aşamalar tamamlandı.</p></section><p class="muted">Ücretli LLM API entegrasyonu yoktur. Teknik kontrol oranı cevap doğruluğu değildir. Tek makine ve kurgusal İngiltere CRM verileri; mobil, WebGPU çıkarımı, Türkçe kalite ve insan konuşması kapsam dışıdır.</p><h2>Çalıştırılan modeller</h2><div class="table-wrap"><table class=""><thead><tr><th>Görev</th><th>Model</th><th>Sabit revizyon</th><th>Varyant</th></tr></thead><tbody><tr><td data-label="Görev"><div class="cell-value">M1</div></td><td data-label="Model"><div class="cell-value">Xenova/paraphrase-multilingual-MiniLM-L12-v2</div></td><td data-label="Sabit revizyon"><div class="cell-value"><code>2c4055b12046f11709e9df2c122e59ffbdc2f900</code></div></td><td data-label="Varyant"><div class="cell-value">q8</div></td></tr><tr><td data-label="Görev"><div class="cell-value">M2</div></td><td data-label="Model"><div class="cell-value">Xenova/distilbert-base-uncased-finetuned-sst-2-english</div></td><td data-label="Sabit revizyon"><div class="cell-value"><code>0b6928efcb76139cae2c6881d49cda67fe119f42</code></div></td><td data-label="Varyant"><div class="cell-value">q8</div></td></tr><tr><td data-label="Görev"><div class="cell-value">M3</div></td><td data-label="Model"><div class="cell-value">Xenova/whisper-tiny</div></td><td data-label="Sabit revizyon"><div class="cell-value"><code>5332fcc35e32a33b86612b9a57a89be7906102b1</code></div></td><td data-label="Varyant"><div class="cell-value">q8</div></td></tr><tr><td data-label="Görev"><div class="cell-value">M4</div></td><td data-label="Model"><div class="cell-value">Xenova/speecht5_tts</div></td><td data-label="Sabit revizyon"><div class="cell-value"><code>1723781b8ce2d02f0400c8337be04ae8ee3d6d56</code></div></td><td data-label="Varyant"><div class="cell-value">fp32</div></td></tr><tr><td data-label="Görev"><div class="cell-value">M5</div></td><td data-label="Model"><div class="cell-value">onnx-community/Qwen2.5-0.5B-Instruct</div></td><td data-label="Sabit revizyon"><div class="cell-value"><code>22942cb7d7ba4cc81bb4673549ca4d4614469b5e</code></div></td><td data-label="Varyant"><div class="cell-value">q4</div></td></tr></tbody></table></div><h2>Ölçümler</h2><div class="table-wrap"><table class=""><thead><tr><th>Ölçü</th><th>Bu koşu</th></tr></thead><tbody><tr><td data-label="Ölçü"><div class="cell-value">Anlamsal ilk sıra</div></td><td data-label="Bu koşu"><div class="cell-value">%94,12</div></td></tr><tr><td data-label="Ölçü"><div class="cell-value">Kelime ilk sıra</div></td><td data-label="Bu koşu"><div class="cell-value">%96,08</div></td></tr><tr><td data-label="Ölçü"><div class="cell-value">Duygu etiket doğruluğu</div></td><td data-label="Bu koşu"><div class="cell-value">%95,83</div></td></tr><tr><td data-label="Ölçü"><div class="cell-value">Whisper temiz WER</div></td><td data-label="Bu koşu"><div class="cell-value">%14,29</div></td></tr><tr><td data-label="Ölçü"><div class="cell-value">Whisper gürültülü WER</div></td><td data-label="Bu koşu"><div class="cell-value">%25,51</div></td></tr><tr><td data-label="Ölçü"><div class="cell-value">Qwen katı JSON</div></td><td data-label="Bu koşu"><div class="cell-value">0/8</div></td></tr><tr><td data-label="Ölçü"><div class="cell-value">Qwen dar otomatik koşullar</div></td><td data-label="Bu koşu"><div class="cell-value">11/24</div></td></tr><tr><td data-label="Ölçü"><div class="cell-value">SpeechT5 üretilen ses</div></td><td data-label="Bu koşu"><div class="cell-value">8</div></td></tr><tr><td data-label="Ölçü"><div class="cell-value">TTS geri döküm WER</div></td><td data-label="Bu koşu"><div class="cell-value">%20</div></td></tr><tr><td data-label="Ölçü"><div class="cell-value">M1 en iyi gözlenen metin/sn</div></td><td data-label="Bu koşu"><div class="cell-value">119,44</div></td></tr></tbody></table></div><h2>Başarısız kontroller</h2><div class="table-wrap"><table class=""><thead><tr><th>Kimlik</th><th>Gerçek hata</th></tr></thead><tbody><tr><td data-label="Kimlik"><div class="cell-value">EMB-03</div></td><td data-label="Gerçek hata"><div class="cell-value">Single/batch cosine drift: 0.992712294189976; required &gt;=0.9999</div></td></tr><tr><td data-label="Kimlik"><div class="cell-value">LEN-04</div></td><td data-label="Gerçek hata"><div class="cell-value">Padding changed short input embedding: 0.9956058190100308; required &gt;=0.9999</div></td></tr><tr><td data-label="Kimlik"><div class="cell-value">ASR-SILENCE</div></td><td data-label="Gerçek hata"><div class="cell-value">Speech hallucinated on silence: [&quot; you&quot;,&quot; you&quot;]</div></td></tr><tr><td data-label="Kimlik"><div class="cell-value">TTS-DEFAULT-PIPELINE</div></td><td data-label="Gerçek hata"><div class="cell-value">An error occurred during model execution: &quot;Missing the following inputs: speaker_embeddings, encoder_hidden_states, output_sequence.</div></td></tr><tr><td data-label="Kimlik"><div class="cell-value">TTS-EXPLICIT-PIPELINE</div></td><td data-label="Gerçek hata"><div class="cell-value">Empty audio output</div></td></tr><tr><td data-label="Kimlik"><div class="cell-value">TTS-BATCH</div></td><td data-label="Gerçek hata"><div class="cell-value">Got invalid dimensions for input: input_ids for the following indices
+ index: 0 Got: 2 Expected: 1
+ Please fix either the inputs/outputs or the model.</div></td></tr></tbody></table></div><details><summary>Ortam ve tekrar üretim bilgisi</summary><pre>{
+  &quot;execution&quot;: {
+    &quot;kind&quot;: &quot;GitHub Actions&quot;,
+    &quot;repository&quot;: &quot;umrtkyrk/transformers-js-research&quot;,
+    &quot;runner&quot;: &quot;Windows&quot;,
+    &quot;runnerImage&quot;: &quot;win25-vs2026&quot;,
+    &quot;runId&quot;: &quot;41902920049&quot;,
+    &quot;runUrl&quot;: &quot;https://github.com/umrtkyrk/transformers-js-research/actions/runs/41902920049&quot;
+  },
+  &quot;environment&quot;: {
+    &quot;node&quot;: &quot;v24.22.1&quot;,
+    &quot;cpu&quot;: &quot;AMD EPYC 9V74 80-Core Processor                &quot;,
+    &quot;ramBytes&quot;: 17174360064,
+    &quot;edge&quot;: &quot;156.0.4314.56&quot;,
+    &quot;backend&quot;: &quot;CPU (4 intra-op / 1 inter-op) + M1/M2 Edge WASM (1 thread)&quot;
+  },
+  &quot;protocolHash&quot;: &quot;92095318905a61ebb985cdde0eb9e3f02d1f3c5d5b54037922c16a9ef78408b9&quot;,
+  &quot;datasetHash&quot;: &quot;44cf5cef4e6bc6cb0d82421fd67d364e32d258fcf8bb709e1b9552391eff8d36&quot;,
+  &quot;models&quot;: [
+    {
+      &quot;slot&quot;: &quot;M1&quot;,
+      &quot;id&quot;: &quot;Xenova/paraphrase-multilingual-MiniLM-L12-v2&quot;,
+      &quot;revision&quot;: &quot;2c4055b12046f11709e9df2c122e59ffbdc2f900&quot;,
+      &quot;dtype&quot;: &quot;q8&quot;,
+      &quot;task&quot;: &quot;feature-extraction&quot;,
+      &quot;allowedModelTypes&quot;: [
+        &quot;bert&quot;
+      ]
+    },
+    {
+      &quot;slot&quot;: &quot;M2&quot;,
+      &quot;id&quot;: &quot;Xenova/distilbert-base-uncased-finetuned-sst-2-english&quot;,
+      &quot;revision&quot;: &quot;0b6928efcb76139cae2c6881d49cda67fe119f42&quot;,
+      &quot;dtype&quot;: &quot;q8&quot;,
+      &quot;task&quot;: &quot;text-classification&quot;,
+      &quot;allowedModelTypes&quot;: [
+        &quot;distilbert&quot;,
+        &quot;bert&quot;,
+        &quot;roberta&quot;
+      ]
+    },
+    {
+      &quot;slot&quot;: &quot;M3&quot;,
+      &quot;id&quot;: &quot;Xenova/whisper-tiny&quot;,
+      &quot;revision&quot;: &quot;5332fcc35e32a33b86612b9a57a89be7906102b1&quot;,
+      &quot;dtype&quot;: &quot;q8&quot;,
+      &quot;task&quot;: &quot;automatic-speech-recognition&quot;,
+      &quot;allowedModelTypes&quot;: [
+        &quot;whisper&quot;
+      ]
+    },
+    {
+      &quot;slot&quot;: &quot;M4&quot;,
+      &quot;id&quot;: &quot;Xenova/speecht5_tts&quot;,
+      &quot;revision&quot;: &quot;1723781b8ce2d02f0400c8337be04ae8ee3d6d56&quot;,
+      &quot;dtype&quot;: &quot;fp32&quot;,
+      &quot;task&quot;: &quot;text-to-speech&quot;,
+      &quot;allowedModelTypes&quot;: [
+        &quot;speecht5&quot;
+      ]
+    },
+    {
+      &quot;slot&quot;: &quot;M5&quot;,
+      &quot;id&quot;: &quot;onnx-community/Qwen2.5-0.5B-Instruct&quot;,
+      &quot;revision&quot;: &quot;22942cb7d7ba4cc81bb4673549ca4d4614469b5e&quot;,
+      &quot;dtype&quot;: &quot;q4&quot;,
+      &quot;task&quot;: &quot;text-generation&quot;,
+      &quot;allowedModelTypes&quot;: [
+        &quot;qwen2&quot;
+      ]
+    }
+  ]
+}</pre></details><h2>Ham kanıtlar</h2><ul><li><a href="evidence/backend-comparison.json">backend-comparison.json</a></li><li><a href="evidence/browser-validation.json">browser-validation.json</a></li><li><a href="evidence/browser.png">browser.png</a></li><li><a href="evidence/consistency-diagnostics.json">consistency-diagnostics.json</a></li><li><a href="evidence/environment.json">environment.json</a></li><li><a href="evidence/extended/m3-validation.json">extended/m3-validation.json</a></li><li><a href="evidence/extended/m4-validation.json">extended/m4-validation.json</a></li><li><a href="evidence/extended/m5-validation.json">extended/m5-validation.json</a></li><li><a href="evidence/extended/tts-audio/T001.wav">extended/tts-audio/T001.wav</a></li><li><a href="evidence/extended/tts-audio/T002.wav">extended/tts-audio/T002.wav</a></li><li><a href="evidence/extended/tts-audio/T003.wav">extended/tts-audio/T003.wav</a></li><li><a href="evidence/extended/tts-audio/T004.wav">extended/tts-audio/T004.wav</a></li><li><a href="evidence/extended/tts-audio/T005.wav">extended/tts-audio/T005.wav</a></li><li><a href="evidence/extended/tts-audio/T006.wav">extended/tts-audio/T006.wav</a></li><li><a href="evidence/extended/tts-audio/T007.wav">extended/tts-audio/T007.wav</a></li><li><a href="evidence/extended/tts-audio/T008.wav">extended/tts-audio/T008.wav</a></li><li><a href="evidence/extended/tts-roundtrip.json">extended/tts-roundtrip.json</a></li><li><a href="evidence/filter-tests.json">filter-tests.json</a></li><li><a href="evidence/full-suite.json">full-suite.json</a></li><li><a href="evidence/guide-node-network-1.json">guide-node-network-1.json</a></li><li><a href="evidence/guide-node-network-2.json">guide-node-network-2.json</a></li><li><a href="evidence/guide-node-results.json">guide-node-results.json</a></li><li><a href="evidence/input-artifacts.json">input-artifacts.json</a></li><li><a href="evidence/job-request.json">job-request.json</a></li><li><a href="evidence/node-final/batch-timings.json">node-final/batch-timings.json</a></li><li><a href="evidence/node-final/embedding-reference.json">node-final/embedding-reference.json</a></li><li><a href="evidence/node-final/job-checkpoint.json">node-final/job-checkpoint.json</a></li><li><a href="evidence/node-final/node-validation.json">node-final/node-validation.json</a></li><li><a href="evidence/node-final/retrieval-results.json">node-final/retrieval-results.json</a></li><li><a href="evidence/node-final/scaling-results.json">node-final/scaling-results.json</a></li><li><a href="evidence/node-final/sentiment-results.json">node-final/sentiment-results.json</a></li></ul></main></body></html>

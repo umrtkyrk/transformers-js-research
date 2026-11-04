@@ -1,0 +1,52 @@
+{
+  "completed": {
+    "UK001": {
+      "dimensions": 384,
+      "vectorSha256": "ecea6cf6cd117d2d34f69f6caed3047705a3e37bde775eab176a273c67bba2de"
+    },
+    "UK002": {
+      "dimensions": 384,
+      "vectorSha256": "7805841d69af5f11367f80f07b28331fc7b3ebeebce0975ae07313f75114230f"
+    },
+    "UK003": {
+      "dimensions": 384,
+      "vectorSha256": "a9046608b227b1cc5a74b3ae87aca86652f5d5152b4b8a93dd7154267c95b4f8"
+    },
+    "UK004": {
+      "dimensions": 384,
+      "vectorSha256": "6f8b275528be799aea45aed21bb0ea0056f42931bd8d5b285d1d48127c88f41a"
+    },
+    "UK005": {
+      "dimensions": 384,
+      "vectorSha256": "0c45884fb44dc8024267523df3ca702d2bafe8e12e19cd6432354ce71520d9df"
+    },
+    "UK006": {
+      "dimensions": 384,
+      "vectorSha256": "18a7e35b3dfc937edc859f998825077acc9ea149685d12432a99b654093de5e9"
+    },
+    "UK007": {
+      "dimensions": 384,
+      "vectorSha256": "37c65a1c8a2aeee1bb954a1f20cd77b982adcbf94c4d91af5c9173871e791a3a"
+    },
+    "UK008": {
+      "dimensions": 384,
+      "vectorSha256": "897e91763529cacc3826cd9a661c3767bd4d2774e8f1df7d0987f14b80209ce3"
+    },
+    "UK009": {
+      "dimensions": 384,
+      "vectorSha256": "fddf616546d5917249447368441c46274a8d6ae19e71172f68bc1d648a585c8b"
+    },
+    "UK010": {
+      "dimensions": 384,
+      "vectorSha256": "7211a67de1854c90976e9b3a5d77b67c7d6240db3f717bf38d66d920338c1786"
+    },
+    "UK011": {
+      "dimensions": 384,
+      "vectorSha256": "881b3f4773dbfe8c81c2cbc49f255cf0088ec76ffbc149ea23588088595bb184"
+    },
+    "UK012": {
+      "dimensions": 384,
+      "vectorSha256": "1e47fde236f42fa23d83a1bc451df8be133e342e10d641a11e4ef42c10983a99"
+    }
+  }
+}

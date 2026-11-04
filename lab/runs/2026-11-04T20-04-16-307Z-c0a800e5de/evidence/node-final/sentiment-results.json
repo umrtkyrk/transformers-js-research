@@ -1,0 +1,760 @@
+{
+  "summary": {
+    "labeled": 48,
+    "ambiguousExcluded": 12,
+    "correct": 46,
+    "accuracy": 0.9583333333333334,
+    "perClass": {
+      "POSITIVE": {
+        "tp": 22,
+        "fp": 0,
+        "fn": 2,
+        "precision": 1,
+        "recall": 0.9166666666666666
+      },
+      "NEGATIVE": {
+        "tp": 24,
+        "fp": 2,
+        "fn": 0,
+        "precision": 0.9230769230769231,
+        "recall": 1
+      }
+    },
+    "byCategory": {
+      "straightforward": {
+        "count": 16,
+        "correct": 16
+      },
+      "negation": {
+        "count": 12,
+        "correct": 11
+      },
+      "property_domain": {
+        "count": 20,
+        "correct": 19
+      }
+    }
+  },
+  "cases": [
+    {
+      "id": "S001",
+      "text": "The agent was friendly, organised and genuinely helpful throughout the viewing.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Explicit praise for the agent's service.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9997743368148804
+      }
+    },
+    {
+      "id": "S002",
+      "text": "I love how bright and peaceful this flat feels.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Clear satisfaction with the property.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9996609091758728
+      }
+    },
+    {
+      "id": "S003",
+      "text": "Booking the viewing was easy, and everything went smoothly.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The booking and viewing experience is praised.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9998065829277039
+      }
+    },
+    {
+      "id": "S004",
+      "text": "The agent answered every question clearly and made us feel welcome.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Clear praise for communication and treatment.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9998731017112732
+      }
+    },
+    {
+      "id": "S005",
+      "text": "We are delighted with the clean rooms and comfortable layout.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Explicit delight about the property.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9998870491981506
+      }
+    },
+    {
+      "id": "S006",
+      "text": "The regular updates were reassuring and saved me a great deal of worry.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The communication reduced concern and is appreciated.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9973331689834595
+      }
+    },
+    {
+      "id": "S007",
+      "text": "Collecting the keys was quick, pleasant and well organised.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The key collection experience is clearly positive.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9998724460601807
+      }
+    },
+    {
+      "id": "S008",
+      "text": "I would happily use this agent again after such excellent service.",
+      "category": "straightforward",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "An explicit favourable recommendation.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9987620711326599
+      }
+    },
+    {
+      "id": "S009",
+      "text": "The agent was rude and rushed us through the viewing.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Explicit criticism of the agent's conduct.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9994422197341919
+      }
+    },
+    {
+      "id": "S010",
+      "text": "The flat was filthy, noisy and deeply disappointing.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Clear dissatisfaction with the property.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9998080134391785
+      }
+    },
+    {
+      "id": "S011",
+      "text": "Booking a viewing was frustrating, and my messages went unanswered.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "A clearly frustrating service experience.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9995536804199219
+      }
+    },
+    {
+      "id": "S012",
+      "text": "The agent arrived late and gave confusing answers to simple questions.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Unreliable attendance and poor communication.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9932253360748291
+      }
+    },
+    {
+      "id": "S013",
+      "text": "We regretted renting this uncomfortable and poorly maintained flat.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Explicit regret and criticism.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9997776746749878
+      }
+    },
+    {
+      "id": "S014",
+      "text": "The constant delays made the whole process exhausting.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The process is described as tiring and delayed.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9997729659080505
+      }
+    },
+    {
+      "id": "S015",
+      "text": "Key collection was chaotic, and nobody seemed prepared for us.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "An explicitly disorganised handover.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9997853636741638
+      }
+    },
+    {
+      "id": "S016",
+      "text": "I am extremely unhappy with the poor service we received.",
+      "category": "straightforward",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "An explicit statement of dissatisfaction.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9997460246086121
+      }
+    },
+    {
+      "id": "S017",
+      "text": "I have no complaints about how the agent handled the viewing.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The negation removes the otherwise negative complaint.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9544623494148254
+      }
+    },
+    {
+      "id": "S018",
+      "text": "The flat is not cramped; every room feels spacious.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The negative property description is denied and replaced with praise.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9994580745697021
+      }
+    },
+    {
+      "id": "S019",
+      "text": "The heating did not fail once, and the flat stayed pleasantly warm.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Failure is denied and reliable warmth is appreciated.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9996680021286011
+      }
+    },
+    {
+      "id": "S020",
+      "text": "The agent never ignored my questions and always replied promptly.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Negated neglect and prompt replies express satisfaction.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9993076920509338
+      }
+    },
+    {
+      "id": "S021",
+      "text": "The handover was not stressful at all; it was a relief.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Stress is explicitly denied.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9973942637443542
+      }
+    },
+    {
+      "id": "S022",
+      "text": "There was nothing disappointing about the clean, quiet flat.",
+      "category": "negation",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Disappointment is negated and favourable features are named.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9841469526290894
+      }
+    },
+    {
+      "id": "S023",
+      "text": "The agent was not helpful when I asked about the tenancy.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Negation reverses the positive word helpful.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9997283220291138
+      }
+    },
+    {
+      "id": "S024",
+      "text": "The flat was not clean when I collected the keys.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The property fails the expected standard of cleanliness.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9997642636299133
+      }
+    },
+    {
+      "id": "S025",
+      "text": "The repair was never completed despite repeated requests.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The requested repair remains unresolved.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9995576739311218
+      }
+    },
+    {
+      "id": "S026",
+      "text": "There is nothing pleasant about the constant noise in this flat.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Pleasantness is denied and noise is criticised.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9997645020484924
+      }
+    },
+    {
+      "id": "S027",
+      "text": "The agent did not keep the promised appointment.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The agent failed to attend as promised.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9990637302398682
+      }
+    },
+    {
+      "id": "S028",
+      "text": "I cannot recommend this agency after such poor service.",
+      "category": "negation",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "An explicit unfavourable recommendation.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9995567798614502
+      }
+    },
+    {
+      "id": "S029",
+      "text": "The agent kept the chain moving and made completion day pleasantly straightforward.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Clear satisfaction with sale progression and completion.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.999860942363739
+      }
+    },
+    {
+      "id": "S030",
+      "text": "The tenancy paperwork was clear, and the letting team explained every charge patiently.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The tenancy process and explanations are praised.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9982212781906128
+      }
+    },
+    {
+      "id": "S031",
+      "text": "The inventory matched the spotless flat, so I felt confident collecting the keys.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Accurate records and property condition create confidence.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9883277416229248
+      }
+    },
+    {
+      "id": "S032",
+      "text": "The repairs were completed before move-in, and I am delighted with the flat.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Explicit satisfaction with completed repairs.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9994125962257385
+      }
+    },
+    {
+      "id": "S033",
+      "text": "The rent and service charge were explained upfront, with no unpleasant surprises.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Transparent property costs are appreciated.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9964821338653564
+      }
+    },
+    {
+      "id": "S034",
+      "text": "The survey findings were explained clearly, which made the purchase much less worrying.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Helpful explanations reduce concern during purchase.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.8554553389549255
+      }
+    },
+    {
+      "id": "S035",
+      "text": "The deposit return was handled promptly and fairly, and I was very pleased.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Explicit satisfaction with the deposit return process.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9998626112937927
+      }
+    },
+    {
+      "id": "S036",
+      "text": "The accurate floor plan and detailed listing made choosing this home easy.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The listing information is described as accurate and useful.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9990498423576355
+      }
+    },
+    {
+      "id": "S037",
+      "text": "The warm, draught-free rooms have made renting this home a pleasure.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "Explicit enjoyment of the property's comfort.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9996611475944519
+      }
+    },
+    {
+      "id": "S038",
+      "text": "The agent explained the leasehold terms patiently, and I appreciated the clear communication.",
+      "category": "property_domain",
+      "expected_label": "POSITIVE",
+      "split": "evaluation",
+      "rationale": "The quality of the explanation is praised, without evaluating legal terms.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9997785091400146
+      }
+    },
+    {
+      "id": "S039",
+      "text": "Poor communication left the chain stalled and made completion day miserable.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Clear dissatisfaction with sale progression.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9998062252998352
+      }
+    },
+    {
+      "id": "S040",
+      "text": "The letting team sent contradictory tenancy paperwork and left me thoroughly frustrated.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Contradictory paperwork causes explicit frustration.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9997857809066772
+      }
+    },
+    {
+      "id": "S041",
+      "text": "The inventory missed obvious damage, which made the handover upsetting.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Missing damage records and an upsetting handover express dissatisfaction.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9996982216835022
+      }
+    },
+    {
+      "id": "S042",
+      "text": "We moved into a damp flat with a broken boiler, and the experience was awful.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Explicitly poor property conditions and a negative experience.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9996965527534485
+      }
+    },
+    {
+      "id": "S043",
+      "text": "Unexpected service charges appeared after the viewing, and I felt misled.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Unexpected costs lead to an explicit feeling of being misled.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9988100528717041
+      }
+    },
+    {
+      "id": "S044",
+      "text": "The agent dismissed my questions about the survey, which was deeply unhelpful.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The response to survey questions is explicitly criticised.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9994431734085083
+      }
+    },
+    {
+      "id": "S045",
+      "text": "The deposit return involved endless unanswered emails and an exhausting wait.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Poor communication and delay produce dissatisfaction.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9995291233062744
+      }
+    },
+    {
+      "id": "S046",
+      "text": "The listing exaggerated the room sizes, and seeing the flat was a disappointment.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "Misleading listing details cause explicit disappointment.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9997971057891846
+      }
+    },
+    {
+      "id": "S047",
+      "text": "The draughts and unreliable heating have made living here unpleasant.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The property's comfort and heating are criticised.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.999193012714386
+      }
+    },
+    {
+      "id": "S048",
+      "text": "The agent rushed through the leasehold questions and left me anxious and confused.",
+      "category": "property_domain",
+      "expected_label": "NEGATIVE",
+      "split": "evaluation",
+      "rationale": "The quality of communication is clearly negative.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9994156956672668
+      }
+    },
+    {
+      "id": "S049",
+      "text": "The flat is lovely, but dealing with the agent was exhausting.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Mixed sentiment with different property and service targets; excluded from binary accuracy.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9960305690765381
+      }
+    },
+    {
+      "id": "S050",
+      "text": "The rent is reasonable, although the noise makes the place hard to enjoy.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Positive cost assessment and negative comfort assessment coexist; excluded from binary accuracy.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.7710779309272766
+      }
+    },
+    {
+      "id": "S051",
+      "text": "The agent replied quickly, but every answer created another question.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Prompt replies contrast with an unclear experience; excluded from binary accuracy.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9846524000167847
+      }
+    },
+    {
+      "id": "S052",
+      "text": "Wonderful, another viewing cancelled at the last minute.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Ironic positive wording about an adverse event; qualitative review only and excluded from binary accuracy.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9948164224624634
+      }
+    },
+    {
+      "id": "S053",
+      "text": "The property has character, if you enjoy sloping floors and rattling windows.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "The property description may be ironic or depend on personal preference; excluded from binary accuracy.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9962725639343262
+      }
+    },
+    {
+      "id": "S054",
+      "text": "Completion took a month longer than expected, but the agent worked hard to resolve it.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Negative outcome and positive agent effort have different targets; excluded from binary accuracy.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9992388486862183
+      }
+    },
+    {
+      "id": "S055",
+      "text": "The kitchen is excellent; the bedroom is a different story.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Explicit praise is combined with an implied criticism; excluded from binary accuracy.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9998379349708557
+      }
+    },
+    {
+      "id": "S056",
+      "text": "At least the draughty flat will keep us awake during winter.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "An ironic framing of an uncomfortable property; qualitative review only and excluded from binary accuracy.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.986504077911377
+      }
+    },
+    {
+      "id": "S057",
+      "text": "The flat is on the second floor and the tenancy begins next month.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Factual description without explicit evaluative sentiment; excluded from binary accuracy.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9826518893241882
+      }
+    },
+    {
+      "id": "S058",
+      "text": "The agent was polite, and that is about all I can say.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "Understatement may imply criticism beyond the explicit praise; excluded from binary accuracy.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9910078048706055
+      }
+    },
+    {
+      "id": "S059",
+      "text": "The service charge is higher, but it includes the maintenance I wanted.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "A cost-benefit trade-off without an unambiguous overall sentiment; excluded from binary accuracy.",
+      "predicted": {
+        "label": "NEGATIVE",
+        "score": 0.9411543607711792
+      }
+    },
+    {
+      "id": "S060",
+      "text": "The viewing was an experience I will remember.",
+      "category": "ambiguous_mixed_irony",
+      "expected_label": null,
+      "split": "evaluation",
+      "rationale": "The memorable experience is not specified as positive or negative; excluded from binary accuracy.",
+      "predicted": {
+        "label": "POSITIVE",
+        "score": 0.9991855025291443
+      }
+    }
+  ]
+}

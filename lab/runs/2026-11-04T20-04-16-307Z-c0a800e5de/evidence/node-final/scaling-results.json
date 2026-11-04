@@ -1,0 +1,89 @@
+[
+  {
+    "count": 256,
+    "processed": 256,
+    "batchSize": 16,
+    "durationMs": 2148.4668999999994,
+    "textsPerSecond": 119.15473307966721,
+    "memory": {
+      "before": {
+        "rss": 933208064,
+        "heapTotal": 316960768,
+        "heapUsed": 228895488,
+        "external": 96558121,
+        "arrayBuffers": 89694283,
+        "availableSystemBytes": 13345705984
+      },
+      "after": {
+        "rss": 936398848,
+        "heapTotal": 316960768,
+        "heapUsed": 226671552,
+        "external": 97828081,
+        "arrayBuffers": 90964243,
+        "availableSystemBytes": 13342294016
+      },
+      "sampledMaxRssBytes": 937431040,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "count": 1024,
+    "processed": 1024,
+    "batchSize": 16,
+    "durationMs": 8709.7192,
+    "textsPerSecond": 117.56980638365471,
+    "memory": {
+      "before": {
+        "rss": 936833024,
+        "heapTotal": 316960768,
+        "heapUsed": 226721632,
+        "external": 98352369,
+        "arrayBuffers": 91488531,
+        "availableSystemBytes": 13342879744
+      },
+      "after": {
+        "rss": 941064192,
+        "heapTotal": 316960768,
+        "heapUsed": 226723016,
+        "external": 102505713,
+        "arrayBuffers": 95641875,
+        "availableSystemBytes": 13342515200
+      },
+      "sampledMaxRssBytes": 941064192,
+      "samplingIntervalMs": 25,
+      "samples": 64,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "count": 4096,
+    "processed": 4096,
+    "batchSize": 16,
+    "durationMs": 34872.5222,
+    "textsPerSecond": 117.45637371764295,
+    "memory": {
+      "before": {
+        "rss": 941531136,
+        "heapTotal": 316960768,
+        "heapUsed": 226771416,
+        "external": 103095537,
+        "arrayBuffers": 96231699,
+        "availableSystemBytes": 13342027776
+      },
+      "after": {
+        "rss": 953573376,
+        "heapTotal": 316960768,
+        "heapUsed": 209017584,
+        "external": 119049164,
+        "arrayBuffers": 112185875,
+        "availableSystemBytes": 13348163584
+      },
+      "sampledMaxRssBytes": 954101760,
+      "samplingIntervalMs": 25,
+      "samples": 256,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  }
+]

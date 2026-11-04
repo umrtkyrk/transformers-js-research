@@ -1,0 +1,54 @@
+{
+  "timestamp": "2026-11-04T20:09:50.312Z",
+  "durationMs": 4850.9771,
+  "fetches": [
+    {
+      "url": "https://huggingface.co/Xenova/distilbert-base-uncased-finetuned-sst-2-english/resolve/main/config.json",
+      "method": "GET",
+      "status": 200,
+      "durationMs": 82.7183,
+      "contentLength": "735",
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/distilbert-base-uncased-finetuned-sst-2-english/resolve/main/tokenizer_config.json",
+      "method": "GET",
+      "status": 206,
+      "durationMs": 21.082499999999982,
+      "contentLength": "1",
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/distilbert-base-uncased-finetuned-sst-2-english/resolve/0b6928efcb76139cae2c6881d49cda67fe119f42/config.json",
+      "method": "GET",
+      "status": 200,
+      "durationMs": 26.438499999999976,
+      "contentLength": "735",
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/distilbert-base-uncased-finetuned-sst-2-english/resolve/0b6928efcb76139cae2c6881d49cda67fe119f42/tokenizer.json",
+      "method": "GET",
+      "status": 200,
+      "durationMs": 29.729899999999986,
+      "contentLength": null,
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/distilbert-base-uncased-finetuned-sst-2-english/resolve/0b6928efcb76139cae2c6881d49cda67fe119f42/tokenizer_config.json",
+      "method": "GET",
+      "status": 200,
+      "durationMs": 35.032399999999996,
+      "contentLength": "372",
+      "contentType": "text/plain; charset=utf-8"
+    },
+    {
+      "url": "https://huggingface.co/Xenova/distilbert-base-uncased-finetuned-sst-2-english/resolve/0b6928efcb76139cae2c6881d49cda67fe119f42/onnx/model_quantized.onnx",
+      "method": "GET",
+      "status": 200,
+      "durationMs": 131.98450000000003,
+      "contentLength": "67581197",
+      "contentType": "application/octet-stream"
+    }
+  ]
+}

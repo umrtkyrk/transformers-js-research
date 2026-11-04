@@ -64,10 +64,144 @@
       "force": true,
       "key": "c0a800e5de025f9cc97fe1648af5457793c541eae1e100c1e7df551470b4a6d1",
       "queuedAt": "2026-11-04T20:04:14.346Z",
-      "status": "queued"
+      "status": "completed"
     }
   ],
-  "runs": [],
+  "runs": [
+    {
+      "id": "2026-11-04T20-04-16-307Z-c0a800e5de",
+      "key": "c0a800e5de025f9cc97fe1648af5457793c541eae1e100c1e7df551470b4a6d1",
+      "version": "4.3.2",
+      "reason": "cloud verification",
+      "models": [
+        {
+          "slot": "M1",
+          "id": "Xenova/paraphrase-multilingual-MiniLM-L12-v2",
+          "revision": "2c4055b12046f11709e9df2c122e59ffbdc2f900",
+          "dtype": "q8",
+          "task": "feature-extraction",
+          "allowedModelTypes": [
+            "bert"
+          ]
+        },
+        {
+          "slot": "M2",
+          "id": "Xenova/distilbert-base-uncased-finetuned-sst-2-english",
+          "revision": "0b6928efcb76139cae2c6881d49cda67fe119f42",
+          "dtype": "q8",
+          "task": "text-classification",
+          "allowedModelTypes": [
+            "distilbert",
+            "bert",
+            "roberta"
+          ]
+        },
+        {
+          "slot": "M3",
+          "id": "Xenova/whisper-tiny",
+          "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+          "dtype": "q8",
+          "task": "automatic-speech-recognition",
+          "allowedModelTypes": [
+            "whisper"
+          ]
+        },
+        {
+          "slot": "M4",
+          "id": "Xenova/speecht5_tts",
+          "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+          "dtype": "fp32",
+          "task": "text-to-speech",
+          "allowedModelTypes": [
+            "speecht5"
+          ]
+        },
+        {
+          "slot": "M5",
+          "id": "onnx-community/Qwen2.5-0.5B-Instruct",
+          "revision": "22942cb7d7ba4cc81bb4673549ca4d4614469b5e",
+          "dtype": "q4",
+          "task": "text-generation",
+          "allowedModelTypes": [
+            "qwen2"
+          ]
+        }
+      ],
+      "protocolHash": "92095318905a61ebb985cdde0eb9e3f02d1f3c5d5b54037922c16a9ef78408b9",
+      "datasetHash": "44cf5cef4e6bc6cb0d82421fd67d364e32d258fcf8bb709e1b9552391eff8d36",
+      "status": "completed",
+      "startedAt": "2026-11-04T20:04:16.308Z",
+      "execution": {
+        "kind": "GitHub Actions",
+        "repository": "umrtkyrk/transformers-js-research",
+        "runner": "Windows",
+        "runnerImage": "win25-vs2026",
+        "runId": "41902920049",
+        "runUrl": "https://github.com/umrtkyrk/transformers-js-research/actions/runs/41902920049"
+      },
+      "downloadBytes": 1683244696,
+      "summary": {
+        "complete": true,
+        "technical": {
+          "total": 54,
+          "passed": 48,
+          "failed": 6,
+          "expected": 54
+        },
+        "failures": [
+          {
+            "id": "EMB-03",
+            "error": "Single/batch cosine drift: 0.992712294189976; required >=0.9999"
+          },
+          {
+            "id": "LEN-04",
+            "error": "Padding changed short input embedding: 0.9956058190100308; required >=0.9999"
+          },
+          {
+            "id": "ASR-SILENCE",
+            "error": "Speech hallucinated on silence: [\" you\",\" you\"]"
+          },
+          {
+            "id": "TTS-DEFAULT-PIPELINE",
+            "error": "An error occurred during model execution: \"Missing the following inputs: speaker_embeddings, encoder_hidden_states, output_sequence."
+          },
+          {
+            "id": "TTS-EXPLICIT-PIPELINE",
+            "error": "Empty audio output"
+          },
+          {
+            "id": "TTS-BATCH",
+            "error": "Got invalid dimensions for input: input_ids for the following indices\n index: 0 Got: 2 Expected: 1\n Please fix either the inputs/outputs or the model."
+          }
+        ],
+        "auxiliaryFailures": [],
+        "metrics": {
+          "semanticHit1": 0.9411764705882353,
+          "lexicalHit1": 0.9607843137254902,
+          "sentimentAccuracy": 0.9583333333333334,
+          "cleanWer": 0.14285714285714285,
+          "noisyWer": 0.25510204081632654,
+          "generationConstraints": 11,
+          "generationCases": 24,
+          "jsonPasses": 0,
+          "jsonCases": 8,
+          "ttsClips": 8,
+          "ttsRoundtripWer": 0.2,
+          "bestBatchTextsPerSecond": 119.43946536357215,
+          "bestBatchSize": 32
+        },
+        "environment": {
+          "node": "v24.22.1",
+          "cpu": "AMD EPYC 9V74 80-Core Processor                ",
+          "ramBytes": 17174360064,
+          "edge": "156.0.4314.56",
+          "backend": "CPU (4 intra-op / 1 inter-op) + M1/M2 Edge WASM (1 thread)"
+        },
+        "suiteStatus": "completed"
+      },
+      "completedAt": "2026-11-04T20:10:15.105Z"
+    }
+  ],
   "candidates": [],
   "lastCheck": {
     "at": "2026-11-04T20:04:14.346Z",

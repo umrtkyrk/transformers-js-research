@@ -1,0 +1,3406 @@
+{
+  "summary": {
+    "semantic": {
+      "queries": 60,
+      "answerable": 51,
+      "noResult": 9,
+      "hitAt1": 0.9411764705882353,
+      "hitAt3": 0.9803921568627451,
+      "hitAt5": 0.9803921568627451,
+      "recallAt3": 0.8671011994541409,
+      "recallAt5": 0.901023486317604,
+      "mrr": 0.9560308972073679
+    },
+    "lexical": {
+      "queries": 60,
+      "answerable": 51,
+      "noResult": 9,
+      "hitAt1": 0.9607843137254902,
+      "hitAt3": 1,
+      "hitAt5": 1,
+      "recallAt3": 0.9070794129617661,
+      "recallAt5": 0.9473054178936532,
+      "mrr": 0.977124183006536
+    },
+    "semanticCalibration": {
+      "tp": 17,
+      "tn": 2,
+      "fp": 1,
+      "fn": 0,
+      "threshold": 0.25,
+      "accuracy": 0.95,
+      "positiveRecall": 1,
+      "negativeRecall": 0.6666666666666666,
+      "balancedAccuracy": 0.8333333333333333,
+      "f1": 0.9714285714285714
+    },
+    "lexicalCalibration": {
+      "tp": 13,
+      "tn": 3,
+      "fp": 0,
+      "fn": 4,
+      "threshold": 0.6000000000000001,
+      "accuracy": 0.8,
+      "positiveRecall": 0.7647058823529411,
+      "negativeRecall": 1,
+      "balancedAccuracy": 0.8823529411764706,
+      "f1": 0.8666666666666667
+    },
+    "semanticAnswerability": {
+      "tp": 51,
+      "tn": 8,
+      "fp": 1,
+      "fn": 0,
+      "threshold": 0.25,
+      "accuracy": 0.9833333333333333,
+      "positiveRecall": 1,
+      "negativeRecall": 0.8888888888888888,
+      "balancedAccuracy": 0.9444444444444444,
+      "f1": 0.9902912621359223
+    },
+    "lexicalAnswerability": {
+      "tp": 32,
+      "tn": 9,
+      "fp": 0,
+      "fn": 19,
+      "threshold": 0.6000000000000001,
+      "accuracy": 0.6833333333333333,
+      "positiveRecall": 0.6274509803921569,
+      "negativeRecall": 1,
+      "balancedAccuracy": 0.8137254901960784,
+      "f1": 0.7710843373493976
+    },
+    "byCategory": {
+      "paraphrase": {
+        "semantic": {
+          "queries": 12,
+          "answerable": 12,
+          "noResult": 0,
+          "hitAt1": 1,
+          "hitAt3": 1,
+          "hitAt5": 1,
+          "recallAt3": 1,
+          "recallAt5": 1,
+          "mrr": 1
+        },
+        "lexical": {
+          "queries": 12,
+          "answerable": 12,
+          "noResult": 0,
+          "hitAt1": 1,
+          "hitAt3": 1,
+          "hitAt5": 1,
+          "recallAt3": 1,
+          "recallAt5": 1,
+          "mrr": 1
+        }
+      },
+      "location": {
+        "semantic": {
+          "queries": 10,
+          "answerable": 10,
+          "noResult": 0,
+          "hitAt1": 1,
+          "hitAt3": 1,
+          "hitAt5": 1,
+          "recallAt3": 1,
+          "recallAt5": 1,
+          "mrr": 1
+        },
+        "lexical": {
+          "queries": 10,
+          "answerable": 10,
+          "noResult": 0,
+          "hitAt1": 1,
+          "hitAt3": 1,
+          "hitAt5": 1,
+          "recallAt3": 1,
+          "recallAt5": 1,
+          "mrr": 1
+        }
+      },
+      "negative_challenge": {
+        "semantic": {
+          "queries": 10,
+          "answerable": 9,
+          "noResult": 1,
+          "hitAt1": 1,
+          "hitAt3": 1,
+          "hitAt5": 1,
+          "recallAt3": 1,
+          "recallAt5": 1,
+          "mrr": 1
+        },
+        "lexical": {
+          "queries": 10,
+          "answerable": 9,
+          "noResult": 1,
+          "hitAt1": 1,
+          "hitAt3": 1,
+          "hitAt5": 1,
+          "recallAt3": 1,
+          "recallAt5": 1,
+          "mrr": 1
+        }
+      },
+      "preference": {
+        "semantic": {
+          "queries": 10,
+          "answerable": 10,
+          "noResult": 0,
+          "hitAt1": 1,
+          "hitAt3": 1,
+          "hitAt5": 1,
+          "recallAt3": 1,
+          "recallAt5": 1,
+          "mrr": 1
+        },
+        "lexical": {
+          "queries": 10,
+          "answerable": 10,
+          "noResult": 0,
+          "hitAt1": 1,
+          "hitAt3": 1,
+          "hitAt5": 1,
+          "recallAt3": 1,
+          "recallAt5": 1,
+          "mrr": 1
+        }
+      },
+      "missing_information": {
+        "semantic": {
+          "queries": 10,
+          "answerable": 10,
+          "noResult": 0,
+          "hitAt1": 0.7,
+          "hitAt3": 0.9,
+          "hitAt5": 0.9,
+          "recallAt3": 0.3222161172161172,
+          "recallAt5": 0.49521978021978014,
+          "mrr": 0.7757575757575758
+        },
+        "lexical": {
+          "queries": 10,
+          "answerable": 10,
+          "noResult": 0,
+          "hitAt1": 0.8,
+          "hitAt3": 1,
+          "hitAt5": 1,
+          "recallAt3": 0.5261050061050061,
+          "recallAt5": 0.7312576312576313,
+          "mrr": 0.8833333333333332
+        }
+      },
+      "nonsense": {
+        "semantic": {
+          "queries": 4,
+          "answerable": 0,
+          "noResult": 4,
+          "hitAt1": 0,
+          "hitAt3": 0,
+          "hitAt5": 0,
+          "recallAt3": 0,
+          "recallAt5": 0,
+          "mrr": 0
+        },
+        "lexical": {
+          "queries": 4,
+          "answerable": 0,
+          "noResult": 4,
+          "hitAt1": 0,
+          "hitAt3": 0,
+          "hitAt5": 0,
+          "recallAt3": 0,
+          "recallAt5": 0,
+          "mrr": 0
+        }
+      },
+      "no_result": {
+        "semantic": {
+          "queries": 4,
+          "answerable": 0,
+          "noResult": 4,
+          "hitAt1": 0,
+          "hitAt3": 0,
+          "hitAt5": 0,
+          "recallAt3": 0,
+          "recallAt5": 0,
+          "mrr": 0
+        },
+        "lexical": {
+          "queries": 4,
+          "answerable": 0,
+          "noResult": 4,
+          "hitAt1": 0,
+          "hitAt3": 0,
+          "hitAt5": 0,
+          "recallAt3": 0,
+          "recallAt5": 0,
+          "mrr": 0
+        }
+      }
+    },
+    "candidateCounts": [
+      {
+        "id": "Q021",
+        "eligible": 1
+      },
+      {
+        "id": "Q022",
+        "eligible": 1
+      },
+      {
+        "id": "Q023",
+        "eligible": 1
+      },
+      {
+        "id": "Q024",
+        "eligible": 1
+      },
+      {
+        "id": "Q025",
+        "eligible": 1
+      },
+      {
+        "id": "Q026",
+        "eligible": 2
+      },
+      {
+        "id": "Q027",
+        "eligible": 1
+      },
+      {
+        "id": "Q028",
+        "eligible": 1
+      },
+      {
+        "id": "Q029",
+        "eligible": 1
+      },
+      {
+        "id": "Q030",
+        "eligible": 1
+      },
+      {
+        "id": "Q031",
+        "eligible": 1
+      },
+      {
+        "id": "Q032",
+        "eligible": 1
+      },
+      {
+        "id": "Q033",
+        "eligible": 1
+      },
+      {
+        "id": "Q034",
+        "eligible": 1
+      },
+      {
+        "id": "Q035",
+        "eligible": 2
+      },
+      {
+        "id": "Q036",
+        "eligible": 1
+      },
+      {
+        "id": "Q037",
+        "eligible": 1
+      },
+      {
+        "id": "Q038",
+        "eligible": 1
+      },
+      {
+        "id": "Q039",
+        "eligible": 1
+      },
+      {
+        "id": "Q040",
+        "eligible": 1
+      },
+      {
+        "id": "Q041",
+        "eligible": 1
+      },
+      {
+        "id": "Q042",
+        "eligible": 1
+      },
+      {
+        "id": "Q043",
+        "eligible": 1
+      },
+      {
+        "id": "Q044",
+        "eligible": 1
+      },
+      {
+        "id": "Q045",
+        "eligible": 1
+      },
+      {
+        "id": "Q046",
+        "eligible": 2
+      },
+      {
+        "id": "Q047",
+        "eligible": 1
+      },
+      {
+        "id": "Q048",
+        "eligible": 1
+      },
+      {
+        "id": "Q049",
+        "eligible": 1
+      },
+      {
+        "id": "Q050",
+        "eligible": 1
+      },
+      {
+        "id": "Q051",
+        "eligible": 1
+      },
+      {
+        "id": "Q052",
+        "eligible": 1
+      },
+      {
+        "id": "Q053",
+        "eligible": 1
+      },
+      {
+        "id": "Q054",
+        "eligible": 2
+      },
+      {
+        "id": "Q055",
+        "eligible": 2
+      },
+      {
+        "id": "Q056",
+        "eligible": 2
+      },
+      {
+        "id": "Q057",
+        "eligible": 1
+      },
+      {
+        "id": "Q058",
+        "eligible": 1
+      },
+      {
+        "id": "Q059",
+        "eligible": 1
+      },
+      {
+        "id": "Q060",
+        "eligible": 1
+      },
+      {
+        "id": "Q061",
+        "eligible": 36
+      },
+      {
+        "id": "Q062",
+        "eligible": 36
+      },
+      {
+        "id": "Q063",
+        "eligible": 36
+      },
+      {
+        "id": "Q064",
+        "eligible": 36
+      },
+      {
+        "id": "Q065",
+        "eligible": 5
+      },
+      {
+        "id": "Q066",
+        "eligible": 13
+      },
+      {
+        "id": "Q067",
+        "eligible": 23
+      },
+      {
+        "id": "Q068",
+        "eligible": 13
+      },
+      {
+        "id": "Q069",
+        "eligible": 10
+      },
+      {
+        "id": "Q070",
+        "eligible": 36
+      },
+      {
+        "id": "Q071",
+        "eligible": 36
+      },
+      {
+        "id": "Q072",
+        "eligible": 12
+      },
+      {
+        "id": "Q073",
+        "eligible": 36
+      },
+      {
+        "id": "Q074",
+        "eligible": 36
+      },
+      {
+        "id": "Q075",
+        "eligible": 0
+      },
+      {
+        "id": "Q076",
+        "eligible": 0
+      },
+      {
+        "id": "Q077",
+        "eligible": 0
+      },
+      {
+        "id": "Q078",
+        "eligible": 0
+      },
+      {
+        "id": "Q079",
+        "eligible": 1
+      },
+      {
+        "id": "Q080",
+        "eligible": 1
+      }
+    ],
+    "note": "Quality is descriptive on this synthetic fixture. No production acceptance threshold was supplied. Ground truth labels and filters are never sent to the embedding model.",
+    "multiCandidateEvaluation": {
+      "semantic": {
+        "queries": 20,
+        "answerable": 16,
+        "noResult": 4,
+        "hitAt1": 0.8125,
+        "hitAt3": 0.9375,
+        "hitAt5": 0.9375,
+        "recallAt3": 0.5763850732600732,
+        "recallAt5": 0.6845123626373626,
+        "mrr": 0.859848484848485
+      },
+      "lexical": {
+        "queries": 20,
+        "answerable": 16,
+        "noResult": 4,
+        "hitAt1": 0.875,
+        "hitAt3": 1,
+        "hitAt5": 1,
+        "recallAt3": 0.7038156288156288,
+        "recallAt5": 0.8320360195360195,
+        "mrr": 0.9270833333333333
+      }
+    }
+  },
+  "queries": [
+    {
+      "id": "Q001",
+      "split": "development",
+      "category": "paraphrase",
+      "query": "A bright two-bedroom apartment with a balcony in Manchester, up to GBP 1,300 a month.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Manchester",
+        "tenure": "rent",
+        "max_price_gbp": 1300,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK001"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK001",
+          "score": 0.7843224992574314
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK001",
+          "score": 0.8181818181818182
+        }
+      ]
+    },
+    {
+      "id": "Q002",
+      "split": "development",
+      "category": "paraphrase",
+      "query": "I want to buy a two-bedroom Bristol cottage with its own garden for no more than GBP 330,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Bristol",
+        "tenure": "sale",
+        "max_price_gbp": 330000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK007"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK007",
+          "score": 0.8749264498732517
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK007",
+          "score": 0.5714285714285714
+        }
+      ]
+    },
+    {
+      "id": "Q003",
+      "split": "development",
+      "category": "paraphrase",
+      "query": "A two-bedroom terraced rental in Leeds with private outdoor space, at most GBP 1,000 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Leeds",
+        "tenure": "rent",
+        "max_price_gbp": 1000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK011"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK011",
+          "score": 0.7145965512793959
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK011",
+          "score": 0.46153846153846156
+        }
+      ]
+    },
+    {
+      "id": "Q004",
+      "split": "development",
+      "category": "paraphrase",
+      "query": "A London two-bed apartment with a lift and balcony, to rent below GBP 2,500 a month.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "London",
+        "tenure": "rent",
+        "max_price_gbp": 2500,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK016"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK016",
+          "score": 0.8423978120448188
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK016",
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "id": "Q005",
+      "split": "development",
+      "category": "paraphrase",
+      "query": "A two-bedroom semi in Birmingham with a garden and space to park on the drive, up to GBP 1,200 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Birmingham",
+        "tenure": "rent",
+        "max_price_gbp": 1200,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK021"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK021",
+          "score": 0.7377628418027813
+        },
+        {
+          "id": "UK025",
+          "score": 0.6782908358582276
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK021",
+          "score": 0.5384615384615384
+        },
+        {
+          "id": "UK025",
+          "score": 0.46153846153846156
+        }
+      ]
+    },
+    {
+      "id": "Q006",
+      "split": "development",
+      "category": "location",
+      "query": "Show me the four-bedroom detached house for sale in Leeds, with a garage and garden.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Leeds",
+        "tenure": "sale",
+        "max_price_gbp": 360000,
+        "min_bedrooms": 4
+      },
+      "relevant_ids": [
+        "UK012"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK012",
+          "score": 0.8684903020259903
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK012",
+          "score": 1
+        }
+      ]
+    },
+    {
+      "id": "Q007",
+      "split": "development",
+      "category": "location",
+      "query": "A three-bedroom terraced house to buy in London with a private garden, budget GBP 750,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "London",
+        "tenure": "sale",
+        "max_price_gbp": 750000,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK017"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK017",
+          "score": 0.8946585782829634
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK017",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "id": "Q008",
+      "split": "development",
+      "category": "location",
+      "query": "Find a two-bedroom ground-floor flat to rent in Bristol for up to GBP 1,500 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Bristol",
+        "tenure": "rent",
+        "max_price_gbp": 1500,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK010"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK010",
+          "score": 0.8740762875995615
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK010",
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "id": "Q009",
+      "split": "development",
+      "category": "location",
+      "query": "I am buying in Manchester: a detached three-bedroom house with a garden and garage under GBP 300,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Manchester",
+        "tenure": "sale",
+        "max_price_gbp": 300000,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK002"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK002",
+          "score": 0.864743964098549
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK002",
+          "score": 0.6923076923076923
+        }
+      ]
+    },
+    {
+      "id": "Q010",
+      "split": "development",
+      "category": "negative_challenge",
+      "query": "A two-bedroom Manchester flat to rent with no private garden and no allocated parking, up to GBP 1,300 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Manchester",
+        "tenure": "rent",
+        "max_price_gbp": 1300,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK001"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK001",
+          "score": 0.8904015266038888
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK001",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "id": "Q011",
+      "split": "development",
+      "category": "negative_challenge",
+      "query": "A two-bedroom Birmingham rental flat without a garden or balcony, maximum GBP 1,050 per month.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Birmingham",
+        "tenure": "rent",
+        "max_price_gbp": 1050,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK025"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK025",
+          "score": 0.8668527419830129
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK025",
+          "score": 0.7142857142857143
+        }
+      ]
+    },
+    {
+      "id": "Q012",
+      "split": "development",
+      "category": "negative_challenge",
+      "query": "A London studio with no separate bedroom and no garden, at most GBP 1,700 a month.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "London",
+        "tenure": "rent",
+        "max_price_gbp": 1700
+      },
+      "relevant_ids": [
+        "UK020"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK020",
+          "score": 0.7998952703949984
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK020",
+          "score": 0.8181818181818182
+        }
+      ]
+    },
+    {
+      "id": "Q013",
+      "split": "development",
+      "category": "preference",
+      "query": "A three-bedroom Manchester rental with a dedicated study and a private garden, budget GBP 1,600 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Manchester",
+        "tenure": "rent",
+        "max_price_gbp": 1600,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK005"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK005",
+          "score": 0.8386671053847913
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK005",
+          "score": 0.6923076923076923
+        }
+      ]
+    },
+    {
+      "id": "Q014",
+      "split": "development",
+      "category": "preference",
+      "query": "I would like to buy a two-bedroom Leeds flat with lift access and a balcony, up to GBP 180,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Leeds",
+        "tenure": "sale",
+        "max_price_gbp": 180000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK015"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK015",
+          "score": 0.7957490329787624
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK015",
+          "score": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "id": "Q015",
+      "split": "development",
+      "category": "preference",
+      "query": "A Bristol two-bedroom rental with a balcony and step-free entrance, within GBP 1,500 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Bristol",
+        "tenure": "rent",
+        "max_price_gbp": 1500,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK010"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK010",
+          "score": 0.7859449616579092
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK010",
+          "score": 0.6923076923076923
+        }
+      ]
+    },
+    {
+      "id": "Q016",
+      "split": "development",
+      "category": "missing_information",
+      "query": "A two-bedroom flat, please. I have not chosen a city or whether to rent or buy.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK001",
+        "UK010",
+        "UK015",
+        "UK016",
+        "UK025",
+        "UK031",
+        "UK037",
+        "UK041",
+        "UK046",
+        "UK051",
+        "UK057"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK001",
+          "score": 0.6553735422775776
+        },
+        {
+          "id": "UK016",
+          "score": 0.6407461810181257
+        },
+        {
+          "id": "UK015",
+          "score": 0.6287852172426343
+        },
+        {
+          "id": "UK025",
+          "score": 0.6119981689468398
+        },
+        {
+          "id": "UK041",
+          "score": 0.6014252440714462
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK001",
+          "score": 0.4
+        },
+        {
+          "id": "UK010",
+          "score": 0.4
+        },
+        {
+          "id": "UK016",
+          "score": 0.4
+        },
+        {
+          "id": "UK025",
+          "score": 0.4
+        },
+        {
+          "id": "UK031",
+          "score": 0.4
+        }
+      ]
+    },
+    {
+      "id": "Q017",
+      "split": "development",
+      "category": "nonsense",
+      "query": "Blue umbrellas hum square Tuesdays.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [
+        {
+          "id": "UK046",
+          "score": 0.2424780360762776
+        },
+        {
+          "id": "UK045",
+          "score": 0.22595206091742284
+        },
+        {
+          "id": "UK021",
+          "score": 0.22338681313889253
+        },
+        {
+          "id": "UK022",
+          "score": 0.22270569244870494
+        },
+        {
+          "id": "UK041",
+          "score": 0.21270538704648775
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK001",
+          "score": 0
+        },
+        {
+          "id": "UK002",
+          "score": 0
+        },
+        {
+          "id": "UK005",
+          "score": 0
+        },
+        {
+          "id": "UK006",
+          "score": 0
+        },
+        {
+          "id": "UK007",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "Q018",
+      "split": "development",
+      "category": "no_result",
+      "query": "An available two-bedroom Manchester rental with a garden for no more than GBP 1,000 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Manchester",
+        "tenure": "rent",
+        "max_price_gbp": 1000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [],
+      "lexicalRanking": []
+    },
+    {
+      "id": "Q019",
+      "split": "development",
+      "category": "negative_challenge",
+      "query": "A two-bedroom Bristol rental with its own garden, not a balcony or shared courtyard. Maximum GBP 1,500 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Bristol",
+        "tenure": "rent",
+        "max_price_gbp": 1500,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [
+        {
+          "id": "UK010",
+          "score": 0.8373404468520591
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK010",
+          "score": 0.5625
+        }
+      ]
+    },
+    {
+      "id": "Q020",
+      "split": "development",
+      "category": "location",
+      "query": "A two-bedroom terraced house to buy in Birmingham with a private garden, up to GBP 200,000.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true,
+        "city": "Birmingham",
+        "tenure": "sale",
+        "max_price_gbp": 200000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK024"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK024",
+          "score": 0.8566387735796127
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK024",
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "id": "Q021",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A cosy two-bedroom Nottingham cottage with a private garden to rent, budget GBP 950 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Nottingham",
+        "tenure": "rent",
+        "max_price_gbp": 950,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK026"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK026",
+          "score": 0.869830902001131
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK026",
+          "score": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "id": "Q022",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A Newcastle two-bed apartment with a balcony and lift access for under GBP 900 a month.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Newcastle",
+        "tenure": "rent",
+        "max_price_gbp": 900,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK031"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK031",
+          "score": 0.8305524728774004
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK031",
+          "score": 0.6363636363636364
+        }
+      ]
+    },
+    {
+      "id": "Q023",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A stand-alone three-bedroom Liverpool house to rent with a garden and garage, at most GBP 1,350 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Liverpool",
+        "tenure": "rent",
+        "max_price_gbp": 1350,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK040"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK040",
+          "score": 0.8999105987949299
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK040",
+          "score": 0.7857142857142857
+        }
+      ]
+    },
+    {
+      "id": "Q024",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A two-bedroom Brighton cottage with its own garden to purchase, spending no more than GBP 430,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Brighton",
+        "tenure": "sale",
+        "max_price_gbp": 430000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK042"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK042",
+          "score": 0.8514859535067161
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK042",
+          "score": 0.4666666666666667
+        }
+      ]
+    },
+    {
+      "id": "Q025",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A two-bed ground-floor apartment in Sheffield with step-free access and parking, up to GBP 850 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Sheffield",
+        "tenure": "rent",
+        "max_price_gbp": 850,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK046"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK046",
+          "score": 0.7718009092741739
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK046",
+          "score": 0.6428571428571429
+        }
+      ]
+    },
+    {
+      "id": "Q026",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A Cambridge two-bedroom terraced rental with a garden and a built-in study nook, budget GBP 1,900 a month.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Cambridge",
+        "tenure": "rent",
+        "max_price_gbp": 1900,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK055"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK055",
+          "score": 0.842843585164765
+        },
+        {
+          "id": "UK051",
+          "score": 0.8300369977320176
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK055",
+          "score": 0.7857142857142857
+        },
+        {
+          "id": "UK051",
+          "score": 0.5
+        }
+      ]
+    },
+    {
+      "id": "Q027",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A two-bedroom Oxford cottage with private outdoor space and a fireplace, rent up to GBP 1,650 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Oxford",
+        "tenure": "rent",
+        "max_price_gbp": 1650,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK056"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK056",
+          "score": 0.8796700557303877
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK056",
+          "score": 0.6428571428571429
+        }
+      ]
+    },
+    {
+      "id": "Q028",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A three-bedroom terraced Newcastle home with its own garden to buy below GBP 220,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Newcastle",
+        "tenure": "sale",
+        "max_price_gbp": 220000,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK032"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK032",
+          "score": 0.8399992806709278
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK032",
+          "score": 0.5833333333333334
+        }
+      ]
+    },
+    {
+      "id": "Q029",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A three-bedroom semi in Sheffield with a garden and garage to purchase for at most GBP 240,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Sheffield",
+        "tenure": "sale",
+        "max_price_gbp": 240000,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK047"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK047",
+          "score": 0.7734427940914017
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK047",
+          "score": 0.8181818181818182
+        }
+      ]
+    },
+    {
+      "id": "Q030",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A two-bedroom Oxford apartment to purchase with a lift, within GBP 390,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Oxford",
+        "tenure": "sale",
+        "max_price_gbp": 390000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK057"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK057",
+          "score": 0.7725439665312427
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK057",
+          "score": 0.6
+        }
+      ]
+    },
+    {
+      "id": "Q031",
+      "split": "evaluation",
+      "category": "location",
+      "query": "Show a three-bedroom semi-detached house for sale in Nottingham with a driveway, up to GBP 250,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Nottingham",
+        "tenure": "sale",
+        "max_price_gbp": 250000,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK027"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK027",
+          "score": 0.8575424319530403
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK027",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "id": "Q032",
+      "split": "evaluation",
+      "category": "location",
+      "query": "A three-bedroom semi-detached Newcastle rental with a private garden and driveway, maximum GBP 1,150 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Newcastle",
+        "tenure": "rent",
+        "max_price_gbp": 1150,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK035"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK035",
+          "score": 0.8130240923374499
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK035",
+          "score": 0.7142857142857143
+        }
+      ]
+    },
+    {
+      "id": "Q033",
+      "split": "evaluation",
+      "category": "location",
+      "query": "A two-bedroom Liverpool flat to buy with a lift and balcony, budget GBP 170,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Liverpool",
+        "tenure": "sale",
+        "max_price_gbp": 170000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK037"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK037",
+          "score": 0.808871664529121
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK037",
+          "score": 0.7272727272727273
+        }
+      ]
+    },
+    {
+      "id": "Q034",
+      "split": "evaluation",
+      "category": "location",
+      "query": "Find a two-bedroom flat with a balcony to rent in Brighton for up to GBP 1,850 a month.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Brighton",
+        "tenure": "rent",
+        "max_price_gbp": 1850,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK041"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK041",
+          "score": 0.8589999308112453
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK041",
+          "score": 0.8181818181818182
+        }
+      ]
+    },
+    {
+      "id": "Q035",
+      "split": "evaluation",
+      "category": "location",
+      "query": "A two-bedroom terraced Sheffield rental where pets are permitted, up to GBP 1,000 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Sheffield",
+        "tenure": "rent",
+        "max_price_gbp": 1000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK050"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK050",
+          "score": 0.7491983156532849
+        },
+        {
+          "id": "UK046",
+          "score": 0.6957264741553659
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK050",
+          "score": 0.5384615384615384
+        },
+        {
+          "id": "UK046",
+          "score": 0.3076923076923077
+        }
+      ]
+    },
+    {
+      "id": "Q036",
+      "split": "evaluation",
+      "category": "location",
+      "query": "A detached three-bedroom house in Cambridge to buy with a garage, up to GBP 660,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Cambridge",
+        "tenure": "sale",
+        "max_price_gbp": 660000,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK052"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK052",
+          "score": 0.8975527155444073
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK052",
+          "score": 0.7272727272727273
+        }
+      ]
+    },
+    {
+      "id": "Q037",
+      "split": "evaluation",
+      "category": "location",
+      "query": "A three-bedroom Oxford terraced rental with a driveway and garden, at most GBP 2,200 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Oxford",
+        "tenure": "rent",
+        "max_price_gbp": 2200,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK060"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK060",
+          "score": 0.8480280515210676
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK060",
+          "score": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "id": "Q038",
+      "split": "evaluation",
+      "category": "location",
+      "query": "A two-bedroom Nottingham flat with a balcony to rent for no more than GBP 900 pcm.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true,
+        "city": "Nottingham",
+        "tenure": "rent",
+        "max_price_gbp": 900,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK029"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK029",
+          "score": 0.8303203263496998
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK029",
+          "score": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "id": "Q039",
+      "split": "evaluation",
+      "category": "location",
+      "query": "A two-bedroom cottage with a private garden to rent in Cambridge, within GBP 1,500 a month.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true,
+        "city": "Cambridge",
+        "tenure": "rent",
+        "max_price_gbp": 1500,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK054"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK054",
+          "score": 0.8914459885898863
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK054",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "id": "Q040",
+      "split": "evaluation",
+      "category": "location",
+      "query": "An available two-bedroom Liverpool terraced house with a private garden, rent up to GBP 850 pcm.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true,
+        "city": "Liverpool",
+        "tenure": "rent",
+        "max_price_gbp": 850,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK039"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK039",
+          "score": 0.8291545432554244
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK039",
+          "score": 0.6923076923076923
+        }
+      ]
+    },
+    {
+      "id": "Q041",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "query": "A two-bedroom Newcastle rental flat without a private garden; a balcony is fine. Maximum GBP 900 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Newcastle",
+        "tenure": "rent",
+        "max_price_gbp": 900,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK031"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK031",
+          "score": 0.8814980938059562
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK031",
+          "score": 0.5714285714285714
+        }
+      ]
+    },
+    {
+      "id": "Q042",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "query": "A two-bedroom flat to buy in Liverpool with no private garden, within GBP 170,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Liverpool",
+        "tenure": "sale",
+        "max_price_gbp": 170000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK037"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK037",
+          "score": 0.9134644260508197
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK037",
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "id": "Q043",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "query": "A Sheffield rental flat with two bedrooms and parking, but no garden, up to GBP 900 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Sheffield",
+        "tenure": "rent",
+        "max_price_gbp": 900,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK046"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK046",
+          "score": 0.8331950526360489
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK046",
+          "score": 0.5384615384615384
+        }
+      ]
+    },
+    {
+      "id": "Q044",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "query": "A two-bedroom Oxford flat to buy with neither a private garden nor a balcony, at most GBP 400,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Oxford",
+        "tenure": "sale",
+        "max_price_gbp": 400000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK057"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK057",
+          "score": 0.7975091061007114
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK057",
+          "score": 0.6428571428571429
+        }
+      ]
+    },
+    {
+      "id": "Q045",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "query": "A three-bedroom Nottingham semi to buy with a driveway but no garden and no garage, budget GBP 250,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Nottingham",
+        "tenure": "sale",
+        "max_price_gbp": 250000,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK027"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK027",
+          "score": 0.7432433305138821
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK027",
+          "score": 0.7857142857142857
+        }
+      ]
+    },
+    {
+      "id": "Q046",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "query": "A two-bedroom Brighton rental house with a private garden but no allocated parking, within GBP 2,000 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Brighton",
+        "tenure": "rent",
+        "max_price_gbp": 2000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK045"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK045",
+          "score": 0.8842554942215414
+        },
+        {
+          "id": "UK041",
+          "score": 0.841206794457376
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK045",
+          "score": 0.625
+        },
+        {
+          "id": "UK041",
+          "score": 0.4375
+        }
+      ]
+    },
+    {
+      "id": "Q047",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "query": "A Newcastle three-bedroom semi to rent with a garden and driveway but without a garage, up to GBP 1,150 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Newcastle",
+        "tenure": "rent",
+        "max_price_gbp": 1150,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK035"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK035",
+          "score": 0.8384754786956856
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK035",
+          "score": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "id": "Q048",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "query": "A three-bedroom Oxford terraced rental with off-street parking and no garage, maximum GBP 2,200 a month.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Oxford",
+        "tenure": "rent",
+        "max_price_gbp": 2200,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK060"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK060",
+          "score": 0.8626897651821686
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK060",
+          "score": 0.8
+        }
+      ]
+    },
+    {
+      "id": "Q049",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "query": "A two-bedroom Cambridge rental apartment with a balcony but no private garden, up to GBP 1,750 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Cambridge",
+        "tenure": "rent",
+        "max_price_gbp": 1750,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK051"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK051",
+          "score": 0.8633451468051095
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK051",
+          "score": 0.6666666666666666
+        }
+      ]
+    },
+    {
+      "id": "Q050",
+      "split": "evaluation",
+      "category": "negative_challenge",
+      "query": "A three-bedroom rental house in Nottingham with no garden. Maximum GBP 1,300 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Nottingham",
+        "tenure": "rent",
+        "max_price_gbp": 1300,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [
+        {
+          "id": "UK030",
+          "score": 0.7375978946697366
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK030",
+          "score": 0.5833333333333334
+        }
+      ]
+    },
+    {
+      "id": "Q051",
+      "split": "evaluation",
+      "category": "preference",
+      "query": "A three-bedroom Nottingham rental with a private garden where pets are permitted, up to GBP 1,200 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Nottingham",
+        "tenure": "rent",
+        "max_price_gbp": 1200,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK030"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK030",
+          "score": 0.8910654423211462
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK030",
+          "score": 0.6428571428571429
+        }
+      ]
+    },
+    {
+      "id": "Q052",
+      "split": "evaluation",
+      "category": "preference",
+      "query": "I prefer a three-bedroom Newcastle semi with a garden and driveway, to rent within GBP 1,150 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Newcastle",
+        "tenure": "rent",
+        "max_price_gbp": 1150,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK035"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK035",
+          "score": 0.7284195442031702
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK035",
+          "score": 0.6923076923076923
+        }
+      ]
+    },
+    {
+      "id": "Q053",
+      "split": "evaluation",
+      "category": "preference",
+      "query": "A detached three-bedroom Liverpool rental with a garage and private garden, at most GBP 1,350 a month.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Liverpool",
+        "tenure": "rent",
+        "max_price_gbp": 1350,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK040"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK040",
+          "score": 0.8750621149607467
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK040",
+          "score": 0.7692307692307693
+        }
+      ]
+    },
+    {
+      "id": "Q054",
+      "split": "evaluation",
+      "category": "preference",
+      "query": "A two-bedroom terraced rental in Brighton with a private garden for outdoor seating, under GBP 2,000 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Brighton",
+        "tenure": "rent",
+        "max_price_gbp": 2000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK045"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK045",
+          "score": 0.856560642905568
+        },
+        {
+          "id": "UK041",
+          "score": 0.8284433558551603
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK045",
+          "score": 0.6428571428571429
+        },
+        {
+          "id": "UK041",
+          "score": 0.42857142857142855
+        }
+      ]
+    },
+    {
+      "id": "Q055",
+      "split": "evaluation",
+      "category": "preference",
+      "query": "A pet-friendly two-bedroom Sheffield terraced rental with a garden, within GBP 1,000 per month.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Sheffield",
+        "tenure": "rent",
+        "max_price_gbp": 1000,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK050"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK050",
+          "score": 0.7632845605959885
+        },
+        {
+          "id": "UK046",
+          "score": 0.7227684281590899
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK050",
+          "score": 0.5714285714285714
+        },
+        {
+          "id": "UK046",
+          "score": 0.5
+        }
+      ]
+    },
+    {
+      "id": "Q056",
+      "split": "evaluation",
+      "category": "preference",
+      "query": "A two-bedroom Cambridge rental house with a dedicated study nook and private garden, maximum GBP 1,900 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Cambridge",
+        "tenure": "rent",
+        "max_price_gbp": 1900,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK055"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK055",
+          "score": 0.8435658190070019
+        },
+        {
+          "id": "UK051",
+          "score": 0.8006739077324425
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK055",
+          "score": 0.6666666666666666
+        },
+        {
+          "id": "UK051",
+          "score": 0.4666666666666667
+        }
+      ]
+    },
+    {
+      "id": "Q057",
+      "split": "evaluation",
+      "category": "preference",
+      "query": "A three-bedroom Oxford rental house with a private garden and somewhere to park on the drive, up to GBP 2,200 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Oxford",
+        "tenure": "rent",
+        "max_price_gbp": 2200,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK060"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK060",
+          "score": 0.875032566811071
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK060",
+          "score": 0.5333333333333333
+        }
+      ]
+    },
+    {
+      "id": "Q058",
+      "split": "evaluation",
+      "category": "preference",
+      "query": "A two-bedroom Newcastle cottage with a private garden and fireplace, rent up to GBP 950 a month.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true,
+        "city": "Newcastle",
+        "tenure": "rent",
+        "max_price_gbp": 950,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK034"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK034",
+          "score": 0.8923159072436996
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK034",
+          "score": 0.8333333333333334
+        }
+      ]
+    },
+    {
+      "id": "Q059",
+      "split": "evaluation",
+      "category": "preference",
+      "query": "A detached three-bedroom Sheffield rental with a private garden and a garage, budget GBP 1,250 pcm.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true,
+        "city": "Sheffield",
+        "tenure": "rent",
+        "max_price_gbp": 1250,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK049"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK049",
+          "score": 0.8149589359470852
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK049",
+          "score": 0.6923076923076923
+        }
+      ]
+    },
+    {
+      "id": "Q060",
+      "split": "evaluation",
+      "category": "preference",
+      "query": "A one-bedroom flat to rent in Brighton for no more than GBP 1,300 a month.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true,
+        "city": "Brighton",
+        "tenure": "rent",
+        "max_price_gbp": 1300,
+        "min_bedrooms": 1
+      },
+      "relevant_ids": [
+        "UK044"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK044",
+          "score": 0.8768633090054893
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK044",
+          "score": 0.75
+        }
+      ]
+    },
+    {
+      "id": "Q061",
+      "split": "evaluation",
+      "category": "missing_information",
+      "query": "A cottage with a private garden, please. I have not chosen a city or whether to rent or buy.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true
+      },
+      "relevant_ids": [
+        "UK007",
+        "UK026",
+        "UK042",
+        "UK056"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK026",
+          "score": 0.6551933628283153
+        },
+        {
+          "id": "UK011",
+          "score": 0.6524602031339766
+        },
+        {
+          "id": "UK017",
+          "score": 0.6501053855168853
+        },
+        {
+          "id": "UK050",
+          "score": 0.6394344612616951
+        },
+        {
+          "id": "UK042",
+          "score": 0.6379633918407033
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK002",
+          "score": 0.4
+        },
+        {
+          "id": "UK017",
+          "score": 0.4
+        },
+        {
+          "id": "UK026",
+          "score": 0.4
+        },
+        {
+          "id": "UK042",
+          "score": 0.4
+        },
+        {
+          "id": "UK056",
+          "score": 0.4
+        }
+      ]
+    },
+    {
+      "id": "Q062",
+      "split": "evaluation",
+      "category": "missing_information",
+      "query": "I need a property advertised with a garage. I have not set a location or budget.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true
+      },
+      "relevant_ids": [
+        "UK002",
+        "UK012",
+        "UK022",
+        "UK040",
+        "UK047",
+        "UK052"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK047",
+          "score": 0.5483376319738444
+        },
+        {
+          "id": "UK027",
+          "score": 0.5437184276601952
+        },
+        {
+          "id": "UK022",
+          "score": 0.5270413271486356
+        },
+        {
+          "id": "UK012",
+          "score": 0.5008376313512435
+        },
+        {
+          "id": "UK002",
+          "score": 0.48314704685769616
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK002",
+          "score": 0.2857142857142857
+        },
+        {
+          "id": "UK011",
+          "score": 0.14285714285714285
+        },
+        {
+          "id": "UK012",
+          "score": 0.14285714285714285
+        },
+        {
+          "id": "UK021",
+          "score": 0.14285714285714285
+        },
+        {
+          "id": "UK022",
+          "score": 0.14285714285714285
+        }
+      ]
+    },
+    {
+      "id": "Q063",
+      "split": "evaluation",
+      "category": "missing_information",
+      "query": "Somewhere with a balcony. I have not decided on a city, bedroom count or tenure.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true
+      },
+      "relevant_ids": [
+        "UK001",
+        "UK006",
+        "UK010",
+        "UK015",
+        "UK016",
+        "UK031",
+        "UK037",
+        "UK041",
+        "UK051"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK031",
+          "score": 0.463589448706166
+        },
+        {
+          "id": "UK001",
+          "score": 0.46044689570711084
+        },
+        {
+          "id": "UK041",
+          "score": 0.45820871196998414
+        },
+        {
+          "id": "UK045",
+          "score": 0.44543526451324017
+        },
+        {
+          "id": "UK035",
+          "score": 0.44043223720173535
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK001",
+          "score": 0.2222222222222222
+        },
+        {
+          "id": "UK002",
+          "score": 0.2222222222222222
+        },
+        {
+          "id": "UK006",
+          "score": 0.2222222222222222
+        },
+        {
+          "id": "UK010",
+          "score": 0.2222222222222222
+        },
+        {
+          "id": "UK015",
+          "score": 0.2222222222222222
+        }
+      ]
+    },
+    {
+      "id": "Q064",
+      "split": "evaluation",
+      "category": "missing_information",
+      "query": "A ground-floor home with a step-free entrance. My location and budget are not decided.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true
+      },
+      "relevant_ids": [
+        "UK010",
+        "UK046"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK027",
+          "score": 0.5918244917651718
+        },
+        {
+          "id": "UK057",
+          "score": 0.5674820138593738
+        },
+        {
+          "id": "UK046",
+          "score": 0.56739615260229
+        },
+        {
+          "id": "UK052",
+          "score": 0.5419923903042957
+        },
+        {
+          "id": "UK011",
+          "score": 0.5353163955685791
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK010",
+          "score": 0.5555555555555556
+        },
+        {
+          "id": "UK046",
+          "score": 0.5555555555555556
+        },
+        {
+          "id": "UK001",
+          "score": 0.1111111111111111
+        },
+        {
+          "id": "UK002",
+          "score": 0.1111111111111111
+        },
+        {
+          "id": "UK057",
+          "score": 0.1111111111111111
+        }
+      ]
+    },
+    {
+      "id": "Q065",
+      "split": "evaluation",
+      "category": "missing_information",
+      "query": "A three-bedroom home to rent. I have not picked a city or a monthly budget.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "tenure": "rent",
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK005",
+        "UK030",
+        "UK035",
+        "UK040",
+        "UK060"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK035",
+          "score": 0.6239092272715749
+        },
+        {
+          "id": "UK030",
+          "score": 0.6140750915964124
+        },
+        {
+          "id": "UK060",
+          "score": 0.5775265801080001
+        },
+        {
+          "id": "UK005",
+          "score": 0.5568005435738744
+        },
+        {
+          "id": "UK040",
+          "score": 0.47261148349246956
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK005",
+          "score": 0.3333333333333333
+        },
+        {
+          "id": "UK030",
+          "score": 0.3333333333333333
+        },
+        {
+          "id": "UK035",
+          "score": 0.3333333333333333
+        },
+        {
+          "id": "UK040",
+          "score": 0.3333333333333333
+        },
+        {
+          "id": "UK060",
+          "score": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "id": "Q066",
+      "split": "evaluation",
+      "category": "missing_information",
+      "query": "A two-bedroom home to buy, with no city or budget selected yet.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "tenure": "sale",
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK007",
+        "UK015",
+        "UK037",
+        "UK042",
+        "UK057"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK027",
+          "score": 0.6741465157412398
+        },
+        {
+          "id": "UK002",
+          "score": 0.6535630799059756
+        },
+        {
+          "id": "UK015",
+          "score": 0.645005419383322
+        },
+        {
+          "id": "UK037",
+          "score": 0.6283725001354741
+        },
+        {
+          "id": "UK012",
+          "score": 0.6264486794287951
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK015",
+          "score": 0.375
+        },
+        {
+          "id": "UK037",
+          "score": 0.375
+        },
+        {
+          "id": "UK042",
+          "score": 0.375
+        },
+        {
+          "id": "UK057",
+          "score": 0.375
+        },
+        {
+          "id": "UK007",
+          "score": 0.25
+        }
+      ]
+    },
+    {
+      "id": "Q067",
+      "split": "evaluation",
+      "category": "missing_information",
+      "query": "A rental advertised with a private garden. I have not chosen a city or bedroom count.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "tenure": "rent"
+      },
+      "relevant_ids": [
+        "UK005",
+        "UK011",
+        "UK021",
+        "UK026",
+        "UK030",
+        "UK035",
+        "UK036",
+        "UK040",
+        "UK045",
+        "UK050",
+        "UK055",
+        "UK056",
+        "UK060"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK050",
+          "score": 0.6220054231844896
+        },
+        {
+          "id": "UK001",
+          "score": 0.6079051743168482
+        },
+        {
+          "id": "UK031",
+          "score": 0.6029516486939804
+        },
+        {
+          "id": "UK011",
+          "score": 0.6004770570862223
+        },
+        {
+          "id": "UK026",
+          "score": 0.5927347041373126
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK001",
+          "score": 0.3
+        },
+        {
+          "id": "UK005",
+          "score": 0.3
+        },
+        {
+          "id": "UK010",
+          "score": 0.3
+        },
+        {
+          "id": "UK011",
+          "score": 0.3
+        },
+        {
+          "id": "UK016",
+          "score": 0.3
+        }
+      ]
+    },
+    {
+      "id": "Q068",
+      "split": "evaluation",
+      "category": "missing_information",
+      "query": "A detached house for sale. I have not specified the city, price or bedroom count.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "tenure": "sale"
+      },
+      "relevant_ids": [
+        "UK002",
+        "UK012",
+        "UK022",
+        "UK052"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK012",
+          "score": 0.7602321959975725
+        },
+        {
+          "id": "UK002",
+          "score": 0.7406613962031278
+        },
+        {
+          "id": "UK027",
+          "score": 0.7325798029392059
+        },
+        {
+          "id": "UK047",
+          "score": 0.7122110335145184
+        },
+        {
+          "id": "UK022",
+          "score": 0.7081073951039152
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK002",
+          "score": 0.5
+        },
+        {
+          "id": "UK012",
+          "score": 0.4
+        },
+        {
+          "id": "UK022",
+          "score": 0.4
+        },
+        {
+          "id": "UK027",
+          "score": 0.4
+        },
+        {
+          "id": "UK047",
+          "score": 0.4
+        }
+      ]
+    },
+    {
+      "id": "Q069",
+      "split": "evaluation",
+      "category": "missing_information",
+      "query": "A two-bedroom rental with its own private garden. I have not chosen a location or budget.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true,
+        "tenure": "rent",
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK004",
+        "UK009",
+        "UK019",
+        "UK034",
+        "UK039",
+        "UK054",
+        "UK059"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK019",
+          "score": 0.6648981087013259
+        },
+        {
+          "id": "UK004",
+          "score": 0.6254701988003954
+        },
+        {
+          "id": "UK059",
+          "score": 0.6191026718874855
+        },
+        {
+          "id": "UK014",
+          "score": 0.6138404170853355
+        },
+        {
+          "id": "UK009",
+          "score": 0.6064837943553257
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK004",
+          "score": 0.5
+        },
+        {
+          "id": "UK009",
+          "score": 0.3333333333333333
+        },
+        {
+          "id": "UK019",
+          "score": 0.3333333333333333
+        },
+        {
+          "id": "UK034",
+          "score": 0.3333333333333333
+        },
+        {
+          "id": "UK039",
+          "score": 0.3333333333333333
+        }
+      ]
+    },
+    {
+      "id": "Q070",
+      "split": "evaluation",
+      "category": "missing_information",
+      "query": "A home advertised with a dedicated study or a built-in study nook. Other details are undecided.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true
+      },
+      "relevant_ids": [
+        "UK005",
+        "UK055"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK047",
+          "score": 0.44724661843217545
+        },
+        {
+          "id": "UK052",
+          "score": 0.44653334768011443
+        },
+        {
+          "id": "UK022",
+          "score": 0.44007741489358676
+        },
+        {
+          "id": "UK027",
+          "score": 0.4219124659938624
+        },
+        {
+          "id": "UK012",
+          "score": 0.4166452137202158
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK055",
+          "score": 0.375
+        },
+        {
+          "id": "UK005",
+          "score": 0.25
+        },
+        {
+          "id": "UK001",
+          "score": 0
+        },
+        {
+          "id": "UK002",
+          "score": 0
+        },
+        {
+          "id": "UK006",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "Q071",
+      "split": "evaluation",
+      "category": "nonsense",
+      "query": "Colourless triangles rent yesterday's alphabet.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [
+        {
+          "id": "UK046",
+          "score": 0.1988037367994251
+        },
+        {
+          "id": "UK050",
+          "score": 0.1541829234606769
+        },
+        {
+          "id": "UK035",
+          "score": 0.14059813167751858
+        },
+        {
+          "id": "UK041",
+          "score": 0.12946694688248295
+        },
+        {
+          "id": "UK001",
+          "score": 0.11223255695769585
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK001",
+          "score": 0.16666666666666666
+        },
+        {
+          "id": "UK002",
+          "score": 0.16666666666666666
+        },
+        {
+          "id": "UK005",
+          "score": 0.16666666666666666
+        },
+        {
+          "id": "UK006",
+          "score": 0.16666666666666666
+        },
+        {
+          "id": "UK010",
+          "score": 0.16666666666666666
+        }
+      ]
+    },
+    {
+      "id": "Q072",
+      "split": "evaluation",
+      "category": "nonsense",
+      "query": "Seven velvet Thursdays, please.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [
+        {
+          "id": "UK039",
+          "score": 0.15548828926163386
+        },
+        {
+          "id": "UK034",
+          "score": 0.12181651991732441
+        },
+        {
+          "id": "UK014",
+          "score": 0.10988064374106751
+        },
+        {
+          "id": "UK049",
+          "score": 0.10986731485060952
+        },
+        {
+          "id": "UK004",
+          "score": 0.08008833446373365
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK004",
+          "score": 0
+        },
+        {
+          "id": "UK009",
+          "score": 0
+        },
+        {
+          "id": "UK014",
+          "score": 0
+        },
+        {
+          "id": "UK019",
+          "score": 0
+        },
+        {
+          "id": "UK024",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "Q073",
+      "split": "evaluation",
+      "category": "nonsense",
+      "query": "Turn the number eleven into a seaside teapot.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [
+        {
+          "id": "UK056",
+          "score": 0.16945549300849866
+        },
+        {
+          "id": "UK042",
+          "score": 0.1658942205435009
+        },
+        {
+          "id": "UK036",
+          "score": 0.16199127531906696
+        },
+        {
+          "id": "UK007",
+          "score": 0.16024116775392394
+        },
+        {
+          "id": "UK026",
+          "score": 0.15106511077528575
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK001",
+          "score": 0
+        },
+        {
+          "id": "UK002",
+          "score": 0
+        },
+        {
+          "id": "UK005",
+          "score": 0
+        },
+        {
+          "id": "UK006",
+          "score": 0
+        },
+        {
+          "id": "UK007",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "Q074",
+      "split": "evaluation",
+      "category": "nonsense",
+      "query": "asdf qwer zxcv blorp.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [
+        {
+          "id": "UK021",
+          "score": 0.09626883570759456
+        },
+        {
+          "id": "UK025",
+          "score": 0.08413254751947044
+        },
+        {
+          "id": "UK035",
+          "score": 0.078849926118082
+        },
+        {
+          "id": "UK041",
+          "score": 0.052864694182501115
+        },
+        {
+          "id": "UK022",
+          "score": 0.049034784631161385
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK001",
+          "score": 0
+        },
+        {
+          "id": "UK002",
+          "score": 0
+        },
+        {
+          "id": "UK005",
+          "score": 0
+        },
+        {
+          "id": "UK006",
+          "score": 0
+        },
+        {
+          "id": "UK007",
+          "score": 0
+        }
+      ]
+    },
+    {
+      "id": "Q075",
+      "split": "evaluation",
+      "category": "no_result",
+      "query": "An available London home to buy for no more than GBP 100,000.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "London",
+        "tenure": "sale",
+        "max_price_gbp": 100000
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [],
+      "lexicalRanking": []
+    },
+    {
+      "id": "Q076",
+      "split": "evaluation",
+      "category": "no_result",
+      "query": "An available two-bedroom Cambridge rental with a private garden for up to GBP 1,500 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Cambridge",
+        "tenure": "rent",
+        "max_price_gbp": 1500,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [],
+      "lexicalRanking": []
+    },
+    {
+      "id": "Q077",
+      "split": "evaluation",
+      "category": "no_result",
+      "query": "An available Liverpool rental with at least four bedrooms.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Liverpool",
+        "tenure": "rent",
+        "min_bedrooms": 4
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [],
+      "lexicalRanking": []
+    },
+    {
+      "id": "Q078",
+      "split": "evaluation",
+      "category": "no_result",
+      "query": "An available two-bedroom Oxford rental with a private garden for at most GBP 1,500 pcm.",
+      "allowed_office": "alpha",
+      "filters": {
+        "active": true,
+        "city": "Oxford",
+        "tenure": "rent",
+        "max_price_gbp": 1500,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [],
+      "expected_no_result": true,
+      "ranking": [],
+      "lexicalRanking": []
+    },
+    {
+      "id": "Q079",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A London two-bed apartment with its own garden, to rent within GBP 2,200 a month.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true,
+        "city": "London",
+        "tenure": "rent",
+        "max_price_gbp": 2200,
+        "min_bedrooms": 2
+      },
+      "relevant_ids": [
+        "UK019"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK019",
+          "score": 0.8991695427732294
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK019",
+          "score": 0.5384615384615384
+        }
+      ]
+    },
+    {
+      "id": "Q080",
+      "split": "evaluation",
+      "category": "paraphrase",
+      "query": "A Leeds three-bedroom semi to rent with private outdoor space and off-street parking, at most GBP 1,200 pcm.",
+      "allowed_office": "beta",
+      "filters": {
+        "active": true,
+        "city": "Leeds",
+        "tenure": "rent",
+        "max_price_gbp": 1200,
+        "min_bedrooms": 3
+      },
+      "relevant_ids": [
+        "UK014"
+      ],
+      "expected_no_result": false,
+      "ranking": [
+        {
+          "id": "UK014",
+          "score": 0.7695434628014096
+        }
+      ],
+      "lexicalRanking": [
+        {
+          "id": "UK014",
+          "score": 0.6875
+        }
+      ]
+    }
+  ]
+}

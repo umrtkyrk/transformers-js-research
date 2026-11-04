@@ -1,0 +1,2442 @@
+[
+  {
+    "round": 0,
+    "size": 1,
+    "durationMs": 723.0539999999992,
+    "processed": 64,
+    "batchTimesMs": [
+      12.951500000000124,
+      12.297099999999773,
+      10.873399999999492,
+      12.014000000000124,
+      12.16149999999925,
+      11.253499999999804,
+      11.797299999999268,
+      11.404199999999946,
+      11.439300000000003,
+      13.663900000000467,
+      10.569800000000214,
+      13.034899999999652,
+      10.835000000000036,
+      12.386199999999917,
+      10.917699999999968,
+      10.759600000000319,
+      11.332700000000841,
+      12.249399999999696,
+      10.348199999999451,
+      11.255400000000009,
+      11.780399999999645,
+      10.139200000000528,
+      10.068199999999706,
+      10.170999999999367,
+      9.847800000000461,
+      10.323699999999917,
+      13.259699999999611,
+      10.662000000000262,
+      9.864199999999983,
+      11.262699999999313,
+      9.97149999999965,
+      10.514799999999923,
+      12.140300000000025,
+      17.730500000000575,
+      14.43080000000009,
+      11.652200000000448,
+      10.88339999999971,
+      10.714100000000144,
+      10.546700000000783,
+      12.422300000000178,
+      10.563799999999901,
+      10.483700000000681,
+      11.40059999999994,
+      13.738299999999981,
+      10.87039999999979,
+      12.676800000000185,
+      11.26379999999972,
+      9.851699999999255,
+      10.665200000000368,
+      10.620700000000397,
+      9.995499999999993,
+      10.054700000000594,
+      9.64599999999973,
+      10.30869999999959,
+      11.093199999999342,
+      10.20930000000044,
+      9.344099999999344,
+      10.016999999999825,
+      9.676000000000386,
+      10.90059999999994,
+      11.766499999999724,
+      12.366099999999278,
+      10.97990000000027,
+      12.150399999999536
+    ],
+    "memory": {
+      "before": {
+        "rss": 838221824,
+        "heapTotal": 499916800,
+        "heapUsed": 351966968,
+        "external": 52060895,
+        "arrayBuffers": 45192100,
+        "availableSystemBytes": 13431279616
+      },
+      "after": {
+        "rss": 893153280,
+        "heapTotal": 499916800,
+        "heapUsed": 367983848,
+        "external": 61291255,
+        "arrayBuffers": 54422460,
+        "availableSystemBytes": 13377191936
+      },
+      "sampledMaxRssBytes": 893153280,
+      "samplingIntervalMs": 25,
+      "samples": 23,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 0,
+    "size": 8,
+    "durationMs": 547.3010000000004,
+    "processed": 64,
+    "batchTimesMs": [
+      63.389000000000124,
+      77.09609999999975,
+      58.199100000000726,
+      106.80079999999998,
+      55.793800000000374,
+      66.85069999999996,
+      56.31890000000021,
+      62.727499999999964
+    ],
+    "memory": {
+      "before": {
+        "rss": 893153280,
+        "heapTotal": 499916800,
+        "heapUsed": 367987696,
+        "external": 61291255,
+        "arrayBuffers": 54422460,
+        "availableSystemBytes": 13377191936
+      },
+      "after": {
+        "rss": 896483328,
+        "heapTotal": 499916800,
+        "heapUsed": 377996472,
+        "external": 63506015,
+        "arrayBuffers": 56637220,
+        "availableSystemBytes": 13375524864
+      },
+      "sampledMaxRssBytes": 896483328,
+      "samplingIntervalMs": 25,
+      "samples": 8,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 0,
+    "size": 32,
+    "durationMs": 559.2601000000004,
+    "processed": 64,
+    "batchTimesMs": [
+      307.83160000000044,
+      251.34390000000076
+    ],
+    "memory": {
+      "before": {
+        "rss": 896483328,
+        "heapTotal": 499916800,
+        "heapUsed": 377998280,
+        "external": 63506015,
+        "arrayBuffers": 56637220,
+        "availableSystemBytes": 13375524864
+      },
+      "after": {
+        "rss": 914911232,
+        "heapTotal": 499916800,
+        "heapUsed": 384697576,
+        "external": 67061791,
+        "arrayBuffers": 60192996,
+        "availableSystemBytes": 13358379008
+      },
+      "sampledMaxRssBytes": 914911232,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 0,
+    "size": 4,
+    "durationMs": 585.5398000000005,
+    "processed": 64,
+    "batchTimesMs": [
+      38.55479999999989,
+      37.63879999999972,
+      37.63630000000012,
+      36.23030000000017,
+      32.915500000000065,
+      54.89130000000023,
+      48.22600000000057,
+      33.436399999999594,
+      30.785399999999754,
+      33.30000000000018,
+      31.233900000000176,
+      35.469199999999546,
+      33.74279999999999,
+      34.12010000000009,
+      31.00799999999981,
+      36.25489999999991
+    ],
+    "memory": {
+      "before": {
+        "rss": 914911232,
+        "heapTotal": 499916800,
+        "heapUsed": 384699384,
+        "external": 67061791,
+        "arrayBuffers": 60192996,
+        "availableSystemBytes": 13358379008
+      },
+      "after": {
+        "rss": 912744448,
+        "heapTotal": 499916800,
+        "heapUsed": 400151568,
+        "external": 67299647,
+        "arrayBuffers": 60430852,
+        "availableSystemBytes": 13360672768
+      },
+      "sampledMaxRssBytes": 914927616,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 0,
+    "size": 16,
+    "durationMs": 550.3149000000003,
+    "processed": 64,
+    "batchTimesMs": [
+      130.51479999999992,
+      163.83819999999923,
+      132.46919999999955,
+      123.40719999999965
+    ],
+    "memory": {
+      "before": {
+        "rss": 912744448,
+        "heapTotal": 499916800,
+        "heapUsed": 400153376,
+        "external": 67299647,
+        "arrayBuffers": 60430852,
+        "availableSystemBytes": 13360672768
+      },
+      "after": {
+        "rss": 915058688,
+        "heapTotal": 499916800,
+        "heapUsed": 357706568,
+        "external": 65092255,
+        "arrayBuffers": 58223460,
+        "availableSystemBytes": 13358252032
+      },
+      "sampledMaxRssBytes": 917966848,
+      "samplingIntervalMs": 25,
+      "samples": 4,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 1,
+    "size": 16,
+    "durationMs": 550.8409999999994,
+    "processed": 64,
+    "batchTimesMs": [
+      131.41030000000046,
+      169.9382000000005,
+      128.41280000000006,
+      120.98229999999967
+    ],
+    "memory": {
+      "before": {
+        "rss": 915058688,
+        "heapTotal": 499916800,
+        "heapUsed": 357784472,
+        "external": 66271903,
+        "arrayBuffers": 59403108,
+        "availableSystemBytes": 13359230976
+      },
+      "after": {
+        "rss": 916594688,
+        "heapTotal": 500178944,
+        "heapUsed": 375927968,
+        "external": 68186527,
+        "arrayBuffers": 61317732,
+        "availableSystemBytes": 13357068288
+      },
+      "sampledMaxRssBytes": 917950464,
+      "samplingIntervalMs": 25,
+      "samples": 4,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 1,
+    "size": 4,
+    "durationMs": 580.9263999999994,
+    "processed": 64,
+    "batchTimesMs": [
+      38.05400000000009,
+      37.69500000000062,
+      35.9340000000002,
+      34.701100000000224,
+      52.23980000000029,
+      41.597499999999854,
+      37.990099999999984,
+      34.09569999999985,
+      31.019800000000032,
+      32.73410000000149,
+      32.09239999999954,
+      37.02050000000054,
+      33.96169999999984,
+      32.59510000000046,
+      31.41990000000078,
+      37.68370000000141
+    ],
+    "memory": {
+      "before": {
+        "rss": 916594688,
+        "heapTotal": 500178944,
+        "heapUsed": 375930080,
+        "external": 68186527,
+        "arrayBuffers": 61317732,
+        "availableSystemBytes": 13357068288
+      },
+      "after": {
+        "rss": 917663744,
+        "heapTotal": 500178944,
+        "heapUsed": 391592648,
+        "external": 70882431,
+        "arrayBuffers": 64013636,
+        "availableSystemBytes": 13356711936
+      },
+      "sampledMaxRssBytes": 917663744,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 1,
+    "size": 1,
+    "durationMs": 701.6687000000002,
+    "processed": 64,
+    "batchTimesMs": [
+      12.157100000000355,
+      12.284999999999854,
+      10.77850000000035,
+      12.483299999999872,
+      11.340700000000652,
+      10.572899999999208,
+      11.906299999998737,
+      12.100100000001476,
+      11.441799999998693,
+      12.490299999999479,
+      15.90099999999984,
+      17.610199999999168,
+      19.69880000000012,
+      14.215500000000247,
+      10.123799999999392,
+      10.210000000000946,
+      10.20720000000074,
+      10.732100000001083,
+      10.493399999999383,
+      9.996399999999994,
+      11.224700000000666,
+      9.752800000000207,
+      9.612199999999575,
+      9.60490000000027,
+      8.490499999999884,
+      9.705799999999726,
+      12.584100000000035,
+      9.22189999999864,
+      9.59139999999934,
+      10.562200000000303,
+      9.347899999998845,
+      9.992099999999482,
+      10.596999999999753,
+      11.048600000000079,
+      10.318199999999706,
+      9.587900000000445,
+      9.053499999999985,
+      9.722999999999956,
+      10.1987999999983,
+      10.84940000000097,
+      9.967199999999139,
+      9.540899999999965,
+      10.442600000000311,
+      9.932099999999991,
+      10.406399999999849,
+      12.714500000000044,
+      10.940500000000611,
+      9.787599999999657,
+      11.22320000000036,
+      10.84439999999995,
+      9.563099999999395,
+      9.356900000000678,
+      9.020399999999427,
+      9.614299999999275,
+      10.367899999999281,
+      9.648299999998926,
+      9.545500000000175,
+      10.274099999998725,
+      9.62630000000172,
+      11.15020000000004,
+      11.516700000000128,
+      11.724200000000565,
+      12.242500000000291,
+      14.248100000000704
+    ],
+    "memory": {
+      "before": {
+        "rss": 917663744,
+        "heapTotal": 500178944,
+        "heapUsed": 391594720,
+        "external": 70882431,
+        "arrayBuffers": 64013636,
+        "availableSystemBytes": 13356711936
+      },
+      "after": {
+        "rss": 921849856,
+        "heapTotal": 500178944,
+        "heapUsed": 351324008,
+        "external": 72943136,
+        "arrayBuffers": 66074341,
+        "availableSystemBytes": 13353054208
+      },
+      "sampledMaxRssBytes": 921849856,
+      "samplingIntervalMs": 25,
+      "samples": 22,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 1,
+    "size": 32,
+    "durationMs": 511.98079999999936,
+    "processed": 64,
+    "batchTimesMs": [
+      262.5550000000003,
+      249.3693000000003
+    ],
+    "memory": {
+      "before": {
+        "rss": 921849856,
+        "heapTotal": 500178944,
+        "heapUsed": 351325848,
+        "external": 72943136,
+        "arrayBuffers": 66074341,
+        "availableSystemBytes": 13353054208
+      },
+      "after": {
+        "rss": 924717056,
+        "heapTotal": 500178944,
+        "heapUsed": 370763808,
+        "external": 75721152,
+        "arrayBuffers": 68852357,
+        "availableSystemBytes": 13350268928
+      },
+      "sampledMaxRssBytes": 924717056,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 1,
+    "size": 8,
+    "durationMs": 532.9987999999994,
+    "processed": 64,
+    "batchTimesMs": [
+      100.18409999999858,
+      67.67559999999867,
+      58.8114000000005,
+      64.54329999999936,
+      57.02689999999893,
+      65.60059999999976,
+      54.99070000000029,
+      64.10390000000007
+    ],
+    "memory": {
+      "before": {
+        "rss": 924717056,
+        "heapTotal": 500178944,
+        "heapUsed": 370765648,
+        "external": 75721152,
+        "arrayBuffers": 68852357,
+        "availableSystemBytes": 13350268928
+      },
+      "after": {
+        "rss": 925532160,
+        "heapTotal": 500178944,
+        "heapUsed": 386837920,
+        "external": 76607424,
+        "arrayBuffers": 69738629,
+        "availableSystemBytes": 13349351424
+      },
+      "sampledMaxRssBytes": 926687232,
+      "samplingIntervalMs": 25,
+      "samples": 8,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 2,
+    "size": 1,
+    "durationMs": 732.6563000000006,
+    "processed": 64,
+    "batchTimesMs": [
+      11.740300000001298,
+      12.603300000000672,
+      25.671800000000076,
+      37.47770000000128,
+      12.19170000000122,
+      10.369999999998981,
+      11.520200000000841,
+      10.934100000000399,
+      11.011500000000524,
+      12.445700000000215,
+      10.261999999998807,
+      11.52639999999883,
+      9.195700000000215,
+      10.745200000001205,
+      10.79989999999998,
+      10.236800000000585,
+      9.913000000000466,
+      10.483699999998862,
+      8.795400000000882,
+      9.892400000000634,
+      11.024700000001758,
+      9.752599999999802,
+      9.723900000000867,
+      9.706500000000233,
+      8.610099999999875,
+      10.203799999999319,
+      11.931300000000192,
+      9.008599999999205,
+      9.730999999999767,
+      10.518199999998615,
+      8.76679999999942,
+      9.482199999998556,
+      9.834200000001147,
+      10.037399999999252,
+      9.505300000000716,
+      8.795000000000073,
+      8.141499999999724,
+      9.270100000001548,
+      9.874799999999595,
+      10.501999999998588,
+      9.59979999999996,
+      9.482199999998556,
+      10.28689999999915,
+      9.925099999998565,
+      11.665600000000268,
+      12.528200000000652,
+      10.431300000000192,
+      9.297500000000582,
+      10.387700000001132,
+      10.308200000001307,
+      10.042999999999665,
+      11.517499999999927,
+      10.860500000000684,
+      12.149500000001353,
+      16.370100000000093,
+      12.14390000000094,
+      27.830700000000434,
+      10.339599999999336,
+      9.16910000000098,
+      10.38550000000032,
+      11.3075000000008,
+      11.373700000000099,
+      11.086600000000544,
+      11.8096000000005
+    ],
+    "memory": {
+      "before": {
+        "rss": 925532160,
+        "heapTotal": 500178944,
+        "heapUsed": 386896576,
+        "external": 77066176,
+        "arrayBuffers": 70197381,
+        "availableSystemBytes": 13349928960
+      },
+      "after": {
+        "rss": 927580160,
+        "heapTotal": 500178944,
+        "heapUsed": 347728224,
+        "external": 77944336,
+        "arrayBuffers": 71075541,
+        "availableSystemBytes": 13348630528
+      },
+      "sampledMaxRssBytes": 927580160,
+      "samplingIntervalMs": 25,
+      "samples": 24,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 2,
+    "size": 8,
+    "durationMs": 536.9493999999995,
+    "processed": 64,
+    "batchTimesMs": [
+      63.130199999999604,
+      66.97100000000137,
+      57.97690000000148,
+      65.15900000000147,
+      54.88270000000011,
+      65.72240000000056,
+      101.88889999999992,
+      61.156199999999444
+    ],
+    "memory": {
+      "before": {
+        "rss": 927580160,
+        "heapTotal": 500178944,
+        "heapUsed": 347730064,
+        "external": 77944336,
+        "arrayBuffers": 71075541,
+        "availableSystemBytes": 13348630528
+      },
+      "after": {
+        "rss": 928952320,
+        "heapTotal": 500178944,
+        "heapUsed": 360655912,
+        "external": 79637760,
+        "arrayBuffers": 72768965,
+        "availableSystemBytes": 13344489472
+      },
+      "sampledMaxRssBytes": 931524608,
+      "samplingIntervalMs": 25,
+      "samples": 8,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 2,
+    "size": 32,
+    "durationMs": 547.4423999999999,
+    "processed": 64,
+    "batchTimesMs": [
+      250.5697,
+      296.8163000000004
+    ],
+    "memory": {
+      "before": {
+        "rss": 928952320,
+        "heapTotal": 500178944,
+        "heapUsed": 360657752,
+        "external": 79637760,
+        "arrayBuffers": 72768965,
+        "availableSystemBytes": 13344489472
+      },
+      "after": {
+        "rss": 931807232,
+        "heapTotal": 500178944,
+        "heapUsed": 370828816,
+        "external": 81489856,
+        "arrayBuffers": 74621061,
+        "availableSystemBytes": 13341736960
+      },
+      "sampledMaxRssBytes": 931807232,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 2,
+    "size": 4,
+    "durationMs": 593.3928999999989,
+    "processed": 64,
+    "batchTimesMs": [
+      38.33089999999902,
+      35.90400000000045,
+      35.80879999999888,
+      44.41189999999915,
+      33.68550000000141,
+      34.65380000000005,
+      39.07970000000023,
+      32.454099999999016,
+      30.68449999999939,
+      32.77319999999963,
+      32.17119999999886,
+      35.426799999999275,
+      65.0658999999996,
+      34.65309999999954,
+      31.200699999999415,
+      37.027500000000146
+    ],
+    "memory": {
+      "before": {
+        "rss": 931807232,
+        "heapTotal": 500178944,
+        "heapUsed": 370830656,
+        "external": 81489856,
+        "arrayBuffers": 74621061,
+        "availableSystemBytes": 13341736960
+      },
+      "after": {
+        "rss": 930922496,
+        "heapTotal": 500178944,
+        "heapUsed": 387357304,
+        "external": 82669632,
+        "arrayBuffers": 75800837,
+        "availableSystemBytes": 13343031296
+      },
+      "sampledMaxRssBytes": 932413440,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 2,
+    "size": 16,
+    "durationMs": 526.9701999999997,
+    "processed": 64,
+    "batchTimesMs": [
+      128.19200000000092,
+      123.56600000000071,
+      126.89880000000085,
+      148.2572
+    ],
+    "memory": {
+      "before": {
+        "rss": 930922496,
+        "heapTotal": 500178944,
+        "heapUsed": 387359144,
+        "external": 82669632,
+        "arrayBuffers": 75800837,
+        "availableSystemBytes": 13343031296
+      },
+      "after": {
+        "rss": 935186432,
+        "heapTotal": 500178944,
+        "heapUsed": 393716608,
+        "external": 84073024,
+        "arrayBuffers": 77204229,
+        "availableSystemBytes": 13340016640
+      },
+      "sampledMaxRssBytes": 935186432,
+      "samplingIntervalMs": 25,
+      "samples": 4,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 3,
+    "size": 16,
+    "durationMs": 534.6518999999989,
+    "processed": 64,
+    "batchTimesMs": [
+      131.96669999999904,
+      121.7630999999983,
+      128.3098000000009,
+      152.5575000000008
+    ],
+    "memory": {
+      "before": {
+        "rss": 935186432,
+        "heapTotal": 500178944,
+        "heapUsed": 393793976,
+        "external": 84597312,
+        "arrayBuffers": 77728517,
+        "availableSystemBytes": 13339471872
+      },
+      "after": {
+        "rss": 936620032,
+        "heapTotal": 500178944,
+        "heapUsed": 399678368,
+        "external": 86331712,
+        "arrayBuffers": 79462917,
+        "availableSystemBytes": 13338505216
+      },
+      "sampledMaxRssBytes": 936620032,
+      "samplingIntervalMs": 25,
+      "samples": 4,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 3,
+    "size": 4,
+    "durationMs": 574.4490999999998,
+    "processed": 64,
+    "batchTimesMs": [
+      38.29620000000068,
+      36.18920000000071,
+      35.674300000000585,
+      34.7432000000008,
+      32.25640000000021,
+      33.84150000000045,
+      37.20720000000074,
+      31.99539999999979,
+      30.48449999999866,
+      33.250200000000405,
+      30.563099999999395,
+      36.005599999998594,
+      42.79689999999937,
+      52.29770000000099,
+      31.84889999999905,
+      36.927999999999884
+    ],
+    "memory": {
+      "before": {
+        "rss": 936620032,
+        "heapTotal": 500178944,
+        "heapUsed": 399680208,
+        "external": 86331712,
+        "arrayBuffers": 79462917,
+        "availableSystemBytes": 13338505216
+      },
+      "after": {
+        "rss": 934014976,
+        "heapTotal": 500178944,
+        "heapUsed": 357543160,
+        "external": 82540448,
+        "arrayBuffers": 75671653,
+        "availableSystemBytes": 13341896704
+      },
+      "sampledMaxRssBytes": 936620032,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 3,
+    "size": 1,
+    "durationMs": 677.3325000000004,
+    "processed": 64,
+    "batchTimesMs": [
+      11.754500000000917,
+      11.79490000000078,
+      10.287000000000262,
+      11.693900000000212,
+      11.001500000000306,
+      10.53650000000016,
+      11.500500000000102,
+      11.102199999999357,
+      12.192799999998897,
+      12.398400000000038,
+      9.649500000001353,
+      11.611899999999878,
+      9.161700000000565,
+      10.905300000000352,
+      9.84310000000005,
+      9.777400000000853,
+      9.953700000000026,
+      10.38260000000082,
+      8.879800000000614,
+      9.557300000000396,
+      11.131899999998495,
+      9.813099999999395,
+      9.709700000001249,
+      9.815899999999601,
+      8.825999999999112,
+      9.747400000000198,
+      12.13970000000154,
+      9.371600000000399,
+      9.71270000000004,
+      10.551400000000285,
+      8.900699999998324,
+      10.903999999998632,
+      10.3841999999986,
+      10.355100000000675,
+      9.614599999998973,
+      9.11109999999826,
+      8.259200000000419,
+      9.284100000000763,
+      9.858100000001286,
+      19.455799999999726,
+      19.011000000000422,
+      13.789899999999761,
+      12.832100000001446,
+      9.427100000000792,
+      10.115600000000995,
+      12.099200000000565,
+      10.237100000000282,
+      9.65020000000004,
+      10.26089999999931,
+      10.287200000000666,
+      9.421500000000378,
+      9.244699999999284,
+      9.005199999999604,
+      9.503799999998591,
+      10.284499999999753,
+      9.369199999999182,
+      8.921899999999368,
+      9.623099999998885,
+      8.946799999999712,
+      9.94210000000021,
+      11.302299999999377,
+      11.39009999999871,
+      10.005699999999706,
+      11.611199999999371
+    ],
+    "memory": {
+      "before": {
+        "rss": 934014976,
+        "heapTotal": 500178944,
+        "heapUsed": 357545000,
+        "external": 82540448,
+        "arrayBuffers": 75671653,
+        "availableSystemBytes": 13341896704
+      },
+      "after": {
+        "rss": 935624704,
+        "heapTotal": 500178944,
+        "heapUsed": 372384008,
+        "external": 87604584,
+        "arrayBuffers": 80735789,
+        "availableSystemBytes": 13341593600
+      },
+      "sampledMaxRssBytes": 935624704,
+      "samplingIntervalMs": 25,
+      "samples": 23,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 3,
+    "size": 32,
+    "durationMs": 544.1057000000001,
+    "processed": 64,
+    "batchTimesMs": [
+      251.83640000000014,
+      292.21670000000086
+    ],
+    "memory": {
+      "before": {
+        "rss": 935624704,
+        "heapTotal": 500178944,
+        "heapUsed": 372386208,
+        "external": 87604584,
+        "arrayBuffers": 80735789,
+        "availableSystemBytes": 13341593600
+      },
+      "after": {
+        "rss": 938545152,
+        "heapTotal": 500178944,
+        "heapUsed": 379025096,
+        "external": 88967104,
+        "arrayBuffers": 82098309,
+        "availableSystemBytes": 13339181056
+      },
+      "sampledMaxRssBytes": 938545152,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 3,
+    "size": 8,
+    "durationMs": 530.5360000000001,
+    "processed": 64,
+    "batchTimesMs": [
+      62.6913999999997,
+      67.46440000000075,
+      56.65989999999874,
+      63.74070000000029,
+      95.48090000000047,
+      67.77880000000005,
+      55.43949999999859,
+      61.22229999999945
+    ],
+    "memory": {
+      "before": {
+        "rss": 938545152,
+        "heapTotal": 500178944,
+        "heapUsed": 379026936,
+        "external": 88967104,
+        "arrayBuffers": 82098309,
+        "availableSystemBytes": 13339181056
+      },
+      "after": {
+        "rss": 939569152,
+        "heapTotal": 500178944,
+        "heapUsed": 395477232,
+        "external": 90489472,
+        "arrayBuffers": 83620677,
+        "availableSystemBytes": 13339049984
+      },
+      "sampledMaxRssBytes": 939917312,
+      "samplingIntervalMs": 25,
+      "samples": 8,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 4,
+    "size": 1,
+    "durationMs": 693.9060000000009,
+    "processed": 64,
+    "batchTimesMs": [
+      11.712799999999334,
+      11.633100000000923,
+      10.339200000000346,
+      12.859800000000178,
+      11.023300000000745,
+      10.052800000001298,
+      11.968700000001263,
+      11.188000000000102,
+      11.469999999999345,
+      12.650100000000748,
+      9.936099999998987,
+      11.70560000000114,
+      9.584600000000137,
+      11.53440000000046,
+      9.95679999999993,
+      10.936900000000605,
+      10.920399999999063,
+      10.773400000000038,
+      8.982099999999264,
+      9.753899999999703,
+      11.004899999999907,
+      9.491400000000795,
+      9.41269999999895,
+      9.616699999998673,
+      8.995699999999488,
+      9.319400000000314,
+      11.676799999999275,
+      19.510800000000017,
+      13.817999999999302,
+      28.87500000000182,
+      9.254499999999098,
+      10.233500000002095,
+      10.249400000000605,
+      10.777500000000146,
+      10.078300000001036,
+      9.170200000000477,
+      8.240200000000186,
+      9.02140000000145,
+      9.88459999999759,
+      10.648600000000442,
+      9.32209999999759,
+      9.057400000001508,
+      9.971799999999348,
+      9.313099999999395,
+      10.254899999999907,
+      12.223799999999756,
+      10.680500000002212,
+      9.796299999998155,
+      11.069999999999709,
+      10.569999999999709,
+      9.628100000001723,
+      9.711300000002666,
+      9.220000000001164,
+      10.290000000000873,
+      11.810300000001007,
+      9.750100000001112,
+      8.950400000001537,
+      9.691299999998591,
+      9.453699999998207,
+      10.374899999998888,
+      11.325700000001234,
+      11.40520000000106,
+      10.22439999999915,
+      11.425599999998667
+    ],
+    "memory": {
+      "before": {
+        "rss": 939900928,
+        "heapTotal": 500178944,
+        "heapUsed": 395557000,
+        "external": 91079296,
+        "arrayBuffers": 84210501,
+        "availableSystemBytes": 13338435584
+      },
+      "after": {
+        "rss": 941670400,
+        "heapTotal": 500178944,
+        "heapUsed": 356462432,
+        "external": 91898176,
+        "arrayBuffers": 85029381,
+        "availableSystemBytes": 13339258880
+      },
+      "sampledMaxRssBytes": 941670400,
+      "samplingIntervalMs": 25,
+      "samples": 23,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 4,
+    "size": 8,
+    "durationMs": 537.1297000000013,
+    "processed": 64,
+    "batchTimesMs": [
+      63.42309999999998,
+      66.89010000000053,
+      102.10909999999785,
+      62.76110000000335,
+      55.44590000000244,
+      67.89800000000105,
+      56.61019999999917,
+      61.935599999997066
+    ],
+    "memory": {
+      "before": {
+        "rss": 941670400,
+        "heapTotal": 500178944,
+        "heapUsed": 356464272,
+        "external": 91898176,
+        "arrayBuffers": 85029381,
+        "availableSystemBytes": 13339258880
+      },
+      "after": {
+        "rss": 943632384,
+        "heapTotal": 500178944,
+        "heapUsed": 369951104,
+        "external": 93763200,
+        "arrayBuffers": 86894405,
+        "availableSystemBytes": 13336313856
+      },
+      "sampledMaxRssBytes": 944902144,
+      "samplingIntervalMs": 25,
+      "samples": 8,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 4,
+    "size": 32,
+    "durationMs": 533.8833000000013,
+    "processed": 64,
+    "batchTimesMs": [
+      285.69550000000163,
+      248.14220000000205
+    ],
+    "memory": {
+      "before": {
+        "rss": 943632384,
+        "heapTotal": 500178944,
+        "heapUsed": 369952944,
+        "external": 93763200,
+        "arrayBuffers": 86894405,
+        "availableSystemBytes": 13336313856
+      },
+      "after": {
+        "rss": 946487296,
+        "heapTotal": 500178944,
+        "heapUsed": 376596200,
+        "external": 94866880,
+        "arrayBuffers": 87998085,
+        "availableSystemBytes": 13333561344
+      },
+      "sampledMaxRssBytes": 946487296,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 4,
+    "size": 4,
+    "durationMs": 574.1170999999995,
+    "processed": 64,
+    "batchTimesMs": [
+      37.35719999999856,
+      36.38849999999729,
+      35.889500000001135,
+      35.329499999999825,
+      33.35729999999967,
+      56.777399999999034,
+      38.78069999999934,
+      32.078999999997905,
+      31.292900000000373,
+      33.022899999999936,
+      33.57879999999932,
+      36.339100000001054,
+      33.61490000000049,
+      32.58760000000257,
+      30.315200000000914,
+      37.33850000000166
+    ],
+    "memory": {
+      "before": {
+        "rss": 946487296,
+        "heapTotal": 500178944,
+        "heapUsed": 376598040,
+        "external": 94866880,
+        "arrayBuffers": 87998085,
+        "availableSystemBytes": 13333561344
+      },
+      "after": {
+        "rss": 945582080,
+        "heapTotal": 500178944,
+        "heapUsed": 391793400,
+        "external": 96364704,
+        "arrayBuffers": 89495909,
+        "availableSystemBytes": 13335769088
+      },
+      "sampledMaxRssBytes": 946511872,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 4,
+    "size": 16,
+    "durationMs": 538.1729999999989,
+    "processed": 64,
+    "batchTimesMs": [
+      127.91340000000127,
+      161.88520000000062,
+      129.2367000000013,
+      119.08779999999751
+    ],
+    "memory": {
+      "before": {
+        "rss": 945582080,
+        "heapTotal": 500178944,
+        "heapUsed": 391795240,
+        "external": 96364704,
+        "arrayBuffers": 89495909,
+        "availableSystemBytes": 13335769088
+      },
+      "after": {
+        "rss": 949739520,
+        "heapTotal": 500178944,
+        "heapUsed": 397670568,
+        "external": 97450048,
+        "arrayBuffers": 90581253,
+        "availableSystemBytes": 13331841024
+      },
+      "sampledMaxRssBytes": 949739520,
+      "samplingIntervalMs": 25,
+      "samples": 4,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 5,
+    "size": 16,
+    "durationMs": 534.7497000000003,
+    "processed": 64,
+    "batchTimesMs": [
+      126.9864000000016,
+      160.1752000000015,
+      129.15469999999914,
+      118.38230000000112
+    ],
+    "memory": {
+      "before": {
+        "rss": 949751808,
+        "heapTotal": 500178944,
+        "heapUsed": 397750040,
+        "external": 97974336,
+        "arrayBuffers": 91105541,
+        "availableSystemBytes": 13332594688
+      },
+      "after": {
+        "rss": 951181312,
+        "heapTotal": 500178944,
+        "heapUsed": 403677960,
+        "external": 99643200,
+        "arrayBuffers": 92774405,
+        "availableSystemBytes": 13331509248
+      },
+      "sampledMaxRssBytes": 951181312,
+      "samplingIntervalMs": 25,
+      "samples": 4,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 5,
+    "size": 4,
+    "durationMs": 576.5583000000006,
+    "processed": 64,
+    "batchTimesMs": [
+      38.66519999999946,
+      36.58320000000094,
+      36.2515999999996,
+      34.87290000000212,
+      36.59049999999843,
+      57.02100000000064,
+      38.401300000001356,
+      31.755799999999,
+      31.03349999999773,
+      33.157899999998335,
+      30.951700000001438,
+      36.0012999999999,
+      32.48250000000189,
+      33.53359999999884,
+      31.409999999999854,
+      37.78139999999985
+    ],
+    "memory": {
+      "before": {
+        "rss": 951181312,
+        "heapTotal": 500178944,
+        "heapUsed": 403679800,
+        "external": 99643200,
+        "arrayBuffers": 92774405,
+        "availableSystemBytes": 13331509248
+      },
+      "after": {
+        "rss": 948396032,
+        "heapTotal": 500178944,
+        "heapUsed": 357643704,
+        "external": 95851936,
+        "arrayBuffers": 88983141,
+        "availableSystemBytes": 13334917120
+      },
+      "sampledMaxRssBytes": 951181312,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 5,
+    "size": 1,
+    "durationMs": 693.115600000001,
+    "processed": 64,
+    "batchTimesMs": [
+      11.666199999999662,
+      11.495400000003428,
+      10.087799999997515,
+      11.788300000000163,
+      11.070299999999406,
+      10.117099999999482,
+      11.398200000003271,
+      10.805199999998877,
+      10.986000000000786,
+      12.201000000000931,
+      9.425699999999779,
+      11.306399999997666,
+      9.09780000000319,
+      14.092499999998836,
+      42.32889999999679,
+      10.012799999996787,
+      11.024499999999534,
+      10.910299999999552,
+      8.986599999996542,
+      9.680799999998271,
+      10.65020000000004,
+      9.13550000000032,
+      8.855099999997037,
+      9.019499999998516,
+      8.260099999999511,
+      9.23909999999887,
+      11.562100000002829,
+      9.042300000000978,
+      9.278800000000047,
+      10.430000000000291,
+      8.79320000000007,
+      9.73240000000078,
+      10.094600000000355,
+      10.221799999999348,
+      10.588299999999435,
+      9.092099999998027,
+      8.311900000000605,
+      9.123999999999796,
+      9.979999999999563,
+      11.361399999997957,
+      9.396199999999226,
+      9.118299999998271,
+      10.068299999998999,
+      9.35740000000078,
+      9.99539999999979,
+      12.607700000000477,
+      10.915499999999156,
+      9.92949999999837,
+      10.70509999999922,
+      10.51220000000103,
+      9.504000000000815,
+      9.648000000001048,
+      9.064500000000407,
+      9.574799999998504,
+      10.495499999997264,
+      9.293099999998958,
+      9.015400000000227,
+      10.08129999999801,
+      9.151699999998527,
+      10.656699999999546,
+      11.296699999998964,
+      17.214499999998225,
+      10.823599999999715,
+      13.31420000000071
+    ],
+    "memory": {
+      "before": {
+        "rss": 948396032,
+        "heapTotal": 500178944,
+        "heapUsed": 357645544,
+        "external": 95851936,
+        "arrayBuffers": 88983141,
+        "availableSystemBytes": 13334917120
+      },
+      "after": {
+        "rss": 950071296,
+        "heapTotal": 500178944,
+        "heapUsed": 372490776,
+        "external": 100916072,
+        "arrayBuffers": 94047277,
+        "availableSystemBytes": 13333876736
+      },
+      "sampledMaxRssBytes": 950071296,
+      "samplingIntervalMs": 25,
+      "samples": 22,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 5,
+    "size": 32,
+    "durationMs": 536.289499999999,
+    "processed": 64,
+    "batchTimesMs": [
+      282.22070000000167,
+      254.02280000000246
+    ],
+    "memory": {
+      "before": {
+        "rss": 950071296,
+        "heapTotal": 500178944,
+        "heapUsed": 372492616,
+        "external": 100916072,
+        "arrayBuffers": 94047277,
+        "availableSystemBytes": 13333876736
+      },
+      "after": {
+        "rss": 952991744,
+        "heapTotal": 500178944,
+        "heapUsed": 379123816,
+        "external": 102278592,
+        "arrayBuffers": 95409797,
+        "availableSystemBytes": 13331468288
+      },
+      "sampledMaxRssBytes": 952991744,
+      "samplingIntervalMs": 25,
+      "samples": 3,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 5,
+    "size": 8,
+    "durationMs": 539.2914000000019,
+    "processed": 64,
+    "batchTimesMs": [
+      108.52669999999853,
+      66.10800000000017,
+      58.663000000000466,
+      63.891599999999016,
+      56.315999999998894,
+      66.87800000000061,
+      56.61779999999999,
+      62.234700000000885
+    ],
+    "memory": {
+      "before": {
+        "rss": 952991744,
+        "heapTotal": 500178944,
+        "heapUsed": 379125656,
+        "external": 102278592,
+        "arrayBuffers": 95409797,
+        "availableSystemBytes": 13331468288
+      },
+      "after": {
+        "rss": 953966592,
+        "heapTotal": 500178944,
+        "heapUsed": 395586496,
+        "external": 103800960,
+        "arrayBuffers": 96932165,
+        "availableSystemBytes": 13331271680
+      },
+      "sampledMaxRssBytes": 954355712,
+      "samplingIntervalMs": 25,
+      "samples": 8,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 6,
+    "size": 1,
+    "durationMs": 876.8457999999991,
+    "processed": 64,
+    "batchTimesMs": [
+      11.804100000001199,
+      25.921900000001187,
+      59.29460000000108,
+      53.99200000000201,
+      19.539499999998952,
+      14.373100000000704,
+      35.857499999998254,
+      12.2570999999989,
+      12.697299999999814,
+      12.380700000001525,
+      9.658599999998842,
+      11.968600000000151,
+      9.59059999999954,
+      16.5753999999979,
+      19.95339999999851,
+      28.190099999999802,
+      13.943199999997887,
+      11.060900000000402,
+      10.927599999999074,
+      10.081699999998818,
+      11.06919999999809,
+      9.876299999999901,
+      9.838799999997718,
+      9.967599999999948,
+      8.65259999999762,
+      9.676299999999173,
+      11.751599999999598,
+      8.507100000002538,
+      10.826900000000023,
+      10.341800000001967,
+      8.416599999996834,
+      9.625599999999395,
+      10.153399999999237,
+      10.130600000000413,
+      9.938799999999901,
+      9.317299999998795,
+      14.644500000002154,
+      20.094199999999546,
+      20.25669999999809,
+      11.505000000001019,
+      10.319799999997485,
+      10.393899999999121,
+      10.886200000000827,
+      10.636000000002241,
+      11.038800000002084,
+      12.961800000000949,
+      10.581900000001042,
+      9.898700000001554,
+      10.894100000001345,
+      10.725899999997637,
+      9.890299999999115,
+      9.59349999999904,
+      9.270700000000943,
+      9.777100000002974,
+      10.55710000000181,
+      9.4204000000027,
+      8.960800000000745,
+      11.081500000000233,
+      9.205900000000838,
+      10.072500000002037,
+      11.726699999999255,
+      12.235000000000582,
+      10.40259999999762,
+      11.526499999999942
+    ],
+    "memory": {
+      "before": {
+        "rss": 954204160,
+        "heapTotal": 500178944,
+        "heapUsed": 395701336,
+        "external": 104364426,
+        "arrayBuffers": 97495631,
+        "availableSystemBytes": 13330644992
+      },
+      "after": {
+        "rss": 906571776,
+        "heapTotal": 345796608,
+        "heapUsed": 187984088,
+        "external": 70459926,
+        "arrayBuffers": 63591131,
+        "availableSystemBytes": 13372387328
+      },
+      "sampledMaxRssBytes": 955637760,
+      "samplingIntervalMs": 25,
+      "samples": 26,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 6,
+    "size": 8,
+    "durationMs": 524.2846000000027,
+    "processed": 64,
+    "batchTimesMs": [
+      61.544200000000274,
+      68.27200000000084,
+      57.13940000000002,
+      90.00879999999961,
+      61.55649999999878,
+      66.86929999999847,
+      54.771600000000035,
+      64.06620000000112
+    ],
+    "memory": {
+      "before": {
+        "rss": 906571776,
+        "heapTotal": 345796608,
+        "heapUsed": 187985928,
+        "external": 70459926,
+        "arrayBuffers": 63591131,
+        "availableSystemBytes": 13372387328
+      },
+      "after": {
+        "rss": 909389824,
+        "heapTotal": 345796608,
+        "heapUsed": 204384376,
+        "external": 72529166,
+        "arrayBuffers": 65660371,
+        "availableSystemBytes": 13370851328
+      },
+      "sampledMaxRssBytes": 909852672,
+      "samplingIntervalMs": 25,
+      "samples": 8,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 6,
+    "size": 32,
+    "durationMs": 539.7302999999993,
+    "processed": 64,
+    "batchTimesMs": [
+      251.72420000000056,
+      287.9570999999996
+    ],
+    "memory": {
+      "before": {
+        "rss": 909389824,
+        "heapTotal": 345796608,
+        "heapUsed": 204386216,
+        "external": 72529166,
+        "arrayBuffers": 65660371,
+        "availableSystemBytes": 13370851328
+      },
+      "after": {
+        "rss": 912437248,
+        "heapTotal": 345796608,
+        "heapUsed": 211043792,
+        "external": 73632846,
+        "arrayBuffers": 66764051,
+        "availableSystemBytes": 13368094720
+      },
+      "sampledMaxRssBytes": 912437248,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 6,
+    "size": 4,
+    "durationMs": 587.6324999999997,
+    "processed": 64,
+    "batchTimesMs": [
+      38.219199999999546,
+      37.39970000000176,
+      36.09180000000197,
+      35.38009999999849,
+      33.53229999999894,
+      34.73769999999786,
+      37.82190000000264,
+      63.77950000000055,
+      33.4387999999999,
+      33.02649999999994,
+      31.28200000000288,
+      36.807199999999284,
+      33.85180000000037,
+      34.09619999999995,
+      30.894000000000233,
+      37.20759999999791
+    ],
+    "memory": {
+      "before": {
+        "rss": 912437248,
+        "heapTotal": 345796608,
+        "heapUsed": 211045632,
+        "external": 73632846,
+        "arrayBuffers": 66764051,
+        "availableSystemBytes": 13368094720
+      },
+      "after": {
+        "rss": 911380480,
+        "heapTotal": 345796608,
+        "heapUsed": 226241584,
+        "external": 75130670,
+        "arrayBuffers": 68261875,
+        "availableSystemBytes": 13370281984
+      },
+      "sampledMaxRssBytes": 912769024,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 6,
+    "size": 16,
+    "durationMs": 545.441700000003,
+    "processed": 64,
+    "batchTimesMs": [
+      132.27930000000197,
+      161.90139999999883,
+      129.09749999999985,
+      122.11439999999857
+    ],
+    "memory": {
+      "before": {
+        "rss": 911380480,
+        "heapTotal": 345796608,
+        "heapUsed": 226243424,
+        "external": 75130670,
+        "arrayBuffers": 68261875,
+        "availableSystemBytes": 13370281984
+      },
+      "after": {
+        "rss": 914706432,
+        "heapTotal": 345796608,
+        "heapUsed": 232142864,
+        "external": 76216014,
+        "arrayBuffers": 69347219,
+        "availableSystemBytes": 13366415360
+      },
+      "sampledMaxRssBytes": 914706432,
+      "samplingIntervalMs": 25,
+      "samples": 4,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 7,
+    "size": 16,
+    "durationMs": 545.6327999999994,
+    "processed": 64,
+    "batchTimesMs": [
+      132.66110000000117,
+      162.53840000000127,
+      130.674500000001,
+      119.7013999999981
+    ],
+    "memory": {
+      "before": {
+        "rss": 915193856,
+        "heapTotal": 345796608,
+        "heapUsed": 232245416,
+        "external": 76786011,
+        "arrayBuffers": 69917216,
+        "availableSystemBytes": 13365911552
+      },
+      "after": {
+        "rss": 916860928,
+        "heapTotal": 345796608,
+        "heapUsed": 238202040,
+        "external": 78409166,
+        "arrayBuffers": 71540371,
+        "availableSystemBytes": 13365972992
+      },
+      "sampledMaxRssBytes": 916860928,
+      "samplingIntervalMs": 25,
+      "samples": 4,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 7,
+    "size": 4,
+    "durationMs": 606.4523000000008,
+    "processed": 64,
+    "batchTimesMs": [
+      38.85520000000179,
+      38.38119999999981,
+      37.3099000000002,
+      35.60650000000169,
+      32.80229999999938,
+      34.5538000000015,
+      78.30210000000079,
+      35.74829999999929,
+      30.936399999998685,
+      34.15480000000025,
+      33.00239999999758,
+      37.7596999999987,
+      34.09609999999884,
+      34.80229999999938,
+      31.735499999998865,
+      38.261500000000524
+    ],
+    "memory": {
+      "before": {
+        "rss": 916860928,
+        "heapTotal": 345796608,
+        "heapUsed": 238203880,
+        "external": 78409166,
+        "arrayBuffers": 71540371,
+        "availableSystemBytes": 13365972992
+      },
+      "after": {
+        "rss": 912986112,
+        "heapTotal": 345796608,
+        "heapUsed": 192168912,
+        "external": 74611758,
+        "arrayBuffers": 67742963,
+        "availableSystemBytes": 13369643008
+      },
+      "sampledMaxRssBytes": 916860928,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 7,
+    "size": 1,
+    "durationMs": 696.9688999999998,
+    "processed": 64,
+    "batchTimesMs": [
+      11.91820000000007,
+      11.783800000001065,
+      10.214899999999034,
+      11.680299999999988,
+      10.919600000001083,
+      10.155399999999645,
+      11.845699999998033,
+      11.232100000001083,
+      11.49409999999989,
+      12.538700000000972,
+      9.744300000002113,
+      11.948800000001938,
+      9.877599999999802,
+      10.897000000000844,
+      10.028200000000652,
+      10.007399999998597,
+      30.843399999997928,
+      13.51090000000113,
+      10.29689999999755,
+      12.12550000000192,
+      11.25460000000021,
+      9.418299999997544,
+      9.674699999999575,
+      9.57300000000032,
+      8.837799999997515,
+      9.64969999999812,
+      11.651200000000244,
+      9.132699999998295,
+      9.517400000000634,
+      10.3295999999973,
+      8.856599999999162,
+      9.473900000000867,
+      10.268000000000029,
+      9.979199999997945,
+      9.48189999999886,
+      9.2045999999973,
+      8.53530000000319,
+      9.881499999999505,
+      10.868700000002718,
+      11.99069999999847,
+      10.18119999999908,
+      9.949500000002445,
+      10.694099999996979,
+      10.067299999998795,
+      11.209800000000541,
+      13.10280000000057,
+      11.294799999999668,
+      10.43920000000071,
+      11.235899999999674,
+      11.024799999999232,
+      10.219100000002072,
+      9.862900000000081,
+      9.557000000000698,
+      10.111499999999069,
+      11.111700000001292,
+      9.832899999997608,
+      9.51680000000124,
+      10.148699999997916,
+      9.3849999999984,
+      11.103300000002491,
+      11.87159999999858,
+      11.587299999999232,
+      10.545399999999063,
+      12.17069999999876
+    ],
+    "memory": {
+      "before": {
+        "rss": 912986112,
+        "heapTotal": 345796608,
+        "heapUsed": 192170752,
+        "external": 74611758,
+        "arrayBuffers": 67742963,
+        "availableSystemBytes": 13369643008
+      },
+      "after": {
+        "rss": 917053440,
+        "heapTotal": 345796608,
+        "heapUsed": 207125312,
+        "external": 79680502,
+        "arrayBuffers": 72811707,
+        "availableSystemBytes": 13368569856
+      },
+      "sampledMaxRssBytes": 917053440,
+      "samplingIntervalMs": 25,
+      "samples": 22,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 7,
+    "size": 32,
+    "durationMs": 557.1513999999988,
+    "processed": 64,
+    "batchTimesMs": [
+      295.9974000000002,
+      261.11279999999897
+    ],
+    "memory": {
+      "before": {
+        "rss": 917053440,
+        "heapTotal": 345796608,
+        "heapUsed": 207126960,
+        "external": 79680502,
+        "arrayBuffers": 72811707,
+        "availableSystemBytes": 13368569856
+      },
+      "after": {
+        "rss": 920031232,
+        "heapTotal": 345796608,
+        "heapUsed": 213788800,
+        "external": 81044558,
+        "arrayBuffers": 74175763,
+        "availableSystemBytes": 13362536448
+      },
+      "sampledMaxRssBytes": 920031232,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 7,
+    "size": 8,
+    "durationMs": 555.4243999999999,
+    "processed": 64,
+    "batchTimesMs": [
+      116.63200000000143,
+      68.67529999999897,
+      59.31450000000041,
+      64.25959999999759,
+      55.37010000000009,
+      70.18269999999757,
+      57.76220000000103,
+      63.17829999999958
+    ],
+    "memory": {
+      "before": {
+        "rss": 920031232,
+        "heapTotal": 345796608,
+        "heapUsed": 213790448,
+        "external": 81044558,
+        "arrayBuffers": 74175763,
+        "availableSystemBytes": 13362536448
+      },
+      "after": {
+        "rss": 919359488,
+        "heapTotal": 345796608,
+        "heapUsed": 230113424,
+        "external": 82554638,
+        "arrayBuffers": 75685843,
+        "availableSystemBytes": 13358678016
+      },
+      "sampledMaxRssBytes": 920154112,
+      "samplingIntervalMs": 25,
+      "samples": 8,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 8,
+    "size": 1,
+    "durationMs": 717.8186999999998,
+    "processed": 64,
+    "batchTimesMs": [
+      42.35239999999976,
+      14.808099999998376,
+      11.273000000001048,
+      13.356500000001688,
+      11.188600000001315,
+      10.527399999999034,
+      11.68409999999858,
+      11.099500000000262,
+      11.190000000002328,
+      12.075000000000728,
+      9.504800000002433,
+      11.555399999997462,
+      9.355400000000373,
+      11.175300000002608,
+      9.942000000002736,
+      9.815299999998388,
+      10.20679999999993,
+      10.526200000000244,
+      8.814099999999598,
+      9.98609999999826,
+      10.789100000001781,
+      9.416300000000774,
+      9.638100000000122,
+      9.467199999999139,
+      8.72019999999975,
+      9.77780000000348,
+      11.932699999997567,
+      9.184799999999086,
+      9.455799999999726,
+      12.264999999999418,
+      9.145700000000943,
+      9.443100000000413,
+      10.145599999999831,
+      10.336500000001251,
+      9.293600000000879,
+      9.271199999999226,
+      8.291299999997136,
+      9.559000000001106,
+      9.573200000002544,
+      10.322299999999814,
+      10.013999999999214,
+      9.375499999998283,
+      10.451300000000629,
+      9.774399999998423,
+      10.451499999999214,
+      12.79910000000018,
+      10.755800000002637,
+      9.654899999997724,
+      10.847999999998137,
+      11.705799999999726,
+      26.040600000000268,
+      14.3153999999995,
+      11.206900000001042,
+      10.174999999999272,
+      11.434400000001915,
+      9.643400000000838,
+      9.050100000000384,
+      9.763599999998405,
+      9.29229999999734,
+      10.092699999997421,
+      11.434400000001915,
+      11.567900000001828,
+      9.763200000001234,
+      11.643099999997503
+    ],
+    "memory": {
+      "before": {
+        "rss": 919851008,
+        "heapTotal": 345796608,
+        "heapUsed": 230212216,
+        "external": 83131151,
+        "arrayBuffers": 76262356,
+        "availableSystemBytes": 13357518848
+      },
+      "after": {
+        "rss": 922497024,
+        "heapTotal": 345796608,
+        "heapUsed": 191028520,
+        "external": 83908558,
+        "arrayBuffers": 77039763,
+        "availableSystemBytes": 13349888000
+      },
+      "sampledMaxRssBytes": 922497024,
+      "samplingIntervalMs": 25,
+      "samples": 23,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 8,
+    "size": 8,
+    "durationMs": 699.9659000000029,
+    "processed": 64,
+    "batchTimesMs": [
+      65.01959999999963,
+      66.74009999999907,
+      57.59850000000006,
+      68.67599999999948,
+      80.05010000000038,
+      114.44859999999971,
+      179.67299999999886,
+      67.70709999999963
+    ],
+    "memory": {
+      "before": {
+        "rss": 922497024,
+        "heapTotal": 345796608,
+        "heapUsed": 191030168,
+        "external": 83908558,
+        "arrayBuffers": 77039763,
+        "availableSystemBytes": 13349888000
+      },
+      "after": {
+        "rss": 923496448,
+        "heapTotal": 316960768,
+        "heapUsed": 193384032,
+        "external": 84612017,
+        "arrayBuffers": 77748179,
+        "availableSystemBytes": 13349085184
+      },
+      "sampledMaxRssBytes": 923496448,
+      "samplingIntervalMs": 25,
+      "samples": 8,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 8,
+    "size": 32,
+    "durationMs": 523.3414999999986,
+    "processed": 64,
+    "batchTimesMs": [
+      252.08909999999742,
+      271.20460000000094
+    ],
+    "memory": {
+      "before": {
+        "rss": 923496448,
+        "heapTotal": 316960768,
+        "heapUsed": 193385680,
+        "external": 84612017,
+        "arrayBuffers": 77748179,
+        "availableSystemBytes": 13349085184
+      },
+      "after": {
+        "rss": 926384128,
+        "heapTotal": 316960768,
+        "heapUsed": 203733832,
+        "external": 87063153,
+        "arrayBuffers": 80199315,
+        "availableSystemBytes": 13346193408
+      },
+      "sampledMaxRssBytes": 926384128,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 8,
+    "size": 4,
+    "durationMs": 583.1127000000015,
+    "processed": 64,
+    "batchTimesMs": [
+      39.407100000000355,
+      36.497299999999086,
+      36.35250000000087,
+      35.21399999999994,
+      32.36329999999725,
+      33.17630000000281,
+      37.990499999999884,
+      64.95690000000104,
+      31.757999999997992,
+      32.88539999999921,
+      32.85229999999865,
+      36.81710000000021,
+      32.51260000000184,
+      32.26550000000134,
+      30.645000000000437,
+      37.3647000000019
+    ],
+    "memory": {
+      "before": {
+        "rss": 926384128,
+        "heapTotal": 316960768,
+        "heapUsed": 203735480,
+        "external": 87063153,
+        "arrayBuffers": 80199315,
+        "availableSystemBytes": 13346193408
+      },
+      "after": {
+        "rss": 923725824,
+        "heapTotal": 316960768,
+        "heapUsed": 220256664,
+        "external": 88285937,
+        "arrayBuffers": 81422099,
+        "availableSystemBytes": 13349408768
+      },
+      "sampledMaxRssBytes": 926404608,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 8,
+    "size": 16,
+    "durationMs": 610.2227999999996,
+    "processed": 64,
+    "batchTimesMs": [
+      164.1178,
+      163.4334000000017,
+      135.7354000000014,
+      146.88680000000022
+    ],
+    "memory": {
+      "before": {
+        "rss": 923725824,
+        "heapTotal": 316960768,
+        "heapUsed": 220258984,
+        "external": 88285937,
+        "arrayBuffers": 81422099,
+        "availableSystemBytes": 13349408768
+      },
+      "after": {
+        "rss": 927907840,
+        "heapTotal": 316960768,
+        "heapUsed": 226619280,
+        "external": 89670897,
+        "arrayBuffers": 82807059,
+        "availableSystemBytes": 13346279424
+      },
+      "sampledMaxRssBytes": 927907840,
+      "samplingIntervalMs": 25,
+      "samples": 4,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 9,
+    "size": 16,
+    "durationMs": 554.8093999999983,
+    "processed": 64,
+    "batchTimesMs": [
+      129.47969999999987,
+      174.44520000000193,
+      129.06040000000212,
+      121.77880000000005
+    ],
+    "memory": {
+      "before": {
+        "rss": 928354304,
+        "heapTotal": 316960768,
+        "heapUsed": 226734392,
+        "external": 90188394,
+        "arrayBuffers": 83324556,
+        "availableSystemBytes": 13345763328
+      },
+      "after": {
+        "rss": 929996800,
+        "heapTotal": 316960768,
+        "heapUsed": 232599016,
+        "external": 91823089,
+        "arrayBuffers": 84959251,
+        "availableSystemBytes": 13344223232
+      },
+      "sampledMaxRssBytes": 929996800,
+      "samplingIntervalMs": 25,
+      "samples": 4,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 9,
+    "size": 4,
+    "durationMs": 579.1916999999994,
+    "processed": 64,
+    "batchTimesMs": [
+      38.374900000002526,
+      36.268299999999726,
+      35.73370000000068,
+      68.73349999999846,
+      34.35959999999977,
+      34.282100000000355,
+      36.93229999999676,
+      30.425700000003417,
+      29.969499999999243,
+      32.394399999997404,
+      31.036299999999756,
+      36.651999999998225,
+      33.401200000000244,
+      32.71700000000055,
+      30.46059999999852,
+      37.39950000000317
+    ],
+    "memory": {
+      "before": {
+        "rss": 929996800,
+        "heapTotal": 316960768,
+        "heapUsed": 232600664,
+        "external": 91823089,
+        "arrayBuffers": 84959251,
+        "availableSystemBytes": 13344223232
+      },
+      "after": {
+        "rss": 926502912,
+        "heapTotal": 316960768,
+        "heapUsed": 190371616,
+        "external": 88025681,
+        "arrayBuffers": 81161843,
+        "availableSystemBytes": 13348630528
+      },
+      "sampledMaxRssBytes": 929996800,
+      "samplingIntervalMs": 25,
+      "samples": 16,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 9,
+    "size": 1,
+    "durationMs": 717.1238000000048,
+    "processed": 64,
+    "batchTimesMs": [
+      11.482200000002194,
+      11.475000000002183,
+      9.889599999998609,
+      11.36949999999706,
+      10.620100000000093,
+      9.965100000001257,
+      12.86160000000018,
+      10.959900000001653,
+      10.955000000001746,
+      13.908199999998033,
+      15.181400000001304,
+      35.56659999999829,
+      9.821499999998196,
+      11.224500000000262,
+      9.953600000000733,
+      10.125699999996868,
+      9.943100000000413,
+      10.520899999999529,
+      9.135199999996985,
+      10.03689999999915,
+      10.946099999997386,
+      9.8608000000022,
+      9.68869999999879,
+      9.762000000002445,
+      8.838500000001659,
+      9.784000000003289,
+      12.092399999997724,
+      9.373400000000402,
+      9.826099999998405,
+      10.774100000002363,
+      9.101499999997031,
+      10.072399999997288,
+      10.925699999999779,
+      10.38260000000082,
+      9.815199999997276,
+      9.72650000000067,
+      8.67239999999947,
+      9.243999999998778,
+      9.989799999999377,
+      11.2471000000005,
+      9.797699999999168,
+      9.426699999999983,
+      10.384799999999814,
+      9.791000000001077,
+      10.131199999999808,
+      12.134399999999005,
+      10.579399999998714,
+      9.113900000000285,
+      10.632799999999406,
+      10.462100000000646,
+      9.294700000002194,
+      9.327300000000832,
+      8.899799999999232,
+      9.440299999998388,
+      10.306700000001001,
+      9.252099999997881,
+      8.761999999998807,
+      9.428100000000995,
+      8.912599999999657,
+      9.858800000001793,
+      11.192999999999302,
+      40.2641999999978,
+      12.098700000002282,
+      12.412100000001374
+    ],
+    "memory": {
+      "before": {
+        "rss": 926502912,
+        "heapTotal": 316960768,
+        "heapUsed": 190373264,
+        "external": 88025681,
+        "arrayBuffers": 81161843,
+        "availableSystemBytes": 13348630528
+      },
+      "after": {
+        "rss": 931635200,
+        "heapTotal": 316960768,
+        "heapUsed": 205278312,
+        "external": 93094425,
+        "arrayBuffers": 86230587,
+        "availableSystemBytes": 13347049472
+      },
+      "sampledMaxRssBytes": 931635200,
+      "samplingIntervalMs": 25,
+      "samples": 23,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 9,
+    "size": 32,
+    "durationMs": 505.1779000000024,
+    "processed": 64,
+    "batchTimesMs": [
+      250.4426999999996,
+      254.68559999999707
+    ],
+    "memory": {
+      "before": {
+        "rss": 931635200,
+        "heapTotal": 316960768,
+        "heapUsed": 205279960,
+        "external": 93094425,
+        "arrayBuffers": 86230587,
+        "availableSystemBytes": 13347049472
+      },
+      "after": {
+        "rss": 934539264,
+        "heapTotal": 316960768,
+        "heapUsed": 211935688,
+        "external": 94458481,
+        "arrayBuffers": 87594643,
+        "availableSystemBytes": 13344497664
+      },
+      "sampledMaxRssBytes": 934539264,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  {
+    "round": 9,
+    "size": 8,
+    "durationMs": 521.7280000000028,
+    "processed": 64,
+    "batchTimesMs": [
+      89.46669999999722,
+      66.9155000000028,
+      58.123899999998685,
+      65.01380000000063,
+      55.790399999998044,
+      67.06999999999971,
+      56.48790000000008,
+      62.81049999999959
+    ],
+    "memory": {
+      "before": {
+        "rss": 934539264,
+        "heapTotal": 316960768,
+        "heapUsed": 211937336,
+        "external": 94458481,
+        "arrayBuffers": 87594643,
+        "availableSystemBytes": 13344497664
+      },
+      "after": {
+        "rss": 932986880,
+        "heapTotal": 316960768,
+        "heapUsed": 228321304,
+        "external": 95968561,
+        "arrayBuffers": 89104723,
+        "availableSystemBytes": 13346549760
+      },
+      "sampledMaxRssBytes": 934617088,
+      "samplingIntervalMs": 25,
+      "samples": 9,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  }
+]

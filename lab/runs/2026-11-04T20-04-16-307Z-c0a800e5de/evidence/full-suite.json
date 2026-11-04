@@ -1,0 +1,86 @@
+{
+  "version": "4.3.2",
+  "startedAt": "2026-11-04T20:06:21.024Z",
+  "stages": [
+    {
+      "name": "environment",
+      "file": "capture-environment.mjs",
+      "startedAt": "2026-11-04T20:06:21.025Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:06:21.097Z"
+    },
+    {
+      "name": "filters",
+      "file": "run-filter-tests.mjs",
+      "startedAt": "2026-11-04T20:06:21.097Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:06:21.165Z"
+    },
+    {
+      "name": "node",
+      "file": "run-node-validation.mjs",
+      "startedAt": "2026-11-04T20:06:21.166Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:07:41.821Z"
+    },
+    {
+      "name": "consistency",
+      "file": "run-consistency-diagnostics.mjs",
+      "startedAt": "2026-11-04T20:07:41.822Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:07:44.366Z"
+    },
+    {
+      "name": "M3",
+      "file": "run-extended-validation.mjs",
+      "startedAt": "2026-11-04T20:07:44.367Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:08:15.557Z"
+    },
+    {
+      "name": "M4",
+      "file": "run-extended-validation.mjs",
+      "startedAt": "2026-11-04T20:08:15.558Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:08:43.871Z"
+    },
+    {
+      "name": "M5",
+      "file": "run-extended-validation.mjs",
+      "startedAt": "2026-11-04T20:08:43.872Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:09:37.154Z"
+    },
+    {
+      "name": "roundtrip",
+      "file": "run-tts-roundtrip.mjs",
+      "startedAt": "2026-11-04T20:09:37.155Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:09:45.346Z"
+    },
+    {
+      "name": "guide-node",
+      "file": "run-guide-node.mjs",
+      "startedAt": "2026-11-04T20:09:45.346Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:09:51.103Z"
+    },
+    {
+      "name": "browser",
+      "file": "run-browser-validation.mjs",
+      "startedAt": "2026-11-04T20:09:51.104Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:10:12.818Z"
+    },
+    {
+      "name": "backend",
+      "file": "run-backend-comparison.mjs",
+      "startedAt": "2026-11-04T20:10:12.819Z",
+      "exitCode": 0,
+      "completedAt": "2026-11-04T20:10:15.086Z"
+    }
+  ],
+  "method": "Original runners with exact version metadata/assertions updated only. Stages run sequentially to avoid competing model benchmarks.",
+  "status": "completed",
+  "completedAt": "2026-11-04T20:10:15.087Z"
+}

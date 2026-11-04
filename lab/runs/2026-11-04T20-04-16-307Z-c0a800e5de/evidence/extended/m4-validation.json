@@ -1,0 +1,619 @@
+{
+  "model": {
+    "key": "M4",
+    "id": "Xenova/speecht5_tts",
+    "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+    "dtype": "fp32",
+    "task": "text-to-speech"
+  },
+  "startedAt": "2026-11-04T20:08:15.624Z",
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "win32",
+    "architecture": "x64",
+    "cpu": "AMD EPYC 9V74 80-Core Processor                ",
+    "freeMemoryBytesAtStart": 14299193344
+  },
+  "settings": {
+    "package": "4.3.2",
+    "backend": "Node native CPU",
+    "intraOpNumThreads": 4,
+    "interOpNumThreads": 1,
+    "network": "disabled during controlled inference",
+    "memory": "Whole-process RSS sampled25ms; short native peaks may be missed."
+  },
+  "tests": [
+    {
+      "id": "M4-VERSION",
+      "purpose": "Exact installed package",
+      "status": "passed",
+      "durationMs": 0.035899999999998045,
+      "detail": {
+        "@huggingface/transformers": "4.3.2",
+        "onnxruntime-node": "1.30.0"
+      }
+    },
+    {
+      "id": "M4-LOAD",
+      "purpose": "Pinned model loads on native CPU",
+      "status": "passed",
+      "durationMs": 0.034799999999904685,
+      "detail": {
+        "revision": "1723781b8ce2d02f0400c8337be04ae8ee3d6d56",
+        "dtype": "fp32",
+        "loadMs": 1466.2455
+      }
+    },
+    {
+      "id": "TTS-DEFAULT-PIPELINE",
+      "purpose": "Unmodified convenience pipeline produces non-empty audio",
+      "status": "failed",
+      "durationMs": 39.64160000000015,
+      "error": "An error occurred during model execution: \"Missing the following inputs: speaker_embeddings, encoder_hidden_states, output_sequence."
+    },
+    {
+      "id": "TTS-EXPLICIT-PIPELINE",
+      "purpose": "Explicit processor and vocoder pipeline produces non-empty audio",
+      "status": "failed",
+      "durationMs": 977.4008999999999,
+      "error": "Empty audio output"
+    },
+    {
+      "id": "TTS-WAVEFORM",
+      "purpose": "Eight outputs are finite non-silent16000Hz audio",
+      "status": "passed",
+      "durationMs": 0.1934000000001106,
+      "detail": {
+        "cases": 8
+      }
+    },
+    {
+      "id": "TTS-CLIPPING",
+      "purpose": "Each clip has under1percent full-scale samples",
+      "status": "passed",
+      "durationMs": 0.0904000000009546,
+      "detail": {
+        "maximumClippedFraction": 0
+      }
+    },
+    {
+      "id": "TTS-MISSING-SPEAKER",
+      "purpose": "Missing speaker embedding is rejected",
+      "status": "passed",
+      "durationMs": 0.8487000000022817,
+      "detail": {
+        "error": "A float32 tensor's data must be type of function Float32Array() { [native code] }"
+      }
+    },
+    {
+      "id": "TTS-WRONG-SPEAKER",
+      "purpose": "Wrong speaker dimension is rejected",
+      "status": "passed",
+      "durationMs": 60.678500000001804,
+      "detail": {
+        "error": "Got invalid dimensions for input: speaker_embeddings for the following indices\n index: 1 Got: 511 Expected: 512\n Please fix either the inputs/outputs or the model."
+      }
+    },
+    {
+      "id": "TTS-BATCH",
+      "purpose": "Two texts produce two finite audio outputs",
+      "status": "failed",
+      "durationMs": 1.2111000000004424,
+      "error": "Got invalid dimensions for input: input_ids for the following indices\n index: 0 Got: 2 Expected: 1\n Please fix either the inputs/outputs or the model."
+    },
+    {
+      "id": "M4-OFFLINE",
+      "purpose": "Controlled inference made no network requests",
+      "status": "passed",
+      "durationMs": 0.0562000000027183,
+      "detail": {
+        "networkAttempts": 0
+      }
+    }
+  ],
+  "cases": [
+    {
+      "id": "T001",
+      "text": "The viewing in London is on Friday at ten in the morning.",
+      "required_phrases": [
+        "london",
+        "friday",
+        "ten"
+      ],
+      "stats": {
+        "samples": 52736,
+        "sampleRate": 16000,
+        "durationSeconds": 3.296,
+        "finite": true,
+        "rms": 0.047435813574750824,
+        "peak": 0.32171905040740967,
+        "clippedFraction": 0
+      },
+      "durationMs": 2474.4087999999997,
+      "realTimeFactor": 0.7507308252427184,
+      "memory": {
+        "before": {
+          "rss": 817311744,
+          "heapTotal": 31952896,
+          "heapUsed": 18881584,
+          "external": 22525104,
+          "arrayBuffers": 15656309,
+          "availableSystemBytes": 13521223680
+        },
+        "after": {
+          "rss": 931422208,
+          "heapTotal": 31768576,
+          "heapUsed": 12674984,
+          "external": 92299963,
+          "arrayBuffers": 85436674,
+          "availableSystemBytes": 13415428096
+        },
+        "sampledMaxRssBytes": 931422208,
+        "samplingIntervalMs": 25,
+        "samples": 51,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "wav": "results/extended/tts-audio/T001.wav",
+      "file": {
+        "bytes": 105516,
+        "sha256": "d38e6c6daae35a11cd78aafa97f3f43b3b2f90d7ad726dc103e4fd98351e6dfa"
+      }
+    },
+    {
+      "id": "T002",
+      "text": "The monthly rent in Manchester is one thousand two hundred pounds.",
+      "required_phrases": [
+        "manchester",
+        "one thousand two hundred"
+      ],
+      "stats": {
+        "samples": 72192,
+        "sampleRate": 16000,
+        "durationSeconds": 4.512,
+        "finite": true,
+        "rms": 0.03580148411515825,
+        "peak": 0.24555866420269012,
+        "clippedFraction": 0
+      },
+      "durationMs": 3171.9903999999997,
+      "realTimeFactor": 0.7030120567375886,
+      "memory": {
+        "before": {
+          "rss": 895610880,
+          "heapTotal": 31768576,
+          "heapUsed": 12127688,
+          "external": 54708412,
+          "arrayBuffers": 47845123,
+          "availableSystemBytes": 13447757824
+        },
+        "after": {
+          "rss": 951443456,
+          "heapTotal": 31768576,
+          "heapUsed": 12143744,
+          "external": 86044192,
+          "arrayBuffers": 79180903,
+          "availableSystemBytes": 13392388096
+        },
+        "sampledMaxRssBytes": 989855744,
+        "samplingIntervalMs": 25,
+        "samples": 68,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "wav": "results/extended/tts-audio/T002.wav",
+      "file": {
+        "bytes": 144428,
+        "sha256": "6dba42d14871f607674d35a9081cf00c0881007a0d5c5b3bcf2445d67326a7f8"
+      }
+    },
+    {
+      "id": "T003",
+      "text": "The Bristol flat has two bedrooms and a private garden.",
+      "required_phrases": [
+        "bristol",
+        "two bedrooms",
+        "garden"
+      ],
+      "stats": {
+        "samples": 57856,
+        "sampleRate": 16000,
+        "durationSeconds": 3.616,
+        "finite": true,
+        "rms": 0.04162417554448823,
+        "peak": 0.2803616225719452,
+        "clippedFraction": 0
+      },
+      "durationMs": 2653.6633,
+      "realTimeFactor": 0.7338670630530973,
+      "memory": {
+        "before": {
+          "rss": 954163200,
+          "heapTotal": 31768576,
+          "heapUsed": 12331952,
+          "external": 87761484,
+          "arrayBuffers": 80898195,
+          "availableSystemBytes": 13394149376
+        },
+        "after": {
+          "rss": 1005330432,
+          "heapTotal": 31768576,
+          "heapUsed": 12732944,
+          "external": 135672183,
+          "arrayBuffers": 128808894,
+          "availableSystemBytes": 13349941248
+        },
+        "sampledMaxRssBytes": 1026154496,
+        "samplingIntervalMs": 25,
+        "samples": 57,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "wav": "results/extended/tts-audio/T003.wav",
+      "file": {
+        "bytes": 115756,
+        "sha256": "bf0f082b882ad76d00a4afe7149387119bec8e18691c6ff4ebe90b45c8885cb9"
+      }
+    },
+    {
+      "id": "T004",
+      "text": "The house in Leeds has no garden and no parking space.",
+      "required_phrases": [
+        "leeds",
+        "no garden",
+        "no parking"
+      ],
+      "stats": {
+        "samples": 54784,
+        "sampleRate": 16000,
+        "durationSeconds": 3.424,
+        "finite": true,
+        "rms": 0.0522801527776504,
+        "peak": 0.38852569460868835,
+        "clippedFraction": 0
+      },
+      "durationMs": 2521.0162,
+      "realTimeFactor": 0.7362780957943925,
+      "memory": {
+        "before": {
+          "rss": 983400448,
+          "heapTotal": 19447808,
+          "heapUsed": 12944712,
+          "external": 109312932,
+          "arrayBuffers": 102449643,
+          "availableSystemBytes": 13362270208
+        },
+        "after": {
+          "rss": 1004462080,
+          "heapTotal": 19447808,
+          "heapUsed": 12448536,
+          "external": 133903089,
+          "arrayBuffers": 127039800,
+          "availableSystemBytes": 13341208576
+        },
+        "sampledMaxRssBytes": 1052516352,
+        "samplingIntervalMs": 25,
+        "samples": 53,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "wav": "results/extended/tts-audio/T004.wav",
+      "file": {
+        "bytes": 109612,
+        "sha256": "b449b5a7efa741428cbab7bcd874ce7c2399fed9cc36cfe9321d6ab593b8657b"
+      }
+    },
+    {
+      "id": "T005",
+      "text": "Please call the Nottingham office before arranging a viewing.",
+      "required_phrases": [
+        "nottingham",
+        "office"
+      ],
+      "stats": {
+        "samples": 62464,
+        "sampleRate": 16000,
+        "durationSeconds": 3.904,
+        "finite": true,
+        "rms": 0.04251063041884717,
+        "peak": 0.24240811169147491,
+        "clippedFraction": 0
+      },
+      "durationMs": 2837.5793000000012,
+      "realTimeFactor": 0.7268389600409839,
+      "memory": {
+        "before": {
+          "rss": 992919552,
+          "heapTotal": 19447808,
+          "heapUsed": 12368888,
+          "external": 120957763,
+          "arrayBuffers": 114094474,
+          "availableSystemBytes": 13351485440
+        },
+        "after": {
+          "rss": 1063956480,
+          "heapTotal": 19972096,
+          "heapUsed": 12934248,
+          "external": 187446295,
+          "arrayBuffers": 180583006,
+          "availableSystemBytes": 13292601344
+        },
+        "sampledMaxRssBytes": 1087598592,
+        "samplingIntervalMs": 25,
+        "samples": 62,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "wav": "results/extended/tts-audio/T005.wav",
+      "file": {
+        "bytes": 124972,
+        "sha256": "14523f87fccb757c80445f76e8d97cb0b0dded550e155162d6109fc934ca0ea8"
+      }
+    },
+    {
+      "id": "T006",
+      "text": "The Oxford cottage is available from the first of November.",
+      "required_phrases": [
+        "oxford",
+        "first",
+        "november"
+      ],
+      "stats": {
+        "samples": 67584,
+        "sampleRate": 16000,
+        "durationSeconds": 4.224,
+        "finite": true,
+        "rms": 0.041301449143219,
+        "peak": 0.32600462436676025,
+        "clippedFraction": 0
+      },
+      "durationMs": 3122.197899999999,
+      "realTimeFactor": 0.7391566998106058,
+      "memory": {
+        "before": {
+          "rss": 1034801152,
+          "heapTotal": 19447808,
+          "heapUsed": 12802032,
+          "external": 158950268,
+          "arrayBuffers": 152086979,
+          "availableSystemBytes": 13315772416
+        },
+        "after": {
+          "rss": 1101193216,
+          "heapTotal": 19972096,
+          "heapUsed": 13080384,
+          "external": 223334784,
+          "arrayBuffers": 216471495,
+          "availableSystemBytes": 13263319040
+        },
+        "sampledMaxRssBytes": 1128341504,
+        "samplingIntervalMs": 25,
+        "samples": 68,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "wav": "results/extended/tts-audio/T006.wav",
+      "file": {
+        "bytes": 135212,
+        "sha256": "ed8acb8c6a28b0167052a059d65ef393dbc47f816ed95537aa7638d731b928da"
+      }
+    },
+    {
+      "id": "T007",
+      "text": "The buyer in Cambridge needs a step free entrance.",
+      "required_phrases": [
+        "cambridge",
+        "step free"
+      ],
+      "stats": {
+        "samples": 47104,
+        "sampleRate": 16000,
+        "durationSeconds": 2.944,
+        "finite": true,
+        "rms": 0.04864267059244233,
+        "peak": 0.29843056201934814,
+        "clippedFraction": 0
+      },
+      "durationMs": 2105.880000000001,
+      "realTimeFactor": 0.7153125000000004,
+      "memory": {
+        "before": {
+          "rss": 1063612416,
+          "heapTotal": 17874944,
+          "heapUsed": 13340976,
+          "external": 187005366,
+          "arrayBuffers": 180142077,
+          "availableSystemBytes": 13294088192
+        },
+        "after": {
+          "rss": 1056038912,
+          "heapTotal": 19709952,
+          "heapUsed": 13130832,
+          "external": 174820491,
+          "arrayBuffers": 167957202,
+          "availableSystemBytes": 13311860736
+        },
+        "sampledMaxRssBytes": 1080729600,
+        "samplingIntervalMs": 25,
+        "samples": 46,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "wav": "results/extended/tts-audio/T007.wav",
+      "file": {
+        "bytes": 94252,
+        "sha256": "4d767b06a32e5b850e6d6fe5da809c9bf9dd59bf2b51589e1a494b98f2ba9791"
+      }
+    },
+    {
+      "id": "T008",
+      "text": "The Brighton apartment costs three hundred thousand pounds.",
+      "required_phrases": [
+        "brighton",
+        "three hundred thousand"
+      ],
+      "stats": {
+        "samples": 56320,
+        "sampleRate": 16000,
+        "durationSeconds": 3.52,
+        "finite": true,
+        "rms": 0.03320795199746284,
+        "peak": 0.2649174928665161,
+        "clippedFraction": 0
+      },
+      "durationMs": 2439.463100000001,
+      "realTimeFactor": 0.6930292897727275,
+      "memory": {
+        "before": {
+          "rss": 1018081280,
+          "heapTotal": 19709952,
+          "heapUsed": 13230864,
+          "external": 141127116,
+          "arrayBuffers": 134263827,
+          "availableSystemBytes": 13339672576
+        },
+        "after": {
+          "rss": 1069621248,
+          "heapTotal": 19972096,
+          "heapUsed": 13107136,
+          "external": 192065225,
+          "arrayBuffers": 185201936,
+          "availableSystemBytes": 13296439296
+        },
+        "sampledMaxRssBytes": 1099689984,
+        "samplingIntervalMs": 25,
+        "samples": 54,
+        "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+      },
+      "wav": "results/extended/tts-audio/T008.wav",
+      "file": {
+        "bytes": 112684,
+        "sha256": "45af6132873a9559de111b8aef03caab70df0e970161b5179935b33c72985e0a"
+      }
+    }
+  ],
+  "observations": {
+    "inferenceRoute": "Direct SpeechT5ForTextToSpeech.generate_speech with tokenizer, speaker tensor and explicit HiFiGAN; no installed library modifications. Default and explicit pipeline findings retained as separate tests.",
+    "pipelineComponents": {
+      "defaultHasProcessor": false,
+      "defaultHasVocoder": false
+    },
+    "warm": {
+      "count": 3,
+      "median": 1009.9313999999977,
+      "p95": 1020.6296000000002,
+      "minimum": 971.0584999999992,
+      "maximum": 1020.6296000000002,
+      "mean": 1000.5398333333324
+    },
+    "latencyMs": {
+      "count": 8,
+      "median": 2521.0162,
+      "p95": 3171.9903999999997,
+      "minimum": 2105.880000000001,
+      "maximum": 3171.9903999999997,
+      "mean": 2665.7748750000005
+    },
+    "realTimeFactor": {
+      "count": 8,
+      "median": 0.7268389600409839,
+      "p95": 0.7507308252427184,
+      "minimum": 0.6930292897727275,
+      "maximum": 0.7507308252427184,
+      "mean": 0.7247781863065144
+    }
+  },
+  "networkAttempts": [],
+  "import": {
+    "durationMs": 147.9969,
+    "memory": {
+      "before": {
+        "rss": 48869376,
+        "heapTotal": 8962048,
+        "heapUsed": 5771832,
+        "external": 2432264,
+        "arrayBuffers": 158968,
+        "availableSystemBytes": 14299054080
+      },
+      "after": {
+        "rss": 67366912,
+        "heapTotal": 19447808,
+        "heapUsed": 12033968,
+        "external": 5663695,
+        "arrayBuffers": 345271,
+        "availableSystemBytes": 14277861376
+      },
+      "sampledMaxRssBytes": 67366912,
+      "samplingIntervalMs": 25,
+      "samples": 1,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  "packageLockSha256": "ecd4f3eadc4adb41d2979d672fa766243bd25ed683018f95d63e0d841220e2aa",
+  "dependencies": {
+    "@huggingface/transformers": "4.3.2",
+    "onnxruntime-node": "1.30.0"
+  },
+  "vocoderLoad": {
+    "durationMs": 198.3885,
+    "memory": {
+      "before": {
+        "rss": 67485696,
+        "heapTotal": 19447808,
+        "heapUsed": 12326976,
+        "external": 5700002,
+        "arrayBuffers": 381586,
+        "availableSystemBytes": 14277726208
+      },
+      "after": {
+        "rss": 153980928,
+        "heapTotal": 22855680,
+        "heapUsed": 12590592,
+        "external": 7385813,
+        "arrayBuffers": 320230,
+        "availableSystemBytes": 14192635904
+      },
+      "sampledMaxRssBytes": 153980928,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  "load": {
+    "durationMs": 1466.2455,
+    "memory": {
+      "before": {
+        "rss": 153980928,
+        "heapTotal": 22855680,
+        "heapUsed": 12603376,
+        "external": 7385813,
+        "arrayBuffers": 320230,
+        "availableSystemBytes": 14192635904
+      },
+      "after": {
+        "rss": 778457088,
+        "heapTotal": 22855680,
+        "heapUsed": 13379456,
+        "external": 9110685,
+        "arrayBuffers": 2241890,
+        "availableSystemBytes": 13560135680
+      },
+      "sampledMaxRssBytes": 778457088,
+      "samplingIntervalMs": 25,
+      "samples": 2,
+      "note": "Whole process RSS sampled on the same event loop; short native peaks may be missed. This is not model-only RAM or GPU memory."
+    }
+  },
+  "dataset": {
+    "fixtureSha256": "5e7b0a2b80359b5fb1ec6be0f8800572da94a519279f33892d4459671f6ca6bd",
+    "speakerEmbeddingSha256": "7384027325428d6eda21f47213572541443f5864044295a2e5c07fbaaf372bb3",
+    "speakerEmbeddingDimensions": 512,
+    "notes": [
+      "Waveform checks and ASR round-trip are diagnostics, not a human MOS/naturalness rating.",
+      "All sentences are fictional England property examples."
+    ]
+  },
+  "summary": {
+    "technical": {
+      "total": 10,
+      "passed": 7,
+      "failed": 3
+    },
+    "cases": 8
+  },
+  "status": "completed",
+  "completedAt": "2026-11-04T20:08:43.090Z"
+}

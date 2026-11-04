@@ -1,0 +1,246 @@
+{
+  "startedAt": "2026-11-04T20:09:38.118Z",
+  "purpose": "Coupled SpeechT5 to Whisper diagnostic, not human intelligibility, naturalness or speaker similarity validation",
+  "ttsResultSha256": "d46ab90fc109ff3c702e4bfbdbc61270ed45060312f174513e6762d94b940ca2",
+  "asrModel": {
+    "key": "M3",
+    "id": "Xenova/whisper-tiny",
+    "revision": "5332fcc35e32a33b86612b9a57a89be7906102b1",
+    "dtype": "q8",
+    "task": "automatic-speech-recognition"
+  },
+  "cases": [
+    {
+      "id": "T001",
+      "reference": "The viewing in London is on Friday at ten in the morning.",
+      "prediction": " The viewing in London is on Friday at 10 in the morning.",
+      "wav": "results/extended/tts-audio/T001.wav",
+      "sha256": "d38e6c6daae35a11cd78aafa97f3f43b3b2f90d7ad726dc103e4fd98351e6dfa",
+      "durationMs": 918.6303,
+      "score": {
+        "referenceWords": 12,
+        "wordErrors": 1,
+        "wer": 0.08333333333333333,
+        "characterErrors": 3,
+        "referenceCharacters": 56,
+        "cer": 0.05357142857142857,
+        "requiredPhrases": [
+          {
+            "text": "london",
+            "present": true
+          },
+          {
+            "text": "friday",
+            "present": true
+          },
+          {
+            "text": "ten",
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "T002",
+      "reference": "The monthly rent in Manchester is one thousand two hundred pounds.",
+      "prediction": " The monthly rent in Manchester is £1200.",
+      "wav": "results/extended/tts-audio/T002.wav",
+      "sha256": "6dba42d14871f607674d35a9081cf00c0881007a0d5c5b3bcf2445d67326a7f8",
+      "durationMs": 864.1500000000001,
+      "score": {
+        "referenceWords": 11,
+        "wordErrors": 5,
+        "wer": 0.45454545454545453,
+        "characterErrors": 31,
+        "referenceCharacters": 65,
+        "cer": 0.47692307692307695,
+        "requiredPhrases": [
+          {
+            "text": "manchester",
+            "present": true
+          },
+          {
+            "text": "one thousand two hundred",
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "T003",
+      "reference": "The Bristol flat has two bedrooms and a private garden.",
+      "prediction": " The Bristol Flat has two bedrooms and a private garden.",
+      "wav": "results/extended/tts-audio/T003.wav",
+      "sha256": "bf0f082b882ad76d00a4afe7149387119bec8e18691c6ff4ebe90b45c8885cb9",
+      "durationMs": 886.5272,
+      "score": {
+        "referenceWords": 10,
+        "wordErrors": 0,
+        "wer": 0,
+        "characterErrors": 0,
+        "referenceCharacters": 54,
+        "cer": 0,
+        "requiredPhrases": [
+          {
+            "text": "bristol",
+            "present": true
+          },
+          {
+            "text": "two bedrooms",
+            "present": true
+          },
+          {
+            "text": "garden",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "T004",
+      "reference": "The house in Leeds has no garden and no parking space.",
+      "prediction": " The house in Leeds has no garden and no parking space.",
+      "wav": "results/extended/tts-audio/T004.wav",
+      "sha256": "b449b5a7efa741428cbab7bcd874ce7c2399fed9cc36cfe9321d6ab593b8657b",
+      "durationMs": 840.7444999999998,
+      "score": {
+        "referenceWords": 11,
+        "wordErrors": 0,
+        "wer": 0,
+        "characterErrors": 0,
+        "referenceCharacters": 53,
+        "cer": 0,
+        "requiredPhrases": [
+          {
+            "text": "leeds",
+            "present": true
+          },
+          {
+            "text": "no garden",
+            "present": true
+          },
+          {
+            "text": "no parking",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "T005",
+      "reference": "Please call the Nottingham office before arranging a viewing.",
+      "prediction": " Please call the nodding him office before arranging a viewing.",
+      "wav": "results/extended/tts-audio/T005.wav",
+      "sha256": "14523f87fccb757c80445f76e8d97cb0b0dded550e155162d6109fc934ca0ea8",
+      "durationMs": 875.0646000000006,
+      "score": {
+        "referenceWords": 9,
+        "wordErrors": 2,
+        "wer": 0.2222222222222222,
+        "characterErrors": 4,
+        "referenceCharacters": 60,
+        "cer": 0.06666666666666667,
+        "requiredPhrases": [
+          {
+            "text": "nottingham",
+            "present": false
+          },
+          {
+            "text": "office",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "T006",
+      "reference": "The Oxford cottage is available from the first of November.",
+      "prediction": " The Oxford College is available from the first of November.",
+      "wav": "results/extended/tts-audio/T006.wav",
+      "sha256": "ed8acb8c6a28b0167052a059d65ef393dbc47f816ed95537aa7638d731b928da",
+      "durationMs": 871.8512000000001,
+      "score": {
+        "referenceWords": 10,
+        "wordErrors": 1,
+        "wer": 0.1,
+        "characterErrors": 3,
+        "referenceCharacters": 58,
+        "cer": 0.05172413793103448,
+        "requiredPhrases": [
+          {
+            "text": "oxford",
+            "present": true
+          },
+          {
+            "text": "first",
+            "present": true
+          },
+          {
+            "text": "november",
+            "present": true
+          }
+        ]
+      }
+    },
+    {
+      "id": "T007",
+      "reference": "The buyer in Cambridge needs a step free entrance.",
+      "prediction": " The buyer and Cambridge needs a step for the entrance.",
+      "wav": "results/extended/tts-audio/T007.wav",
+      "sha256": "4d767b06a32e5b850e6d6fe5da809c9bf9dd59bf2b51589e1a494b98f2ba9791",
+      "durationMs": 834.5028999999995,
+      "score": {
+        "referenceWords": 9,
+        "wordErrors": 3,
+        "wer": 0.3333333333333333,
+        "characterErrors": 6,
+        "referenceCharacters": 49,
+        "cer": 0.12244897959183673,
+        "requiredPhrases": [
+          {
+            "text": "cambridge",
+            "present": true
+          },
+          {
+            "text": "step free",
+            "present": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "T008",
+      "reference": "The Brighton apartment costs three hundred thousand pounds.",
+      "prediction": " The Brighton apartment costs £300,000.",
+      "wav": "results/extended/tts-audio/T008.wav",
+      "sha256": "45af6132873a9559de111b8aef03caab70df0e970161b5179935b33c72985e0a",
+      "durationMs": 836.7641999999996,
+      "score": {
+        "referenceWords": 8,
+        "wordErrors": 4,
+        "wer": 0.5,
+        "characterErrors": 28,
+        "referenceCharacters": 58,
+        "cer": 0.4827586206896552,
+        "requiredPhrases": [
+          {
+            "text": "brighton",
+            "present": true
+          },
+          {
+            "text": "three hundred thousand",
+            "present": false
+          }
+        ]
+      }
+    }
+  ],
+  "summary": {
+    "cases": 8,
+    "referenceWords": 80,
+    "wordErrors": 16,
+    "wer": 0.2
+  },
+  "status": "completed",
+  "completedAt": "2026-11-04T20:09:45.254Z"
+}
